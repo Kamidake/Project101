@@ -1,0 +1,42 @@
+name: Refresh live playlist
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scraper.py', '.github/workflows/refresh.yml']
+permissions:
+  contents: write
+concurrency:
+  group: playlist-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test parser
+        run: python -m unittest discover -s tests -v
+      - name: Generate playlist
+        run: python scraper.py
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playlist-diagnostics
+          path: status.json
+          retention-days: 7
+      - name: Commit playlist
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add playlist.m3u status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh live playlist'
+            git push
+          fi
