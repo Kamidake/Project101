@@ -71,6 +71,10 @@ https://admin2.formaturamaxi.com.br/nfl6.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-13
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/nfl5.m3u8
+#EXTINF:-1 group-title="NFL",Los Angeles Chargers vs Seattle Seahawks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-13
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://temp.formaturamaxi.com.br/nfl13.m3u8
 #EXTINF:-1 group-title="NFL",Miami Dolphins vs Minnesota Vikings
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-10
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
@@ -87,6 +91,10 @@ https://temp.formaturamaxi.com.br/nfl3.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nhl4.m3u8
+#EXTINF:-1 group-title="NHL",Calgary Flames vs Seattle Kraken
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/nhl4.m3u8
 #EXTINF:-1 group-title="NHL",Florida Panthers vs Anaheim Ducks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
@@ -95,6 +103,10 @@ https://tedesco.formaturamaxi.com.br/nhl3.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nhl2.m3u8
+#EXTINF:-1 group-title="NHL",Vegas Golden Knights vs Vancouver Canucks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/nhl5.m3u8
 #EXTINF:-1 group-title="NHL",Winnipeg Jets vs Detroit Red Wings
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
