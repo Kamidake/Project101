@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="zerostreams.1d4b11f87d653149" tvg-name="Formula 1: Malaysian Grand Prix" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/formula-1.png" group-title="Formula 1",Formula 1 | Formula 1: Malaysian Grand Prix — RoxieStreams
+#EXTINF:-1 tvg-id="zerostreams.1d4b11f87d653149" tvg-name="Formula 1: Malaysian Grand Prix" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/formula-1.png" group-title="Formula 1",Formula 1: Malaysian Grand Prix — RoxieStreams
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/f1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/f1.m3u8
@@ -11,11 +11,11 @@ https://tedesco.formaturamaxi.com.br/mlb.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/mlb-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/mlb.m3u8
-#EXTINF:-1 tvg-id="zerostreams.a955d5429634edc8" tvg-name="MXGP: Race" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/mxgp.png" group-title="MXGP",MXGP | MXGP: Race — RoxieStreams
+#EXTINF:-1 tvg-id="zerostreams.a955d5429634edc8" tvg-name="MXGP: Race" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/mxgp.png" group-title="MXGP",MXGP: Race — RoxieStreams
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/mxgp
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/mxgp.m3u8
-#EXTINF:-1 tvg-id="zerostreams.ed5cc0d5e3f503af" tvg-name="NASCAR Cup Series: Race" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nascar.png" group-title="NASCAR",NASCAR | NASCAR Cup Series: Race — RoxieStreams
+#EXTINF:-1 tvg-id="zerostreams.ed5cc0d5e3f503af" tvg-name="NASCAR Cup Series: Race" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nascar.png" group-title="NASCAR",NASCAR Cup Series: Race — RoxieStreams
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nascar
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nas.m3u8
@@ -71,11 +71,11 @@ https://temp.formaturamaxi.com.br/nfl10.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://temp.formaturamaxi.com.br/nfl3.m3u8
-#EXTINF:-1 tvg-id="zerostreams.d6a567cee29ec223" tvg-name="NFL RedZone" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nfl.png" group-title="NFL",NFL | NFL RedZone — Feed 1 · RoxieStreams
+#EXTINF:-1 tvg-id="zerostreams.d6a567cee29ec223" tvg-name="NFL RedZone" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nfl.png" group-title="NFL",NFL RedZone — Feed 1 · RoxieStreams
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/redzone
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/redzone.m3u8
-#EXTINF:-1 tvg-id="zerostreams.be0d25a61fa9acaa" tvg-name="NFL RedZone" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nfl.png" group-title="NFL",NFL | NFL RedZone — Feed 2 · RoxieStreams
+#EXTINF:-1 tvg-id="zerostreams.be0d25a61fa9acaa" tvg-name="NFL RedZone" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nfl.png" group-title="NFL",NFL RedZone — Feed 2 · RoxieStreams
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/redzone
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://temp.formaturamaxi.com.br/redzonealt.m3u8
@@ -151,7 +151,7 @@ https://admin2.formaturamaxi.com.br/portes.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/s4c.m3u8
-#EXTINF:-1 tvg-id="zerostreams.020b8247511aa5de" tvg-name="WWE RAW" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/wwe.png" group-title="WWE",WWE | WWE RAW — RoxieStreams
+#EXTINF:-1 tvg-id="zerostreams.020b8247511aa5de" tvg-name="WWE RAW" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/wwe.png" group-title="WWE",WWE RAW — RoxieStreams
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/wwe.m3u8
