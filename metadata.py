@@ -166,12 +166,13 @@ def decorate(entries, catalog):
     for key in sorted(groups):
         feeds = sorted(groups[key], key=lambda e:(e['provider'],e.get('source_tag',''),e['url']))
         for index, entry in enumerate(feeds,1):
-            details = ([f'Feed {index}'] if len(feeds)>1 else []) + [entry['provider']]
+            details = [f'Feed {index}'] if len(feeds)>1 else []
+            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
             if entry.get('source_tag'):
                 details.append(entry['source_tag'])
             if entry.get('locale'):
                 details.append(entry['locale'].upper())
             title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
-            entry['display_name'] = title + ' — ' + ' · '.join(details)
+            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
             result.append(entry)
     return result

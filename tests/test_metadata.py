@@ -26,6 +26,7 @@ class MetadataTests(unittest.TestCase):
         b=self.entry('https://example.org/b.m3u8', provider='PPV')
         output=decorate([a,a,b], [])
         self.assertEqual(len(output),2)
+        self.assertFalse(any('RoxieStreams' in entry['display_name'] for entry in output))
         self.assertTrue(all(e['poster'].endswith('nfl.png') for e in output))
         self.assertIn('Feed 1',output[0]['display_name'])
         self.assertIn('Feed 2',output[1]['display_name'])
@@ -41,6 +42,7 @@ class MetadataTests(unittest.TestCase):
         output=decorate([self.entry('https://example.org/a.m3u8')], [{'name':'Detroit Lions at Carolina Panthers','poster':'https://example.org/game.jpg','starts_at':100}])
         self.assertEqual(output[0]['poster'],'https://example.org/game.jpg')
         self.assertEqual(output[0]['name'],'Detroit Lions vs Carolina Panthers')
+        self.assertEqual(output[0]['display_name'],'NFL | Detroit Lions vs Carolina Panthers')
 
     def test_catalog_supports_substreams_without_publishing_embeds(self):
         index={'success':True,'streams':[{'category':'Cricket','streams':[{'id':1,'name':'Willow','always_live':1,'uri_name':'willow','poster':'https://example.org/willow.jpg'}]}]}

@@ -14,7 +14,8 @@ support `tvg-logo`; VLC may show the playlist without artwork.
 
 - Consistent league/category names and normalized matchup titles.
 - Alternate URLs for an event labeled **Feed 1**, **Feed 2**, etc., with the
-  provider and broadcaster/language when supplied by that provider.
+  broadcaster/language when supplied. RoxieStreams branding is omitted from
+  display titles.
 - Exact duplicate URLs removed. Different working mirror URLs are retained.
 - URLs shared across unrelated events labeled as shared channels rather than
   arbitrarily assigned to one match.
@@ -24,7 +25,7 @@ support `tvg-logo`; VLC may show the playlist without artwork.
   Feed numbers can change as feeds become unavailable; IDs do not depend on them.
 
 Example title for alternate feeds:
-`NFL | Detroit Lions vs Carolina Panthers — Feed 1 · RoxieStreams`
+`NFL | Detroit Lions vs Carolina Panthers — Feed 1`
 
 ## Sources
 
