@@ -1,7 +1,12 @@
 # ZeroStreams
 
-A curated M3U playlist of currently reachable live HLS feeds, refreshed by
-GitHub Actions every 30 minutes. Stream availability changes between refreshes.
+An automatically maintained M3U playlist of validated live HLS streams,
+refreshed every **30 minutes**. ZeroStreams brings together clean event titles,
+thumbnail artwork, clearly labeled alternate feeds, automatic mirror failover,
+and an on-demand refresh button.
+
+Compatible with VLC and IPTV players that support M3U playlists. Stream
+availability changes between refreshes.
 
 **[Open the M3U playlist](https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/playlist.m3u)** ·
 **[Refresh status](https://github.com/Zer0Spce/ZeroStreams/actions)** ·
@@ -14,8 +19,7 @@ support `tvg-logo`; VLC may show the playlist without artwork.
 
 - Consistent league/category names and normalized matchup titles.
 - Alternate URLs for an event labeled **Feed 1**, **Feed 2**, etc., with the
-  broadcaster/language when supplied. RoxieStreams branding is omitted from
-  display titles.
+  broadcaster and language labels when available.
 - Exact duplicate URLs removed. Different working mirror URLs are retained.
 - URLs shared across unrelated events labeled as shared channels rather than
   arbitrarily assigned to one match.
@@ -62,7 +66,6 @@ To refresh whenever you want:
 
 Manual and scheduled refreshes share one concurrency group, so they run one at
 a time. A manual refresh does not alter the automatic schedule.
-
 
 ## Local usage
 
