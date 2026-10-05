@@ -100,16 +100,6 @@
     "page": "https://ppv.st/live/nhl-network-29780"
   },
   {
-    "name": "Utah Mammoth vs New York Rangers",
-    "poster": "https://static.ppvservices.st/assets/thumb/74fb497c1e20362bfc2dbb92c85e822f-thumbnail.jpg",
-    "tag": "NHL",
-    "category": "Ice Hockey",
-    "uri": "nhl/2026-10-04/uta-nyr",
-    "starts_at": 1791151200,
-    "ends_at": 1791162000,
-    "page": "https://ppv.st/live/nhl/2026-10-04/uta-nyr"
-  },
-  {
     "name": "Florida Panthers vs Anaheim Ducks",
     "poster": "https://static.ppvservices.st/assets/thumb/e5994c7fcfdfff728f85efedf712b346-thumbnail.jpg",
     "tag": "NHL",
@@ -128,6 +118,16 @@
     "starts_at": 1791158400,
     "ends_at": 1791169200,
     "page": "https://ppv.st/live/nhl/2026-10-04/cgy-sea"
+  },
+  {
+    "name": "Vegas Golden Knights vs Vancouver Canucks",
+    "poster": "https://static.ppvservices.st/assets/thumb/1b2015768550483a02a4192b662e3a7a-thumbnail.jpg",
+    "tag": "NHL",
+    "category": "Ice Hockey",
+    "uri": "nhl/2026-10-04/vgk-van",
+    "starts_at": 1791162000,
+    "ends_at": 1791172800,
+    "page": "https://ppv.st/live/nhl/2026-10-04/vgk-van"
   },
   {
     "name": "Fox League",
