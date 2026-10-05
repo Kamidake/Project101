@@ -40,26 +40,6 @@
     "page": "https://ppv.st/live/mlb/2026-10-04/atl-lad"
   },
   {
-    "name": "Utah Jazz vs Denver Nuggets",
-    "poster": "https://static.ppvservices.st/assets/thumb/cda54c935202511d07fe86f0b4ec7d28-thumbnail.jpg",
-    "tag": "NBA",
-    "category": "Basketball",
-    "uri": "nba/2026-10-04/utah-den",
-    "starts_at": 1791154800,
-    "ends_at": 1791165600,
-    "page": "https://ppv.st/live/nba/2026-10-04/utah-den"
-  },
-  {
-    "name": "Golden State Warriors vs Los Angeles Clippers",
-    "poster": "https://static.ppvservices.st/assets/thumb/c6462fe3cdc4e3d5042c9d848f261423-thumbnail.jpg",
-    "tag": "NBA",
-    "category": "Basketball",
-    "uri": "nba/2026-10-04/gs-lac",
-    "starts_at": 1791154800,
-    "ends_at": 1791165600,
-    "page": "https://ppv.st/live/nba/2026-10-04/gs-lac"
-  },
-  {
     "name": "Willow",
     "poster": "https://static.ppvservices.st/assets/thumb/2e3cba2a94ae6af4b958675e73fe91e9-thumbnail.jpg",
     "tag": "24/7 channel",
