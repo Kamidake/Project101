@@ -136,6 +136,16 @@ def render(entries):
     return '\n'.join(lines) + '\n'
 
 
+def write_playlist_if_changed(content, path=Path('playlist.m3u')):
+    encoded = content.encode('utf-8')
+    if path.is_file() and path.read_bytes() == encoded:
+        return False
+    temporary = path.with_name(path.name + '.tmp')
+    temporary.write_bytes(encoded)
+    temporary.replace(path)
+    return True
+
+
 def discover_roxie(base, pool):
     pages, errors, labels = {}, [], {base:'RoxieStreams'}
     pending = {base}
@@ -243,9 +253,8 @@ def main():
     # Retain the last successful playlist if every mirror fails discovery.
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
-    temporary = Path('playlist.m3u.tmp')
-    temporary.write_text(render(entries), encoding='utf-8')
-    temporary.replace('playlist.m3u')
+    changed = write_playlist_if_changed(render(entries))
+    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
 
 
 if __name__ == '__main__':

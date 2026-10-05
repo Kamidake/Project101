@@ -35,6 +35,10 @@ jobs:
           retention-days: 7
       - name: Commit playlist
         run: |
+          if git diff --quiet -- playlist.m3u; then
+            echo 'Playlist unchanged; skipping repository update.'
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add playlist.m3u status.json ppv-catalog.json

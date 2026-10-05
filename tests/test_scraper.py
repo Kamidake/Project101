@@ -43,6 +43,27 @@ class ParserTests(unittest.TestCase):
             self.assertTrue(scraper.live_media('https://example.org/master.m3u8', scraper.BASE))
             self.assertEqual(request.call_args.args[0].full_url, 'https://example.org/segment.ts')
 
+    def test_identical_playlist_preserves_file(self):
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'playlist.m3u'
+            content = '#EXTM3U\nhttps://example.org/live.m3u8\n'
+            self.assertTrue(scraper.write_playlist_if_changed(content, path))
+            before = path.stat().st_mtime_ns
+            self.assertFalse(scraper.write_playlist_if_changed(content, path))
+            self.assertEqual(path.stat().st_mtime_ns, before)
+            self.assertFalse(path.with_name(path.name + '.tmp').exists())
+
+    def test_changed_playlist_replaces_existing_content(self):
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'playlist.m3u'
+            scraper.write_playlist_if_changed('#EXTM3U\nold.m3u8\n', path)
+            self.assertTrue(scraper.write_playlist_if_changed('#EXTM3U\nnew.m3u8\n', path))
+            self.assertEqual(path.read_text(), '#EXTM3U\nnew.m3u8\n')
+
     def test_m3u_sanitizes_labels(self):
         output = scraper.render([{'group':'NFL"\n', 'name':'Game\nInjected', 'page':scraper.BASE, 'url':'https://example.org/live.m3u8'}])
         self.assertIn(',Game Injected\n', output)

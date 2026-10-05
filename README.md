@@ -56,6 +56,12 @@ RoxieStreams playlist from refreshing; category artwork remains available.
 Runs **every 15 minutes**, at minutes **07, 22, 37, and 52 of every hour** (UTC and
 Philippine time have the same minute offsets). GitHub may delay scheduled jobs.
 
+Each run checks for changes. If the playlist is identical, it is not rewritten
+and no refresh commit is created. New or removed feeds, changed playback URLs,
+and changes to event titles or artwork trigger an update. Fresh check reports
+remain available in each run's diagnostics artifact; the committed scan report
+records the last published playlist update.
+
 To refresh whenever you want:
 
 1. Open **[Actions](https://github.com/Zer0Spce/ZeroStreams/actions/workflows/refresh.yml)**.
