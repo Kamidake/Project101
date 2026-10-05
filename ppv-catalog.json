@@ -80,26 +80,6 @@
     "page": "https://ppv.st/live/nhl-network-29780"
   },
   {
-    "name": "Florida Panthers vs Anaheim Ducks",
-    "poster": "https://static.ppvservices.st/assets/thumb/e5994c7fcfdfff728f85efedf712b346-thumbnail.jpg",
-    "tag": "NHL",
-    "category": "Ice Hockey",
-    "uri": "nhl/2026-10-04/fla-ana",
-    "starts_at": 1791158400,
-    "ends_at": 1791169200,
-    "page": "https://ppv.st/live/nhl/2026-10-04/fla-ana"
-  },
-  {
-    "name": "Calgary Flames vs Seattle Kraken",
-    "poster": "https://static.ppvservices.st/assets/thumb/5b944fe7bd9b7977f8e5826bb8d11c6c-thumbnail.jpg",
-    "tag": "NHL",
-    "category": "Ice Hockey",
-    "uri": "nhl/2026-10-04/cgy-sea",
-    "starts_at": 1791158400,
-    "ends_at": 1791169200,
-    "page": "https://ppv.st/live/nhl/2026-10-04/cgy-sea"
-  },
-  {
     "name": "Vegas Golden Knights vs Vancouver Canucks",
     "poster": "https://static.ppvservices.st/assets/thumb/1b2015768550483a02a4192b662e3a7a-thumbnail.jpg",
     "tag": "NHL",
