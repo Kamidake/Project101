@@ -1,7 +1,7 @@
 # ZeroStreams
 
 A curated M3U playlist of currently reachable live HLS feeds, refreshed by
-GitHub Actions every six hours. Stream availability changes between refreshes.
+GitHub Actions every 30 minutes. Stream availability changes between refreshes.
 
 **[Open the M3U playlist](https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/playlist.m3u)** ·
 **[Refresh status](https://github.com/Zer0Spce/ZeroStreams/actions)** ·
@@ -48,9 +48,20 @@ RoxieStreams playlist from refreshing; category artwork remains available.
 
 ## Schedule
 
-Runs at **00:17, 06:17, 12:17, and 18:17 UTC**, or **08:17, 14:17, 20:17, and
-02:17 Philippine time**. GitHub may delay scheduled jobs. Use **Actions →
-Refresh live playlist → Run workflow** to refresh manually.
+Runs **every 30 minutes**, at minutes **07 and 37 of every hour** (UTC and
+Philippine time have the same minute offsets). GitHub may delay scheduled jobs.
+
+To refresh whenever you want:
+
+1. Open **[Actions](https://github.com/Zer0Spce/ZeroStreams/actions/workflows/refresh.yml)**.
+2. Select **Refresh live playlist** in the sidebar.
+3. Click **Run workflow**, leave the branch as **main**, then click the green
+   **Run workflow** button.
+4. Wait for the run to show a green check, then reload the playlist in your player.
+
+Manual and scheduled refreshes share one concurrency group, so they run one at
+a time. A manual refresh does not alter the automatic schedule.
+
 
 ## Local usage
 

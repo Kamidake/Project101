@@ -171,6 +171,7 @@ def decorate(entries, catalog):
                 details.append(entry['source_tag'])
             if entry.get('locale'):
                 details.append(entry['locale'].upper())
-            entry['display_name'] = f'{entry["group"]} | {entry["name"]} — ' + ' · '.join(details)
+            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+            entry['display_name'] = title + ' — ' + ' · '.join(details)
             result.append(entry)
     return result
