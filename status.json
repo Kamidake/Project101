@@ -1,18 +1,70 @@
 {
-  "updated_utc": "2026-10-05T18:28:27.789721+00:00",
-  "pages": 30,
-  "candidate_urls": 28,
-  "live_urls": 24,
-  "unavailable_urls": 4,
+  "updated_utc": "2026-10-05T21:53:34.375273+00:00",
+  "pages": 29,
+  "candidate_urls": 29,
+  "live_urls": 26,
+  "unavailable_urls": 3,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 22,
   "event_posters": 0,
-  "roxie_source": "https://roxiestreams.info/",
+  "roxie_source": "https://roxiestreams.su/",
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 30,
+      "pages": 25,
+      "errors": [
+        {
+          "page": "https://roxiestreams.info/nfl",
+          "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+        },
+        {
+          "page": "https://roxiestreams.info/nhl",
+          "error": "The read operation timed out"
+        },
+        {
+          "page": "https://roxiestreams.info/wwe-streams",
+          "error": "The read operation timed out"
+        },
+        {
+          "page": "https://roxiestreams.info/nba-streams-5",
+          "error": "The read operation timed out"
+        },
+        {
+          "page": "https://roxiestreams.info/soccer-streams-4",
+          "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+        },
+        {
+          "page": "https://roxiestreams.info/soccer-streams-5",
+          "error": "The read operation timed out"
+        }
+      ]
+    },
+    {
+      "base": "https://roxiestreams.biz/",
+      "pages": 29,
+      "errors": [
+        {
+          "page": "https://roxiestreams.biz/nfl",
+          "error": "The read operation timed out"
+        },
+        {
+          "page": "https://roxiestreams.biz/mlb-streams-1",
+          "error": "The read operation timed out"
+        },
+        {
+          "page": "https://roxiestreams.biz/nascar",
+          "error": "The read operation timed out"
+        },
+        {
+          "page": "https://roxiestreams.biz/nba-streams-1",
+          "error": "The read operation timed out"
+        }
+      ]
+    },
+    {
+      "base": "https://roxiestreams.su/",
+      "pages": 29,
       "errors": []
     }
   ]
