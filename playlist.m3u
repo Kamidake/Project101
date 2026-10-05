@@ -31,15 +31,15 @@ https://admin2.formaturamaxi.com.br/nba.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nfl5.m3u8
-#EXTINF:-1 tvg-id="zerostreams.4b465020962901a7" tvg-name="Detroit Lions vs Carolina Panthers" tvg-logo="https://static.ppvservices.st/assets/thumb/720b814fc9288f55828e89b14ee1cc32-thumbnail.jpg" group-title="NFL",NFL | Detroit Lions vs Carolina Panthers — Feed 1
+#EXTINF:-1 tvg-id="zerostreams.4b465020962901a7" tvg-name="Detroit Lions vs Carolina Panthers" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nfl.png" group-title="NFL",NFL | Detroit Lions vs Carolina Panthers — Feed 1
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/nflalt.m3u8
-#EXTINF:-1 tvg-id="zerostreams.cf1024dd4f5bcdd1" tvg-name="Detroit Lions vs Carolina Panthers" tvg-logo="https://static.ppvservices.st/assets/thumb/720b814fc9288f55828e89b14ee1cc32-thumbnail.jpg" group-title="NFL",NFL | Detroit Lions vs Carolina Panthers — Feed 2
+#EXTINF:-1 tvg-id="zerostreams.cf1024dd4f5bcdd1" tvg-name="Detroit Lions vs Carolina Panthers" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nfl.png" group-title="NFL",NFL | Detroit Lions vs Carolina Panthers — Feed 2
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nfl14.m3u8
-#EXTINF:-1 tvg-id="zerostreams.a096cec0e20f3130" tvg-name="Detroit Lions vs Carolina Panthers" tvg-logo="https://static.ppvservices.st/assets/thumb/720b814fc9288f55828e89b14ee1cc32-thumbnail.jpg" group-title="NFL",NFL | Detroit Lions vs Carolina Panthers — Feed 3
+#EXTINF:-1 tvg-id="zerostreams.a096cec0e20f3130" tvg-name="Detroit Lions vs Carolina Panthers" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nfl.png" group-title="NFL",NFL | Detroit Lions vs Carolina Panthers — Feed 3
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nfl-streams-14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://tedesco.formaturamaxi.com.br/nfl.m3u8
@@ -95,7 +95,7 @@ https://tedesco.formaturamaxi.com.br/nhl3.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nhl2.m3u8
-#EXTINF:-1 tvg-id="zerostreams.44e771e76305c2fd" tvg-name="Vegas Golden Knights vs Vancouver Canucks" tvg-logo="https://static.ppvservices.st/assets/thumb/1b2015768550483a02a4192b662e3a7a-thumbnail.jpg" group-title="NHL",NHL | Vegas Golden Knights vs Vancouver Canucks
+#EXTINF:-1 tvg-id="zerostreams.44e771e76305c2fd" tvg-name="Vegas Golden Knights vs Vancouver Canucks" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nhl.png" group-title="NHL",NHL | Vegas Golden Knights vs Vancouver Canucks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://tedesco.formaturamaxi.com.br/nhl5.m3u8
