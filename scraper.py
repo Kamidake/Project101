@@ -9,10 +9,13 @@ import os
 from pathlib import Path
 import re
 import time
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
+from metadata import clean_title, decorate, ppv_catalog, roxie_group
 
 BASE = os.getenv('SOURCE_URL', 'https://roxiestreams.info/').rstrip('/') + '/'
+BACKUPS = tuple(x.rstrip('/')+'/' for x in os.getenv('ROXIE_BACKUP_URLS','https://roxiestreams.biz/,https://roxiestreams.su/').split(',') if x.strip())
+ROXIE_HOSTS = {'roxiestreams.info','roxiestreams.biz','roxiestreams.su'}
 UA = 'Mozilla/5.0 (compatible; LivePlaylist/1.0)'
 TIMEOUT = 12
 
@@ -57,13 +60,21 @@ class Links(HTMLParser):
             self.heading = False
 
 
-def internal_links(text, page):
+def internal_links(text, page, base=None):
+    base = base or BASE
     parser = Links()
     parser.feed(text)
     for href, label in parser.links:
         url = urljoin(page, href).split('#')[0]
         parts = urlsplit(url)
-        if parts.scheme not in ('http', 'https') or parts.netloc != urlsplit(BASE).netloc:
+        if parts.scheme not in ('http', 'https'):
+            continue
+        # Mirrors sometimes retain absolute links to the original domain.
+        if parts.hostname in ROXIE_HOSTS:
+            target = urlsplit(base)
+            url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
+            parts = urlsplit(url)
+        if parts.netloc != urlsplit(base).netloc:
             continue
         if parts.query or re.search(r'\.[a-zA-Z0-9]{2,5}$', parts.path) or parts.path == '/multiview':
             continue
@@ -119,75 +130,117 @@ def safe(value):
 def render(entries):
     lines = ['#EXTM3U']
     for entry in entries:
-        lines += [f'#EXTINF:-1 group-title="{safe(entry["group"])}",{safe(entry["name"])}',
+        lines += [f'#EXTINF:-1 tvg-id="{safe(entry.get("tvg_id", ""))}" tvg-name="{safe(entry["name"])}" tvg-logo="{safe(entry.get("poster", ""))}" group-title="{safe(entry["group"])}",{safe(entry.get("display_name", entry["name"]))}',
                   f'#EXTVLCOPT:http-referrer={entry["page"]}',
                   f'#EXTVLCOPT:http-user-agent={UA}', entry['url']]
     return '\n'.join(lines) + '\n'
 
 
-def main():
-    pages, errors, labels = {}, [], {BASE: 'RoxieStreams'}
-    print('Discovering stream pages...', flush=True)
-    pending = {BASE}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        for _ in range(5):
-            batch = sorted(pending - pages.keys())
-            print(f'Crawl batch: {len(batch)} pages', flush=True)
-            if not batch:
-                break
-            if len(pages) + len(batch) > 200:
-                raise RuntimeError('Crawl exceeded 200 pages; review website structure')
-            pending = set()
-            futures = {pool.submit(fetch, url): url for url in batch}
-            for future in concurrent.futures.as_completed(futures):
-                page = futures[future]
-                try:
-                    text = future.result()
-                    pages[page] = text
-                    for url, label in internal_links(text, page):
-                        if label:
-                            labels.setdefault(url, label)
-                        if url not in pages:
-                            pending.add(url)
-                except Exception as exc:
-                    pages[page] = ''
-                    errors.append({'page': page, 'error': str(exc)})
-        if pending - pages.keys():
-            errors.append({'error': 'Crawl depth limit reached'})
-        candidates = {}
-        unsupported = []
-        for page, text in sorted(pages.items()):
+def discover_roxie(base, pool):
+    pages, errors, labels = {}, [], {base:'RoxieStreams'}
+    pending = {base}
+    for _ in range(5):
+        batch = sorted(pending - pages.keys())
+        print(f'Crawl batch: {len(batch)} pages on {base}', flush=True)
+        if not batch:
+            break
+        if len(pages) + len(batch) > 200:
+            raise RuntimeError('Crawl exceeded 200 pages; review website structure')
+        pending = set()
+        futures = {pool.submit(fetch, url, base):url for url in batch}
+        for future in concurrent.futures.as_completed(futures):
+            page = futures[future]
             try:
-                sources = extract_sources(text, page)
-                for url in sources:
-                    candidates.setdefault(url, {'name': labels.get(page) or urlsplit(page).path.strip('/'),
-                                                'group': urlsplit(page).path.strip('/').split('-')[0].upper() or 'LIVE',
-                                                'page': page, 'url': url})
-                if not sources and re.search(r'<(?:iframe|video)\b', text):
-                    unsupported.append(page)
+                text = future.result()
+                pages[page] = text
+                for url, label in internal_links(text,page,base):
+                    if label:
+                        labels.setdefault(url,label)
+                    if url not in pages:
+                        pending.add(url)
             except Exception as exc:
-                errors.append({'page': page, 'error': str(exc)})
+                pages[page] = ''
+                errors.append({'page':page,'error':str(exc)})
+    if pending - pages.keys():
+        errors.append({'error':'Crawl depth limit reached'})
+    return pages, labels, errors
+
+
+def collect_roxie(pages, labels):
+    errors = []
+    candidates = {}
+    unsupported = []
+    for page, text in sorted(pages.items()):
+        try:
+            sources = extract_sources(text, page)
+            for url in sources:
+                candidates.setdefault(url, []).append({'name': clean_title(labels.get(page) or urlsplit(page).path.strip('/')),
+                                            'group': roxie_group(page), 'provider':'RoxieStreams',
+                                            'page': page, 'url': url})
+            if not sources and re.search(r'<(?:iframe|video)\b', text):
+                unsupported.append(page)
+        except Exception as exc:
+            errors.append({'page': page, 'error': str(exc)})
+    return candidates, unsupported, errors
+
+
+def select_roxie(pool):
+    global BASE
+    attempts = []
+    for base in dict.fromkeys((BASE, *BACKUPS)):
+        BASE = base
+        try:
+            pages, labels, errors = discover_roxie(base,pool)
+            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+            errors.extend(source_errors)
+            if not candidates:
+                errors.append({'error':'No HLS sources discovered'})
+        except Exception as exc:
+            pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
+        attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
+        if not errors:
+            break
+        print(f'Incomplete discovery on {base}; trying backup',flush=True)
+    return pages, candidates, unsupported, errors, attempts
+
+
+def main():
+    print('Discovering stream pages...', flush=True)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+        print('Loading PPV public catalogue and direct HLS sources...', flush=True)
+        catalog, ppv_entries, ppv_status = ppv_catalog(fetch)
+        for entry in ppv_entries:
+            candidates.setdefault(entry['url'], []).append(entry)
         entries, unavailable = [], 0
         print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
-        def check(entry):
-            try:
-                return entry if live_media(entry['url'], entry['page']) else None
-            except Exception:
-                return None
+        def check(aliases):
+            for entry in aliases:
+                try:
+                    if live_media(entry['url'], entry['page']):
+                        # Use the verified referrer on the deduplicated playback entry.
+                        return [dict(alias, page=entry['page']) for alias in aliases]
+                except Exception:
+                    pass
+            return None
         for index, result in enumerate(pool.map(check, candidates.values()), 1):
             if index % 10 == 0:
                 print(f'Checked {index}/{len(candidates)} URLs', flush=True)
             if result:
-                entries.append(result)
+                entries.extend(result)
             else:
                 unavailable += 1
-    entries.sort(key=lambda e: (e['group'], e['name'], e['url']))
+    entries = decorate(entries, catalog)
     report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
               'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
-              'unsupported_pages': unsupported, 'errors': errors}
+              'unsupported_pages': unsupported, 'errors': errors, 'ppv':ppv_status,
+              'event_groups':len({e['event_id'] for e in entries}),
+              'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
+              'roxie_source':BASE,'roxie_attempts':attempts}
+    Path('ppv-catalog.json').write_text(json.dumps(catalog, indent=2) + '\n')
     Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
-    # Fail closed: never publish an old playlist after an incomplete scan.
+    # Retain the last successful playlist if every mirror fails discovery.
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
     temporary = Path('playlist.m3u.tmp')

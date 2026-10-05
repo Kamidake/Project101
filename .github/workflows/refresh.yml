@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scraper.py', '.github/workflows/refresh.yml']
+    paths: ['scraper.py', 'metadata.py', 'tests/**', 'assets/**', '.github/workflows/refresh.yml']
 permissions:
   contents: write
 concurrency:
@@ -29,13 +29,15 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playlist-diagnostics
-          path: status.json
+          path: |
+            status.json
+            ppv-catalog.json
           retention-days: 7
       - name: Commit playlist
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add playlist.m3u status.json
+          git add playlist.m3u status.json ppv-catalog.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh live playlist'
             git push

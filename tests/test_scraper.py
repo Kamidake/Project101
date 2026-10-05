@@ -10,6 +10,28 @@ class ParserTests(unittest.TestCase):
     def test_ignore_external_and_assets(self):
         links = list(scraper.internal_links('<a href="/nfl">NFL</a><a href="https://ads.test/">Ad</a><a href="/x.png">Image</a>', scraper.BASE))
         self.assertEqual(links, [(scraper.BASE+'nfl', 'NFL')])
+    def test_backup_rewrites_absolute_primary_links(self):
+        links = list(scraper.internal_links('<a href="https://roxiestreams.info/nfl">NFL</a>', 'https://roxiestreams.biz/', 'https://roxiestreams.biz/'))
+        self.assertEqual(links, [('https://roxiestreams.biz/nfl', 'NFL')])
+
+    def test_failover_uses_first_complete_mirror(self):
+        primary = 'https://roxiestreams.info/'
+        backup = 'https://roxiestreams.biz/'
+        with patch('scraper.BASE', primary), patch('scraper.BACKUPS',(backup,)), patch('scraper.discover_roxie', side_effect=[({}, {}, [{'error':'offline'}]), ({backup:'player'}, {}, [])]), patch('scraper.collect_roxie', side_effect=[({},[],[]), ({'https://example.org/live.m3u8':[]},[],[])]):
+            pages,candidates,unsupported,errors,attempts = scraper.select_roxie(None)
+            self.assertEqual(scraper.BASE,backup)
+            self.assertEqual(errors,[])
+            self.assertEqual(len(attempts),2)
+            self.assertTrue(candidates)
+
+    def test_domain_file_failure_triggers_backup(self):
+        primary = 'https://roxiestreams.info/'
+        backup = 'https://roxiestreams.su/'
+        with patch('scraper.BASE',primary), patch('scraper.BACKUPS',(backup,)), patch('scraper.discover_roxie',side_effect=lambda *args: ({'p':'player'}, {}, [])), patch('scraper.collect_roxie',side_effect=[({},[],[{'error':'domains unavailable'}]), ({'stream':[]},[],[])]):
+            result = scraper.select_roxie(None)
+            self.assertEqual(scraper.BASE,backup)
+            self.assertEqual(result[3],[])
+
     def test_reject_vod_and_fake_manifest(self):
         for text in ['<html>Denied</html>', '#EXTM3U\n#EXTINF:6,\nx.ts\n#EXT-X-ENDLIST']:
             with patch('scraper.fetch', return_value=text):

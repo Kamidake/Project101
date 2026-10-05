@@ -1,56 +1,93 @@
 # ZeroStreams
 
-Builds `playlist.m3u` from HLS streams linked on https://roxiestreams.info/.
-Python 3.12, standard library only. GitHub Actions refreshes at 00:17, 06:17,
-12:17 and 18:17 UTC (08:17, 14:17, 20:17 and 02:17 Philippine time).
-GitHub scheduled jobs may be delayed; this is not an exact-time guarantee.
+A curated M3U playlist of currently reachable live HLS feeds, refreshed by
+GitHub Actions every six hours. Stream availability changes between refreshes.
 
-## Install on GitHub
+**[Open the M3U playlist](https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/playlist.m3u)** ·
+**[Refresh status](https://github.com/Zer0Spce/ZeroStreams/actions)** ·
+**[Latest scan report](status.json)**
 
-1. Create a repository named `ZeroStreams`, with default branch `main`.
-2. Upload this folder's contents, including `.github/workflows/refresh.yml`.
-3. Enable Actions if prompted. Run **Refresh live playlist → Run workflow**.
-4. After a successful run, copy the Raw URL of `playlist.m3u` into VLC or an
-   IPTV player. For a public repository it follows this pattern:
-   `https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/playlist.m3u`.
-   Private repositories require authentication. Do not embed GitHub tokens in a player URL.
+Paste the M3U link into VLC or an IPTV player. Artwork appears in players that
+support `tvg-logo`; VLC may show the playlist without artwork.
 
-## Run locally
+## Titles and artwork
+
+- Consistent league/category names and normalized matchup titles.
+- Alternate URLs for an event labeled **Feed 1**, **Feed 2**, etc., with the
+  provider and broadcaster/language when supplied by that provider.
+- Exact duplicate URLs removed. Different working mirror URLs are retained.
+- URLs shared across unrelated events labeled as shared channels rather than
+  arbitrarily assigned to one match.
+- Real PPV event posters used for exact matching current events. Other entries
+  receive the included ZeroStreams category thumbnails.
+- Stable `tvg-id`, `tvg-name`, `tvg-logo`, and `group-title` M3U attributes.
+  Feed numbers can change as feeds become unavailable; IDs do not depend on them.
+
+Example title for alternate feeds:
+`NFL | Detroit Lions vs Carolina Panthers — Feed 1 · RoxieStreams`
+
+## Sources
+
+| Source | Discovery | Current playback support |
+| --- | --- | --- |
+| RoxieStreams | Internal event links and the site's current HLS domain list | Live HLS manifests with reachable media segments |
+| PPV | Documented public catalogue API and public event details | Only directly published public HLS URLs, when supplied |
+
+The [PPV API documentation](https://ppv.st/api) provides titles, posters,
+schedule times, and player links. Current responses provide iframe players
+and empty M3U8 fields. Those iframe URLs **are not M3U playback URLs** and are
+excluded from this playlist. PPV metadata still enriches exact matching events.
+The adapter will include public direct HLS URLs if the API supplies them and
+live validation succeeds. PPV's player integrations are kept intact; the
+scraper does not extract streams from its embedded players or use VIP links.
+
+`ppv-catalog.json` lists current PPV events, artwork, and links to their original
+player pages. `status.json` explicitly reports `embed-only`, partial API errors,
+and the number of direct candidates. A PPV outage does not prevent the primary
+RoxieStreams playlist from refreshing; category artwork remains available.
+
+## Schedule
+
+Runs at **00:17, 06:17, 12:17, and 18:17 UTC**, or **08:17, 14:17, 20:17, and
+02:17 Philippine time**. GitHub may delay scheduled jobs. Use **Actions →
+Refresh live playlist → Run workflow** to refresh manually.
+
+## Local usage
+
+Python 3.12; no third-party runtime dependencies.
 
 ```sh
 python -m unittest discover -s tests -v
 python scraper.py
 ```
 
-Optional: set `SOURCE_URL` to the current source domain if it changes.
+RoxieStreams failover tries `.info`, then `.biz`, then `.su`. A complete
+successful discovery uses one mirror per refresh. Failed primary discoveries
+are recorded in `roxie_attempts`; `roxie_source` records the chosen mirror.
+Absolute links pointing at another RoxieStreams mirror are resolved onto the
+chosen mirror. If every mirror fails, the existing playlist is retained.
 
-## What counts as live
+Set `SOURCE_URL` to a new primary domain if necessary. Set `ROXIE_BACKUP_URLS`
+to a comma-separated list to override backups. To reuse this project
+in another repository, update `LOGO_BASE` in `metadata.py` to that repository's
+Raw asset URL. Included PNG category thumbnails are committed assets and do
+not require an image library at runtime.
 
-The scraper follows internal HTML links, reads direct HLS URLs and the site's
-`getRandomStream` calls plus its current domain TXT file. It checks the HLS
-manifest, rejects VOD/ended manifests, and requests a small part of the latest
-segment. Master playlists are followed to media variants. Reachability is a
-snapshot; this does not establish whether an event is currently in progress,
-verify actual video content, or guarantee uninterrupted playback.
+## Validation and limits
 
-Separate working mirror URLs are retained. Identical URLs are deduplicated.
-VLC referrer/user-agent directives are included; other players may ignore them.
+The scraper checks HLS manifests, rejects ended/VOD playlists, follows master
+playlists to media variants, and reads a small part of the latest media segment.
+This is a reachability check, not confirmation of the match's actual video
+content or an uninterrupted-playback guarantee. PPV metadata excludes future
+and ended events unless they are marked as continuous channels.
 
-`status.json` records crawl errors, unavailable URLs, and pages containing
-unsupported embedded players. Encrypted/DRM, authenticated, or iframe-only
-sources without a public HLS URL are not extracted. No access controls are
-bypassed. Use streams only where you have permission to access them.
+VLC referrer/user-agent directives are included. Some players ignore these;
+feeds requiring those headers may fail there. No DRM, authentication, or access
+controls are bypassed. Use streams where you have permission to access them.
 
-An incomplete crawl fails the run and retains the last successfully published
-playlist. Check Actions and diagnostics before relying on its freshness. A
-complete scan with no reachable streams publishes an empty M3U. Domain changes,
-expiring URLs, and changes to the site's player logic may require updates.
-Public repository schedules can be disabled after 60 days without activity.
-
-## Initial validation
-
-On 2026-10-05 at 00:31 UTC, the initial scan discovered 43 pages and 42 HLS
-URLs. 35 passed live-manifest and segment checks, 7 were unavailable, and
-there were no discovery errors or unsupported player pages. All five tests
-passed. This result is a snapshot, not a playback guarantee. The schedule
-starts only after this workflow is uploaded to GitHub and enabled.
+An incomplete RoxieStreams discovery fails the run and retains the last
+successful playlist. A complete scan with no reachable streams writes an empty
+playlist. Consult the scan report and Actions history for freshness and source
+coverage. Public-repository schedules may be disabled after 60 days without
+activity. Parser, live-manifest, timing, deduplication, title, image, and PPV
+source-boundary behavior are covered by automated tests.
