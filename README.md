@@ -1,7 +1,7 @@
 # ZeroStreams
 
 An automatically maintained M3U playlist of validated live HLS streams,
-refreshed every **30 minutes**. ZeroStreams brings together clean event titles,
+refreshed every **15 minutes**. ZeroStreams brings together clean event titles,
 thumbnail artwork, clearly labeled alternate feeds, automatic mirror failover,
 and an on-demand refresh button.
 
@@ -53,7 +53,7 @@ RoxieStreams playlist from refreshing; category artwork remains available.
 
 ## Schedule
 
-Runs **every 30 minutes**, at minutes **07 and 37 of every hour** (UTC and
+Runs **every 15 minutes**, at minutes **07, 22, 37, and 52 of every hour** (UTC and
 Philippine time have the same minute offsets). GitHub may delay scheduled jobs.
 
 To refresh whenever you want:
