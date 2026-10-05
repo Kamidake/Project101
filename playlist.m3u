@@ -27,10 +27,6 @@ https://admin.formaturamaxi.com.br/mxgp.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nascar
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nas.m3u8
-#EXTINF:-1 tvg-id="zerostreams.e603721945607098" tvg-name="Memphis Grizzlies vs Atlanta Hawks" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nba.png" group-title="NBA",NBA | Memphis Grizzlies vs Atlanta Hawks
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/nba.m3u8
 #EXTINF:-1 tvg-id="zerostreams.f1320cc92c40b210" tvg-name="Minnesota Timberwolves vs Milwaukee Bucks" tvg-logo="https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/nba.png" group-title="NBA",NBA | Minnesota Timberwolves vs Milwaukee Bucks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
