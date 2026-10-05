@@ -32,6 +32,15 @@ class ParserTests(unittest.TestCase):
             self.assertEqual(scraper.BASE,backup)
             self.assertEqual(result[3],[])
 
+    def test_category_schedule_keeps_all_labels_for_reused_player(self):
+        base = scraper.BASE
+        pages = {base: '<a href="/soccer-streams-6">Old Match</a>',
+                 base+'soccer': '<a href="/soccer-streams-6">Match A</a><a href="/soccer-streams-6">Match B</a>',
+                 base+'soccer-streams-6': 'https://example.org/live.m3u8'}
+        candidates, _, errors = scraper.collect_roxie(pages, {base+'soccer-streams-6':'Old Match'})
+        self.assertEqual(errors, [])
+        self.assertEqual({e['name'] for e in candidates['https://example.org/live.m3u8']}, {'Match A','Match B'})
+
     def test_reject_vod_and_fake_manifest(self):
         for text in ['<html>Denied</html>', '#EXTM3U\n#EXTINF:6,\nx.ts\n#EXT-X-ENDLIST']:
             with patch('scraper.fetch', return_value=text):

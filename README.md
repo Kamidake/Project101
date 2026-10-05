@@ -21,10 +21,9 @@ support `tvg-logo`; VLC may show the playlist without artwork.
 - Alternate URLs for an event labeled **Feed 1**, **Feed 2**, etc., with the
   broadcaster and language labels when available.
 - Exact duplicate URLs removed. Different working mirror URLs are retained.
-- URLs shared across unrelated events labeled as shared channels rather than
-  arbitrarily assigned to one match.
-- Real PPV event posters used for exact matching current events. Other entries
-  receive the included ZeroStreams category thumbnails.
+- Reused player pages and URLs shared across scheduled events labeled as shared
+  feeds within their sport, rather than assigned to an older matchup.
+- Included ZeroStreams category thumbnails for each sport.
 - Stable `tvg-id`, `tvg-name`, `tvg-logo`, and `group-title` M3U attributes.
   Feed numbers can change as feeds become unavailable; IDs do not depend on them.
 
@@ -33,23 +32,8 @@ Example title for alternate feeds:
 
 ## Sources
 
-| Source | Discovery | Current playback support |
-| --- | --- | --- |
-| RoxieStreams | Internal event links and the site's current HLS domain list | Live HLS manifests with reachable media segments |
-| PPV | Documented public catalogue API and public event details | Only directly published public HLS URLs, when supplied |
-
-The [PPV API documentation](https://ppv.st/api) provides titles, posters,
-schedule times, and player links. Current responses provide iframe players
-and empty M3U8 fields. Those iframe URLs **are not M3U playback URLs** and are
-excluded from this playlist. PPV metadata still enriches exact matching events.
-The adapter will include public direct HLS URLs if the API supplies them and
-live validation succeeds. PPV's player integrations are kept intact; the
-scraper does not extract streams from its embedded players or use VIP links.
-
-`ppv-catalog.json` lists current PPV events, artwork, and links to their original
-player pages. `status.json` explicitly reports `embed-only`, partial API errors,
-and the number of direct candidates. A PPV outage does not prevent the primary
-RoxieStreams playlist from refreshing; category artwork remains available.
+RoxieStreams internal event links and current HLS domain lists are the only
+stream source. Only live manifests with reachable media segments are included.
 
 ## Schedule
 
@@ -99,8 +83,7 @@ not require an image library at runtime.
 The scraper checks HLS manifests, rejects ended/VOD playlists, follows master
 playlists to media variants, and reads a small part of the latest media segment.
 This is a reachability check, not confirmation of the match's actual video
-content or an uninterrupted-playback guarantee. PPV metadata excludes future
-and ended events unless they are marked as continuous channels.
+content or an uninterrupted-playback guarantee.
 
 VLC referrer/user-agent directives are included. Some players ignore these;
 feeds requiring those headers may fail there. No DRM, authentication, or access
@@ -110,5 +93,5 @@ An incomplete RoxieStreams discovery fails the run and retains the last
 successful playlist. A complete scan with no reachable streams writes an empty
 playlist. Consult the scan report and Actions history for freshness and source
 coverage. Public-repository schedules may be disabled after 60 days without
-activity. Parser, live-manifest, timing, deduplication, title, image, and PPV
-source-boundary behavior are covered by automated tests.
+activity. Parser, live-manifest, deduplication, title, and image
+behavior are covered by automated tests.

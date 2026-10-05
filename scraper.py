@@ -11,7 +11,7 @@ import re
 import time
 from urllib.parse import urljoin, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
-from metadata import clean_title, decorate, ppv_catalog, roxie_group
+from metadata import clean_title, decorate, roxie_group
 
 BASE = os.getenv('SOURCE_URL', 'https://roxiestreams.info/').rstrip('/') + '/'
 BACKUPS = tuple(x.rstrip('/')+'/' for x in os.getenv('ROXIE_BACKUP_URLS','https://roxiestreams.biz/,https://roxiestreams.su/').split(',') if x.strip())
@@ -180,13 +180,21 @@ def collect_roxie(pages, labels):
     errors = []
     candidates = {}
     unsupported = []
+    event_labels = {}
+    # Category schedules override older homepage links and retain reused slots.
+    for parent, text in sorted(pages.items()):
+        if urlsplit(parent).path.strip('/'):
+            for target, label in internal_links(text, parent):
+                if label:
+                    event_labels.setdefault(target, set()).add(clean_title(label))
     for page, text in sorted(pages.items()):
         try:
             sources = extract_sources(text, page)
             for url in sources:
-                candidates.setdefault(url, []).append({'name': clean_title(labels.get(page) or urlsplit(page).path.strip('/')),
-                                            'group': roxie_group(page), 'provider':'RoxieStreams',
-                                            'page': page, 'url': url})
+                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
+                    candidates.setdefault(url, []).append({'name': name,
+                                                'group': roxie_group(page), 'provider':'RoxieStreams',
+                                                'page': page, 'url': url})
             if not sources and re.search(r'<(?:iframe|video)\b', text):
                 unsupported.append(page)
         except Exception as exc:
@@ -218,10 +226,6 @@ def main():
     print('Discovering stream pages...', flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         pages, candidates, unsupported, errors, attempts = select_roxie(pool)
-        print('Loading PPV public catalogue and direct HLS sources...', flush=True)
-        catalog, ppv_entries, ppv_status = ppv_catalog(fetch)
-        for entry in ppv_entries:
-            candidates.setdefault(entry['url'], []).append(entry)
         entries, unavailable = [], 0
         print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
         def check(aliases):
@@ -240,14 +244,13 @@ def main():
                 entries.extend(result)
             else:
                 unavailable += 1
-    entries = decorate(entries, catalog)
+    entries = decorate(entries)
     report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
               'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
-              'unsupported_pages': unsupported, 'errors': errors, 'ppv':ppv_status,
+              'unsupported_pages': unsupported, 'errors': errors,
               'event_groups':len({e['event_id'] for e in entries}),
               'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
               'roxie_source':BASE,'roxie_attempts':attempts}
-    Path('ppv-catalog.json').write_text(json.dumps(catalog, indent=2) + '\n')
     Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
     # Retain the last successful playlist if every mirror fails discovery.
