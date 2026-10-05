@@ -1,0 +1,77 @@
+{
+  "checked_utc": "2026-10-05T13:51:39.998533+00:00",
+  "api": "https://api.ppv.st/api",
+  "active_events": 13,
+  "embed_only_events": 13,
+  "live_urls": 0,
+  "unavailable_urls": 0,
+  "events": [
+    {
+      "name": "NFL Network",
+      "page": "https://ppv.st/live/nfl-network",
+      "poster": "https://static.ppvservices.st/assets/thumb/5ed7ea60fe8e3842203b0741187f0fd7-thumbnail.jpg"
+    },
+    {
+      "name": "Fox Footy",
+      "page": "https://ppv.st/live/247-fox-footy",
+      "poster": "https://static.ppvservices.st/assets/thumb/514cf8272ec290889a5ce6fd299fb9c8-thumbnail.jpg"
+    },
+    {
+      "name": "Willow",
+      "page": "https://ppv.st/live/247-willow",
+      "poster": "https://static.ppvservices.st/assets/thumb/2e3cba2a94ae6af4b958675e73fe91e9-thumbnail.jpg"
+    },
+    {
+      "name": "Fox Cricket",
+      "page": "https://ppv.st/live/247-fox-cricket",
+      "poster": "https://static.ppvservices.st/assets/thumb/5dfe2fc8e56d59add47afb0f6e996e55-thumbnail.jpg"
+    },
+    {
+      "name": "Sky Sports Golf",
+      "page": "https://ppv.st/live/sky-sports-golf-29059",
+      "poster": "https://static.ppvservices.st/assets/thumb/9950e3e6c1a19cad6a216ec1c6b50d71-thumbnail.jpg"
+    },
+    {
+      "name": "NHL Network",
+      "page": "https://ppv.st/live/nhl-network-29780",
+      "poster": "https://static.ppvservices.st/assets/thumb/4a70bb8cf331b8ab0299fd836b56e2ed-thumbnail.jpg"
+    },
+    {
+      "name": "Fox League",
+      "page": "https://ppv.st/live/247-fox-league",
+      "poster": "https://static.ppvservices.st/assets/thumb/5ec4933f4ae6363e151dfe5c75ad24e3-thumbnail.jpg"
+    },
+    {
+      "name": "24/7 South Park",
+      "page": "https://ppv.st/live/247-south-park",
+      "poster": "https://thumbs.poocloud.in/southpark/preview.jpg"
+    },
+    {
+      "name": "24/7 COWS",
+      "page": "https://ppv.st/live/247-cows",
+      "poster": "https://static.ppvservices.st/assets/thumb/213d77252211e1926309f43b38263a4f-thumbnail.jpg"
+    },
+    {
+      "name": "24/7 Family Guy",
+      "page": "https://ppv.st/live/247-family-guy",
+      "poster": "https://thumbs.poocloud.in/familyguy/preview.jpg"
+    },
+    {
+      "name": "24/7 The Simpsons",
+      "page": "https://ppv.st/live/247-the-simpsons",
+      "poster": "https://thumbs.poocloud.in/thesimpsons/preview.jpg"
+    },
+    {
+      "name": "24/7 SpongeBob Squarepants",
+      "page": "https://ppv.st/live/247-spongebob-squarepants",
+      "poster": "https://static.ppvservices.st/assets/thumb/f8e24d78314ed44b137c90cbf50b1c1d-thumbnail.jpg"
+    },
+    {
+      "name": "Rally TV",
+      "page": "https://ppv.st/live/rally-tv",
+      "poster": "https://static.ppvservices.st/assets/thumb/0b5137de6f5809a3c652fad1b9c1bd57-thumbnail.jpg"
+    }
+  ],
+  "status": "no-playable-direct-hls",
+  "playlist_changed": true
+}

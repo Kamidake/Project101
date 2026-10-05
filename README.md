@@ -33,7 +33,7 @@ Example title for alternate feeds:
 ## Sources
 
 RoxieStreams internal event links and current HLS domain lists are the only
-stream source. Only live manifests with reachable media segments are included.
+stream source for `playlist.m3u`. Only live manifests with reachable media segments are included.
 
 ## Schedule
 
@@ -95,3 +95,25 @@ playlist. Consult the scan report and Actions history for freshness and source
 coverage. Public-repository schedules may be disabled after 60 days without
 activity. Parser, live-manifest, deduplication, title, and image
 behavior are covered by automated tests.
+
+## Separate PPV playlist
+
+[PPV M3U](https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/ppv.m3u) ·
+[PPV workflow](https://github.com/Zer0Spce/ZeroStreams/actions/workflows/ppv.yml) ·
+[PPV report](ppv-status.json)
+
+PPV has its own exporter, tests, diagnostics, and manual **Run workflow** button.
+It checks every 15 minutes at minutes 11, 26, 41, and 56. It never reads or writes
+the Roxie playlist or report. Workflows share a publication lock to avoid racing
+to push the repository.
+
+The documented public streams API and ping mirror discovery are used.
+Active events and continuous channels are considered; future and ended events
+are excluded. Public direct HLS URLs are validated when supplied, with event
+posters and labeled alternate feeds. Embedded player URLs are not M3U URLs.
+Currently the API supplies embeds only, so **ppv.m3u has no playable entries**.
+Embed integrations are not modified or extracted.
+
+API failures retain the previous PPV playlist and fail the PPV run only.
+Identical playlists produce no refresh commit; each run uploads its fresh
+diagnostic report as an artifact. Run locally with `python ppv_scraper.py`.
