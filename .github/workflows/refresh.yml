@@ -45,4 +45,4 @@ jobs:
             git commit -m 'Refresh live playlist'
             git push
           fi
-          # Triggering workflow run
+          # Triggering workflow
