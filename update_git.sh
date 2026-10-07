@@ -9,7 +9,7 @@ fi
 # Configure Git using the Render environment variable
 git config user.name "render-bot"
 git config user.email "bot@render.com"
-git remote set-url origin https://${GITHUB_TOKEN}@github.com/kamidake/Project101.git
+git remote set-url origin https://${GITHUB_TOKEN}@github.com/Kamidake/Project101.git
 
 # Commit and push the updated files
 git add playlist.m3u status.json
