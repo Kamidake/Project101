@@ -1,13 +1,45 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="zerostreams.90a795ca6ab5621b" tvg-name="NBA — Shared Feed" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA — Shared Feed
+#EXTINF:-1 tvg-id="zerostreams.90e298ac81863038" tvg-name="Atlanta Hawks vs Indiana Pacers" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Atlanta Hawks vs Indiana Pacers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="zerostreams.c159187f22261475" tvg-name="Detroit Pistons vs Washington Wizards" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Detroit Pistons vs Washington Wizards
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="zerostreams.90a795ca6ab5621b" tvg-name="Los Angeles Clippers vs Toronto Raptors" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Los Angeles Clippers vs Toronto Raptors
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://tedesco.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="zerostreams.020b8247511aa5de" tvg-name="WWE Smackdown" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown — Feed 1
+#EXTINF:-1 tvg-id="zerostreams.1482c7de233fe065" tvg-name="Minnesota Timberwolves vs Miami Heat" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Minnesota Timberwolves vs Miami Heat
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin.formaturamaxi.com.br/nba4.m3u8
+#EXTINF:-1 tvg-id="zerostreams.4e05893217110266" tvg-name="Philadelphia 76ers vs Boston Celtics" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Philadelphia 76ers vs Boston Celtics
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba5.m3u8
+#EXTINF:-1 tvg-id="zerostreams.9839392d458c9fcc" tvg-name="Sacramento Kings vs Golden State Warriors" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Sacramento Kings vs Golden State Warriors
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba6.m3u8
+#EXTINF:-1 tvg-id="zerostreams.f83ee6255f0180f7" tvg-name="UFC Fight Night: Allen vs Duncan" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Allen vs Duncan — Feed 1
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ncaa-streams-10
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin.formaturamaxi.com.br/ncaa10.m3u8
+#EXTINF:-1 tvg-id="zerostreams.978b25f6b6f39355" tvg-name="UFC Fight Night: Allen vs Duncan" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Allen vs Duncan — Feed 2
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/abbiecadabrii.m3u8
+#EXTINF:-1 tvg-id="zerostreams.aed86d5012ca292d" tvg-name="UFC Fight Night: Allen vs Duncan" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Allen vs Duncan — Feed 3
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/hub.m3u8
+#EXTINF:-1 tvg-id="zerostreams.020b8247511aa5de" tvg-name="WWE: Money In The Bank" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE: Money In The Bank — Feed 1
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/wwe.m3u8
-#EXTINF:-1 tvg-id="zerostreams.f0ae8d396889ae29" tvg-name="WWE Smackdown" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown — Feed 2
+#EXTINF:-1 tvg-id="zerostreams.f0ae8d396889ae29" tvg-name="WWE: Money In The Bank" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE: Money In The Bank — Feed 2
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://tedesco.formaturamaxi.com.br/wwe.m3u8
