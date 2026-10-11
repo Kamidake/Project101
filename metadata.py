@@ -7,7 +7,7 @@ import time
 import unicodedata
 from urllib.parse import urlsplit
 
-LOGO_BASE = 'https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/'
+LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
 GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
           'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
           'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'Combat Sports',
