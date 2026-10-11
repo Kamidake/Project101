@@ -1,4 +1,4 @@
-"""Consistent IPTV titles, category artwork, and feed labels, filtered for specific sports and excluding NCAA, NHL, & MLB."""
+"""Consistent IPTV titles, category artwork, and feed labels."""
 from collections import defaultdict
 import hashlib
 import html
@@ -7,27 +7,17 @@ import time
 import unicodedata
 from urllib.parse import urlsplit
 
-LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
-
-# Updated GROUPS to map only the requested categories
-GROUPS = {
-    'nba': 'NBA', 
-    'wwe': 'WWE', 
-    'ufc': 'UFC',
-    'boxing': 'Boxing', 
-    'fighting': 'Combat Sports',
-    'live': 'Live'
-}
-
-# Updated LOGOS to match the new GROUPS
-LOGOS = {
-    'NBA': 'nba', 
-    'WWE': 'wwe', 
-    'UFC': 'ufc', 
-    'Boxing': 'boxing',
-    'Combat Sports': 'combat-sports',
-    'Live': 'live'
-}
+LOGO_BASE = 'https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/'
+GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
+          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
+          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'Combat Sports',
+          'tna':'Combat Sports', 'ufc':'UFC', 'boxing':'Boxing', 
+          'fighting':'Combat Sports', 'motorsports':'Motorsports'}
+LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
+         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
+         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
+         'Combat Sports':'combat-sports', 'Motorsports':'motorsports',
+         'PPV':'boxing', 'Pay Per View':'boxing'} # Fallback logos for PPV if needed
 
 
 def clean_title(value):
@@ -54,28 +44,14 @@ def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
 
 
-def is_excluded(entry):
-    """Check if the entry relates to NCAA, NHL, or MLB by looking at the name and group."""
-    name = str(entry.get('name', '')).casefold()
-    group = str(entry.get('group', '')).casefold()
-    
-    # Exclude any stream if its name or group contains these terms
-    excluded_terms = ['ncaa', 'nhl', 'mlb']
-    return any(term in name or term in group for term in excluded_terms)
-
-
 def decorate(entries):
-    """Dedupe exact URLs; filter by allowed groups and exclude specific sports; merge matching event names, number distinct feeds."""
-    
-    # 1. Filter entries to only include allowed groups AND drop excluded terms
-    allowed_groups = set(GROUPS.values())
-    filtered_entries = [
-        entry for entry in entries 
-        if entry.get('group') in allowed_groups and not is_excluded(entry)
-    ]
-
+    """Dedupe URLs; exclude streams with no group; conditionally group specific events."""
     by_url = defaultdict(list)
-    for entry in filtered_entries:
+    for entry in entries:
+        # EXCLUSION LOGIC: Skip any stream that has no group assigned
+        if not entry.get('group') or not str(entry.get('group')).strip():
+            continue
+            
         by_url[entry['url']].append(dict(entry))
         
     unique = []
@@ -101,19 +77,23 @@ def decorate(entries):
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
         identity = entry.get('identity') or f'{entry["provider"]}:{urlsplit(url).netloc}:{urlsplit(url).path}'
         entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+        
         unique.append(entry)
-        
-    groups = defaultdict(list)
-    for entry in unique:
-        groups[entry['event_id']].append(entry)
-        
+
+    # Separate grouped streams from flat streams
+    grouped_streams = defaultdict(list)
     result = []
-    for key in sorted(groups):
-        feeds = sorted(groups[key], key=lambda e:(e['provider'],e.get('source_tag',''),e['url']))
-        for index, entry in enumerate(feeds,1):
-            details = [f'Feed {index}'] if len(feeds)>1 else []
+    
+    # Define which groups get the numbered feed logic
+    groups_to_number = {'NBA', 'UFC', 'Boxing', 'Combat Sports', 'WWE', 'PPV', 'Pay Per View'}
+    
+    for entry in unique:
+        if entry.get('group') in groups_to_number:
+            grouped_streams[entry['event_id']].append(entry)
+        else:
+            # Format flat streams directly without feed grouping
+            details = []
             details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
-            
             if entry.get('source_tag'):
                 details.append(entry['source_tag'])
             if entry.get('locale'):
@@ -123,4 +103,20 @@ def decorate(entries):
             entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
             result.append(entry)
             
-    return result
+    # Process and format grouped streams
+    for key in sorted(grouped_streams):
+        feeds = sorted(grouped_streams[key], key=lambda e:(e['provider'], e.get('source_tag',''), e['url']))
+        for index, entry in enumerate(feeds, 1):
+            details = [f'Feed {index}'] if len(feeds) > 1 else []
+            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
+            if entry.get('source_tag'):
+                details.append(entry['source_tag'])
+            if entry.get('locale'):
+                details.append(entry['locale'].upper())
+                
+            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+            result.append(entry)
+            
+    # Sort the final combined output by group and then event name
+    return sorted(result, key=lambda e: (e.get('group', ''), e.get('name', '')))
