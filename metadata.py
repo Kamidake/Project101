@@ -48,7 +48,7 @@ def decorate(entries):
     """Dedupe URLs; strictly include only specific groups; conditionally group events."""
     
     # Define the strict whitelist of allowed groups (case-insensitive mapping)
-    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports'}
+    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports', 'wwe'}
     
     by_url = defaultdict(list)
     for entry in entries:
