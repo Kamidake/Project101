@@ -1,1 +1,17 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="Lennon.41df34b610ddfe04" tvg-name="PPV — Shared Feed" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | PPV — Shared Feed
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/ppv.m3u8
+#EXTINF:-1 tvg-id="Lennon.e603721945607098" tvg-name="Dallas Mavericks vs Houston Rockets" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Dallas Mavericks vs Houston Rockets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="Lennon.c159187f22261475" tvg-name="Milwaukee Bucks vs Charlotte Hornets" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Milwaukee Bucks vs Charlotte Hornets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="Lennon.69f82e9ce08bb5a8" tvg-name="NBA2 — Shared Feed" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA2 — Shared Feed
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba2.m3u8
