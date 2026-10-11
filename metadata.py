@@ -45,11 +45,16 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Dedupe URLs; exclude streams with no group; conditionally group specific events."""
+    """Dedupe URLs; strictly include only specific groups; conditionally group events."""
+    
+    # Define the strict whitelist of allowed groups (case-insensitive mapping)
+    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports'}
+    
     by_url = defaultdict(list)
     for entry in entries:
-        # EXCLUSION LOGIC: Skip any stream that has no group assigned
-        if not entry.get('group') or not str(entry.get('group')).strip():
+        # INCLUSION LOGIC: Skip any stream whose group is not in the allowed list
+        group = str(entry.get('group', '')).strip().casefold()
+        if not group or group not in allowed_groups:
             continue
             
         by_url[entry['url']].append(dict(entry))
