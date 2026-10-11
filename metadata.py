@@ -1,4 +1,4 @@
-"""Consistent IPTV titles, category artwork, and feed labels, filtered for specific sports and excluding NCAA."""
+"""Consistent IPTV titles, category artwork, and feed labels, filtered for specific sports and excluding NCAA, NHL, & MLB."""
 from collections import defaultdict
 import hashlib
 import html
@@ -54,21 +54,24 @@ def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
 
 
-def is_ncaa(entry):
-    """Check if the entry relates to NCAA by looking at the name and group."""
+def is_excluded(entry):
+    """Check if the entry relates to NCAA, NHL, or MLB by looking at the name and group."""
     name = str(entry.get('name', '')).casefold()
     group = str(entry.get('group', '')).casefold()
-    return 'ncaa' in name or 'ncaa' in group
+    
+    # Exclude any stream if its name or group contains these terms
+    excluded_terms = ['ncaa', 'nhl', 'mlb']
+    return any(term in name or term in group for term in excluded_terms)
 
 
 def decorate(entries):
-    """Dedupe exact URLs; filter by allowed groups and exclude NCAA; merge matching event names, number distinct feeds."""
+    """Dedupe exact URLs; filter by allowed groups and exclude specific sports; merge matching event names, number distinct feeds."""
     
-    # 1. Filter entries to only include allowed groups AND exclude NCAA
+    # 1. Filter entries to only include allowed groups AND drop excluded terms
     allowed_groups = set(GROUPS.values())
     filtered_entries = [
         entry for entry in entries 
-        if entry.get('group') in allowed_groups and not is_ncaa(entry)
+        if entry.get('group') in allowed_groups and not is_excluded(entry)
     ]
 
     by_url = defaultdict(list)
