@@ -81,7 +81,7 @@ def decorate(entries):
         date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
         identity = entry.get('identity') or f'{entry["provider"]}:{urlsplit(url).netloc}:{urlsplit(url).path}'
-        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+        entry['tvg_id'] = 'Lennon.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
         
         unique.append(entry)
 
