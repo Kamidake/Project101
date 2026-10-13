@@ -106,7 +106,9 @@ def decorate(entries):
                 # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
                 pht_timestamp = entry['starts_at'] + 28800
                 event_time = time.strftime('%b %d, %I:%M %p PHT', time.gmtime(pht_timestamp))
-                details.append(event_time)
+                
+                # Append time to the base name so it shows up directly in tvg-name
+                entry['name'] = f"{entry['name']} [{event_time}]"
 
             # 2. Add Feed Number (if applicable)
             is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
