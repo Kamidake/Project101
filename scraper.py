@@ -38,12 +38,28 @@ class Links(HTMLParser):
         self.current = None
         self.heading = False
         self.title = ''
+        
+        # Table tracking for Start Time extraction
+        self.in_tr = False
+        self.td_count = 0
+        self.pending_link = None
+        self.time_str = ''
+        self.in_time_cell = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        if tag == 'a' and attrs.get('href'):
+        if tag == 'tr':
+            self.in_tr = True
+            self.td_count = 0
+            self.pending_link = None
+            self.time_str = ''
+        elif tag == 'td':
+            self.td_count += 1
+            if self.td_count == 2:
+                self.in_time_cell = True
+        elif tag == 'a' and attrs.get('href'):
             self.current = [attrs['href'], '']
-        if tag in ('h1', 'h2') and not self.title:
+        elif tag in ('h1', 'h2') and not self.title:
             self.heading = True
 
     def handle_data(self, data):
@@ -51,12 +67,24 @@ class Links(HTMLParser):
             self.current[1] += data
         if self.heading:
             self.title += data
+        if self.in_time_cell:
+            self.time_str += data
 
     def handle_endtag(self, tag):
         if tag == 'a' and self.current is not None:
-            self.links.append(tuple(self.current))
+            if self.in_tr and self.td_count == 1:
+                self.pending_link = tuple(self.current)
+            else:
+                self.links.append((*self.current, ''))
             self.current = None
-        if tag in ('h1', 'h2'):
+        elif tag == 'td':
+            self.in_time_cell = False
+        elif tag == 'tr':
+            self.in_tr = False
+            if self.pending_link:
+                self.links.append((*self.pending_link, self.time_str.strip()))
+                self.pending_link = None
+        elif tag in ('h1', 'h2'):
             self.heading = False
 
 
@@ -64,12 +92,11 @@ def internal_links(text, page, base=None):
     base = base or BASE
     parser = Links()
     parser.feed(text)
-    for href, label in parser.links:
+    for href, label, time_str in parser.links:
         url = urljoin(page, href).split('#')[0]
         parts = urlsplit(url)
         if parts.scheme not in ('http', 'https'):
             continue
-        # Mirrors sometimes retain absolute links to the original domain.
         if parts.hostname in ROXIE_HOSTS:
             target = urlsplit(base)
             url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
@@ -78,7 +105,7 @@ def internal_links(text, page, base=None):
             continue
         if parts.query or re.search(r'\.[a-zA-Z0-9]{2,5}$', parts.path) or parts.path == '/multiview':
             continue
-        yield url, ' '.join(label.split())
+        yield url, ' '.join(label.split()), time_str
 
 
 @lru_cache(maxsize=64)
@@ -105,7 +132,6 @@ def extract_sources(text, page, domain_loader=load_domains):
 
 
 def live_media(url, referer, depth=0):
-    """Require a live media manifest and a reachable segment, not just HTTP 200."""
     if depth > 3:
         return False
     text = fetch(url, referer)
@@ -145,9 +171,20 @@ def write_playlist_if_changed(content, path=Path('playlist.m3u')):
     temporary.replace(path)
     return True
 
+def parse_time(time_str):
+    """Parse time string like 'Oct 14, 2026, 7:00 AM' into UTC timestamp"""
+    if not time_str:
+        return None
+    try:
+        clean_str = re.sub(r'\s+', ' ', time_str).strip()
+        dt_obj = dt.datetime.strptime(clean_str, "%b %d, %Y, %I:%M %p")
+        # Treat the scraped time as UTC baseline. metadata.py will add the +8 timezone offset
+        return int(dt_obj.replace(tzinfo=dt.timezone.utc).timestamp())
+    except Exception:
+        return None
 
 def discover_roxie(base, pool):
-    pages, errors, labels = {}, [], {base:'RoxieStreams'}
+    pages, errors, labels, times = {}, [], {base:'RoxieStreams'}, {}
     pending = {base}
     for _ in range(5):
         batch = sorted(pending - pages.keys())
@@ -163,42 +200,45 @@ def discover_roxie(base, pool):
             try:
                 text = future.result()
                 pages[page] = text
-                for url, label in internal_links(text,page,base):
+                for url, label, time_str in internal_links(text,page,base):
                     if label:
                         labels.setdefault(url,label)
+                    if time_str:
+                        times.setdefault(url, time_str)
                     if url not in pages:
                         pending.add(url)
             except Exception as exc:
                 pages[page] = ''
-                # Ignore 404 errors for dead stream links instead of failing the workflow
                 if 'HTTP Error 404' not in str(exc):
                     errors.append({'page': page, 'error': str(exc)})
                 else:
                     print(f'Skipped dead link (404): {page}', flush=True)
     if pending - pages.keys():
         errors.append({'error':'Crawl depth limit reached'})
-    return pages, labels, errors
+    return pages, labels, times, errors
 
 
-def collect_roxie(pages, labels):
+def collect_roxie(pages, labels, times):
     errors = []
     candidates = {}
     unsupported = []
     event_labels = {}
-    # Category schedules override older homepage links and retain reused slots.
     for parent, text in sorted(pages.items()):
         if urlsplit(parent).path.strip('/'):
-            for target, label in internal_links(text, parent):
+            for target, label, _ in internal_links(text, parent):
                 if label:
                     event_labels.setdefault(target, set()).add(clean_title(label))
     for page, text in sorted(pages.items()):
         try:
             sources = extract_sources(text, page)
             for url in sources:
+                page_time = times.get(page, '')
+                starts_at = parse_time(page_time)
                 for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
-                    candidates.setdefault(url, []).append({'name': name,
-                                                'group': roxie_group(page), 'provider':'RoxieStreams',
-                                                'page': page, 'url': url})
+                    candidate = {'name': name, 'group': roxie_group(page), 'provider':'RoxieStreams', 'page': page, 'url': url}
+                    if starts_at:
+                        candidate['starts_at'] = starts_at
+                    candidates.setdefault(url, []).append(candidate)
             if not sources and re.search(r'<(?:iframe|video)\b', text):
                 unsupported.append(page)
         except Exception as exc:
@@ -212,8 +252,8 @@ def select_roxie(pool):
     for base in dict.fromkeys((BASE, *BACKUPS)):
         BASE = base
         try:
-            pages, labels, errors = discover_roxie(base,pool)
-            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+            pages, labels, times, errors = discover_roxie(base,pool)
+            candidates, unsupported, source_errors = collect_roxie(pages,labels,times)
             errors.extend(source_errors)
             if not candidates:
                 errors.append({'error':'No HLS sources discovered'})
@@ -236,7 +276,6 @@ def main():
             for entry in aliases:
                 try:
                     if live_media(entry['url'], entry['page']):
-                        # Use the verified referrer on the deduplicated playback entry.
                         return [dict(alias, page=entry['page']) for alias in aliases]
                 except Exception:
                     pass
@@ -257,7 +296,6 @@ def main():
               'roxie_source':BASE,'roxie_attempts':attempts}
     Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
-    # Retain the last successful playlist if every mirror fails discovery.
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
     changed = write_playlist_if_changed(render(entries))
