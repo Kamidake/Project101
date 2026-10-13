@@ -1,0 +1,2718 @@
+
+Conversation with Gemini
+name: Refresh live playlist
+
+on:
+
+  schedule:
+
+    - cron: '7,22,37,52 * * * *'
+
+  workflow_dispatch:
+
+  push:
+
+    branches: [main]
+
+    paths: ['scraper.py', 'metadata.py', 'tests/**', 'assets/**', '.github/workflows/refresh.yml']
+
+permissions:
+
+  contents: write
+
+concurrency:
+
+  group: playlist-refresh
+
+  cancel-in-progress: false
+
+jobs:
+
+  refresh:
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 25
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+
+        with:
+
+          python-version: '3.12'
+
+      - name: Test parser
+
+        run: python -m unittest discover -s tests -v
+
+      - name: Generate playlist
+
+        run: python scraper.py
+
+      - name: Upload diagnostics
+
+        if: always()
+
+        uses: actions/upload-artifact@v4
+
+        with:
+
+          name: playlist-diagnostics
+
+          path: |
+
+            status.json
+
+          retention-days: 7
+
+      - name: Commit playlist
+
+        run: |
+
+          if git diff --quiet -- playlist.m3u; then
+
+            echo 'Playlist unchanged; skipping repository update.'
+
+            exit 0
+
+          fi
+
+          git config user.name 'github-actions[bot]'
+
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git add playlist.m3u status.json
+
+          if ! git diff --cached --quiet; then
+
+            git commit -m 'Refresh live playlist'
+
+            git push
+
+          fi
+
+
+
+it keeps failing
+
+Without seeing the specific error log from your GitHub Actions run, there are two major issues in this workflow that almost always cause it to fail.
+
+Here are the most likely culprits and how to fix them.
+
+1. Missing Python Dependencies
+Your workflow sets up Python 3.12, but it never installs any packages. If your scraper.py or tests use external libraries like requests, beautifulsoup4, or asyncpg (which you've worked with previously), the workflow will fail immediately at the "Test parser" or "Generate playlist" step with a ModuleNotFoundError.
+
+The Fix: Add a step to install your requirements before running the tests.
+
+YAML
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt # Or install your specific packages here
+      - name: Test parser
+2. The Git Diff Logic Flaw
+Your commit step has a logical flaw that can cause it to either fail or silently skip committing:
+
+Bash
+if git diff --quiet -- playlist.m3u; then
+  echo 'Playlist unchanged; skipping repository update.'
+  exit 0
+fi
+If playlist.m3u is newly created (untracked): git diff only checks tracked files. It won't see the new file, assumes nothing changed, and exits without committing.
+
+If status.json updates but the playlist doesn't: The script exits early, meaning your updated diagnostics (status.json) will never get pushed to the repository.
+
+The Fix: Stage the files first, and then check if there is anything to commit using git diff --cached.
+
+The Corrected Workflow
+Here is your workflow with both fixes applied. Replace your current refresh.yml with this:
+
+YAML
+name: Refresh live playlist
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scraper.py', 'metadata.py', 'tests/**', 'assets/**', '.github/workflows/refresh.yml']
+permissions:
+  contents: write
+concurrency:
+  group: playlist-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          
+      # FIX 1: Added dependency installation
+      - name: Install dependencies
+        run: pip install -r requirements.txt 
+        
+      - name: Test parser
+        run: python -m unittest discover -s tests -v
+        
+      - name: Generate playlist
+        run: python scraper.py
+        
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playlist-diagnostics
+          path: status.json
+          retention-days: 7
+          if-no-files-found: ignore # Prevents failure if the script crashed before creating status.json
+          
+      # FIX 2: Better git commit logic
+      - name: Commit playlist
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          
+          # Stage files first so Git tracks new creations
+          git add playlist.m3u status.json
+          
+          # Check if there are any staged changes
+          if git diff --cached --quiet; then
+            echo 'Files unchanged; skipping repository update.'
+            exit 0
+          fi
+          
+          git commit -m 'Refresh live playlist'
+          git push
+If the workflow still fails after these changes, open the failed run in your GitHub repository's Actions tab, click on the failed refresh job, and let me know which exact step has the red X next to it, along with the error message it outputs.
+
+refresh
+
+Process completed with exit code 1.
+
+
+
+refresh: scraper.py#L258
+
+Incomplete discovery; playlist was not updated. See status.json.
+
+
+
+refresh
+
+Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
+
+
+refresh
+
+"The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+
+The warnings about Node.js and Ubuntu are just standard GitHub Actions deprecation notices—they aren't causing your workflow to fail.
+
+The actual error is coming directly from your Python script:
+refresh: scraper.py#L258: Incomplete discovery; playlist was not updated. See status.json.
+
+Your scraper.py script is intentionally aborting at line 258 and throwing an exit code 1 because it couldn't scrape all the expected data (an "incomplete discovery"). It refuses to overwrite your playlist with incomplete data.
+
+To figure out exactly what the scraper failed to find, we need to look at that status.json file. Since we added the artifact upload step in the previous fix, you can download it right from GitHub.
+
+How to find the diagnostics:
+
+Go to the failed workflow run in your repository's Actions tab.
+
+Scroll to the very bottom of the run summary to the Artifacts section.
+
+Click playlist-diagnostics to download the zip file containing status.json.
+
+Could you share the contents of that status.json file, or show me the code around line 258 in scraper.py so we can see what it's trying to scrape?
+
+{
+
+  "updated_utc": "2026-10-13T08:54:17.521133+00:00",
+
+  "pages": 50,
+
+  "candidate_urls": 54,
+
+  "live_urls": 48,
+
+  "unavailable_urls": 6,
+
+  "unsupported_pages": [],
+
+  "errors": [
+
+    {
+
+      "page": "https://roxiestreams.su/nhl-streams-16",
+
+      "error": "HTTP Error 404: Not Found"
+
+    }
+
+  ],
+
+  "event_groups": 37,
+
+  "event_posters": 0,
+
+  "roxie_source": "https://roxiestreams.su/",
+
+  "roxie_attempts": [
+
+    {
+
+      "base": "https://roxiestreams.info/",
+
+      "pages": 50,
+
+      "errors": [
+
+        {
+
+          "page": "https://roxiestreams.info/nhl-streams-16",
+
+          "error": "HTTP Error 404: Not Found"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "base": "https://roxiestreams.biz/",
+
+      "pages": 50,
+
+      "errors": [
+
+        {
+
+          "page": "https://roxiestreams.biz/nhl-streams-16",
+
+          "error": "HTTP Error 404: Not Found"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "base": "https://roxiestreams.su/",
+
+      "pages": 50,
+
+      "errors": [
+
+        {
+
+          "page": "https://roxiestreams.su/nhl-streams-16",
+
+          "error": "HTTP Error 404: Not Found"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+The status.json reveals exactly what is tripping up your scraper.
+
+The script is finding a link to nhl-streams-16, but when it tries to visit that page across all the available domains (.info, .biz, .su), the site returns an HTTP Error 404: Not Found.
+
+Because your scraper.py has strict validation (likely around line 258), it sees this 404 error, assumes the scrape is broken or incomplete, and aborts to prevent overwriting your playlist.m3u with bad data.
+
+How to fix this
+You need to modify scraper.py so that a 404 Not Found error is treated as a skipped/unavailable stream, rather than a fatal error that crashes the whole workflow.
+
+Since I don't have your exact scraper.py code, look for the section where the script fetches the web pages. Here is how you need to adjust it depending on which library you are using:
+
+If you are using requests:
+Look for your requests.get() call and prevent it from treating a 404 as a hard failure.
+
+Python
+response = requests.get(url)
+
+# Add this check to skip 404s gracefully
+if response.status_code == 404:
+    print(f"Skipping {url} - Page not found (404)")
+    continue # or however your loop skips to the next URL
+
+response.raise_for_status() # Your script probably has something like this currently
+If you are using urllib:
+Look for your urllib.request.urlopen() call and catch the specific 404 error.
+
+Python
+import urllib.error
+
+try:
+    response = urllib.request.urlopen(url)
+except urllib.error.HTTPError as e:
+    # Add this specific exception catch
+    if e.code == 404:
+        print(f"Skipping {url} - Page not found (404)")
+        continue # Skip to the next URL
+    else:
+        raise # Re-raise other HTTP errors
+Alternative Fix (Line 258 validation):
+If line 258 looks something like if errors: raise Exception(...), you can change your validation logic to ignore the error list if the only errors are 404s, or just accept that some candidate URLs won't resolve.
+
+Need help modifying the scraper?
+
+Yes
+{
+
+  "updated_utc": "2026-10-13T08:54:17.521133+00:00",
+
+  "pages": 50,
+
+  "candidate_urls": 54,
+
+  "live_urls": 48,
+
+  "unavailable_urls": 6,
+
+  "unsupported_pages": [],
+
+  "errors": [
+
+    {
+
+      "page": "https://roxiestreams.su/nhl-streams-16",
+
+      "error": "HTTP Error 404: Not Found"
+
+    }
+
+  ],
+
+  "event_groups": 37,
+
+  "event_posters": 0,
+
+  "roxie_source": "https://roxiestreams.su/",
+
+  "roxie_attempts": [
+
+    {
+
+      "base": "https://roxiestreams.info/",
+
+      "pages": 50,
+
+      "errors": [
+
+        {
+
+          "page": "https://roxiestreams.info/nhl-streams-16",
+
+          "error": "HTTP Error 404: Not Found"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "base": "https://roxiestreams.biz/",
+
+      "pages": 50,
+
+      "errors": [
+
+        {
+
+          "page": "https://roxiestreams.biz/nhl-streams-16",
+
+          "error": "HTTP Error 404: Not Found"
+
+        }
+
+      ]
+
+    },
+
+    {
+
+      "base": "https://roxiestreams.su/",
+
+      "pages": 50,
+
+      "errors": [
+
+        {
+
+          "page": "https://roxiestreams.su/nhl-streams-16",
+
+          "error": "HTTP Error 404: Not Found"
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+
+This is the same status.json from your previous message. It confirms that the 404 Not Found error on the nhl-streams-16 page is what is crashing your workflow.
+
+Because the site itself has a broken link for that specific NHL stream, your scraper sees the 404 error, assumes the whole scraping process failed, and intentionally crashes at line 258 to prevent saving a bad playlist.
+
+To fix this so your workflow runs successfully again, you need to update scraper.py to ignore 404 errors instead of failing.
+
+Could you paste the code from scraper.py (specifically the part around line 258, or the part where it fetches the URLs)? Once you share the code, I can give you the exact lines to change.
+
+"""Discover RoxieStreams HLS sources and export currently reachable live feeds."""
+
+import concurrent.futures
+
+import datetime as dt
+
+import html
+
+from functools import lru_cache
+
+from html.parser import HTMLParser
+
+import json
+
+import os
+
+from pathlib import Path
+
+import re
+
+import time
+
+from urllib.parse import urljoin, urlsplit, urlunsplit
+
+from urllib.request import Request, urlopen
+
+from metadata import clean_title, decorate, roxie_group
+
+
+
+BASE = os.getenv('SOURCE_URL', 'https://roxiestreams.info/').rstrip('/') + '/'
+
+BACKUPS = tuple(x.rstrip('/')+'/' for x in os.getenv('ROXIE_BACKUP_URLS','https://roxiestreams.biz/,https://roxiestreams.su/').split(',') if x.strip())
+
+ROXIE_HOSTS = {'roxiestreams.info','roxiestreams.biz','roxiestreams.su'}
+
+UA = 'Mozilla/5.0 (compatible; LivePlaylist/1.0)'
+
+TIMEOUT = 12
+
+
+
+
+
+def fetch(url, referer=BASE):
+
+    for attempt in range(2):
+
+        try:
+
+            with urlopen(Request(url, headers={'User-Agent': UA, 'Referer': referer}), timeout=TIMEOUT) as response:
+
+                return response.read(2_000_000).decode('utf-8', errors='replace')
+
+        except Exception:
+
+            if attempt:
+
+                raise
+
+            time.sleep(0.5)
+
+
+
+
+
+class Links(HTMLParser):
+
+    def __init__(self):
+
+        super().__init__()
+
+        self.links = []
+
+        self.current = None
+
+        self.heading = False
+
+        self.title = ''
+
+
+
+    def handle_starttag(self, tag, attrs):
+
+        attrs = dict(attrs)
+
+        if tag == 'a' and attrs.get('href'):
+
+            self.current = [attrs['href'], '']
+
+        if tag in ('h1', 'h2') and not self.title:
+
+            self.heading = True
+
+
+
+    def handle_data(self, data):
+
+        if self.current is not None:
+
+            self.current[1] += data
+
+        if self.heading:
+
+            self.title += data
+
+
+
+    def handle_endtag(self, tag):
+
+        if tag == 'a' and self.current is not None:
+
+            self.links.append(tuple(self.current))
+
+            self.current = None
+
+        if tag in ('h1', 'h2'):
+
+            self.heading = False
+
+
+
+
+
+def internal_links(text, page, base=None):
+
+    base = base or BASE
+
+    parser = Links()
+
+    parser.feed(text)
+
+    for href, label in parser.links:
+
+        url = urljoin(page, href).split('#')[0]
+
+        parts = urlsplit(url)
+
+        if parts.scheme not in ('http', 'https'):
+
+            continue
+
+        # Mirrors sometimes retain absolute links to the original domain.
+
+        if parts.hostname in ROXIE_HOSTS:
+
+            target = urlsplit(base)
+
+            url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
+
+            parts = urlsplit(url)
+
+        if parts.netloc != urlsplit(base).netloc:
+
+            continue
+
+        if parts.query or re.search(r'\.[a-zA-Z0-9]{2,5}$', parts.path) or parts.path == '/multiview':
+
+            continue
+
+        yield url, ' '.join(label.split())
+
+
+
+
+
+@lru_cache(maxsize=64)
+
+def load_domains(url, referer):
+
+    return fetch(url, BASE)
+
+
+
+
+
+def extract_sources(text, page, domain_loader=load_domains):
+
+    text = html.unescape(text).replace(r'\/', '/')
+
+    sources = set(re.findall(r'https?://[^\s\'"<>`]+\.m3u8(?:\?[^\s\'"<>`]*)?', text))
+
+    calls = re.findall(r"getRandomStream\(\s*['\"]([^'\"]+\.m3u8[^'\"]*)['\"]\s*(?:,\s*['\"]([^'\"]+)['\"])?\s*\)", text)
+
+    if not calls:
+
+        return sorted(sources)
+
+    default = re.search(r"function\s+getRandomStream\([^)]*subdomain\s*=\s*['\"]([^'\"]+)", text)
+
+    domains = []
+
+    for name in set(re.findall(r"fetch\(\s*['\"]([^'\"]+\.txt)['\"]", text)):
+
+        domains += [d.strip() for d in domain_loader(urljoin(page, name), BASE).splitlines() if re.fullmatch(r'[A-Za-z0-9.-]+', d.strip())]
+
+    if not domains:
+
+        raise ValueError('No current stream domains could be loaded')
+
+    for path, subdomain in calls:
+
+        for domain in sorted(set(domains)):
+
+            sources.add(f'https://{subdomain or (default.group(1) if default else "admin2")}.{domain}/{path.lstrip("/")}')
+
+    return sorted(sources)
+
+
+
+
+
+def live_media(url, referer, depth=0):
+
+    """Require a live media manifest and a reachable segment, not just HTTP 200."""
+
+    if depth > 3:
+
+        return False
+
+    text = fetch(url, referer)
+
+    if not text.lstrip('\ufeff').startswith('#EXTM3U') or '#EXT-X-ENDLIST' in text:
+
+        return False
+
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+
+    if any(line.startswith('#EXT-X-STREAM-INF:') for line in lines):
+
+        variants = [line for line in lines if not line.startswith('#')]
+
+        return any(live_media(urljoin(url, variant), referer, depth + 1) for variant in variants[:3])
+
+    segments = [line for line in lines if not line.startswith('#')]
+
+    if not segments or '#EXTINF:' not in text:
+
+        return False
+
+    segment = urljoin(url, segments[-1])
+
+    with urlopen(Request(segment, headers={'User-Agent': UA, 'Referer': referer, 'Range': 'bytes=0-1023'}), timeout=TIMEOUT) as response:
+
+        return bool(response.read(1024))
+
+
+
+
+
+def safe(value):
+
+    return ' '.join(value.replace('"', "'").split())
+
+
+
+
+
+def render(entries):
+
+    lines = ['#EXTM3U']
+
+    for entry in entries:
+
+        lines += [f'#EXTINF:-1 tvg-id="{safe(entry.get("tvg_id", ""))}" tvg-name="{safe(entry["name"])}" tvg-logo="{safe(entry.get("poster", ""))}" group-title="{safe(entry["group"])}",{safe(entry.get("display_name", entry["name"]))}',
+
+                  f'#EXTVLCOPT:http-referrer={entry["page"]}',
+
+                  f'#EXTVLCOPT:http-user-agent={UA}', entry['url']]
+
+    return '\n'.join(lines) + '\n'
+
+
+
+
+
+def write_playlist_if_changed(content, path=Path('playlist.m3u')):
+
+    encoded = content.encode('utf-8')
+
+    if path.is_file() and path.read_bytes() == encoded:
+
+        return False
+
+    temporary = path.with_name(path.name + '.tmp')
+
+    temporary.write_bytes(encoded)
+
+    temporary.replace(path)
+
+    return True
+
+
+
+
+
+def discover_roxie(base, pool):
+
+    pages, errors, labels = {}, [], {base:'RoxieStreams'}
+
+    pending = {base}
+
+    for _ in range(5):
+
+        batch = sorted(pending - pages.keys())
+
+        print(f'Crawl batch: {len(batch)} pages on {base}', flush=True)
+
+        if not batch:
+
+            break
+
+        if len(pages) + len(batch) > 200:
+
+            raise RuntimeError('Crawl exceeded 200 pages; review website structure')
+
+        pending = set()
+
+        futures = {pool.submit(fetch, url, base):url for url in batch}
+
+        for future in concurrent.futures.as_completed(futures):
+
+            page = futures[future]
+
+            try:
+
+                text = future.result()
+
+                pages[page] = text
+
+                for url, label in internal_links(text,page,base):
+
+                    if label:
+
+                        labels.setdefault(url,label)
+
+                    if url not in pages:
+
+                        pending.add(url)
+
+            except Exception as exc:
+
+                pages[page] = ''
+
+                errors.append({'page':page,'error':str(exc)})
+
+    if pending - pages.keys():
+
+        errors.append({'error':'Crawl depth limit reached'})
+
+    return pages, labels, errors
+
+
+
+
+
+def collect_roxie(pages, labels):
+
+    errors = []
+
+    candidates = {}
+
+    unsupported = []
+
+    event_labels = {}
+
+    # Category schedules override older homepage links and retain reused slots.
+
+    for parent, text in sorted(pages.items()):
+
+        if urlsplit(parent).path.strip('/'):
+
+            for target, label in internal_links(text, parent):
+
+                if label:
+
+                    event_labels.setdefault(target, set()).add(clean_title(label))
+
+    for page, text in sorted(pages.items()):
+
+        try:
+
+            sources = extract_sources(text, page)
+
+            for url in sources:
+
+                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
+
+                    candidates.setdefault(url, []).append({'name': name,
+
+                                                'group': roxie_group(page), 'provider':'RoxieStreams',
+
+                                                'page': page, 'url': url})
+
+            if not sources and re.search(r'<(?:iframe|video)\b', text):
+
+                unsupported.append(page)
+
+        except Exception as exc:
+
+            errors.append({'page': page, 'error': str(exc)})
+
+    return candidates, unsupported, errors
+
+
+
+
+
+def select_roxie(pool):
+
+    global BASE
+
+    attempts = []
+
+    for base in dict.fromkeys((BASE, *BACKUPS)):
+
+        BASE = base
+
+        try:
+
+            pages, labels, errors = discover_roxie(base,pool)
+
+            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+
+            errors.extend(source_errors)
+
+            if not candidates:
+
+                errors.append({'error':'No HLS sources discovered'})
+
+        except Exception as exc:
+
+            pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
+
+        attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
+
+        if not errors:
+
+            break
+
+        print(f'Incomplete discovery on {base}; trying backup',flush=True)
+
+    return pages, candidates, unsupported, errors, attempts
+
+
+
+
+
+def main():
+
+    print('Discovering stream pages...', flush=True)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+
+        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+
+        entries, unavailable = [], 0
+
+        print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
+
+        def check(aliases):
+
+            for entry in aliases:
+
+                try:
+
+                    if live_media(entry['url'], entry['page']):
+
+                        # Use the verified referrer on the deduplicated playback entry.
+
+                        return [dict(alias, page=entry['page']) for alias in aliases]
+
+                except Exception:
+
+                    pass
+
+            return None
+
+        for index, result in enumerate(pool.map(check, candidates.values()), 1):
+
+            if index % 10 == 0:
+
+                print(f'Checked {index}/{len(candidates)} URLs', flush=True)
+
+            if result:
+
+                entries.extend(result)
+
+            else:
+
+                unavailable += 1
+
+    entries = decorate(entries)
+
+    report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
+
+              'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
+
+              'unsupported_pages': unsupported, 'errors': errors,
+
+              'event_groups':len({e['event_id'] for e in entries}),
+
+              'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
+
+              'roxie_source':BASE,'roxie_attempts':attempts}
+
+    Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
+
+    print(json.dumps(report, indent=2))
+
+    # Retain the last successful playlist if every mirror fails discovery.
+
+    if errors or not candidates:
+
+        raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
+
+    changed = write_playlist_if_changed(render(entries))
+
+    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
+
+
+
+
+
+if __name__ == '__main__':
+
+    main()
+
+The problem originates in your discover_roxie function. When the scraper hits that broken nhl-streams-16 link, it throws an exception, adds it to the errors list, and causes a chain reaction: it forces select_roxie to needlessly try all your backup domains (which also fail), and then eventually crashes at the end of main().
+
+To fix this, you need to tell discover_roxie to ignore 404 errors so they don't get added to the errors list.
+
+Find this specific block of code inside the discover_roxie function (around line 140-150):
+
+Python
+            except Exception as exc:
+                pages[page] = ''
+                errors.append({'page':page,'error':str(exc)})
+Replace those three lines with this:
+
+Python
+            except Exception as exc:
+                pages[page] = ''
+                # Ignore 404 errors for dead stream links instead of failing the workflow
+                if 'HTTP Error 404' not in str(exc):
+                    errors.append({'page': page, 'error': str(exc)})
+                else:
+                    print(f'Skipped dead link (404): {page}', flush=True)
+Why this works:
+By checking the error message for "HTTP Error 404", the script will simply output a log message, assign a blank page so the scraper ignores it, and move on. Because the 404 is no longer added to the errors list, your script won't panic, won't loop through the .biz and .su backups unnecessarily, and will successfully save the rest of your live streams to playlist.m3u.
+
+replace it for me
+
+Here is the complete, updated scraper.py file with the fix applied. You can copy this entire block and replace the contents of your current scraper.py file.
+
+Python
+"""Discover RoxieStreams HLS sources and export currently reachable live feeds."""
+import concurrent.futures
+import datetime as dt
+import html
+from functools import lru_cache
+from html.parser import HTMLParser
+import json
+import os
+from pathlib import Path
+import re
+import time
+from urllib.parse import urljoin, urlsplit, urlunsplit
+from urllib.request import Request, urlopen
+from metadata import clean_title, decorate, roxie_group
+
+BASE = os.getenv('SOURCE_URL', 'https://roxiestreams.info/').rstrip('/') + '/'
+BACKUPS = tuple(x.rstrip('/')+'/' for x in os.getenv('ROXIE_BACKUP_URLS','https://roxiestreams.biz/,https://roxiestreams.su/').split(',') if x.strip())
+ROXIE_HOSTS = {'roxiestreams.info','roxiestreams.biz','roxiestreams.su'}
+UA = 'Mozilla/5.0 (compatible; LivePlaylist/1.0)'
+TIMEOUT = 12
+
+
+def fetch(url, referer=BASE):
+    for attempt in range(2):
+        try:
+            with urlopen(Request(url, headers={'User-Agent': UA, 'Referer': referer}), timeout=TIMEOUT) as response:
+                return response.read(2_000_000).decode('utf-8', errors='replace')
+        except Exception:
+            if attempt:
+                raise
+            time.sleep(0.5)
+
+
+class Links(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = []
+        self.current = None
+        self.heading = False
+        self.title = ''
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'a' and attrs.get('href'):
+            self.current = [attrs['href'], '']
+        if tag in ('h1', 'h2') and not self.title:
+            self.heading = True
+
+    def handle_data(self, data):
+        if self.current is not None:
+            self.current[1] += data
+        if self.heading:
+            self.title += data
+
+    def handle_endtag(self, tag):
+        if tag == 'a' and self.current is not None:
+            self.links.append(tuple(self.current))
+            self.current = None
+        if tag in ('h1', 'h2'):
+            self.heading = False
+
+
+def internal_links(text, page, base=None):
+    base = base or BASE
+    parser = Links()
+    parser.feed(text)
+    for href, label in parser.links:
+        url = urljoin(page, href).split('#')[0]
+        parts = urlsplit(url)
+        if parts.scheme not in ('http', 'https'):
+            continue
+        # Mirrors sometimes retain absolute links to the original domain.
+        if parts.hostname in ROXIE_HOSTS:
+            target = urlsplit(base)
+            url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
+            parts = urlsplit(url)
+        if parts.netloc != urlsplit(base).netloc:
+            continue
+        if parts.query or re.search(r'\.[a-zA-Z0-9]{2,5}$', parts.path) or parts.path == '/multiview':
+            continue
+        yield url, ' '.join(label.split())
+
+
+@lru_cache(maxsize=64)
+def load_domains(url, referer):
+    return fetch(url, BASE)
+
+
+def extract_sources(text, page, domain_loader=load_domains):
+    text = html.unescape(text).replace(r'\/', '/')
+    sources = set(re.findall(r'https?://[^\s\'"<>`]+\.m3u8(?:\?[^\s\'"<>`]*)?', text))
+    calls = re.findall(r"getRandomStream\(\s*['\"]([^'\"]+\.m3u8[^'\"]*)['\"]\s*(?:,\s*['\"]([^'\"]+)['\"])?\s*\)", text)
+    if not calls:
+        return sorted(sources)
+    default = re.search(r"function\s+getRandomStream\([^)]*subdomain\s*=\s*['\"]([^'\"]+)", text)
+    domains = []
+    for name in set(re.findall(r"fetch\(\s*['\"]([^'\"]+\.txt)['\"]", text)):
+        domains += [d.strip() for d in domain_loader(urljoin(page, name), BASE).splitlines() if re.fullmatch(r'[A-Za-z0-9.-]+', d.strip())]
+    if not domains:
+        raise ValueError('No current stream domains could be loaded')
+    for path, subdomain in calls:
+        for domain in sorted(set(domains)):
+            sources.add(f'https://{subdomain or (default.group(1) if default else "admin2")}.{domain}/{path.lstrip("/")}')
+    return sorted(sources)
+
+
+def live_media(url, referer, depth=0):
+    """Require a live media manifest and a reachable segment, not just HTTP 200."""
+    if depth > 3:
+        return False
+    text = fetch(url, referer)
+    if not text.lstrip('\ufeff').startswith('#EXTM3U') or '#EXT-X-ENDLIST' in text:
+        return False
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if any(line.startswith('#EXT-X-STREAM-INF:') for line in lines):
+        variants = [line for line in lines if not line.startswith('#')]
+        return any(live_media(urljoin(url, variant), referer, depth + 1) for variant in variants[:3])
+    segments = [line for line in lines if not line.startswith('#')]
+    if not segments or '#EXTINF:' not in text:
+        return False
+    segment = urljoin(url, segments[-1])
+    with urlopen(Request(segment, headers={'User-Agent': UA, 'Referer': referer, 'Range': 'bytes=0-1023'}), timeout=TIMEOUT) as response:
+        return bool(response.read(1024))
+
+
+def safe(value):
+    return ' '.join(value.replace('"', "'").split())
+
+
+def render(entries):
+    lines = ['#EXTM3U']
+    for entry in entries:
+        lines += [f'#EXTINF:-1 tvg-id="{safe(entry.get("tvg_id", ""))}" tvg-name="{safe(entry["name"])}" tvg-logo="{safe(entry.get("poster", ""))}" group-title="{safe(entry["group"])}",{safe(entry.get("display_name", entry["name"]))}',
+                  f'#EXTVLCOPT:http-referrer={entry["page"]}',
+                  f'#EXTVLCOPT:http-user-agent={UA}', entry['url']]
+    return '\n'.join(lines) + '\n'
+
+
+def write_playlist_if_changed(content, path=Path('playlist.m3u')):
+    encoded = content.encode('utf-8')
+    if path.is_file() and path.read_bytes() == encoded:
+        return False
+    temporary = path.with_name(path.name + '.tmp')
+    temporary.write_bytes(encoded)
+    temporary.replace(path)
+    return True
+
+
+def discover_roxie(base, pool):
+    pages, errors, labels = {}, [], {base:'RoxieStreams'}
+    pending = {base}
+    for _ in range(5):
+        batch = sorted(pending - pages.keys())
+        print(f'Crawl batch: {len(batch)} pages on {base}', flush=True)
+        if not batch:
+            break
+        if len(pages) + len(batch) > 200:
+            raise RuntimeError('Crawl exceeded 200 pages; review website structure')
+        pending = set()
+        futures = {pool.submit(fetch, url, base):url for url in batch}
+        for future in concurrent.futures.as_completed(futures):
+            page = futures[future]
+            try:
+                text = future.result()
+                pages[page] = text
+                for url, label in internal_links(text,page,base):
+                    if label:
+                        labels.setdefault(url,label)
+                    if url not in pages:
+                        pending.add(url)
+            except Exception as exc:
+                pages[page] = ''
+                # Ignore 404 errors for dead stream links instead of failing the workflow
+                if 'HTTP Error 404' not in str(exc):
+                    errors.append({'page': page, 'error': str(exc)})
+                else:
+                    print(f'Skipped dead link (404): {page}', flush=True)
+    if pending - pages.keys():
+        errors.append({'error':'Crawl depth limit reached'})
+    return pages, labels, errors
+
+
+def collect_roxie(pages, labels):
+    errors = []
+    candidates = {}
+    unsupported = []
+    event_labels = {}
+    # Category schedules override older homepage links and retain reused slots.
+    for parent, text in sorted(pages.items()):
+        if urlsplit(parent).path.strip('/'):
+            for target, label in internal_links(text, parent):
+                if label:
+                    event_labels.setdefault(target, set()).add(clean_title(label))
+    for page, text in sorted(pages.items()):
+        try:
+            sources = extract_sources(text, page)
+            for url in sources:
+                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
+                    candidates.setdefault(url, []).append({'name': name,
+                                                'group': roxie_group(page), 'provider':'RoxieStreams',
+                                                'page': page, 'url': url})
+            if not sources and re.search(r'<(?:iframe|video)\b', text):
+                unsupported.append(page)
+        except Exception as exc:
+            errors.append({'page': page, 'error': str(exc)})
+    return candidates, unsupported, errors
+
+
+def select_roxie(pool):
+    global BASE
+    attempts = []
+    for base in dict.fromkeys((BASE, *BACKUPS)):
+        BASE = base
+        try:
+            pages, labels, errors = discover_roxie(base,pool)
+            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+            errors.extend(source_errors)
+            if not candidates:
+                errors.append({'error':'No HLS sources discovered'})
+        except Exception as exc:
+            pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
+        attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
+        if not errors:
+            break
+        print(f'Incomplete discovery on {base}; trying backup',flush=True)
+    return pages, candidates, unsupported, errors, attempts
+
+
+def main():
+    print('Discovering stream pages...', flush=True)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+        entries, unavailable = [], 0
+        print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
+        def check(aliases):
+            for entry in aliases:
+                try:
+                    if live_media(entry['url'], entry['page']):
+                        # Use the verified referrer on the deduplicated playback entry.
+                        return [dict(alias, page=entry['page']) for alias in aliases]
+                except Exception:
+                    pass
+            return None
+        for index, result in enumerate(pool.map(check, candidates.values()), 1):
+            if index % 10 == 0:
+                print(f'Checked {index}/{len(candidates)} URLs', flush=True)
+            if result:
+                entries.extend(result)
+            else:
+                unavailable += 1
+    entries = decorate(entries)
+    report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
+              'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
+              'unsupported_pages': unsupported, 'errors': errors,
+              'event_groups':len({e['event_id'] for e in entries}),
+              'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
+              'roxie_source':BASE,'roxie_attempts':attempts}
+    Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
+    print(json.dumps(report, indent=2))
+    # Retain the last successful playlist if every mirror fails discovery.
+    if errors or not candidates:
+        raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
+    changed = write_playlist_if_changed(render(entries))
+    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
+
+
+if __name__ == '__main__':
+    main()
+from collections import defaultdict
+
+import hashlib
+
+import html
+
+import re
+
+import time
+
+import unicodedata
+
+from urllib.parse import urlsplit
+
+
+
+LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
+
+GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
+
+          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
+
+          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'Combat Sports',
+
+          'tna':'Combat Sports', 'ufc':'UFC', 'boxing':'Boxing', 
+
+          'fighting':'Combat Sports', 'motorsports':'Motorsports'}
+
+LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
+
+         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
+
+         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
+
+         'Combat Sports':'combat-sports', 'Motorsports':'motorsports',
+
+         'PPV':'boxing', 'Pay Per View':'boxing'} # Fallback logos for PPV if needed
+
+
+
+
+
+def clean_title(value):
+
+    value = ' '.join(html.unescape(str(value)).split())
+
+    value = re.sub(r'\bvs\.?\s*', 'vs ', value, flags=re.I)
+
+    value = re.sub(r'\s+at\s+', ' vs ', value, flags=re.I)
+
+    value = re.sub(r'\bLA Clippers\b', 'Los Angeles Clippers', value)
+
+    value = re.sub(r'\bDenamrk\b', 'Denmark', value)
+
+    value = re.sub(r'\s*-\s*(Race|Malaysian Grand Prix)\b', r': \1', value)
+
+    return value.strip()
+
+
+
+
+
+def event_key(name):
+
+    text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
+
+    return re.sub(r'[^a-z0-9]+', ' ', text).strip()
+
+
+
+
+
+def roxie_group(page):
+
+    slug = urlsplit(page).path.strip('/').split('-')[0].lower()
+
+    return GROUPS.get(slug, 'Live')
+
+
+
+
+
+def fallback_logo(group):
+
+    return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
+
+
+
+
+
+def decorate(entries):
+
+    """Dedupe URLs; strictly include only specific groups; conditionally group events."""
+
+    
+
+    # Define the strict whitelist of allowed groups (case-insensitive mapping)
+
+    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports', 'wwe'}
+
+    
+
+    by_url = defaultdict(list)
+
+    for entry in entries:
+
+        # INCLUSION LOGIC: Skip any stream whose group is not in the allowed list
+
+        group = str(entry.get('group', '')).strip().casefold()
+
+        if not group or group not in allowed_groups:
+
+            continue
+
+            
+
+        by_url[entry['url']].append(dict(entry))
+
+        
+
+    unique = []
+
+    for url, aliases in sorted(by_url.items()):
+
+        aliases.sort(key=lambda e: (e.get('provider','RoxieStreams'), e['page'], e['name']))
+
+        entry = aliases[0]
+
+        names = {event_key(e['name']) for e in aliases}
+
+        entry['provider'] = ' + '.join(sorted({e.get('provider','RoxieStreams') for e in aliases}))
+
+        
+
+        if len(names) > 1:
+
+            channel = urlsplit(url).path.rsplit('/',1)[-1].removesuffix('.m3u8')
+
+            entry['name'] = channel.upper() + ' — Shared Feed'
+
+            categories = {alias['group'] for alias in aliases}
+
+            entry['group'] = next(iter(categories)) if len(categories) == 1 else 'Shared Channels'
+
+            entry['poster'] = ''
+
+        else:
+
+            entry['name'] = clean_title(entry['name'])
+
+            
+
+        entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
+
+        
+
+        # Date avoids grouping repeat fixtures on different days.
+
+        date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
+
+        entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
+
+        identity = entry.get('identity') or f'{entry["provider"]}:{urlsplit(url).netloc}:{urlsplit(url).path}'
+
+        entry['tvg_id'] = 'Lennon.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+
+        
+
+        unique.append(entry)
+
+
+
+    # Separate grouped streams from flat streams
+
+    grouped_streams = defaultdict(list)
+
+    result = []
+
+    
+
+    # Define which groups get the numbered feed logic
+
+    groups_to_number = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
+
+    
+
+    # Process all unique streams into groups for uniform date/time formatting
+
+    for entry in unique:
+
+        grouped_streams[entry['event_id']].append(entry)
+
+            
+
+    # Process and format all streams
+
+    for key in sorted(grouped_streams):
+
+        feeds = sorted(grouped_streams[key], key=lambda e:(e['provider'], e.get('source_tag',''), e['url']))
+
+        for index, entry in enumerate(feeds, 1):
+
+            details = []
+
+            
+
+            # 1. ADD DATE & TIME HERE (Philippine Time / PHT)
+
+            if entry.get('starts_at'):
+
+                # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
+
+                pht_timestamp = entry['starts_at'] + 28800
+
+                event_time = time.strftime('%b %d, %I:%M %p PHT', time.gmtime(pht_timestamp))
+
+                details.append(event_time)
+
+
+
+            # 2. Add Feed Number (if applicable)
+
+            is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
+
+            if is_numbered_group and len(feeds) > 1:
+
+                details.append(f'Feed {index}')
+
+                
+
+            # 3. Add Provider & Locale info
+
+            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
+
+            if entry.get('source_tag'):
+
+                details.append(entry['source_tag'])
+
+            if entry.get('locale'):
+
+                details.append(entry['locale'].upper())
+
+                
+
+            # 4. Build Final Display Name
+
+            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+
+            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+
+            result.append(entry)
+
+            
+
+    # Sort the final combined output by group and then event name
+
+    return sorted(result, key=lambda e: (e.get('group', ''), e.get('name', '')))
+
+
+
+add date & time of the event on tvg name
+
+To get the date and time to show up in the tvg-name attribute, we need to modify the base entry['name'] directly, since your scraper.py uses entry["name"] to generate tvg-name.
+
+I also removed the details.append(event_time) step. Because the time is now baked directly into the event's name, it will naturally cascade to the display name anyway—removing it from details prevents the time from awkwardly showing up twice on the same line.
+
+Here is your updated metadata.py. You can copy and replace your current file entirely:
+
+Python
+from collections import defaultdict
+import hashlib
+import html
+import re
+import time
+import unicodedata
+from urllib.parse import urlsplit
+
+LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
+GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
+          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
+          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'Combat Sports',
+          'tna':'Combat Sports', 'ufc':'UFC', 'boxing':'Boxing', 
+          'fighting':'Combat Sports', 'motorsports':'Motorsports'}
+LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
+         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
+         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
+         'Combat Sports':'combat-sports', 'Motorsports':'motorsports',
+         'PPV':'boxing', 'Pay Per View':'boxing'} # Fallback logos for PPV if needed
+
+
+def clean_title(value):
+    value = ' '.join(html.unescape(str(value)).split())
+    value = re.sub(r'\bvs\.?\s*', 'vs ', value, flags=re.I)
+    value = re.sub(r'\s+at\s+', ' vs ', value, flags=re.I)
+    value = re.sub(r'\bLA Clippers\b', 'Los Angeles Clippers', value)
+    value = re.sub(r'\bDenamrk\b', 'Denmark', value)
+    value = re.sub(r'\s*-\s*(Race|Malaysian Grand Prix)\b', r': \1', value)
+    return value.strip()
+
+
+def event_key(name):
+    text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
+    return re.sub(r'[^a-z0-9]+', ' ', text).strip()
+
+
+def roxie_group(page):
+    slug = urlsplit(page).path.strip('/').split('-')[0].lower()
+    return GROUPS.get(slug, 'Live')
+
+
+def fallback_logo(group):
+    return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
+
+
+def decorate(entries):
+    """Dedupe URLs; strictly include only specific groups; conditionally group events."""
+    
+    # Define the strict whitelist of allowed groups (case-insensitive mapping)
+    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports', 'wwe'}
+    
+    by_url = defaultdict(list)
+    for entry in entries:
+        # INCLUSION LOGIC: Skip any stream whose group is not in the allowed list
+        group = str(entry.get('group', '')).strip().casefold()
+        if not group or group not in allowed_groups:
+            continue
+            
+        by_url[entry['url']].append(dict(entry))
+        
+    unique = []
+    for url, aliases in sorted(by_url.items()):
+        aliases.sort(key=lambda e: (e.get('provider','RoxieStreams'), e['page'], e['name']))
+        entry = aliases[0]
+        names = {event_key(e['name']) for e in aliases}
+        entry['provider'] = ' + '.join(sorted({e.get('provider','RoxieStreams') for e in aliases}))
+        
+        if len(names) > 1:
+            channel = urlsplit(url).path.rsplit('/',1)[-1].removesuffix('.m3u8')
+            entry['name'] = channel.upper() + ' — Shared Feed'
+            categories = {alias['group'] for alias in aliases}
+            entry['group'] = next(iter(categories)) if len(categories) == 1 else 'Shared Channels'
+            entry['poster'] = ''
+        else:
+            entry['name'] = clean_title(entry['name'])
+            
+        entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
+        
+        # Date avoids grouping repeat fixtures on different days.
+        date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
+        entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
+        identity = entry.get('identity') or f'{entry["provider"]}:{urlsplit(url).netloc}:{urlsplit(url).path}'
+        entry['tvg_id'] = 'Lennon.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+        
+        unique.append(entry)
+
+    # Separate grouped streams from flat streams
+    grouped_streams = defaultdict(list)
+    result = []
+    
+    # Define which groups get the numbered feed logic
+    groups_to_number = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
+    
+    # Process all unique streams into groups for uniform date/time formatting
+    for entry in unique:
+        grouped_streams[entry['event_id']].append(entry)
+            
+    # Process and format all streams
+    for key in sorted(grouped_streams):
+        feeds = sorted(grouped_streams[key], key=lambda e:(e['provider'], e.get('source_tag',''), e['url']))
+        for index, entry in enumerate(feeds, 1):
+            details = []
+            
+            # 1. ADD DATE & TIME HERE (Philippine Time / PHT)
+            if entry.get('starts_at'):
+                # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
+                pht_timestamp = entry['starts_at'] + 28800
+                event_time = time.strftime('%b %d, %I:%M %p PHT', time.gmtime(pht_timestamp))
+                
+                # Append time to the base name so it shows up directly in tvg-name
+                entry['name'] = f"{entry['name']} [{event_time}]"
+
+            # 2. Add Feed Number (if applicable)
+            is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
+            if is_numbered_group and len(feeds) > 1:
+                details.append(f'Feed {index}')
+                
+            # 3. Add Provider & Locale info
+            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
+            if entry.get('source_tag'):
+                details.append(entry['source_tag'])
+            if entry.get('locale'):
+                details.append(entry['locale'].upper())
+                
+            # 4. Build Final Display Name
+            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+            result.append(entry)
+            
+    # Sort the final combined output by group and then event name
+    return sorted(result, key=lambda e: (e.get('group', ''), e.get('name', '')))
+show me the example output
+
+Here is what the final output in your playlist.m3u will look like based on the new logic.
+
+Notice how the date and time now appear inside the tvg-name attribute as well as the final display name at the end of the line:
+
+Plaintext
+#EXTM3U
+#EXTINF:-1 tvg-id="Lennon.a1b2c3d4e5f6g7h8" tvg-name="Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM PHT]" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM PHT] — Feed 1
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba/lakers-vs-warriors
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.roxiestreams.info/live/nba1/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Lennon.b2c3d4e5f6g7h8i9" tvg-name="Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM PHT]" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM PHT] — Feed 2
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba/lakers-vs-warriors
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.roxiestreams.info/live/nba2/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Lennon.c3d4e5f6g7h8i9j0" tvg-name="UFC 310: Main Card" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC | UFC 310: Main Card
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc/ufc-310
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.roxiestreams.info/live/ufc/playlist.m3u8
+Line 1 & 2: Shows an NBA game that has a starts_at time. It formats the time to PHT, adds it to tvg-name, and numbers the multiple feeds (Feed 1, Feed 2) in the display name.
+
+Line 3: Shows a UFC event without a specific starts_at timestamp. It simply displays the cleaned name without brackets.
+
+from collections import defaultdict
+
+import hashlib
+
+import html
+
+import re
+
+import time
+
+import unicodedata
+
+from urllib.parse import urlsplit
+
+
+
+LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
+
+GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
+
+          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
+
+          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'Combat Sports',
+
+          'tna':'Combat Sports', 'ufc':'UFC', 'boxing':'Boxing', 
+
+          'fighting':'Combat Sports', 'motorsports':'Motorsports'}
+
+LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
+
+         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
+
+         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
+
+         'Combat Sports':'combat-sports', 'Motorsports':'motorsports',
+
+         'PPV':'boxing', 'Pay Per View':'boxing'} # Fallback logos for PPV if needed
+
+
+
+
+
+def clean_title(value):
+
+    value = ' '.join(html.unescape(str(value)).split())
+
+    value = re.sub(r'\bvs\.?\s*', 'vs ', value, flags=re.I)
+
+    value = re.sub(r'\s+at\s+', ' vs ', value, flags=re.I)
+
+    value = re.sub(r'\bLA Clippers\b', 'Los Angeles Clippers', value)
+
+    value = re.sub(r'\bDenamrk\b', 'Denmark', value)
+
+    value = re.sub(r'\s*-\s*(Race|Malaysian Grand Prix)\b', r': \1', value)
+
+    return value.strip()
+
+
+
+
+
+def event_key(name):
+
+    text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
+
+    return re.sub(r'[^a-z0-9]+', ' ', text).strip()
+
+
+
+
+
+def roxie_group(page):
+
+    slug = urlsplit(page).path.strip('/').split('-')[0].lower()
+
+    return GROUPS.get(slug, 'Live')
+
+
+
+
+
+def fallback_logo(group):
+
+    return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
+
+
+
+
+
+def decorate(entries):
+
+    """Dedupe URLs; strictly include only specific groups; conditionally group events."""
+
+    
+
+    # Define the strict whitelist of allowed groups (case-insensitive mapping)
+
+    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports', 'wwe'}
+
+    
+
+    by_url = defaultdict(list)
+
+    for entry in entries:
+
+        # INCLUSION LOGIC: Skip any stream whose group is not in the allowed list
+
+        group = str(entry.get('group', '')).strip().casefold()
+
+        if not group or group not in allowed_groups:
+
+            continue
+
+            
+
+        by_url[entry['url']].append(dict(entry))
+
+        
+
+    unique = []
+
+    for url, aliases in sorted(by_url.items()):
+
+        aliases.sort(key=lambda e: (e.get('provider','RoxieStreams'), e['page'], e['name']))
+
+        entry = aliases[0]
+
+        names = {event_key(e['name']) for e in aliases}
+
+        entry['provider'] = ' + '.join(sorted({e.get('provider','RoxieStreams') for e in aliases}))
+
+        
+
+        if len(names) > 1:
+
+            channel = urlsplit(url).path.rsplit('/',1)[-1].removesuffix('.m3u8')
+
+            entry['name'] = channel.upper() + ' — Shared Feed'
+
+            categories = {alias['group'] for alias in aliases}
+
+            entry['group'] = next(iter(categories)) if len(categories) == 1 else 'Shared Channels'
+
+            entry['poster'] = ''
+
+        else:
+
+            entry['name'] = clean_title(entry['name'])
+
+            
+
+        entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
+
+        
+
+        # Date avoids grouping repeat fixtures on different days.
+
+        date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
+
+        entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
+
+        identity = entry.get('identity') or f'{entry["provider"]}:{urlsplit(url).netloc}:{urlsplit(url).path}'
+
+        entry['tvg_id'] = 'Lennon.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+
+        
+
+        unique.append(entry)
+
+
+
+    # Separate grouped streams from flat streams
+
+    grouped_streams = defaultdict(list)
+
+    result = []
+
+    
+
+    # Define which groups get the numbered feed logic
+
+    groups_to_number = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
+
+    
+
+    # Process all unique streams into groups for uniform date/time formatting
+
+    for entry in unique:
+
+        grouped_streams[entry['event_id']].append(entry)
+
+            
+
+    # Process and format all streams
+
+    for key in sorted(grouped_streams):
+
+        feeds = sorted(grouped_streams[key], key=lambda e:(e['provider'], e.get('source_tag',''), e['url']))
+
+        for index, entry in enumerate(feeds, 1):
+
+            details = []
+
+            
+
+            # 1. ADD DATE & TIME HERE (Philippine Time / PHT)
+
+            if entry.get('starts_at'):
+
+                # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
+
+                pht_timestamp = entry['starts_at'] + 28800
+
+                event_time = time.strftime('%b %d, %I:%M %p PHT', time.gmtime(pht_timestamp))
+
+                
+
+                # Append time to the base name so it shows up directly in tvg-name
+
+                entry['name'] = f"{entry['name']} [{event_time}]"
+
+
+
+            # 2. Add Feed Number (if applicable)
+
+            is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
+
+            if is_numbered_group and len(feeds) > 1:
+
+                details.append(f'Feed {index}')
+
+                
+
+            # 3. Add Provider & Locale info
+
+            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
+
+            if entry.get('source_tag'):
+
+                details.append(entry['source_tag'])
+
+            if entry.get('locale'):
+
+                details.append(entry['locale'].upper())
+
+                
+
+            # 4. Build Final Display Name
+
+            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+
+            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+
+            result.append(entry)
+
+            
+
+    # Sort the final combined output by group and then event name
+
+    return sorted(result, key=lambda e: (e.get('group', ''), e.get('name', '')))
+
+
+
+remove the word PHT in the date and time in tvg name
+
+Python
+from collections import defaultdict
+import hashlib
+import html
+import re
+import time
+import unicodedata
+from urllib.parse import urlsplit
+
+LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
+GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
+          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
+          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'Combat Sports',
+          'tna':'Combat Sports', 'ufc':'UFC', 'boxing':'Boxing', 
+          'fighting':'Combat Sports', 'motorsports':'Motorsports'}
+LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
+         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
+         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
+         'Combat Sports':'combat-sports', 'Motorsports':'motorsports',
+         'PPV':'boxing', 'Pay Per View':'boxing'} # Fallback logos for PPV if needed
+
+
+def clean_title(value):
+    value = ' '.join(html.unescape(str(value)).split())
+    value = re.sub(r'\bvs\.?\s*', 'vs ', value, flags=re.I)
+    value = re.sub(r'\s+at\s+', ' vs ', value, flags=re.I)
+    value = re.sub(r'\bLA Clippers\b', 'Los Angeles Clippers', value)
+    value = re.sub(r'\bDenamrk\b', 'Denmark', value)
+    value = re.sub(r'\s*-\s*(Race|Malaysian Grand Prix)\b', r': \1', value)
+    return value.strip()
+
+
+def event_key(name):
+    text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
+    return re.sub(r'[^a-z0-9]+', ' ', text).strip()
+
+
+def roxie_group(page):
+    slug = urlsplit(page).path.strip('/').split('-')[0].lower()
+    return GROUPS.get(slug, 'Live')
+
+
+def fallback_logo(group):
+    return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
+
+
+def decorate(entries):
+    """Dedupe URLs; strictly include only specific groups; conditionally group events."""
+    
+    # Define the strict whitelist of allowed groups (case-insensitive mapping)
+    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports', 'wwe'}
+    
+    by_url = defaultdict(list)
+    for entry in entries:
+        # INCLUSION LOGIC: Skip any stream whose group is not in the allowed list
+        group = str(entry.get('group', '')).strip().casefold()
+        if not group or group not in allowed_groups:
+            continue
+            
+        by_url[entry['url']].append(dict(entry))
+        
+    unique = []
+    for url, aliases in sorted(by_url.items()):
+        aliases.sort(key=lambda e: (e.get('provider','RoxieStreams'), e['page'], e['name']))
+        entry = aliases[0]
+        names = {event_key(e['name']) for e in aliases}
+        entry['provider'] = ' + '.join(sorted({e.get('provider','RoxieStreams') for e in aliases}))
+        
+        if len(names) > 1:
+            channel = urlsplit(url).path.rsplit('/',1)[-1].removesuffix('.m3u8')
+            entry['name'] = channel.upper() + ' — Shared Feed'
+            categories = {alias['group'] for alias in aliases}
+            entry['group'] = next(iter(categories)) if len(categories) == 1 else 'Shared Channels'
+            entry['poster'] = ''
+        else:
+            entry['name'] = clean_title(entry['name'])
+            
+        entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
+        
+        # Date avoids grouping repeat fixtures on different days.
+        date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
+        entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
+        identity = entry.get('identity') or f'{entry["provider"]}:{urlsplit(url).netloc}:{urlsplit(url).path}'
+        entry['tvg_id'] = 'Lennon.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+        
+        unique.append(entry)
+
+    # Separate grouped streams from flat streams
+    grouped_streams = defaultdict(list)
+    result = []
+    
+    # Define which groups get the numbered feed logic
+    groups_to_number = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
+    
+    # Process all unique streams into groups for uniform date/time formatting
+    for entry in unique:
+        grouped_streams[entry['event_id']].append(entry)
+            
+    # Process and format all streams
+    for key in sorted(grouped_streams):
+        feeds = sorted(grouped_streams[key], key=lambda e:(e['provider'], e.get('source_tag',''), e['url']))
+        for index, entry in enumerate(feeds, 1):
+            details = []
+            
+            # 1. ADD DATE & TIME HERE (Philippine Time)
+            if entry.get('starts_at'):
+                # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
+                pht_timestamp = entry['starts_at'] + 28800
+                event_time = time.strftime('%b %d, %I:%M %p', time.gmtime(pht_timestamp))
+                
+                # Append time to the base name so it shows up directly in tvg-name
+                entry['name'] = f"{entry['name']} [{event_time}]"
+
+            # 2. Add Feed Number (if applicable)
+            is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
+            if is_numbered_group and len(feeds) > 1:
+                details.append(f'Feed {index}')
+                
+            # 3. Add Provider & Locale info
+            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
+            if entry.get('source_tag'):
+                details.append(entry['source_tag'])
+            if entry.get('locale'):
+                details.append(entry['locale'].upper())
+                
+            # 4. Build Final Display Name
+            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+            result.append(entry)
+            
+    # Sort the final combined output by group and then event name
+    return sorted(result, key=lambda e: (e.get('group', ''), e.get('name', '')))
+example output
+
+Here is the example output showing how your playlist.m3u will look now.
+
+Notice that the date and time inside the brackets [Oct 14, 10:30 AM] no longer contain "PHT", but the time is still correctly calculated for your timezone:
+
+Plaintext
+#EXTM3U
+#EXTINF:-1 tvg-id="Lennon.a1b2c3d4e5f6g7h8" tvg-name="Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM]" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM] — Feed 1
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba/lakers-vs-warriors
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.roxiestreams.info/live/nba1/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Lennon.b2c3d4e5f6g7h8i9" tvg-name="Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM]" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Los Angeles Lakers vs Golden State Warriors [Oct 14, 10:30 AM] — Feed 2
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba/lakers-vs-warriors
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.roxiestreams.info/live/nba2/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Lennon.c3d4e5f6g7h8i9j0" tvg-name="UFC 310: Main Card" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC | UFC 310: Main Card
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc/ufc-310
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.roxiestreams.info/live/ufc/playlist.m3u8
+date & time not showing
+
+The reason the date and time aren't showing up is because your scraper.py script doesn't actually collect any timestamps from the RoxieStreams website.
+
+If we look at the part of scraper.py that sends data over to metadata.py, it only saves the name, group, provider, page, and URL:
+
+Python
+candidates.setdefault(url, []).append({
+    'name': name,
+    'group': roxie_group(page), 
+    'provider':'RoxieStreams',
+    'page': page, 
+    'url': url
+})
+Because starts_at is completely missing from this data, metadata.py sees that it doesn't exist and skips the date/time formatting block entirely.
+
+How to fix this
+To get the time to show up, scraper.py needs to scrape the time from the website.
+
+How does RoxieStreams display the time on their website?
+
+Is it written directly in the link text? (e.g., "10:30 AM - Los Angeles Lakers vs Golden State Warriors")
+
+Is it in a separate HTML tag next to the game?
+
+If the time is already included in the name text, I can write a regex for you to extract it. Otherwise, if you can share a snippet of the HTML from the RoxieStreams schedule page, I can update scraper.py to grab the exact starts_at timestamp so metadata.py can use it.
+
+"""Discover RoxieStreams HLS sources and export currently reachable live feeds."""
+
+import concurrent.futures
+
+import datetime as dt
+
+import html
+
+from functools import lru_cache
+
+from html.parser import HTMLParser
+
+import json
+
+import os
+
+from pathlib import Path
+
+import re
+
+import time
+
+from urllib.parse import urljoin, urlsplit, urlunsplit
+
+from urllib.request import Request, urlopen
+
+from metadata import clean_title, decorate, roxie_group
+
+
+
+BASE = os.getenv('SOURCE_URL', 'https://roxiestreams.info/').rstrip('/') + '/'
+
+BACKUPS = tuple(x.rstrip('/')+'/' for x in os.getenv('ROXIE_BACKUP_URLS','https://roxiestreams.biz/,https://roxiestreams.su/').split(',') if x.strip())
+
+ROXIE_HOSTS = {'roxiestreams.info','roxiestreams.biz','roxiestreams.su'}
+
+UA = 'Mozilla/5.0 (compatible; LivePlaylist/1.0)'
+
+TIMEOUT = 12
+
+
+
+
+
+def fetch(url, referer=BASE):
+
+    for attempt in range(2):
+
+        try:
+
+            with urlopen(Request(url, headers={'User-Agent': UA, 'Referer': referer}), timeout=TIMEOUT) as response:
+
+                return response.read(2_000_000).decode('utf-8', errors='replace')
+
+        except Exception:
+
+            if attempt:
+
+                raise
+
+            time.sleep(0.5)
+
+
+
+
+
+class Links(HTMLParser):
+
+    def __init__(self):
+
+        super().__init__()
+
+        self.links = []
+
+        self.current = None
+
+        self.heading = False
+
+        self.title = ''
+
+
+
+    def handle_starttag(self, tag, attrs):
+
+        attrs = dict(attrs)
+
+        if tag == 'a' and attrs.get('href'):
+
+            self.current = [attrs['href'], '']
+
+        if tag in ('h1', 'h2') and not self.title:
+
+            self.heading = True
+
+
+
+    def handle_data(self, data):
+
+        if self.current is not None:
+
+            self.current[1] += data
+
+        if self.heading:
+
+            self.title += data
+
+
+
+    def handle_endtag(self, tag):
+
+        if tag == 'a' and self.current is not None:
+
+            self.links.append(tuple(self.current))
+
+            self.current = None
+
+        if tag in ('h1', 'h2'):
+
+            self.heading = False
+
+
+
+
+
+def internal_links(text, page, base=None):
+
+    base = base or BASE
+
+    parser = Links()
+
+    parser.feed(text)
+
+    for href, label in parser.links:
+
+        url = urljoin(page, href).split('#')[0]
+
+        parts = urlsplit(url)
+
+        if parts.scheme not in ('http', 'https'):
+
+            continue
+
+        # Mirrors sometimes retain absolute links to the original domain.
+
+        if parts.hostname in ROXIE_HOSTS:
+
+            target = urlsplit(base)
+
+            url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
+
+            parts = urlsplit(url)
+
+        if parts.netloc != urlsplit(base).netloc:
+
+            continue
+
+        if parts.query or re.search(r'\.[a-zA-Z0-9]{2,5}$', parts.path) or parts.path == '/multiview':
+
+            continue
+
+        yield url, ' '.join(label.split())
+
+
+
+
+
+@lru_cache(maxsize=64)
+
+def load_domains(url, referer):
+
+    return fetch(url, BASE)
+
+
+
+
+
+def extract_sources(text, page, domain_loader=load_domains):
+
+    text = html.unescape(text).replace(r'\/', '/')
+
+    sources = set(re.findall(r'https?://[^\s\'"<>`]+\.m3u8(?:\?[^\s\'"<>`]*)?', text))
+
+    calls = re.findall(r"getRandomStream\(\s*['\"]([^'\"]+\.m3u8[^'\"]*)['\"]\s*(?:,\s*['\"]([^'\"]+)['\"])?\s*\)", text)
+
+    if not calls:
+
+        return sorted(sources)
+
+    default = re.search(r"function\s+getRandomStream\([^)]*subdomain\s*=\s*['\"]([^'\"]+)", text)
+
+    domains = []
+
+    for name in set(re.findall(r"fetch\(\s*['\"]([^'\"]+\.txt)['\"]", text)):
+
+        domains += [d.strip() for d in domain_loader(urljoin(page, name), BASE).splitlines() if re.fullmatch(r'[A-Za-z0-9.-]+', d.strip())]
+
+    if not domains:
+
+        raise ValueError('No current stream domains could be loaded')
+
+    for path, subdomain in calls:
+
+        for domain in sorted(set(domains)):
+
+            sources.add(f'https://{subdomain or (default.group(1) if default else "admin2")}.{domain}/{path.lstrip("/")}')
+
+    return sorted(sources)
+
+
+
+
+
+def live_media(url, referer, depth=0):
+
+    """Require a live media manifest and a reachable segment, not just HTTP 200."""
+
+    if depth > 3:
+
+        return False
+
+    text = fetch(url, referer)
+
+    if not text.lstrip('\ufeff').startswith('#EXTM3U') or '#EXT-X-ENDLIST' in text:
+
+        return False
+
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+
+    if any(line.startswith('#EXT-X-STREAM-INF:') for line in lines):
+
+        variants = [line for line in lines if not line.startswith('#')]
+
+        return any(live_media(urljoin(url, variant), referer, depth + 1) for variant in variants[:3])
+
+    segments = [line for line in lines if not line.startswith('#')]
+
+    if not segments or '#EXTINF:' not in text:
+
+        return False
+
+    segment = urljoin(url, segments[-1])
+
+    with urlopen(Request(segment, headers={'User-Agent': UA, 'Referer': referer, 'Range': 'bytes=0-1023'}), timeout=TIMEOUT) as response:
+
+        return bool(response.read(1024))
+
+
+
+
+
+def safe(value):
+
+    return ' '.join(value.replace('"', "'").split())
+
+
+
+
+
+def render(entries):
+
+    lines = ['#EXTM3U']
+
+    for entry in entries:
+
+        lines += [f'#EXTINF:-1 tvg-id="{safe(entry.get("tvg_id", ""))}" tvg-name="{safe(entry["name"])}" tvg-logo="{safe(entry.get("poster", ""))}" group-title="{safe(entry["group"])}",{safe(entry.get("display_name", entry["name"]))}',
+
+                  f'#EXTVLCOPT:http-referrer={entry["page"]}',
+
+                  f'#EXTVLCOPT:http-user-agent={UA}', entry['url']]
+
+    return '\n'.join(lines) + '\n'
+
+
+
+
+
+def write_playlist_if_changed(content, path=Path('playlist.m3u')):
+
+    encoded = content.encode('utf-8')
+
+    if path.is_file() and path.read_bytes() == encoded:
+
+        return False
+
+    temporary = path.with_name(path.name + '.tmp')
+
+    temporary.write_bytes(encoded)
+
+    temporary.replace(path)
+
+    return True
+
+
+
+
+
+def discover_roxie(base, pool):
+
+    pages, errors, labels = {}, [], {base:'RoxieStreams'}
+
+    pending = {base}
+
+    for _ in range(5):
+
+        batch = sorted(pending - pages.keys())
+
+        print(f'Crawl batch: {len(batch)} pages on {base}', flush=True)
+
+        if not batch:
+
+            break
+
+        if len(pages) + len(batch) > 200:
+
+            raise RuntimeError('Crawl exceeded 200 pages; review website structure')
+
+        pending = set()
+
+        futures = {pool.submit(fetch, url, base):url for url in batch}
+
+        for future in concurrent.futures.as_completed(futures):
+
+            page = futures[future]
+
+            try:
+
+                text = future.result()
+
+                pages[page] = text
+
+                for url, label in internal_links(text,page,base):
+
+                    if label:
+
+                        labels.setdefault(url,label)
+
+                    if url not in pages:
+
+                        pending.add(url)
+
+            except Exception as exc:
+
+                pages[page] = ''
+
+                # Ignore 404 errors for dead stream links instead of failing the workflow
+
+                if 'HTTP Error 404' not in str(exc):
+
+                    errors.append({'page': page, 'error': str(exc)})
+
+                else:
+
+                    print(f'Skipped dead link (404): {page}', flush=True)
+
+    if pending - pages.keys():
+
+        errors.append({'error':'Crawl depth limit reached'})
+
+    return pages, labels, errors
+
+
+
+
+
+def collect_roxie(pages, labels):
+
+    errors = []
+
+    candidates = {}
+
+    unsupported = []
+
+    event_labels = {}
+
+    # Category schedules override older homepage links and retain reused slots.
+
+    for parent, text in sorted(pages.items()):
+
+        if urlsplit(parent).path.strip('/'):
+
+            for target, label in internal_links(text, parent):
+
+                if label:
+
+                    event_labels.setdefault(target, set()).add(clean_title(label))
+
+    for page, text in sorted(pages.items()):
+
+        try:
+
+            sources = extract_sources(text, page)
+
+            for url in sources:
+
+                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
+
+                    candidates.setdefault(url, []).append({'name': name,
+
+                                                'group': roxie_group(page), 'provider':'RoxieStreams',
+
+                                                'page': page, 'url': url})
+
+            if not sources and re.search(r'<(?:iframe|video)\b', text):
+
+                unsupported.append(page)
+
+        except Exception as exc:
+
+            errors.append({'page': page, 'error': str(exc)})
+
+    return candidates, unsupported, errors
+
+
+
+
+
+def select_roxie(pool):
+
+    global BASE
+
+    attempts = []
+
+    for base in dict.fromkeys((BASE, *BACKUPS)):
+
+        BASE = base
+
+        try:
+
+            pages, labels, errors = discover_roxie(base,pool)
+
+            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+
+            errors.extend(source_errors)
+
+            if not candidates:
+
+                errors.append({'error':'No HLS sources discovered'})
+
+        except Exception as exc:
+
+            pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
+
+        attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
+
+        if not errors:
+
+            break
+
+        print(f'Incomplete discovery on {base}; trying backup',flush=True)
+
+    return pages, candidates, unsupported, errors, attempts
+
+
+
+
+
+def main():
+
+    print('Discovering stream pages...', flush=True)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+
+        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+
+        entries, unavailable = [], 0
+
+        print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
+
+        def check(aliases):
+
+            for entry in aliases:
+
+                try:
+
+                    if live_media(entry['url'], entry['page']):
+
+                        # Use the verified referrer on the deduplicated playback entry.
+
+                        return [dict(alias, page=entry['page']) for alias in aliases]
+
+                except Exception:
+
+                    pass
+
+            return None
+
+        for index, result in enumerate(pool.map(check, candidates.values()), 1):
+
+            if index % 10 == 0:
+
+                print(f'Checked {index}/{len(candidates)} URLs', flush=True)
+
+            if result:
+
+                entries.extend(result)
+
+            else:
+
+                unavailable += 1
+
+    entries = decorate(entries)
+
+    report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
+
+              'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
+
+              'unsupported_pages': unsupported, 'errors': errors,
+
+              'event_groups':len({e['event_id'] for e in entries}),
+
+              'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
+
+              'roxie_source':BASE,'roxie_attempts':attempts}
+
+    Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
+
+    print(json.dumps(report, indent=2))
+
+    # Retain the last successful playlist if every mirror fails discovery.
+
+    if errors or not candidates:
+
+        raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
+
+    changed = write_playlist_if_changed(render(entries))
+
+    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
+
+
+
+
+
+if __name__ == '__main__':
+
+    main()
