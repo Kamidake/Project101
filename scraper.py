@@ -170,7 +170,11 @@ def discover_roxie(base, pool):
                         pending.add(url)
             except Exception as exc:
                 pages[page] = ''
-                errors.append({'page':page,'error':str(exc)})
+                # Ignore 404 errors for dead stream links instead of failing the workflow
+                if 'HTTP Error 404' not in str(exc):
+                    errors.append({'page': page, 'error': str(exc)})
+                else:
+                    print(f'Skipped dead link (404): {page}', flush=True)
     if pending - pages.keys():
         errors.append({'error':'Crawl depth limit reached'})
     return pages, labels, errors
