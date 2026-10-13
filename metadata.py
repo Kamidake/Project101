@@ -1,4 +1,3 @@
-"""Consistent IPTV titles, category artwork, and feed labels."""
 from collections import defaultdict
 import hashlib
 import html
@@ -90,35 +89,38 @@ def decorate(entries):
     result = []
     
     # Define which groups get the numbered feed logic
-    groups_to_number = {'NBA', 'UFC', 'Boxing', 'Combat Sports', 'WWE', 'PPV', 'Pay Per View'}
+    groups_to_number = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
     
+    # Process all unique streams into groups for uniform date/time formatting
     for entry in unique:
-        if entry.get('group') in groups_to_number:
-            grouped_streams[entry['event_id']].append(entry)
-        else:
-            # Format flat streams directly without feed grouping
-            details = []
-            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
-            if entry.get('source_tag'):
-                details.append(entry['source_tag'])
-            if entry.get('locale'):
-                details.append(entry['locale'].upper())
-                
-            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
-            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
-            result.append(entry)
+        grouped_streams[entry['event_id']].append(entry)
             
-    # Process and format grouped streams
+    # Process and format all streams
     for key in sorted(grouped_streams):
         feeds = sorted(grouped_streams[key], key=lambda e:(e['provider'], e.get('source_tag',''), e['url']))
         for index, entry in enumerate(feeds, 1):
-            details = [f'Feed {index}'] if len(feeds) > 1 else []
+            details = []
+            
+            # 1. ADD DATE & TIME HERE (Philippine Time / PHT)
+            if entry.get('starts_at'):
+                # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
+                pht_timestamp = entry['starts_at'] + 28800
+                event_time = time.strftime('%b %d, %I:%M %p PHT', time.gmtime(pht_timestamp))
+                details.append(event_time)
+
+            # 2. Add Feed Number (if applicable)
+            is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
+            if is_numbered_group and len(feeds) > 1:
+                details.append(f'Feed {index}')
+                
+            # 3. Add Provider & Locale info
             details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
             if entry.get('source_tag'):
                 details.append(entry['source_tag'])
             if entry.get('locale'):
                 details.append(entry['locale'].upper())
                 
+            # 4. Build Final Display Name
             title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
             entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
             result.append(entry)
