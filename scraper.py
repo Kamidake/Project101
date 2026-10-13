@@ -39,10 +39,10 @@ class Links(HTMLParser):
         self.heading = False
         self.title = ''
         
-        # Table tracking for Start Time extraction
+        # Robust Table tracking
         self.in_tr = False
         self.td_count = 0
-        self.pending_link = None
+        self.pending_links = []
         self.time_str = ''
         self.in_time_cell = False
 
@@ -51,9 +51,9 @@ class Links(HTMLParser):
         if tag == 'tr':
             self.in_tr = True
             self.td_count = 0
-            self.pending_link = None
+            self.pending_links = []
             self.time_str = ''
-        elif tag == 'td':
+        elif tag in ('td', 'th'):
             self.td_count += 1
             if self.td_count == 2:
                 self.in_time_cell = True
@@ -68,22 +68,23 @@ class Links(HTMLParser):
         if self.heading:
             self.title += data
         if self.in_time_cell:
-            self.time_str += data
+            self.time_str += data + ' ' # Space prevents mashing across <br> tags
 
     def handle_endtag(self, tag):
         if tag == 'a' and self.current is not None:
             if self.in_tr and self.td_count == 1:
-                self.pending_link = tuple(self.current)
+                self.pending_links.append(tuple(self.current))
             else:
                 self.links.append((*self.current, ''))
             self.current = None
-        elif tag == 'td':
+        elif tag in ('td', 'th'):
             self.in_time_cell = False
         elif tag == 'tr':
             self.in_tr = False
-            if self.pending_link:
-                self.links.append((*self.pending_link, self.time_str.strip()))
-                self.pending_link = None
+            # Apply the time string to any link found in the first column
+            for pl in self.pending_links:
+                self.links.append((*pl, self.time_str.strip()))
+            self.pending_links = []
         elif tag in ('h1', 'h2'):
             self.heading = False
 
@@ -171,17 +172,25 @@ def write_playlist_if_changed(content, path=Path('playlist.m3u')):
     temporary.replace(path)
     return True
 
+
 def parse_time(time_str):
-    """Parse time string like 'Oct 14, 2026, 7:00 AM' into UTC timestamp"""
+    """Safely parse time strings even if formatted poorly"""
     if not time_str:
         return None
     try:
         clean_str = re.sub(r'\s+', ' ', time_str).strip()
-        dt_obj = dt.datetime.strptime(clean_str, "%b %d, %Y, %I:%M %p")
-        # Treat the scraped time as UTC baseline. metadata.py will add the +8 timezone offset
-        return int(dt_obj.replace(tzinfo=dt.timezone.utc).timestamp())
+        # Look for the exact sequence regardless of extra commas or text
+        m = re.search(r'([A-Za-z]{3,})\s*(\d{1,2})[,\s]+(\d{4})[,\s]+(\d{1,2}:\d{2})\s*(AM|PM)', clean_str, re.I)
+        if m:
+            month_str, day, year, time_val, am_pm = m.groups()
+            month = month_str[:3].capitalize()
+            formatted = f"{month} {day} {year} {time_val} {am_pm.upper()}"
+            dt_obj = dt.datetime.strptime(formatted, "%b %d %Y %I:%M %p")
+            return int(dt_obj.replace(tzinfo=dt.timezone.utc).timestamp())
     except Exception:
-        return None
+        pass
+    return None
+
 
 def discover_roxie(base, pool):
     pages, errors, labels, times = {}, [], {base:'RoxieStreams'}, {}
