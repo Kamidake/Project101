@@ -101,11 +101,11 @@ def decorate(entries):
         for index, entry in enumerate(feeds, 1):
             details = []
             
-            # 1. ADD DATE & TIME HERE (Philippine Time / PHT)
+            # 1. ADD DATE & TIME HERE (Philippine Time)
             if entry.get('starts_at'):
                 # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
                 pht_timestamp = entry['starts_at'] + 28800
-                event_time = time.strftime('%b %d, %I:%M %p PHT', time.gmtime(pht_timestamp))
+                event_time = time.strftime('%b %d, %I:%M %p', time.gmtime(pht_timestamp))
                 
                 # Append time to the base name so it shows up directly in tvg-name
                 entry['name'] = f"{entry['name']} [{event_time}]"
