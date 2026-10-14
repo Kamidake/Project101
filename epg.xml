@@ -4,10 +4,6 @@
     <display-name>AEW (Oct 15, 05:00 AM)</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" />
   </channel>
-  <channel id="lennon.74a801167ba76d34">
-    <display-name>AEW (Oct 15, 05:00 AM)</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" />
-  </channel>
   <channel id="lennon.e603721945607098">
     <display-name>NBA | Brooklyn Nets vs Miami Heat (Oct 15, 04:30 AM)</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
@@ -41,10 +37,6 @@
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
   <programme start="20261015050000 +0800" stop="20261015080000 +0800" channel="lennon.9f8fe02a311ada66">
-    <title lang="en">AEW</title>
-    <desc lang="en">Live event: AEW</desc>
-  </programme>
-  <programme start="20261015050000 +0800" stop="20261015080000 +0800" channel="lennon.74a801167ba76d34">
     <title lang="en">AEW</title>
     <desc lang="en">Live event: AEW</desc>
   </programme>
