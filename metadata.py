@@ -53,11 +53,9 @@ def fallback_logo(group):
 
 
 def get_espn_schedule(league):
-    """Fetches today's schedule from ESPN for NBA, NFL, NHL, or UFC."""
+    """Fetches today's schedule from ESPN for NBA or UFC."""
     endpoints = {
         'nba': 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard',
-        'nfl': 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard',
-        'nhl': 'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard',
         'ufc': 'https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard'
     }
     
@@ -86,7 +84,7 @@ def get_espn_schedule(league):
             if event.get('shortName'):
                 schedule[event['shortName'].casefold()] = unix_time
                 
-            # Method B: Extract Competitors (Best for NFL, NBA, NHL)
+            # Method B: Extract Competitors (Best for NBA)
             try:
                 competitors = event['competitions'][0]['competitors']
                 name1 = competitors[0].get('team', {}).get('name') or competitors[0].get('athlete', {}).get('displayName')
@@ -107,13 +105,14 @@ def get_espn_schedule(league):
 def decorate(entries):
     """Dedupe URLs; strictly include only specific groups; conditionally group events."""
     
-    # Define the strict whitelist of allowed groups (case-insensitive mapping)
-    allowed_groups = {'nba', 'nfl', 'nhl', 'ufc', 'boxing', 'combat sports', 'wwe', 'live'}
+    # NFL and NHL removed from allowed groups
+    allowed_groups = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'live'}
     
     # 1. DOWNLOAD SCHEDULES ONLY FOR RELEVANT LEAGUES
     found_leagues = {str(e.get('group', '')).strip().casefold() for e in entries}
     schedules = {}
-    for league in ['nba', 'nfl', 'nhl', 'ufc']:
+    # Check only for NBA and UFC
+    for league in ['nba', 'ufc']:
         if league in found_leagues:
             schedules[league] = get_espn_schedule(league)
     
@@ -171,8 +170,8 @@ def decorate(entries):
     grouped_streams = defaultdict(list)
     result = []
     
-    # Define which groups get the numbered feed logic
-    groups_to_number = {'nba', 'nfl', 'nhl', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
+    # Removed NFL and NHL from groups_to_number
+    groups_to_number = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
     
     # Process all unique streams into groups for uniform date/time formatting
     for entry in unique:
