@@ -33,16 +33,20 @@ jobs:
             status.json
             epg.xml
           retention-days: 7
-      - name: Commit playlist
+      - name: Commit files
         run: |
-          if git diff --quiet -- playlist.m3u epg.xml; then
-            echo 'Playlist and EPG unchanged; skipping repository update.'
-            exit 0
-          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          
+          # Add all files to staging FIRST
           git add playlist.m3u epg.xml status.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Refresh live playlist and EPG'
-            git push
+          
+          # Check if there are any staged changes
+          if git diff --cached --quiet; then
+            echo 'No changes to commit; skipping repository update.'
+            exit 0
           fi
+          
+          # Commit and push if changes exist
+          git commit -m 'Refresh live playlist and EPG'
+          git push
