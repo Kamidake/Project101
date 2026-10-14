@@ -7,14 +7,19 @@ import unicodedata
 from urllib.parse import urlsplit
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
+
+# Full mapping so unwanted sports get correctly identified (and then filtered out)
 GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
           'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
-          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'ufc':'UFC',
-          'boxing':'Boxing', 'fighting':'Combat Sports', 'motorsports':'Motorsports'}
+          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew': 'AEW', 'ufc':'UFC',
+          'boxing':'Boxing', 'fighting':'Combat Sports', 'tna':'Combat Sports', 'motorsports':'Motorsports'}
+
 LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
          'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
-         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
+         'MXGP':'mxgp', 'WWE':'wwe', 'AEW':'combat-sports', 'UFC':'ufc', 'Boxing':'boxing',
          'Combat Sports':'combat-sports', 'Motorsports':'motorsports'}
+
+ALLOWED_GROUPS = {'NBA', 'Boxing', 'Combat Sports', 'UFC', 'AEW', 'WWE', 'Live'}
 
 
 def clean_title(value):
@@ -48,6 +53,11 @@ def decorate(entries):
     
     for entry_raw in entries:
         entry = dict(entry_raw)
+        
+        # Only keep streams that match your requested categories
+        if entry.get('group') not in ALLOWED_GROUPS:
+            continue
+            
         url = entry.get('url', '')
         
         # Deduplicate exact URLs 
