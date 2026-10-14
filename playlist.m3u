@@ -39,7 +39,7 @@ https://admin2.formaturamaxi.com.br/oldham.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ncaa-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/ncaa2.m3u8
-#EXTINF:-1 tvg-id="zerostreams.41df34b610ddfe04" tvg-name="TNA" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | TNA
+#EXTINF:-1 tvg-id="zerostreams.41df34b610ddfe04" tvg-name="TNA" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/ppv.m3u8
