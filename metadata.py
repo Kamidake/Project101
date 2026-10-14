@@ -55,6 +55,11 @@ def decorate(entries):
     for entry_raw in entries:
         entry = dict(entry_raw)
         
+        # --- NEW LOGIC: Move to TNA group if the word 'tna' is in the channel name ---
+        # We use a regex word boundary (\b) so it matches "TNA", but not words like "Patna"
+        if re.search(r'\btna\b', entry.get('name', ''), flags=re.IGNORECASE):
+            entry['group'] = 'TNA'
+            
         # Only keep streams that match your requested categories
         if entry.get('group') not in ALLOWED_GROUPS:
             continue
