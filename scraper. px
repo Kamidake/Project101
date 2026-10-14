@@ -31,6 +31,67 @@ def fetch(url, referer=BASE):
             time.sleep(0.5)
 
 
+class ScheduleParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_table = False
+        self.in_tbody = False
+        self.in_tr = False
+        self.in_td = False
+        self.td_index = 0
+        
+        self.events = []
+        self.current_event = {}
+        self.current_text = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        # Match eventsTable or any general event scheduling table
+        if tag == 'table' and ('eventsTable' in attrs.get('id', '') or 'schedule' in attrs.get('class', '')):
+            self.in_table = True
+        elif self.in_table and tag == 'tbody':
+            self.in_tbody = True
+        elif (self.in_table or self.in_tbody) and tag == 'tr':
+            self.in_tr = True
+            self.current_event = {}
+            self.td_index = 0
+        elif self.in_tr and tag == 'td':
+            self.in_td = True
+            self.current_text = []
+        elif self.in_td and tag == 'a' and self.td_index == 0:
+            self.current_event['url'] = attrs.get('href', '')
+
+    def handle_data(self, data):
+        if self.in_td:
+            self.current_text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == 'table' and self.in_table:
+            self.in_table = False
+        elif tag == 'tbody' and self.in_tbody:
+            self.in_tbody = False
+        elif tag == 'tr' and self.in_tr:
+            self.in_tr = False
+            if 'name' in self.current_event and self.current_event['name']:
+                self.events.append(self.current_event)
+        elif tag == 'td' and self.in_td:
+            self.in_td = False
+            text = ''.join(self.current_text).strip()
+            
+            if self.td_index == 0:
+                self.current_event['name'] = text
+            elif self.td_index == 1:
+                self.current_event['start_time'] = text
+                
+            self.td_index += 1
+
+
+def parse_schedules(html_text):
+    parser = ScheduleParser()
+    parser.feed(html_text)
+    return parser.events
+
+
 class Links(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -69,7 +130,6 @@ def internal_links(text, page, base=None):
         parts = urlsplit(url)
         if parts.scheme not in ('http', 'https'):
             continue
-        # Mirrors sometimes retain absolute links to the original domain.
         if parts.hostname in ROXIE_HOSTS:
             target = urlsplit(base)
             url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
@@ -105,7 +165,6 @@ def extract_sources(text, page, domain_loader=load_domains):
 
 
 def live_media(url, referer, depth=0):
-    """Require a live media manifest and a reachable segment, not just HTTP 200."""
     if depth > 3:
         return False
     text = fetch(url, referer)
@@ -170,7 +229,6 @@ def discover_roxie(base, pool):
                         pending.add(url)
             except Exception as exc:
                 pages[page] = ''
-                # Ignore 404 errors for dead stream links instead of failing the workflow
                 if 'HTTP Error 404' not in str(exc):
                     errors.append({'page': page, 'error': str(exc)})
                 else:
@@ -180,67 +238,172 @@ def discover_roxie(base, pool):
     return pages, labels, errors
 
 
-def collect_roxie(pages, labels):
+def match_schedule_time(name, page_path, group, schedule_lookup_url, schedule_lookup_name, schedule_by_group):
+    """Finds the best matching start time using URL, Title, Keywords, or Category Group."""
+    norm_name = clean_title(name).casefold()
+
+    # 1. Direct URL match
+    if page_path in schedule_lookup_url:
+        return schedule_lookup_url[page_path]
+
+    # 2. Exact Title match
+    if norm_name in schedule_lookup_name:
+        return schedule_lookup_name[norm_name]
+
+    # 3. Partial keyword match (e.g., 'aew', 'dynamite', 'nba', team names)
+    for sched_name, s_time in schedule_lookup_name.items():
+        if sched_name in norm_name or norm_name in sched_name:
+            return s_time
+
+    # 4. Keyword tokens for combat sports & specific leagues
+    keywords = {
+        'AEW': ['aew', 'dynamite', 'rampage', 'collision', 'revolution', 'all out', 'double or nothing'],
+        'NBA': ['nba', 'preseason'],
+        'WWE': ['wwe', 'raw', 'smackdown', 'nxt'],
+        'UFC': ['ufc', 'contender series', 'fight night'],
+        'TNA': ['tna', 'impact'],
+    }
+    for cat, terms in keywords.items():
+        if group == cat or any(t in norm_name for t in terms):
+            if cat in schedule_by_group:
+                return schedule_by_group[cat]
+
+    # 5. Group fallback if category has an active scheduled time
+    return schedule_by_group.get(group)
+
+
+def collect_roxie(pages, labels, schedule_list):
     errors = []
     candidates = {}
     unsupported = []
     event_labels = {}
-    # Category schedules override older homepage links and retain reused slots.
+    
+    schedule_lookup_url = {}
+    schedule_lookup_name = {}
+    schedule_by_group = {}
+
+    for event in schedule_list:
+        start_time = event.get('start_time')
+        if not start_time:
+            continue
+        if 'url' in event and event['url']:
+            path = urlsplit(event['url']).path.strip('/')
+            schedule_lookup_url[path] = start_time
+            # Infer group from scheduled URL path (e.g. /nba -> NBA)
+            grp = roxie_group(event['url'])
+            if grp and grp != 'Live':
+                schedule_by_group.setdefault(grp, start_time)
+
+        if 'name' in event and event['name']:
+            norm = clean_title(event['name']).casefold()
+            schedule_lookup_name[norm] = start_time
+            
+            # Map group from event name keywords
+            if 'aew' in norm:
+                schedule_by_group.setdefault('AEW', start_time)
+            elif 'nba' in norm:
+                schedule_by_group.setdefault('NBA', start_time)
+            elif 'wwe' in norm or 'nxt' in norm:
+                schedule_by_group.setdefault('WWE', start_time)
+            elif 'ufc' in norm or 'contender' in norm:
+                schedule_by_group.setdefault('UFC', start_time)
+
     for parent, text in sorted(pages.items()):
         if urlsplit(parent).path.strip('/'):
             for target, label in internal_links(text, parent):
                 if label:
                     event_labels.setdefault(target, set()).add(clean_title(label))
+                    
     for page, text in sorted(pages.items()):
         try:
+            page_path = urlsplit(page).path.strip('/')
             sources = extract_sources(text, page)
+            group = roxie_group(page)
+            
             for url in sources:
-                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
-                    candidates.setdefault(url, []).append({'name': name,
-                                                'group': roxie_group(page), 'provider':'RoxieStreams',
-                                                'page': page, 'url': url})
+                names_to_use = sorted(event_labels.get(page) or {clean_title(labels.get(page) or page_path)})
+                for name in names_to_use:
+                    
+                    candidate_dict = {
+                        'name': name, 
+                        'group': group, 
+                        'provider': 'RoxieStreams',
+                        'page': page, 
+                        'url': url
+                    }
+                    
+                    # Match start time using the multi-level matcher
+                    start_time = match_schedule_time(
+                        name, page_path, group, 
+                        schedule_lookup_url, schedule_lookup_name, schedule_by_group
+                    )
+                    
+                    if start_time:
+                        candidate_dict['start_time'] = start_time
+
+                    candidates.setdefault(url, []).append(candidate_dict)
+                    
             if not sources and re.search(r'<(?:iframe|video)\b', text):
                 unsupported.append(page)
         except Exception as exc:
             errors.append({'page': page, 'error': str(exc)})
+            
     return candidates, unsupported, errors
 
 
 def select_roxie(pool):
     global BASE
     attempts = []
+    schedule = []
     for base in dict.fromkeys((BASE, *BACKUPS)):
         BASE = base
         try:
-            pages, labels, errors = discover_roxie(base,pool)
-            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+            pages, labels, errors = discover_roxie(base, pool)
+            
+            # Extract schedules from the homepage AND any crawled category pages
+            all_schedules = []
+            seen_events = set()
+            for page_url, html_content in pages.items():
+                if html_content:
+                    for ev in parse_schedules(html_content):
+                        key = (ev.get('name'), ev.get('start_time'))
+                        if key not in seen_events:
+                            seen_events.add(key)
+                            all_schedules.append(ev)
+            schedule = all_schedules
+
+            candidates, unsupported, source_errors = collect_roxie(pages, labels, schedule)
             errors.extend(source_errors)
+            
             if not candidates:
                 errors.append({'error':'No HLS sources discovered'})
+
         except Exception as exc:
             pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
+            
         attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
         if not errors:
             break
         print(f'Incomplete discovery on {base}; trying backup',flush=True)
-    return pages, candidates, unsupported, errors, attempts
+        
+    return pages, candidates, unsupported, errors, attempts, schedule
 
 
 def main():
     print('Discovering stream pages...', flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+        pages, candidates, unsupported, errors, attempts, schedule = select_roxie(pool)
         entries, unavailable = [], 0
         print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
         def check(aliases):
             for entry in aliases:
                 try:
                     if live_media(entry['url'], entry['page']):
-                        # Use the verified referrer on the deduplicated playback entry.
                         return [dict(alias, page=entry['page']) for alias in aliases]
                 except Exception:
                     pass
             return None
+            
         for index, result in enumerate(pool.map(check, candidates.values()), 1):
             if index % 10 == 0:
                 print(f'Checked {index}/{len(candidates)} URLs', flush=True)
@@ -248,18 +411,23 @@ def main():
                 entries.extend(result)
             else:
                 unavailable += 1
+                
     entries = decorate(entries)
+    
     report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
               'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
               'unsupported_pages': unsupported, 'errors': errors,
               'event_groups':len({e['event_id'] for e in entries}),
               'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
+              'schedule': schedule, 
               'roxie_source':BASE,'roxie_attempts':attempts}
+              
     Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
-    # Retain the last successful playlist if every mirror fails discovery.
+    
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
+        
     changed = write_playlist_if_changed(render(entries))
     print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
 
