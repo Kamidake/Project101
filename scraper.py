@@ -31,6 +31,61 @@ def fetch(url, referer=BASE):
             time.sleep(0.5)
 
 
+class ScheduleParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_table = False
+        self.in_tbody = False
+        self.in_tr = False
+        self.in_td = False
+        self.td_index = 0
+        
+        self.events = []
+        self.current_event = {}
+        self.current_text = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        
+        if tag == 'table' and attrs.get('id') == 'eventsTable':
+            self.in_table = True
+        elif self.in_table and tag == 'tbody':
+            self.in_tbody = True
+        elif self.in_tbody and tag == 'tr':
+            self.in_tr = True
+            self.current_event = {}
+            self.td_index = 0
+        elif self.in_tr and tag == 'td':
+            self.in_td = True
+            self.current_text = []
+        elif self.in_td and tag == 'a' and self.td_index == 0:
+            self.current_event['url'] = attrs.get('href', '')
+
+    def handle_data(self, data):
+        if self.in_td:
+            self.current_text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == 'table' and self.in_table:
+            self.in_table = False
+        elif tag == 'tbody' and self.in_tbody:
+            self.in_tbody = False
+        elif tag == 'tr' and self.in_tr:
+            self.in_tr = False
+            if 'name' in self.current_event and self.current_event['name']:
+                self.events.append(self.current_event)
+        elif tag == 'td' and self.in_td:
+            self.in_td = False
+            text = ''.join(self.current_text).strip()
+            
+            if self.td_index == 0:
+                self.current_event['name'] = text
+            elif self.td_index == 1:
+                self.current_event['start_time'] = text
+                
+            self.td_index += 1
+
+
 class Links(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -209,6 +264,7 @@ def collect_roxie(pages, labels):
 def select_roxie(pool):
     global BASE
     attempts = []
+    schedule = []
     for base in dict.fromkeys((BASE, *BACKUPS)):
         BASE = base
         try:
@@ -217,19 +273,26 @@ def select_roxie(pool):
             errors.extend(source_errors)
             if not candidates:
                 errors.append({'error':'No HLS sources discovered'})
+            
+            # Extract the event schedule from the homepage HTML
+            if base in pages:
+                parser = ScheduleParser()
+                parser.feed(pages[base])
+                schedule = parser.events
+
         except Exception as exc:
             pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
         attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
         if not errors:
             break
         print(f'Incomplete discovery on {base}; trying backup',flush=True)
-    return pages, candidates, unsupported, errors, attempts
+    return pages, candidates, unsupported, errors, attempts, schedule
 
 
 def main():
     print('Discovering stream pages...', flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+        pages, candidates, unsupported, errors, attempts, schedule = select_roxie(pool)
         entries, unavailable = [], 0
         print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
         def check(aliases):
@@ -254,6 +317,7 @@ def main():
               'unsupported_pages': unsupported, 'errors': errors,
               'event_groups':len({e['event_id'] for e in entries}),
               'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
+              'schedule': schedule, 
               'roxie_source':BASE,'roxie_attempts':attempts}
     Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
