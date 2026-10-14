@@ -85,6 +85,11 @@ def decorate(entries):
         date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
         
+        # --- NEW LOGIC: Inject schedule into the tvg-name ---
+        # We do this AFTER generating the event_id so the unique IDs stay stable
+        if entry.get('start_time'):
+            entry['name'] = f"{entry['name']} ({entry['start_time']})"
+
         provider = entry.get('provider', 'RoxieStreams')
         identity = entry.get('identity') or f'{provider}:{urlsplit(url).netloc}:{urlsplit(url).path}'
         entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
