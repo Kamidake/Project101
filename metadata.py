@@ -1,31 +1,20 @@
-from collections import defaultdict
-from datetime import datetime, timezone
+"""Consistent IPTV titles, category artwork, and feed labels."""
 import hashlib
 import html
-import json
 import re
 import time
 import unicodedata
 from urllib.parse import urlsplit
-from urllib.request import Request, urlopen
 
-LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
-
-GROUPS = {
-    'nfl': 'NFL', 'redzone': 'NFL', 'nba': 'NBA', 'wnba': 'WNBA', 'nhl': 'NHL',
-    'mlb': 'MLB', 'soccer': 'Soccer', 'f1': 'Formula 1', 'nascar': 'NASCAR',
-    'motogp': 'MotoGP', 'mxgp': 'MXGP', 'wwe': 'WWE', 'aew': 'Combat Sports',
-    'tna': 'Combat Sports', 'ufc': 'UFC', 'boxing': 'Boxing', 
-    'fighting': 'Combat Sports', 'motorsports': 'Motorsports'
-}
-
-LOGOS = {
-    'NFL': 'nfl', 'NBA': 'nba', 'WNBA': 'wnba', 'NHL': 'nhl', 'MLB': 'mlb',
-    'Soccer': 'soccer', 'Formula 1': 'formula-1', 'NASCAR': 'nascar', 'MotoGP': 'motogp',
-    'MXGP': 'mxgp', 'WWE': 'wwe', 'UFC': 'ufc', 'Boxing': 'boxing',
-    'Combat Sports': 'combat-sports', 'Motorsports': 'motorsports',
-    'PPV': 'boxing', 'Pay Per View': 'boxing' # Fallback logos for PPV if needed
-}
+LOGO_BASE = 'https://raw.githubusercontent.com/Zer0Spce/ZeroStreams/main/assets/logos/'
+GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
+          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
+          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'ufc':'UFC',
+          'boxing':'Boxing', 'fighting':'Combat Sports', 'motorsports':'Motorsports'}
+LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
+         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
+         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
+         'Combat Sports':'combat-sports', 'Motorsports':'motorsports'}
 
 
 def clean_title(value):
@@ -52,79 +41,44 @@ def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
 
 
-def get_espn_schedule(league):
-    """Fetches today's schedule from ESPN for NBA or UFC."""
-    endpoints = {
-        'nba': 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard',
-        'ufc': 'https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard'
-    }
-    
-    schedule = {}
-    url = endpoints.get(league)
-    if not url:
-        return schedule
-        
-    try:
-        req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode('utf-8'))
-            
-        for event in data.get('events', []):
-            date_str = event.get('date')
-            if not date_str:
-                continue
-                
-            # Convert ISO string to a Unix timestamp
-            dt_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%MZ").replace(tzinfo=timezone.utc)
-            unix_time = int(dt_obj.timestamp())
-            
-            # Method A: Save the raw event name (Best for UFC, e.g., "UFC 300: Pereira vs. Hill")
-            name = event.get('name')
-            if name:
-                schedule[event_key(name)] = unix_time
-                
-            # Method B: Save the short name (Good for NBA, e.g., "MIA @ BOS")
-            short_name = event.get('shortName')
-            if short_name:
-                schedule[event_key(short_name)] = unix_time
-                
-    except Exception as e:
-        print(f"Error fetching ESPN schedule for {league}: {e}")
-        
-    return schedule
-
-
 def decorate(entries):
-    """
-    Removes duplicate URLs for the same event and numbers alternate streams.
-    A repeated URL for different events is allowed (not mislabeled).
-    """
-    seen = set()
+    """Format entries and remove exact duplicate URLs without grouping."""
     result = []
-    counts = {}
-
-    for entry in entries:
-        # Determine if the dictionary uses 'name' or 'title'
-        name_key = 'name' if 'name' in entry else 'title'
-        name = entry.get(name_key, '')
+    seen_urls = set()
+    
+    for entry_raw in entries:
+        entry = dict(entry_raw)
         url = entry.get('url', '')
-
-        # Use combination of name and url to filter duplicates
-        identifier = (name, url)
-        if identifier in seen:
+        
+        # Deduplicate exact URLs 
+        if url in seen_urls:
             continue
-        seen.add(identifier)
-
-        # Count occurrences of this specific event name for numbering alternates
-        counts[name] = counts.get(name, 0) + 1
-        count = counts[name]
-
-        # Create a copy so we don't mutate the original dictionary
-        new_entry = dict(entry)
-        if count > 1:
-            # Appends ' 2', ' 3', etc., to alternate streams.
-            new_entry[name_key] = f"{name} {count}"
+        seen_urls.add(url)
+        
+        entry['name'] = clean_title(entry['name'])
+        entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
+        
+        # Date ID for EPG/M3U matching
+        date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
+        entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
+        
+        provider = entry.get('provider', 'RoxieStreams')
+        identity = entry.get('identity') or f'{provider}:{urlsplit(url).netloc}:{urlsplit(url).path}'
+        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+        
+        # Build the metadata details (provider, source tag, locale)
+        details = []
+        if provider.casefold() != 'roxiestreams':
+            details.append(provider)
+        if entry.get('source_tag'):
+            details.append(entry['source_tag'])
+        if entry.get('locale'):
+            details.append(entry['locale'].upper())
             
-        result.append(new_entry)
-
+        # Format the final display name
+        title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+        entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+        
+        result.append(entry)
+        
     return result
