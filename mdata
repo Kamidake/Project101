@@ -5,7 +5,7 @@ import re
 import time
 import unicodedata
 from urllib.parse import urlsplit
-from datetime import datetime
+from datetime import datetime, timedelta
 try:
     import zoneinfo
 except ImportError:
@@ -13,7 +13,6 @@ except ImportError:
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
 
-# Full mapping so unwanted sports get correctly identified (and then filtered out)
 GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
           'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
           'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'AEW', 'tna':'TNA', 'ufc':'UFC',
@@ -24,7 +23,6 @@ LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
          'MXGP':'mxgp', 'WWE':'wwe', 'AEW':'combat-sports', 'TNA':'tna', 'UFC':'ufc', 'Boxing':'boxing',
          'Combat Sports':'combat-sports', 'Motorsports':'motorsports'}
 
-# Added TNA to the allowed groups
 ALLOWED_GROUPS = {'NBA', 'Boxing', 'Combat Sports', 'UFC', 'AEW', 'WWE', 'TNA', 'Live'}
 
 
@@ -52,28 +50,28 @@ def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
 
 
-def to_philippine_time(time_str):
-    """Converts a US Eastern time string to Philippine Time."""
+def process_schedule_time(time_str):
+    """Parses time and returns a formatted display string and XMLTV start/stop times."""
     if not time_str or not zoneinfo:
-        return time_str
+        return time_str, None, None
         
     time_str = " ".join(time_str.split())
     
     try:
-        # Parse the expected format: "October 13, 2026 9:45 AM"
         dt = datetime.strptime(time_str, "%B %d, %Y %I:%M %p")
-        
-        # Assume the scraped time is US Eastern (standard for NA sports sites)
         dt_et = dt.replace(tzinfo=zoneinfo.ZoneInfo("America/New_York"))
-        
-        # Convert to Philippine Time (UTC+8)
         dt_ph = dt_et.astimezone(zoneinfo.ZoneInfo("Asia/Manila"))
         
-        # Format back to a simplified string WITHOUT the year (e.g. "Oct 14, 09:45 AM")
-        return dt_ph.strftime("%b %d, %I:%M %p")
+        # 1. Display String (e.g. "Oct 14, 09:45 AM")
+        display = dt_ph.strftime("%b %d, %I:%M %p")
+        
+        # 2. XMLTV timestamps (Format: YYYYMMDDHHMMSS +0800)
+        xmltv_start = dt_ph.strftime("%Y%m%d%H%M00 +0800")
+        xmltv_stop = (dt_ph + timedelta(hours=3)).strftime("%Y%m%d%H%M00 +0800") # Default duration 3 hours
+        
+        return display, xmltv_start, xmltv_stop
     except ValueError:
-        # Fallback to the original string if parsing fails, but try to strip the year
-        return re.sub(r',? \d{4}', '', time_str)
+        return re.sub(r',? \d{4}', '', time_str), None, None
 
 
 def decorate(entries):
@@ -84,25 +82,21 @@ def decorate(entries):
     for entry_raw in entries:
         entry = dict(entry_raw)
         
-        # --- Remove if 'ncaa' is in the referrer or page URL ---
         page_url = str(entry.get('page', '')).casefold()
         referrer_url = str(entry.get('referrer', '')).casefold()
         if 'ncaa' in page_url or 'ncaa' in referrer_url:
             continue
 
-        # --- Re-categorize based on channel name keywords ---
         if re.search(r'\btna\b', entry.get('name', ''), flags=re.IGNORECASE):
             entry['group'] = 'TNA'
         if re.search(r'\baew\b', entry.get('name', ''), flags=re.IGNORECASE):
             entry['group'] = 'AEW'
             
-        # Only keep streams that match your requested categories
         if entry.get('group') not in ALLOWED_GROUPS:
             continue
             
         url = entry.get('url', '')
         
-        # Deduplicate exact URLs 
         if url in seen_urls:
             continue
         seen_urls.add(url)
@@ -110,22 +104,24 @@ def decorate(entries):
         entry['name'] = clean_title(entry['name'])
         entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
         
-        # Date ID for EPG/M3U matching
         date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
         
-        # --- Convert and inject schedule into the tvg-name ---
+        # --- Handle Time and XMLTV Data ---
+        entry['base_name'] = entry['name'] # Keep original name for the EPG Title
         if entry.get('start_time'):
-            ph_time = to_philippine_time(entry['start_time'])
-            entry['name'] = f"{entry['name']} ({ph_time})"
+            display_time, xmltv_start, xmltv_stop = process_schedule_time(entry['start_time'])
+            if display_time:
+                entry['name'] = f"{entry['name']} ({display_time})"
+            if xmltv_start:
+                entry['xmltv_start'] = xmltv_start
+                entry['xmltv_stop'] = xmltv_stop
 
         provider = entry.get('provider', 'RoxieStreams')
         identity = entry.get('identity') or f'{provider}:{urlsplit(url).netloc}:{urlsplit(url).path}'
         
-        # --- REPLACED 'zerostreams.' with 'lennon.' ---
         entry['tvg_id'] = 'lennon.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
         
-        # Build the metadata details (provider, source tag, locale)
         details = []
         if provider.casefold() != 'roxiestreams':
             details.append(provider)
@@ -134,7 +130,6 @@ def decorate(entries):
         if entry.get('locale'):
             details.append(entry['locale'].upper())
             
-        # Format the final display name
         title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
         entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
         
