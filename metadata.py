@@ -7,17 +7,22 @@ import unicodedata
 from urllib.parse import urlsplit
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
-GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
-          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
-          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'aew':'Combat Sports',
-          'tna':'Combat Sports', 'ufc':'UFC', 'boxing':'Boxing', 
-          'fighting':'Combat Sports', 'motorsports':'Motorsports'}
-LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
-         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
-         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
-         'Combat Sports':'combat-sports', 'Motorsports':'motorsports',
-         'PPV':'boxing', 'Pay Per View':'boxing'} # Fallback logos for PPV if needed
 
+GROUPS = {
+    'nfl': 'NFL', 'redzone': 'NFL', 'nba': 'NBA', 'wnba': 'WNBA', 'nhl': 'NHL',
+    'mlb': 'MLB', 'soccer': 'Soccer', 'f1': 'Formula 1', 'nascar': 'NASCAR',
+    'motogp': 'MotoGP', 'mxgp': 'MXGP', 'wwe': 'WWE', 'aew': 'Combat Sports',
+    'tna': 'Combat Sports', 'ufc': 'UFC', 'boxing': 'Boxing', 
+    'fighting': 'Combat Sports', 'motorsports': 'Motorsports'
+}
+
+LOGOS = {
+    'NFL': 'nfl', 'NBA': 'nba', 'WNBA': 'wnba', 'NHL': 'nhl', 'MLB': 'mlb',
+    'Soccer': 'soccer', 'Formula 1': 'formula-1', 'NASCAR': 'nascar', 'MotoGP': 'motogp',
+    'MXGP': 'mxgp', 'WWE': 'wwe', 'UFC': 'ufc', 'Boxing': 'boxing',
+    'Combat Sports': 'combat-sports', 'Motorsports': 'motorsports',
+    'PPV': 'boxing', 'Pay Per View': 'boxing' # Fallback logos for PPV if needed
+}
 
 def clean_title(value):
     value = ' '.join(html.unescape(str(value)).split())
@@ -28,20 +33,16 @@ def clean_title(value):
     value = re.sub(r'\s*-\s*(Race|Malaysian Grand Prix)\b', r': \1', value)
     return value.strip()
 
-
 def event_key(name):
     text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
     return re.sub(r'[^a-z0-9]+', ' ', text).strip()
-
 
 def roxie_group(page):
     slug = urlsplit(page).path.strip('/').split('-')[0].lower()
     return GROUPS.get(slug, 'Live')
 
-
 def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
-
 
 def decorate(entries):
     """Dedupe URLs; strictly include only specific groups; conditionally group events."""
@@ -60,13 +61,13 @@ def decorate(entries):
         
     unique = []
     for url, aliases in sorted(by_url.items()):
-        aliases.sort(key=lambda e: (e.get('provider','RoxieStreams'), e['page'], e['name']))
+        aliases.sort(key=lambda e: (e.get('provider', 'RoxieStreams'), e['page'], e['name']))
         entry = aliases[0]
         names = {event_key(e['name']) for e in aliases}
-        entry['provider'] = ' + '.join(sorted({e.get('provider','RoxieStreams') for e in aliases}))
+        entry['provider'] = ' + '.join(sorted({e.get('provider', 'RoxieStreams') for e in aliases}))
         
         if len(names) > 1:
-            channel = urlsplit(url).path.rsplit('/',1)[-1].removesuffix('.m3u8')
+            channel = urlsplit(url).path.rsplit('/', 1)[-1].removesuffix('.m3u8')
             entry['name'] = channel.upper() + ' — Shared Feed'
             categories = {alias['group'] for alias in aliases}
             entry['group'] = next(iter(categories)) if len(categories) == 1 else 'Shared Channels'
@@ -97,18 +98,23 @@ def decorate(entries):
             
     # Process and format all streams
     for key in sorted(grouped_streams):
-        feeds = sorted(grouped_streams[key], key=lambda e:(e['provider'], e.get('source_tag',''), e['url']))
+        feeds = sorted(grouped_streams[key], key=lambda e: (e['provider'], e.get('source_tag', ''), e['url']))
         for index, entry in enumerate(feeds, 1):
             details = []
             
             # 1. ADD DATE & TIME HERE (Philippine Time)
             if entry.get('starts_at'):
-                # Add 8 hours (28800 seconds) to the UTC timestamp for UTC+8
-                pht_timestamp = entry['starts_at'] + 28800
-                event_time = time.strftime('%b %d, %I:%M %p', time.gmtime(pht_timestamp))
-                
-                # Append time to the base name so it shows up directly in tvg-name
-                entry['name'] = f"{entry['name']} [{event_time}]"
+                try:
+                    # Force starts_at to be an integer (fixes issues if the source sends it as a string)
+                    timestamp = int(entry['starts_at'])
+                    # Add 8 hours (28800 seconds) to the UTC timestamp for PHT
+                    pht_timestamp = timestamp + 28800
+                    event_time = time.strftime('%b %d, %I:%M %p', time.gmtime(pht_timestamp))
+                    
+                    # Append time to the base name
+                    entry['name'] = f"{entry['name']} [{event_time}]"
+                except (ValueError, TypeError):
+                    pass # Failsafe in case starts_at is missing or invalid text
 
             # 2. Add Feed Number (if applicable)
             is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
@@ -125,6 +131,11 @@ def decorate(entries):
             # 4. Build Final Display Name
             title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
             entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+            
+            # 5. EXPLICITLY SET TVG-NAME
+            # This ensures the M3U builder uses the newly formatted name with the date/time
+            entry['tvg_name'] = entry['name'] 
+            
             result.append(entry)
             
     # Sort the final combined output by group and then event name
