@@ -1,10 +1,13 @@
 from collections import defaultdict
+from datetime import datetime, timezone
 import hashlib
 import html
+import json
 import re
 import time
 import unicodedata
 from urllib.parse import urlsplit
+from urllib.request import Request, urlopen
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
 
@@ -24,6 +27,7 @@ LOGOS = {
     'PPV': 'boxing', 'Pay Per View': 'boxing' # Fallback logos for PPV if needed
 }
 
+
 def clean_title(value):
     value = ' '.join(html.unescape(str(value)).split())
     value = re.sub(r'\bvs\.?\s*', 'vs ', value, flags=re.I)
@@ -33,22 +37,85 @@ def clean_title(value):
     value = re.sub(r'\s*-\s*(Race|Malaysian Grand Prix)\b', r': \1', value)
     return value.strip()
 
+
 def event_key(name):
     text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
     return re.sub(r'[^a-z0-9]+', ' ', text).strip()
+
 
 def roxie_group(page):
     slug = urlsplit(page).path.strip('/').split('-')[0].lower()
     return GROUPS.get(slug, 'Live')
 
+
 def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
+
+
+def get_espn_schedule(league):
+    """Fetches today's schedule from ESPN for NBA, NFL, NHL, or UFC."""
+    endpoints = {
+        'nba': 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard',
+        'nfl': 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard',
+        'nhl': 'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard',
+        'ufc': 'https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard'
+    }
+    
+    schedule = {}
+    url = endpoints.get(league)
+    if not url:
+        return schedule
+        
+    try:
+        req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            
+        for event in data.get('events', []):
+            date_str = event.get('date')
+            if not date_str:
+                continue
+                
+            # Convert ISO string to a Unix timestamp
+            dt_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%MZ").replace(tzinfo=timezone.utc)
+            unix_time = int(dt_obj.timestamp())
+            
+            # Method A: Save the raw event name (Best for UFC, e.g., "UFC 300: Pereira vs. Hill")
+            if event.get('name'):
+                schedule[event['name'].casefold()] = unix_time
+            if event.get('shortName'):
+                schedule[event['shortName'].casefold()] = unix_time
+                
+            # Method B: Extract Competitors (Best for NFL, NBA, NHL)
+            try:
+                competitors = event['competitions'][0]['competitors']
+                name1 = competitors[0].get('team', {}).get('name') or competitors[0].get('athlete', {}).get('displayName')
+                name2 = competitors[1].get('team', {}).get('name') or competitors[1].get('athlete', {}).get('displayName')
+                
+                if name1 and name2:
+                    name1, name2 = name1.casefold(), name2.casefold()
+                    schedule[(name1, name2)] = unix_time
+            except (KeyError, IndexError):
+                pass
+                
+    except Exception as e:
+        print(f"DEBUG: Failed to fetch {league.upper()} schedule from ESPN: {e}")
+        
+    return schedule
+
 
 def decorate(entries):
     """Dedupe URLs; strictly include only specific groups; conditionally group events."""
     
     # Define the strict whitelist of allowed groups (case-insensitive mapping)
-    allowed_groups = {'nba', 'live', 'ufc', 'boxing', 'combat sports', 'wwe'}
+    allowed_groups = {'nba', 'nfl', 'nhl', 'ufc', 'boxing', 'combat sports', 'wwe', 'live'}
+    
+    # 1. DOWNLOAD SCHEDULES ONLY FOR RELEVANT LEAGUES
+    found_leagues = {str(e.get('group', '')).strip().casefold() for e in entries}
+    schedules = {}
+    for league in ['nba', 'nfl', 'nhl', 'ufc']:
+        if league in found_leagues:
+            schedules[league] = get_espn_schedule(league)
     
     by_url = defaultdict(list)
     for entry in entries:
@@ -57,6 +124,21 @@ def decorate(entries):
         if not group or group not in allowed_groups:
             continue
             
+        # 2. MATCH THE SCRAPED NAME TO THE EXTERNAL ESPN SCHEDULE
+        name_clean = entry['name'].casefold()
+        league_schedule = schedules.get(group, {})
+        
+        for game_key, start_time in league_schedule.items():
+            if isinstance(game_key, tuple):
+                team1, team2 = game_key
+                if team1 in name_clean and team2 in name_clean:
+                    entry['starts_at'] = start_time
+                    break
+            elif isinstance(game_key, str):
+                if game_key in name_clean or name_clean in game_key:
+                    entry['starts_at'] = start_time
+                    break
+                    
         by_url[entry['url']].append(dict(entry))
         
     unique = []
@@ -90,7 +172,7 @@ def decorate(entries):
     result = []
     
     # Define which groups get the numbered feed logic
-    groups_to_number = {'nba', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
+    groups_to_number = {'nba', 'nfl', 'nhl', 'ufc', 'boxing', 'combat sports', 'wwe', 'ppv', 'pay per view'}
     
     # Process all unique streams into groups for uniform date/time formatting
     for entry in unique:
@@ -102,10 +184,7 @@ def decorate(entries):
         for index, entry in enumerate(feeds, 1):
             details = []
             
-            # --- DEBUG PRINT: THIS WILL SHOW IN YOUR TERMINAL/CONSOLE ---
-            print(f"DEBUG: {entry['name']} - Has starts_at? {entry.get('starts_at')}")
-            
-            # 1. ADD DATE & TIME HERE (Philippine Time)
+            # 3. ADD DATE & TIME HERE (Philippine Time)
             if entry.get('starts_at'):
                 try:
                     # Force starts_at to be an integer
@@ -117,26 +196,25 @@ def decorate(entries):
                     # Append time to the base name
                     entry['name'] = f"{entry['name']} [{event_time}]"
                 except (ValueError, TypeError):
-                    print(f"DEBUG: Error formatting time for {entry['name']}")
-                    pass
+                    pass 
 
-            # 2. Add Feed Number (if applicable)
+            # 4. Add Feed Number (if applicable)
             is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
             if is_numbered_group and len(feeds) > 1:
                 details.append(f'Feed {index}')
                 
-            # 3. Add Provider & Locale info
+            # 5. Add Provider & Locale info
             details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
             if entry.get('source_tag'):
                 details.append(entry['source_tag'])
             if entry.get('locale'):
                 details.append(entry['locale'].upper())
                 
-            # 4. Build Final Display Name
+            # 6. Build Final Display Name
             title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
             entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
             
-            # 5. EXPLICITLY SET TVG-NAME
+            # 7. EXPLICITLY SET TVG-NAME
             entry['tvg_name'] = entry['name'] 
             
             result.append(entry)
