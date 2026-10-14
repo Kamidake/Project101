@@ -1,5 +1,4 @@
 """Consistent IPTV titles, category artwork, and feed labels."""
-from collections import defaultdict
 import hashlib
 import html
 import re
@@ -43,45 +42,43 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Dedupe exact URLs; merge matching event names, number distinct feeds."""
-    by_url = defaultdict(list)
-    for entry in entries:
-        by_url[entry['url']].append(dict(entry))
-    unique = []
-    for url, aliases in sorted(by_url.items()):
-        aliases.sort(key=lambda e: (e.get('provider','RoxieStreams'), e['page'], e['name']))
-        entry = aliases[0]
-        names = {event_key(e['name']) for e in aliases}
-        entry['provider'] = ' + '.join(sorted({e.get('provider','RoxieStreams') for e in aliases}))
-        if len(names) > 1:
-            channel = urlsplit(url).path.rsplit('/',1)[-1].removesuffix('.m3u8')
-            entry['name'] = channel.upper() + ' — Shared Feed'
-            categories = {alias['group'] for alias in aliases}
-            entry['group'] = next(iter(categories)) if len(categories) == 1 else 'Shared Channels'
-            entry['poster'] = ''
-        else:
-            entry['name'] = clean_title(entry['name'])
+    """Format entries and remove exact duplicate URLs without grouping."""
+    result = []
+    seen_urls = set()
+    
+    for entry_raw in entries:
+        entry = dict(entry_raw)
+        url = entry.get('url', '')
+        
+        # Deduplicate exact URLs 
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+        
+        entry['name'] = clean_title(entry['name'])
         entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
-        # Date avoids grouping repeat fixtures on different days.
+        
+        # Date ID for EPG/M3U matching
         date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
-        identity = entry.get('identity') or f'{entry["provider"]}:{urlsplit(url).netloc}:{urlsplit(url).path}'
+        
+        provider = entry.get('provider', 'RoxieStreams')
+        identity = entry.get('identity') or f'{provider}:{urlsplit(url).netloc}:{urlsplit(url).path}'
         entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
-        unique.append(entry)
-    groups = defaultdict(list)
-    for entry in unique:
-        groups[entry['event_id']].append(entry)
-    result = []
-    for key in sorted(groups):
-        feeds = sorted(groups[key], key=lambda e:(e['provider'],e.get('source_tag',''),e['url']))
-        for index, entry in enumerate(feeds,1):
-            details = [f'Feed {index}'] if len(feeds)>1 else []
-            details.extend(provider for provider in entry['provider'].split(' + ') if provider.casefold() != 'roxiestreams')
-            if entry.get('source_tag'):
-                details.append(entry['source_tag'])
-            if entry.get('locale'):
-                details.append(entry['locale'].upper())
-            title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
-            entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
-            result.append(entry)
+        
+        # Build the metadata details (provider, source tag, locale)
+        details = []
+        if provider.casefold() != 'roxiestreams':
+            details.append(provider)
+        if entry.get('source_tag'):
+            details.append(entry['source_tag'])
+        if entry.get('locale'):
+            details.append(entry['locale'].upper())
+            
+        # Format the final display name
+        title = entry['name'] if entry['name'].casefold().startswith(entry['group'].casefold()) else f'{entry["group"]} | {entry["name"]}'
+        entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
+        
+        result.append(entry)
+        
     return result
