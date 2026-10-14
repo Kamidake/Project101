@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-14T22:12:27.476758+00:00",
-  "pages": 42,
-  "candidate_urls": 43,
+  "updated_utc": "2026-10-14T22:37:27.924636+00:00",
+  "pages": 43,
+  "candidate_urls": 44,
   "live_urls": 0,
-  "unavailable_urls": 43,
+  "unavailable_urls": 44,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 0,
@@ -50,14 +50,14 @@
       "start_time": "October 14, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Kennesaw State vs Missouri State",
-      "start_time": "Oct 14, 2026 4:30 PM"
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "Montreal Canadiens vs Washington Capitals",
+      "start_time": "October 14, 2026 04:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Western Kentucky vs Sam Houston",
-      "start_time": "Oct 14, 2026 5:00 PM"
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Dallas Stars vs Colorado Avalanche",
+      "start_time": "October 14, 2026 05:30 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -95,14 +95,14 @@
       "start_time": "October 14, 2026 7:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "Montreal Canadiens vs Washington Capitals",
-      "start_time": "October 14, 2026 04:30 PM"
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Kennesaw State vs Missouri State",
+      "start_time": "Oct 14, 2026 4:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Dallas Stars vs Colorado Avalanche",
-      "start_time": "October 14, 2026 05:30 PM"
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Western Kentucky vs Sam Houston",
+      "start_time": "Oct 14, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/motogp",
@@ -190,6 +190,11 @@
       "start_time": "October 14, 2026 12:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/soccer-streams-17",
+      "name": "Sarmiento vs River Plate",
+      "start_time": "October 14, 2026 3:00 PM"
+    },
+    {
       "url": "https://roxiestreams.info/soccer-streams-14",
       "name": "Atl\u00e9tico Mineiro vs Torque",
       "start_time": "October 14, 2026 3:00 PM"
@@ -219,7 +224,7 @@
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 42,
+      "pages": 43,
       "errors": []
     }
   ]
