@@ -93,6 +93,38 @@ def get_espn_schedule(league):
         
     return schedule
 
-def decorate():
-    """Placeholder function so the tests don't fail trying to import it."""
-    pass
+
+def decorate(entries):
+    """
+    Removes duplicate URLs for the same event and numbers alternate streams.
+    A repeated URL for different events is allowed (not mislabeled).
+    """
+    seen = set()
+    result = []
+    counts = {}
+
+    for entry in entries:
+        # Determine if the dictionary uses 'name' or 'title'
+        name_key = 'name' if 'name' in entry else 'title'
+        name = entry.get(name_key, '')
+        url = entry.get('url', '')
+
+        # Use combination of name and url to filter duplicates
+        identifier = (name, url)
+        if identifier in seen:
+            continue
+        seen.add(identifier)
+
+        # Count occurrences of this specific event name for numbering alternates
+        counts[name] = counts.get(name, 0) + 1
+        count = counts[name]
+
+        # Create a copy so we don't mutate the original dictionary
+        new_entry = dict(entry)
+        if count > 1:
+            # Appends ' 2', ' 3', etc., to alternate streams.
+            new_entry[name_key] = f"{name} {count}"
+            
+        result.append(new_entry)
+
+    return result
