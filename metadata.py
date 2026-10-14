@@ -102,10 +102,13 @@ def decorate(entries):
         for index, entry in enumerate(feeds, 1):
             details = []
             
+            # --- DEBUG PRINT: THIS WILL SHOW IN YOUR TERMINAL/CONSOLE ---
+            print(f"DEBUG: {entry['name']} - Has starts_at? {entry.get('starts_at')}")
+            
             # 1. ADD DATE & TIME HERE (Philippine Time)
             if entry.get('starts_at'):
                 try:
-                    # Force starts_at to be an integer (fixes issues if the source sends it as a string)
+                    # Force starts_at to be an integer
                     timestamp = int(entry['starts_at'])
                     # Add 8 hours (28800 seconds) to the UTC timestamp for PHT
                     pht_timestamp = timestamp + 28800
@@ -114,7 +117,8 @@ def decorate(entries):
                     # Append time to the base name
                     entry['name'] = f"{entry['name']} [{event_time}]"
                 except (ValueError, TypeError):
-                    pass # Failsafe in case starts_at is missing or invalid text
+                    print(f"DEBUG: Error formatting time for {entry['name']}")
+                    pass
 
             # 2. Add Feed Number (if applicable)
             is_numbered_group = str(entry.get('group', '')).casefold() in groups_to_number
@@ -133,7 +137,6 @@ def decorate(entries):
             entry['display_name'] = title + (' — ' + ' · '.join(details) if details else '')
             
             # 5. EXPLICITLY SET TVG-NAME
-            # This ensures the M3U builder uses the newly formatted name with the date/time
             entry['tvg_name'] = entry['name'] 
             
             result.append(entry)
