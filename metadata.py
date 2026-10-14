@@ -59,6 +59,10 @@ def process_schedule_time(time_str):
     
     try:
         dt = datetime.strptime(time_str, "%B %d, %Y %I:%M %p")
+        
+        # --- Add 3 hours to the scheduled time ---
+        dt += timedelta(hours=3)
+        
         dt_et = dt.replace(tzinfo=zoneinfo.ZoneInfo("America/New_York"))
         dt_ph = dt_et.astimezone(zoneinfo.ZoneInfo("Asia/Manila"))
         
