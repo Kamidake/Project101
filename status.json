@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-14T22:52:24.995410+00:00",
+  "updated_utc": "2026-10-14T23:07:23.314599+00:00",
   "pages": 43,
-  "candidate_urls": 44,
+  "candidate_urls": 43,
   "live_urls": 0,
-  "unavailable_urls": 44,
+  "unavailable_urls": 43,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 0,
@@ -35,11 +35,6 @@
       "start_time": "October 14, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
-      "start_time": "October 14, 2026 05:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/ppv-streams-1",
       "name": "TNA",
       "start_time": "October 15, 2026 5:00 PM"
@@ -50,14 +45,39 @@
       "start_time": "October 16, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "Montreal Canadiens vs Washington Capitals",
-      "start_time": "October 14, 2026 04:30 PM"
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
+      "start_time": "October 14, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Dallas Stars vs Colorado Avalanche",
-      "start_time": "October 14, 2026 05:30 PM"
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Kennesaw State vs Missouri State",
+      "start_time": "Oct 14, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Western Kentucky vs Sam Houston",
+      "start_time": "Oct 14, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/motogp",
+      "name": "MotoGP - Indonesian Grand Prix",
+      "start_time": "October 11, 2026 12:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/f1",
+      "name": "Formula 1 - Singapore Grand Prix",
+      "start_time": "October 11, 2026 5:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR Cup Series - Race",
+      "start_time": "October 11, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR O'Reilly Auto Parts Series - Race",
+      "start_time": "October 11, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -93,36 +113,6 @@
       "url": "https://roxiestreams.info/nba-streams-7",
       "name": "Denver Nuggets vs Los Angeles Clippers",
       "start_time": "October 14, 2026 7:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Kennesaw State vs Missouri State",
-      "start_time": "Oct 14, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Western Kentucky vs Sam Houston",
-      "start_time": "Oct 14, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/motogp",
-      "name": "MotoGP - Indonesian Grand Prix",
-      "start_time": "October 11, 2026 12:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/f1",
-      "name": "Formula 1 - Singapore Grand Prix",
-      "start_time": "October 11, 2026 5:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR Cup Series - Race",
-      "start_time": "October 11, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR O'Reilly Auto Parts Series - Race",
-      "start_time": "October 11, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-1",
@@ -218,6 +208,16 @@
       "url": "https://roxiestreams.info/soccer-streams-16",
       "name": "Colorado Rapids vs Minnesota Rapids",
       "start_time": "October 14, 2026 6:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "Montreal Canadiens vs Washington Capitals",
+      "start_time": "October 14, 2026 04:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Dallas Stars vs Colorado Avalanche",
+      "start_time": "October 14, 2026 05:30 PM"
     }
   ],
   "roxie_source": "https://roxiestreams.info/",
