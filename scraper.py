@@ -38,11 +38,20 @@ class Links(HTMLParser):
         self.current = None
         self.heading = False
         self.title = ''
+        self.last_time = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        
+        # AGGRESSIVE TIME SEARCH: Look for hidden timestamps in the HTML (data-time, data-start, etc.)
+        for attr, value in attrs.items():
+            if 'time' in attr or 'date' in attr or 'start' in attr:
+                # Unix timestamps are exactly 10 digits long
+                if str(value).isdigit() and len(str(value)) == 10:
+                    self.last_time = int(value)
+                    
         if tag == 'a' and attrs.get('href'):
-            self.current = [attrs['href'], '']
+            self.current = [attrs['href'], '', self.last_time]
         if tag in ('h1', 'h2') and not self.title:
             self.heading = True
 
@@ -64,12 +73,11 @@ def internal_links(text, page, base=None):
     base = base or BASE
     parser = Links()
     parser.feed(text)
-    for href, label in parser.links:
+    for href, label, starts_at in parser.links:
         url = urljoin(page, href).split('#')[0]
         parts = urlsplit(url)
         if parts.scheme not in ('http', 'https'):
             continue
-        # Mirrors sometimes retain absolute links to the original domain.
         if parts.hostname in ROXIE_HOSTS:
             target = urlsplit(base)
             url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
@@ -78,7 +86,7 @@ def internal_links(text, page, base=None):
             continue
         if parts.query or re.search(r'\.[a-zA-Z0-9]{2,5}$', parts.path) or parts.path == '/multiview':
             continue
-        yield url, ' '.join(label.split())
+        yield url, ' '.join(label.split()), starts_at
 
 
 @lru_cache(maxsize=64)
@@ -105,7 +113,6 @@ def extract_sources(text, page, domain_loader=load_domains):
 
 
 def live_media(url, referer, depth=0):
-    """Require a live media manifest and a reachable segment, not just HTTP 200."""
     if depth > 3:
         return False
     text = fetch(url, referer)
@@ -147,7 +154,7 @@ def write_playlist_if_changed(content, path=Path('playlist.m3u')):
 
 
 def discover_roxie(base, pool):
-    pages, errors, labels = {}, [], {base:'RoxieStreams'}
+    pages, errors, labels, times = {}, [], {base:'RoxieStreams'}, {}
     pending = {base}
     for _ in range(5):
         batch = sorted(pending - pages.keys())
@@ -163,42 +170,63 @@ def discover_roxie(base, pool):
             try:
                 text = future.result()
                 pages[page] = text
-                for url, label in internal_links(text,page,base):
+                for url, label, starts_at in internal_links(text,page,base):
                     if label:
                         labels.setdefault(url,label)
+                    if starts_at:
+                        times.setdefault(url, starts_at)
                     if url not in pages:
                         pending.add(url)
             except Exception as exc:
                 pages[page] = ''
-                # Ignore 404 errors for dead stream links instead of failing the workflow
                 if 'HTTP Error 404' not in str(exc):
                     errors.append({'page': page, 'error': str(exc)})
                 else:
                     print(f'Skipped dead link (404): {page}', flush=True)
     if pending - pages.keys():
         errors.append({'error':'Crawl depth limit reached'})
-    return pages, labels, errors
+    return pages, labels, times, errors
 
 
-def collect_roxie(pages, labels):
+def collect_roxie(pages, labels, times):
     errors = []
     candidates = {}
     unsupported = []
     event_labels = {}
-    # Category schedules override older homepage links and retain reused slots.
     for parent, text in sorted(pages.items()):
         if urlsplit(parent).path.strip('/'):
-            for target, label in internal_links(text, parent):
+            for target, label, starts_at in internal_links(text, parent):
                 if label:
                     event_labels.setdefault(target, set()).add(clean_title(label))
+                if starts_at:
+                    times.setdefault(target, starts_at)
+                    
     for page, text in sorted(pages.items()):
         try:
             sources = extract_sources(text, page)
             for url in sources:
                 for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
-                    candidates.setdefault(url, []).append({'name': name,
-                                                'group': roxie_group(page), 'provider':'RoxieStreams',
-                                                'page': page, 'url': url})
+                    
+                    entry = {
+                        'name': name,
+                        'group': roxie_group(page), 
+                        'provider': 'RoxieStreams',
+                        'page': page, 
+                        'url': url
+                    }
+                    
+                    # Attempt to find the time either from our Link parser or by scanning raw page HTML
+                    starts_at = times.get(page)
+                    if not starts_at:
+                        time_match = re.search(r'data-(?:time|timestamp|start)=["\']?(\d{10})["\']?', text)
+                        if time_match:
+                            starts_at = int(time_match.group(1))
+                            
+                    if starts_at:
+                        entry['starts_at'] = starts_at
+                        
+                    candidates.setdefault(url, []).append(entry)
+                    
             if not sources and re.search(r'<(?:iframe|video)\b', text):
                 unsupported.append(page)
         except Exception as exc:
@@ -212,8 +240,8 @@ def select_roxie(pool):
     for base in dict.fromkeys((BASE, *BACKUPS)):
         BASE = base
         try:
-            pages, labels, errors = discover_roxie(base,pool)
-            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+            pages, labels, times, errors = discover_roxie(base,pool)
+            candidates, unsupported, source_errors = collect_roxie(pages, labels, times)
             errors.extend(source_errors)
             if not candidates:
                 errors.append({'error':'No HLS sources discovered'})
@@ -236,7 +264,6 @@ def main():
             for entry in aliases:
                 try:
                     if live_media(entry['url'], entry['page']):
-                        # Use the verified referrer on the deduplicated playback entry.
                         return [dict(alias, page=entry['page']) for alias in aliases]
                 except Exception:
                     pass
@@ -248,6 +275,7 @@ def main():
                 entries.extend(result)
             else:
                 unavailable += 1
+                
     entries = decorate(entries)
     report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
               'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
@@ -257,7 +285,7 @@ def main():
               'roxie_source':BASE,'roxie_attempts':attempts}
     Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
-    # Retain the last successful playlist if every mirror fails discovery.
+    
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
     changed = write_playlist_if_changed(render(entries))
