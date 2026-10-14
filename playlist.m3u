@@ -3,6 +3,10 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/aew.m3u8
+#EXTINF:-1 tvg-id="lennon.74a801167ba76d34" tvg-name="AEW (Oct 15, 05:00 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" group-title="AEW",AEW (Oct 15, 05:00 AM)
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/aew.m3u8
 #EXTINF:-1 tvg-id="lennon.e603721945607098" tvg-name="Brooklyn Nets vs Miami Heat (Oct 15, 04:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Brooklyn Nets vs Miami Heat (Oct 15, 04:30 AM)
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
