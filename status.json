@@ -1,12 +1,12 @@
 {
-  "updated_utc": "2026-10-14T23:23:39.652092+00:00",
-  "pages": 43,
-  "candidate_urls": 44,
-  "live_urls": 0,
-  "unavailable_urls": 44,
+  "updated_utc": "2026-10-14T23:37:24.533172+00:00",
+  "pages": 42,
+  "candidate_urls": 43,
+  "live_urls": 9,
+  "unavailable_urls": 2,
   "unsupported_pages": [],
   "errors": [],
-  "event_groups": 0,
+  "event_groups": 9,
   "event_posters": 0,
   "schedule": [
     {
@@ -50,26 +50,6 @@
       "start_time": "October 14, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/motogp",
-      "name": "MotoGP - Indonesian Grand Prix",
-      "start_time": "October 11, 2026 12:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/f1",
-      "name": "Formula 1 - Singapore Grand Prix",
-      "start_time": "October 11, 2026 5:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR Cup Series - Race",
-      "start_time": "October 11, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR O'Reilly Auto Parts Series - Race",
-      "start_time": "October 11, 2026 5:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/nba-streams-1",
       "name": "Brooklyn Nets vs Miami Heat",
       "start_time": "October 14, 2026 4:30 PM"
@@ -100,19 +80,9 @@
       "start_time": "October 14, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nba-streams-7",
+      "url": "https://roxiestreams.info/nba-streams-4",
       "name": "Denver Nuggets vs Los Angeles Clippers",
       "start_time": "October 14, 2026 7:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Kennesaw State vs Missouri State",
-      "start_time": "Oct 14, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Western Kentucky vs Sam Houston",
-      "start_time": "Oct 14, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nhl-streams-1",
@@ -123,6 +93,36 @@
       "url": "https://roxiestreams.info/nhl-streams-2",
       "name": "Dallas Stars vs Colorado Avalanche",
       "start_time": "October 14, 2026 05:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/motogp",
+      "name": "MotoGP - Indonesian Grand Prix",
+      "start_time": "October 11, 2026 12:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/f1",
+      "name": "Formula 1 - Singapore Grand Prix",
+      "start_time": "October 11, 2026 5:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR Cup Series - Race",
+      "start_time": "October 11, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR O'Reilly Auto Parts Series - Race",
+      "start_time": "October 11, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Kennesaw State vs Missouri State",
+      "start_time": "Oct 14, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Western Kentucky vs Sam Houston",
+      "start_time": "Oct 14, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-1",
@@ -224,7 +224,7 @@
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 43,
+      "pages": 42,
       "errors": []
     }
   ]

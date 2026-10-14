@@ -1,3 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="Project101 EPG">
+  <channel id="lennon.9f8fe02a311ada66">
+    <display-name>AEW (Oct 15, 08:00 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" />
+  </channel>
+  <channel id="lennon.e603721945607098">
+    <display-name>NBA | Brooklyn Nets vs Miami Heat (Oct 15, 07:30 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.69f82e9ce08bb5a8">
+    <display-name>NBA | Charlotte Hornets vs Boston Celtics (Oct 15, 07:30 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.a96973e26e41e7e4">
+    <display-name>NBA | Phoenix Suns vs San Antonio Spurs (Oct 15, 08:00 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.f1320cc92c40b210">
+    <display-name>NBA | Denver Nuggets vs Los Angeles Clippers (Oct 15, 10:30 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.4e05893217110266">
+    <display-name>NBA | Chicago Bulls vs Milwaukee Bucks (Oct 15, 08:00 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.e0888583cb0049a1">
+    <display-name>NBA | Detroit Pistons vs Minnesota Timberwolves (Oct 15, 08:00 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.41df34b610ddfe04">
+    <display-name>TNA (Oct 16, 08:00 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
+  </channel>
+  <channel id="lennon.020b8247511aa5de">
+    <display-name>WWE Smackdown (Oct 17, 08:00 AM)</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <programme start="20261015080000 +0800" stop="20261015110000 +0800" channel="lennon.9f8fe02a311ada66">
+    <title lang="en">AEW</title>
+    <desc lang="en">Live event: AEW</desc>
+  </programme>
+  <programme start="20261015073000 +0800" stop="20261015103000 +0800" channel="lennon.e603721945607098">
+    <title lang="en">Brooklyn Nets vs Miami Heat</title>
+    <desc lang="en">Live event: Brooklyn Nets vs Miami Heat</desc>
+  </programme>
+  <programme start="20261015073000 +0800" stop="20261015103000 +0800" channel="lennon.69f82e9ce08bb5a8">
+    <title lang="en">Charlotte Hornets vs Boston Celtics</title>
+    <desc lang="en">Live event: Charlotte Hornets vs Boston Celtics</desc>
+  </programme>
+  <programme start="20261015080000 +0800" stop="20261015110000 +0800" channel="lennon.a96973e26e41e7e4">
+    <title lang="en">Phoenix Suns vs San Antonio Spurs</title>
+    <desc lang="en">Live event: Phoenix Suns vs San Antonio Spurs</desc>
+  </programme>
+  <programme start="20261015103000 +0800" stop="20261015133000 +0800" channel="lennon.f1320cc92c40b210">
+    <title lang="en">Denver Nuggets vs Los Angeles Clippers</title>
+    <desc lang="en">Live event: Denver Nuggets vs Los Angeles Clippers</desc>
+  </programme>
+  <programme start="20261015080000 +0800" stop="20261015110000 +0800" channel="lennon.4e05893217110266">
+    <title lang="en">Chicago Bulls vs Milwaukee Bucks</title>
+    <desc lang="en">Live event: Chicago Bulls vs Milwaukee Bucks</desc>
+  </programme>
+  <programme start="20261015080000 +0800" stop="20261015110000 +0800" channel="lennon.e0888583cb0049a1">
+    <title lang="en">Detroit Pistons vs Minnesota Timberwolves</title>
+    <desc lang="en">Live event: Detroit Pistons vs Minnesota Timberwolves</desc>
+  </programme>
+  <programme start="20261016080000 +0800" stop="20261016110000 +0800" channel="lennon.41df34b610ddfe04">
+    <title lang="en">TNA</title>
+    <desc lang="en">Live event: TNA</desc>
+  </programme>
+  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.020b8247511aa5de">
+    <title lang="en">WWE Smackdown</title>
+    <desc lang="en">Live event: WWE Smackdown</desc>
+  </programme>
 </tv>
