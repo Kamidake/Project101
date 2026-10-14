@@ -46,12 +46,12 @@ class ScheduleParser(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        
-        if tag == 'table' and attrs.get('id') == 'eventsTable':
+        # Match eventsTable or any general event scheduling table
+        if tag == 'table' and ('eventsTable' in attrs.get('id', '') or 'schedule' in attrs.get('class', '')):
             self.in_table = True
         elif self.in_table and tag == 'tbody':
             self.in_tbody = True
-        elif self.in_tbody and tag == 'tr':
+        elif (self.in_table or self.in_tbody) and tag == 'tr':
             self.in_tr = True
             self.current_event = {}
             self.td_index = 0
@@ -84,6 +84,12 @@ class ScheduleParser(HTMLParser):
                 self.current_event['start_time'] = text
                 
             self.td_index += 1
+
+
+def parse_schedules(html_text):
+    parser = ScheduleParser()
+    parser.feed(html_text)
+    return parser.events
 
 
 class Links(HTMLParser):
@@ -232,24 +238,75 @@ def discover_roxie(base, pool):
     return pages, labels, errors
 
 
+def match_schedule_time(name, page_path, group, schedule_lookup_url, schedule_lookup_name, schedule_by_group):
+    """Finds the best matching start time using URL, Title, Keywords, or Category Group."""
+    norm_name = clean_title(name).casefold()
+
+    # 1. Direct URL match
+    if page_path in schedule_lookup_url:
+        return schedule_lookup_url[page_path]
+
+    # 2. Exact Title match
+    if norm_name in schedule_lookup_name:
+        return schedule_lookup_name[norm_name]
+
+    # 3. Partial keyword match (e.g., 'aew', 'dynamite', 'nba', team names)
+    for sched_name, s_time in schedule_lookup_name.items():
+        if sched_name in norm_name or norm_name in sched_name:
+            return s_time
+
+    # 4. Keyword tokens for combat sports & specific leagues
+    keywords = {
+        'AEW': ['aew', 'dynamite', 'rampage', 'collision', 'revolution', 'all out', 'double or nothing'],
+        'NBA': ['nba', 'preseason'],
+        'WWE': ['wwe', 'raw', 'smackdown', 'nxt'],
+        'UFC': ['ufc', 'contender series', 'fight night'],
+        'TNA': ['tna', 'impact'],
+    }
+    for cat, terms in keywords.items():
+        if group == cat or any(t in norm_name for t in terms):
+            if cat in schedule_by_group:
+                return schedule_by_group[cat]
+
+    # 5. Group fallback if category has an active scheduled time
+    return schedule_by_group.get(group)
+
+
 def collect_roxie(pages, labels, schedule_list):
     errors = []
     candidates = {}
     unsupported = []
     event_labels = {}
     
-    # Build lookups for both URL and normalized Event Name
     schedule_lookup_url = {}
     schedule_lookup_name = {}
-    
+    schedule_by_group = {}
+
     for event in schedule_list:
-        if 'start_time' in event:
-            if 'url' in event:
-                path = urlsplit(event['url']).path.strip('/')
-                schedule_lookup_url[path] = event['start_time']
-            if 'name' in event:
-                norm_name = clean_title(event['name']).casefold()
-                schedule_lookup_name[norm_name] = event['start_time']
+        start_time = event.get('start_time')
+        if not start_time:
+            continue
+        if 'url' in event and event['url']:
+            path = urlsplit(event['url']).path.strip('/')
+            schedule_lookup_url[path] = start_time
+            # Infer group from scheduled URL path (e.g. /nba -> NBA)
+            grp = roxie_group(event['url'])
+            if grp and grp != 'Live':
+                schedule_by_group.setdefault(grp, start_time)
+
+        if 'name' in event and event['name']:
+            norm = clean_title(event['name']).casefold()
+            schedule_lookup_name[norm] = start_time
+            
+            # Map group from event name keywords
+            if 'aew' in norm:
+                schedule_by_group.setdefault('AEW', start_time)
+            elif 'nba' in norm:
+                schedule_by_group.setdefault('NBA', start_time)
+            elif 'wwe' in norm or 'nxt' in norm:
+                schedule_by_group.setdefault('WWE', start_time)
+            elif 'ufc' in norm or 'contender' in norm:
+                schedule_by_group.setdefault('UFC', start_time)
 
     for parent, text in sorted(pages.items()):
         if urlsplit(parent).path.strip('/'):
@@ -261,6 +318,7 @@ def collect_roxie(pages, labels, schedule_list):
         try:
             page_path = urlsplit(page).path.strip('/')
             sources = extract_sources(text, page)
+            group = roxie_group(page)
             
             for url in sources:
                 names_to_use = sorted(event_labels.get(page) or {clean_title(labels.get(page) or page_path)})
@@ -268,28 +326,18 @@ def collect_roxie(pages, labels, schedule_list):
                     
                     candidate_dict = {
                         'name': name, 
-                        'group': roxie_group(page), 
+                        'group': group, 
                         'provider': 'RoxieStreams',
                         'page': page, 
                         'url': url
                     }
                     
-                    # MATCHING LOGIC:
-                    # 1. Try URL path exactly (e.g. 'ppv-streams-1')
-                    start_time = schedule_lookup_url.get(page_path)
+                    # Match start time using the multi-level matcher
+                    start_time = match_schedule_time(
+                        name, page_path, group, 
+                        schedule_lookup_url, schedule_lookup_name, schedule_by_group
+                    )
                     
-                    # 2. Try Exact Name Match
-                    norm_name = name.casefold()
-                    if not start_time:
-                        start_time = schedule_lookup_name.get(norm_name)
-                        
-                    # 3. Try Partial Name Match (e.g. Schedule="WWE NXT", Link="WWE NXT Live")
-                    if not start_time:
-                        for sched_name, s_time in schedule_lookup_name.items():
-                            if sched_name in norm_name or norm_name in sched_name:
-                                start_time = s_time
-                                break
-                                
                     if start_time:
                         candidate_dict['start_time'] = start_time
 
@@ -310,12 +358,19 @@ def select_roxie(pool):
     for base in dict.fromkeys((BASE, *BACKUPS)):
         BASE = base
         try:
-            pages, labels, errors = discover_roxie(base,pool)
+            pages, labels, errors = discover_roxie(base, pool)
             
-            if base in pages:
-                parser = ScheduleParser()
-                parser.feed(pages[base])
-                schedule = parser.events
+            # Extract schedules from the homepage AND any crawled category pages
+            all_schedules = []
+            seen_events = set()
+            for page_url, html_content in pages.items():
+                if html_content:
+                    for ev in parse_schedules(html_content):
+                        key = (ev.get('name'), ev.get('start_time'))
+                        if key not in seen_events:
+                            seen_events.add(key)
+                            all_schedules.append(ev)
+            schedule = all_schedules
 
             candidates, unsupported, source_errors = collect_roxie(pages, labels, schedule)
             errors.extend(source_errors)
