@@ -20,7 +20,6 @@ class ParserTests(unittest.TestCase):
         primary = 'https://roxiestreams.info/'
         backup = 'https://roxiestreams.biz/'
         with patch('scraper.BASE', primary), patch('scraper.BACKUPS',(backup,)), patch('scraper.discover_roxie', side_effect=[({}, {}, [{'error':'offline'}]), ({backup:'player'}, {}, [])]), patch('scraper.collect_roxie', side_effect=[({},[],[]), ({'https://example.org/live.m3u8':[]},[],[])]):
-            # ADDED 'schedule' HERE TO FIX THE UNPACKING ERROR
             pages, candidates, unsupported, errors, attempts, schedule = scraper.select_roxie(None)
             self.assertEqual(scraper.BASE,backup)
             self.assertEqual(errors,[])
@@ -40,7 +39,8 @@ class ParserTests(unittest.TestCase):
         pages = {base: '<a href="/soccer-streams-6">Old Match</a>',
                  base+'soccer': '<a href="/soccer-streams-6">Match A</a><a href="/soccer-streams-6">Match B</a>',
                  base+'soccer-streams-6': 'https://example.org/live.m3u8'}
-        candidates, _, errors = scraper.collect_roxie(pages, {base+'soccer-streams-6':'Old Match'})
+        # Added `[]` as the third argument here
+        candidates, _, errors = scraper.collect_roxie(pages, {base+'soccer-streams-6':'Old Match'}, [])
         self.assertEqual(errors, [])
         self.assertEqual({e['name'] for e in candidates['https://example.org/live.m3u8']}, {'Match A','Match B'})
 
