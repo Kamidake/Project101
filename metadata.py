@@ -69,11 +69,11 @@ def to_philippine_time(time_str):
         # Convert to Philippine Time (UTC+8)
         dt_ph = dt_et.astimezone(zoneinfo.ZoneInfo("Asia/Manila"))
         
-        # Format back to a string WITHOUT the "PHT" suffix
-        return dt_ph.strftime("%B %d, %Y %I:%M %p")
+        # Format back to a simplified string WITHOUT the year (e.g. "Oct 14, 09:45 AM")
+        return dt_ph.strftime("%b %d, %I:%M %p")
     except ValueError:
-        # Fallback to the original string if parsing fails
-        return time_str
+        # Fallback to the original string if parsing fails, but try to strip the year
+        return re.sub(r',? \d{4}', '', time_str)
 
 
 def decorate(entries):
