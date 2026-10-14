@@ -5,6 +5,11 @@ import re
 import time
 import unicodedata
 from urllib.parse import urlsplit
+from datetime import datetime
+try:
+    import zoneinfo
+except ImportError:
+    zoneinfo = None
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
 
@@ -47,6 +52,30 @@ def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
 
 
+def to_philippine_time(time_str):
+    """Converts a US Eastern time string to Philippine Time (PHT)."""
+    if not time_str or not zoneinfo:
+        return time_str
+        
+    time_str = " ".join(time_str.split())
+    
+    try:
+        # Parse the expected format: "October 13, 2026 9:45 AM"
+        dt = datetime.strptime(time_str, "%B %d, %Y %I:%M %p")
+        
+        # Assume the scraped time is US Eastern (standard for NA sports sites)
+        dt_et = dt.replace(tzinfo=zoneinfo.ZoneInfo("America/New_York"))
+        
+        # Convert to Philippine Time (UTC+8)
+        dt_ph = dt_et.astimezone(zoneinfo.ZoneInfo("Asia/Manila"))
+        
+        # Format back to a string (e.g., "October 13, 2026 09:45 PM PHT")
+        return dt_ph.strftime("%B %d, %Y %I:%M %p PHT")
+    except ValueError:
+        # Fallback to the original string if parsing fails
+        return time_str
+
+
 def decorate(entries):
     """Format entries and remove exact duplicate URLs without grouping."""
     result = []
@@ -56,14 +85,12 @@ def decorate(entries):
         entry = dict(entry_raw)
         
         # --- NEW LOGIC: Remove if 'ncaa' is in the referrer or page URL ---
-        # We check both 'page' and 'referrer' keys just in case, ensuring case-insensitivity
         page_url = str(entry.get('page', '')).casefold()
         referrer_url = str(entry.get('referrer', '')).casefold()
         if 'ncaa' in page_url or 'ncaa' in referrer_url:
             continue
 
         # --- NEW LOGIC: Move to TNA group if the word 'tna' is in the channel name ---
-        # We use a regex word boundary (\b) so it matches "TNA", but not words like "Patna"
         if re.search(r'\btna\b', entry.get('name', ''), flags=re.IGNORECASE):
             entry['group'] = 'TNA'
             
@@ -85,10 +112,10 @@ def decorate(entries):
         date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
         
-        # --- NEW LOGIC: Inject schedule into the tvg-name ---
-        # We do this AFTER generating the event_id so the unique IDs stay stable
+        # --- NEW LOGIC: Convert and inject schedule into the tvg-name ---
         if entry.get('start_time'):
-            entry['name'] = f"{entry['name']} ({entry['start_time']})"
+            ph_time = to_philippine_time(entry['start_time'])
+            entry['name'] = f"{entry['name']} ({ph_time})"
 
         provider = entry.get('provider', 'RoxieStreams')
         identity = entry.get('identity') or f'{provider}:{urlsplit(url).netloc}:{urlsplit(url).path}'
