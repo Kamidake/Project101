@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-14T00:52:31.868179+00:00",
+  "updated_utc": "2026-10-14T01:13:36.156092+00:00",
   "pages": 49,
   "candidate_urls": 53,
   "live_urls": 6,
@@ -8,10 +8,23 @@
   "errors": [],
   "event_groups": 6,
   "event_posters": 0,
-  "roxie_source": "https://roxiestreams.info/",
+  "roxie_source": "https://roxiestreams.biz/",
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
+      "pages": 1,
+      "errors": [
+        {
+          "page": "https://roxiestreams.info/",
+          "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+        },
+        {
+          "error": "No HLS sources discovered"
+        }
+      ]
+    },
+    {
+      "base": "https://roxiestreams.biz/",
       "pages": 49,
       "errors": []
     }
