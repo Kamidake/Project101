@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-14T13:48:47.102163+00:00",
+  "updated_utc": "2026-10-14T14:58:46.185987+00:00",
   "pages": 42,
   "candidate_urls": 46,
   "live_urls": 10,
@@ -8,6 +8,33 @@
   "errors": [],
   "event_groups": 9,
   "event_posters": 0,
+  "schedule": [
+    {
+      "url": "https://roxiestreams.info/soccer",
+      "name": "UEFA Champions League",
+      "start_time": "October 13, 2026 9:45 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/nba",
+      "name": "NBA Preseason",
+      "start_time": "October 13, 2026 4:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "Dana White's Contender Series",
+      "start_time": "October 13, 2026 4:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "MLB Playoff",
+      "start_time": "October 12, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/wwe-streams",
+      "name": "WWE NXT",
+      "start_time": "October 13, 2026 5:00 PM"
+    }
+  ],
   "roxie_source": "https://roxiestreams.info/",
   "roxie_attempts": [
     {
