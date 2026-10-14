@@ -124,7 +124,6 @@ def internal_links(text, page, base=None):
         parts = urlsplit(url)
         if parts.scheme not in ('http', 'https'):
             continue
-        # Mirrors sometimes retain absolute links to the original domain.
         if parts.hostname in ROXIE_HOSTS:
             target = urlsplit(base)
             url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
@@ -160,7 +159,6 @@ def extract_sources(text, page, domain_loader=load_domains):
 
 
 def live_media(url, referer, depth=0):
-    """Require a live media manifest and a reachable segment, not just HTTP 200."""
     if depth > 3:
         return False
     text = fetch(url, referer)
@@ -225,7 +223,6 @@ def discover_roxie(base, pool):
                         pending.add(url)
             except Exception as exc:
                 pages[page] = ''
-                # Ignore 404 errors for dead stream links instead of failing the workflow
                 if 'HTTP Error 404' not in str(exc):
                     errors.append({'page': page, 'error': str(exc)})
                 else:
@@ -235,29 +232,54 @@ def discover_roxie(base, pool):
     return pages, labels, errors
 
 
-def collect_roxie(pages, labels):
+def collect_roxie(pages, labels, schedule_list):
     errors = []
     candidates = {}
     unsupported = []
     event_labels = {}
-    # Category schedules override older homepage links and retain reused slots.
+    
+    # Create a lookup dictionary mapping the URL path to the start time
+    schedule_lookup = {}
+    for event in schedule_list:
+        if 'url' in event and 'start_time' in event:
+            path = urlsplit(event['url']).path.strip('/')
+            schedule_lookup[path] = event['start_time']
+
     for parent, text in sorted(pages.items()):
         if urlsplit(parent).path.strip('/'):
             for target, label in internal_links(text, parent):
                 if label:
                     event_labels.setdefault(target, set()).add(clean_title(label))
+                    
     for page, text in sorted(pages.items()):
         try:
+            # Check if this specific page path matches anything in our schedule
+            page_path = urlsplit(page).path.strip('/')
+            start_time = schedule_lookup.get(page_path)
+
             sources = extract_sources(text, page)
             for url in sources:
-                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
-                    candidates.setdefault(url, []).append({'name': name,
-                                                'group': roxie_group(page), 'provider':'RoxieStreams',
-                                                'page': page, 'url': url})
+                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or page_path)}):
+                    
+                    candidate_dict = {
+                        'name': name, 
+                        'group': roxie_group(page), 
+                        'provider': 'RoxieStreams',
+                        'page': page, 
+                        'url': url
+                    }
+                    
+                    # Attach the schedule time to the candidate!
+                    if start_time:
+                        candidate_dict['start_time'] = start_time
+
+                    candidates.setdefault(url, []).append(candidate_dict)
+                    
             if not sources and re.search(r'<(?:iframe|video)\b', text):
                 unsupported.append(page)
         except Exception as exc:
             errors.append({'page': page, 'error': str(exc)})
+            
     return candidates, unsupported, errors
 
 
@@ -269,23 +291,28 @@ def select_roxie(pool):
         BASE = base
         try:
             pages, labels, errors = discover_roxie(base,pool)
-            candidates, unsupported, source_errors = collect_roxie(pages,labels)
-            errors.extend(source_errors)
-            if not candidates:
-                errors.append({'error':'No HLS sources discovered'})
             
-            # Extract the event schedule from the homepage HTML
+            # 1. Parse the schedule FIRST
             if base in pages:
                 parser = ScheduleParser()
                 parser.feed(pages[base])
                 schedule = parser.events
 
+            # 2. Pass the schedule into collect_roxie so it gets attached
+            candidates, unsupported, source_errors = collect_roxie(pages, labels, schedule)
+            errors.extend(source_errors)
+            
+            if not candidates:
+                errors.append({'error':'No HLS sources discovered'})
+
         except Exception as exc:
             pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
+            
         attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
         if not errors:
             break
         print(f'Incomplete discovery on {base}; trying backup',flush=True)
+        
     return pages, candidates, unsupported, errors, attempts, schedule
 
 
@@ -299,11 +326,11 @@ def main():
             for entry in aliases:
                 try:
                     if live_media(entry['url'], entry['page']):
-                        # Use the verified referrer on the deduplicated playback entry.
                         return [dict(alias, page=entry['page']) for alias in aliases]
                 except Exception:
                     pass
             return None
+            
         for index, result in enumerate(pool.map(check, candidates.values()), 1):
             if index % 10 == 0:
                 print(f'Checked {index}/{len(candidates)} URLs', flush=True)
@@ -311,7 +338,9 @@ def main():
                 entries.extend(result)
             else:
                 unavailable += 1
+                
     entries = decorate(entries)
+    
     report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
               'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
               'unsupported_pages': unsupported, 'errors': errors,
@@ -319,11 +348,13 @@ def main():
               'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
               'schedule': schedule, 
               'roxie_source':BASE,'roxie_attempts':attempts}
+              
     Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report, indent=2))
-    # Retain the last successful playlist if every mirror fails discovery.
+    
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
+        
     changed = write_playlist_if_changed(render(entries))
     print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
 
