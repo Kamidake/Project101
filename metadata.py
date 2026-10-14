@@ -53,7 +53,7 @@ def fallback_logo(group):
 
 
 def to_philippine_time(time_str):
-    """Converts a US Eastern time string to Philippine Time (PHT)."""
+    """Converts a US Eastern time string to Philippine Time."""
     if not time_str or not zoneinfo:
         return time_str
         
@@ -69,8 +69,8 @@ def to_philippine_time(time_str):
         # Convert to Philippine Time (UTC+8)
         dt_ph = dt_et.astimezone(zoneinfo.ZoneInfo("Asia/Manila"))
         
-        # Format back to a string (e.g., "October 13, 2026 09:45 PM PHT")
-        return dt_ph.strftime("%B %d, %Y %I:%M %p PHT")
+        # Format back to a string WITHOUT the "PHT" suffix
+        return dt_ph.strftime("%B %d, %Y %I:%M %p")
     except ValueError:
         # Fallback to the original string if parsing fails
         return time_str
@@ -84,15 +84,17 @@ def decorate(entries):
     for entry_raw in entries:
         entry = dict(entry_raw)
         
-        # --- NEW LOGIC: Remove if 'ncaa' is in the referrer or page URL ---
+        # --- Remove if 'ncaa' is in the referrer or page URL ---
         page_url = str(entry.get('page', '')).casefold()
         referrer_url = str(entry.get('referrer', '')).casefold()
         if 'ncaa' in page_url or 'ncaa' in referrer_url:
             continue
 
-        # --- NEW LOGIC: Move to TNA group if the word 'tna' is in the channel name ---
+        # --- Re-categorize based on channel name keywords ---
         if re.search(r'\btna\b', entry.get('name', ''), flags=re.IGNORECASE):
             entry['group'] = 'TNA'
+        if re.search(r'\baew\b', entry.get('name', ''), flags=re.IGNORECASE):
+            entry['group'] = 'AEW'
             
         # Only keep streams that match your requested categories
         if entry.get('group') not in ALLOWED_GROUPS:
@@ -112,14 +114,16 @@ def decorate(entries):
         date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
         
-        # --- NEW LOGIC: Convert and inject schedule into the tvg-name ---
+        # --- Convert and inject schedule into the tvg-name ---
         if entry.get('start_time'):
             ph_time = to_philippine_time(entry['start_time'])
             entry['name'] = f"{entry['name']} ({ph_time})"
 
         provider = entry.get('provider', 'RoxieStreams')
         identity = entry.get('identity') or f'{provider}:{urlsplit(url).netloc}:{urlsplit(url).path}'
-        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
+        
+        # --- REPLACED 'zerostreams.' with 'lennon.' ---
+        entry['tvg_id'] = 'lennon.' + hashlib.sha256(identity.encode()).hexdigest()[:16]
         
         # Build the metadata details (provider, source tag, locale)
         details = []
