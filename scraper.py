@@ -238,12 +238,18 @@ def collect_roxie(pages, labels, schedule_list):
     unsupported = []
     event_labels = {}
     
-    # Create a lookup dictionary mapping the URL path to the start time
-    schedule_lookup = {}
+    # Build lookups for both URL and normalized Event Name
+    schedule_lookup_url = {}
+    schedule_lookup_name = {}
+    
     for event in schedule_list:
-        if 'url' in event and 'start_time' in event:
-            path = urlsplit(event['url']).path.strip('/')
-            schedule_lookup[path] = event['start_time']
+        if 'start_time' in event:
+            if 'url' in event:
+                path = urlsplit(event['url']).path.strip('/')
+                schedule_lookup_url[path] = event['start_time']
+            if 'name' in event:
+                norm_name = clean_title(event['name']).casefold()
+                schedule_lookup_name[norm_name] = event['start_time']
 
     for parent, text in sorted(pages.items()):
         if urlsplit(parent).path.strip('/'):
@@ -253,13 +259,12 @@ def collect_roxie(pages, labels, schedule_list):
                     
     for page, text in sorted(pages.items()):
         try:
-            # Check if this specific page path matches anything in our schedule
             page_path = urlsplit(page).path.strip('/')
-            start_time = schedule_lookup.get(page_path)
-
             sources = extract_sources(text, page)
+            
             for url in sources:
-                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or page_path)}):
+                names_to_use = sorted(event_labels.get(page) or {clean_title(labels.get(page) or page_path)})
+                for name in names_to_use:
                     
                     candidate_dict = {
                         'name': name, 
@@ -269,7 +274,22 @@ def collect_roxie(pages, labels, schedule_list):
                         'url': url
                     }
                     
-                    # Attach the schedule time to the candidate!
+                    # MATCHING LOGIC:
+                    # 1. Try URL path exactly (e.g. 'ppv-streams-1')
+                    start_time = schedule_lookup_url.get(page_path)
+                    
+                    # 2. Try Exact Name Match
+                    norm_name = name.casefold()
+                    if not start_time:
+                        start_time = schedule_lookup_name.get(norm_name)
+                        
+                    # 3. Try Partial Name Match (e.g. Schedule="WWE NXT", Link="WWE NXT Live")
+                    if not start_time:
+                        for sched_name, s_time in schedule_lookup_name.items():
+                            if sched_name in norm_name or norm_name in sched_name:
+                                start_time = s_time
+                                break
+                                
                     if start_time:
                         candidate_dict['start_time'] = start_time
 
@@ -292,13 +312,11 @@ def select_roxie(pool):
         try:
             pages, labels, errors = discover_roxie(base,pool)
             
-            # 1. Parse the schedule FIRST
             if base in pages:
                 parser = ScheduleParser()
                 parser.feed(pages[base])
                 schedule = parser.events
 
-            # 2. Pass the schedule into collect_roxie so it gets attached
             candidates, unsupported, source_errors = collect_roxie(pages, labels, schedule)
             errors.extend(source_errors)
             
