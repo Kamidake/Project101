@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-14T20:37:24.487195+00:00",
+  "updated_utc": "2026-10-14T20:52:32.478105+00:00",
   "pages": 42,
   "candidate_urls": 43,
   "live_urls": 0,
@@ -35,11 +35,6 @@
       "start_time": "October 14, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
-      "start_time": "October 14, 2026 05:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/ppv-streams-1",
       "name": "TNA",
       "start_time": "October 15, 2026 5:00 PM"
@@ -48,6 +43,11 @@
       "url": "https://roxiestreams.info/wwe-streams",
       "name": "WWE Smackdown",
       "start_time": "October 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
+      "start_time": "October 14, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/motogp",
