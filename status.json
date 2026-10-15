@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-15T12:12:26.372018+00:00",
+  "updated_utc": "2026-10-15T12:37:26.155997+00:00",
   "pages": 43,
   "candidate_urls": 46,
   "live_urls": 5,
@@ -40,6 +40,16 @@
       "start_time": "October 15, 2026 5:30 PM"
     },
     {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 15, 2026 10:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
+      "start_time": "October 15, 2026 05:00 PM"
+    },
+    {
       "url": "https://roxiestreams.info/motogp",
       "name": "MotoGP - Indonesian Grand Prix",
       "start_time": "October 11, 2026 12:00 AM"
@@ -58,16 +68,6 @@
       "url": "https://roxiestreams.info/nascar",
       "name": "NASCAR O'Reilly Auto Parts Series - Race",
       "start_time": "October 11, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 15, 2026 10:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
-      "start_time": "October 15, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/ppv-streams-1",
