@@ -66,8 +66,8 @@ def process_schedule_time(time_str):
         dt_et = dt.replace(tzinfo=zoneinfo.ZoneInfo("America/New_York"))
         dt_ph = dt_et.astimezone(zoneinfo.ZoneInfo("Asia/Manila"))
         
-        # 1. Display String (e.g. "Oct 14, 09:45 AM")
-        display = dt_ph.strftime("%b %d, %I:%M %p")
+        # 1. Display String (e.g. "Oct 14 @ 09:45 AM")
+        display = dt_ph.strftime("%b %d @ %I:%M %p")
         
         # 2. XMLTV timestamps (Format: YYYYMMDDHHMMSS +0800)
         xmltv_start = dt_ph.strftime("%Y%m%d%H%M00 +0800")
@@ -116,7 +116,8 @@ def decorate(entries):
         if entry.get('start_time'):
             display_time, xmltv_start, xmltv_stop = process_schedule_time(entry['start_time'])
             if display_time:
-                entry['name'] = f"{entry['name']} ({display_time})"
+                # Appends the time using the format: Event Name Oct 16 @ 10:00 AM
+                entry['name'] = f"{entry['name']} {display_time}"
             if xmltv_start:
                 entry['xmltv_start'] = xmltv_start
                 entry['xmltv_stop'] = xmltv_stop
