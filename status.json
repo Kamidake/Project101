@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-15T02:07:22.467690+00:00",
+  "updated_utc": "2026-10-15T02:12:24.103537+00:00",
   "pages": 42,
   "candidate_urls": 44,
   "live_urls": 10,
@@ -50,16 +50,6 @@
       "start_time": "October 14, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Kennesaw State vs Missouri State",
-      "start_time": "Oct 14, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Western Kentucky vs Sam Houston",
-      "start_time": "Oct 14, 2026 5:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/nba-streams-1",
       "name": "Brooklyn Nets vs Miami Heat",
       "start_time": "October 14, 2026 4:30 PM"
@@ -93,6 +83,16 @@
       "url": "https://roxiestreams.info/nba-streams-4",
       "name": "Denver Nuggets vs Los Angeles Clippers",
       "start_time": "October 14, 2026 7:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Kennesaw State vs Missouri State",
+      "start_time": "Oct 14, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Western Kentucky vs Sam Houston",
+      "start_time": "Oct 14, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/motogp",
