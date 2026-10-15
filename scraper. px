@@ -46,7 +46,6 @@ class ScheduleParser(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        # Match eventsTable or any general event scheduling table
         if tag == 'table' and ('eventsTable' in attrs.get('id', '') or 'schedule' in attrs.get('class', '')):
             self.in_table = True
         elif self.in_table and tag == 'tbody':
@@ -195,7 +194,39 @@ def render(entries):
     return '\n'.join(lines) + '\n'
 
 
-def write_playlist_if_changed(content, path=Path('playlist.m3u')):
+def render_epg(entries):
+    """Generate XMLTV EPG code for the playlist entries."""
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv generator-info-name="Project101 EPG">']
+    
+    # 1. Define all channels
+    for entry in entries:
+        tvg_id = safe(entry.get("tvg_id", ""))
+        name = html.escape(entry.get("display_name", entry["name"]))
+        poster = html.escape(entry.get("poster", ""))
+        
+        lines.append(f'  <channel id="{tvg_id}">')
+        lines.append(f'    <display-name>{name}</display-name>')
+        if poster:
+            lines.append(f'    <icon src="{poster}" />')
+        lines.append('  </channel>')
+        
+    # 2. Add Programmes (Events) for channels that have times
+    for entry in entries:
+        if 'xmltv_start' in entry and 'xmltv_stop' in entry:
+            tvg_id = safe(entry.get("tvg_id", ""))
+            # Use base_name so the EPG title doesn't display the time (since the EPG grid already shows it)
+            title = html.escape(entry.get("base_name", entry["name"]))
+            
+            lines.append(f'  <programme start="{entry["xmltv_start"]}" stop="{entry["xmltv_stop"]}" channel="{tvg_id}">')
+            lines.append(f'    <title lang="en">{title}</title>')
+            lines.append(f'    <desc lang="en">Live event: {title}</desc>')
+            lines.append('  </programme>')
+            
+    lines.append('</tv>')
+    return '\n'.join(lines) + '\n'
+
+
+def write_playlist_if_changed(content, path):
     encoded = content.encode('utf-8')
     if path.is_file() and path.read_bytes() == encoded:
         return False
@@ -239,23 +270,18 @@ def discover_roxie(base, pool):
 
 
 def match_schedule_time(name, page_path, group, schedule_lookup_url, schedule_lookup_name, schedule_by_group):
-    """Finds the best matching start time using URL, Title, Keywords, or Category Group."""
     norm_name = clean_title(name).casefold()
 
-    # 1. Direct URL match
     if page_path in schedule_lookup_url:
         return schedule_lookup_url[page_path]
 
-    # 2. Exact Title match
     if norm_name in schedule_lookup_name:
         return schedule_lookup_name[norm_name]
 
-    # 3. Partial keyword match (e.g., 'aew', 'dynamite', 'nba', team names)
     for sched_name, s_time in schedule_lookup_name.items():
         if sched_name in norm_name or norm_name in sched_name:
             return s_time
 
-    # 4. Keyword tokens for combat sports & specific leagues
     keywords = {
         'AEW': ['aew', 'dynamite', 'rampage', 'collision', 'revolution', 'all out', 'double or nothing'],
         'NBA': ['nba', 'preseason'],
@@ -268,7 +294,6 @@ def match_schedule_time(name, page_path, group, schedule_lookup_url, schedule_lo
             if cat in schedule_by_group:
                 return schedule_by_group[cat]
 
-    # 5. Group fallback if category has an active scheduled time
     return schedule_by_group.get(group)
 
 
@@ -289,7 +314,6 @@ def collect_roxie(pages, labels, schedule_list):
         if 'url' in event and event['url']:
             path = urlsplit(event['url']).path.strip('/')
             schedule_lookup_url[path] = start_time
-            # Infer group from scheduled URL path (e.g. /nba -> NBA)
             grp = roxie_group(event['url'])
             if grp and grp != 'Live':
                 schedule_by_group.setdefault(grp, start_time)
@@ -298,7 +322,6 @@ def collect_roxie(pages, labels, schedule_list):
             norm = clean_title(event['name']).casefold()
             schedule_lookup_name[norm] = start_time
             
-            # Map group from event name keywords
             if 'aew' in norm:
                 schedule_by_group.setdefault('AEW', start_time)
             elif 'nba' in norm:
@@ -323,24 +346,13 @@ def collect_roxie(pages, labels, schedule_list):
             for url in sources:
                 names_to_use = sorted(event_labels.get(page) or {clean_title(labels.get(page) or page_path)})
                 for name in names_to_use:
-                    
                     candidate_dict = {
-                        'name': name, 
-                        'group': group, 
-                        'provider': 'RoxieStreams',
-                        'page': page, 
-                        'url': url
+                        'name': name, 'group': group, 'provider': 'RoxieStreams',
+                        'page': page, 'url': url
                     }
-                    
-                    # Match start time using the multi-level matcher
-                    start_time = match_schedule_time(
-                        name, page_path, group, 
-                        schedule_lookup_url, schedule_lookup_name, schedule_by_group
-                    )
-                    
+                    start_time = match_schedule_time(name, page_path, group, schedule_lookup_url, schedule_lookup_name, schedule_by_group)
                     if start_time:
                         candidate_dict['start_time'] = start_time
-
                     candidates.setdefault(url, []).append(candidate_dict)
                     
             if not sources and re.search(r'<(?:iframe|video)\b', text):
@@ -360,7 +372,6 @@ def select_roxie(pool):
         try:
             pages, labels, errors = discover_roxie(base, pool)
             
-            # Extract schedules from the homepage AND any crawled category pages
             all_schedules = []
             seen_events = set()
             for page_url, html_content in pages.items():
@@ -428,8 +439,14 @@ def main():
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
         
-    changed = write_playlist_if_changed(render(entries))
-    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
+    # --- WRITE M3U AND EPG XML ---
+    changed_m3u = write_playlist_if_changed(render(entries), Path('playlist.m3u'))
+    changed_epg = write_playlist_if_changed(render_epg(entries), Path('epg.xml'))
+    
+    if changed_m3u or changed_epg:
+        print('Playlist and EPG updated.', flush=True)
+    else:
+        print('Playlist and EPG unchanged; no update needed.', flush=True)
 
 
 if __name__ == '__main__':
