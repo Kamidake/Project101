@@ -20,7 +20,7 @@
     <display-name>NBA | Phoenix Suns vs San Antonio Spurs (Oct 15, 08:00 AM)</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
-  <channel id="lennon.f1320cc92c40b210">
+  <channel id="lennon.872b165b84888df4">
     <display-name>NBA | Denver Nuggets vs Los Angeles Clippers (Oct 15, 10:30 AM)</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
@@ -60,7 +60,7 @@
     <title lang="en">Phoenix Suns vs San Antonio Spurs</title>
     <desc lang="en">Live event: Phoenix Suns vs San Antonio Spurs</desc>
   </programme>
-  <programme start="20261015103000 +0800" stop="20261015133000 +0800" channel="lennon.f1320cc92c40b210">
+  <programme start="20261015103000 +0800" stop="20261015133000 +0800" channel="lennon.872b165b84888df4">
     <title lang="en">Denver Nuggets vs Los Angeles Clippers</title>
     <desc lang="en">Live event: Denver Nuggets vs Los Angeles Clippers</desc>
   </programme>
