@@ -1,21 +1,21 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="lennon.6db8eb59ac831b1f" tvg-name="Toronto Raptors vs New York Knicks Oct 16 @ 07:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs New York Knicks Oct 16 @ 07:30 AM
+#EXTINF:-1 tvg-id="lennon.6db8eb59ac831b1f" tvg-name="Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/heat.m3u8
-#EXTINF:-1 tvg-id="lennon.e603721945607098" tvg-name="Toronto Raptors vs New York Knicks Oct 16 @ 07:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs New York Knicks Oct 16 @ 07:30 AM
+#EXTINF:-1 tvg-id="lennon.e603721945607098" tvg-name="Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="lennon.69f82e9ce08bb5a8" tvg-name="Oklahoma City Thunder vs Houston Rockets Oct 16 @ 08:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Oklahoma City Thunder vs Houston Rockets Oct 16 @ 08:30 AM
+#EXTINF:-1 tvg-id="lennon.69f82e9ce08bb5a8" tvg-name="Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nba2.m3u8
-#EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="TNA Oct 16 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA Oct 16 @ 08:00 AM
+#EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="TNA | Oct 16 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA | Oct 16 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/ppv.m3u8
-#EXTINF:-1 tvg-id="lennon.020b8247511aa5de" tvg-name="WWE Smackdown Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown Oct 17 @ 08:00 AM
+#EXTINF:-1 tvg-id="lennon.020b8247511aa5de" tvg-name="WWE Smackdown | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown | Oct 17 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/wwe.m3u8

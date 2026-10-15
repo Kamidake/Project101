@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="Project101 EPG">
   <channel id="lennon.6db8eb59ac831b1f">
-    <display-name>NBA | Toronto Raptors vs New York Knicks Oct 16 @ 07:30 AM</display-name>
+    <display-name>NBA | Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.e603721945607098">
-    <display-name>NBA | Toronto Raptors vs New York Knicks Oct 16 @ 07:30 AM</display-name>
+    <display-name>NBA | Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.69f82e9ce08bb5a8">
-    <display-name>NBA | Oklahoma City Thunder vs Houston Rockets Oct 16 @ 08:30 AM</display-name>
+    <display-name>NBA | Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.41df34b610ddfe04">
-    <display-name>TNA Oct 16 @ 08:00 AM</display-name>
+    <display-name>TNA | Oct 16 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
   </channel>
   <channel id="lennon.020b8247511aa5de">
-    <display-name>WWE Smackdown Oct 17 @ 08:00 AM</display-name>
+    <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
   <programme start="20261016073000 +0800" stop="20261016103000 +0800" channel="lennon.6db8eb59ac831b1f">
