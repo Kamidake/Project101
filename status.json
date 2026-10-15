@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-15T06:29:52.116874+00:00",
+  "updated_utc": "2026-10-15T06:37:25.309985+00:00",
   "pages": 42,
   "candidate_urls": 44,
   "live_urls": 10,
@@ -35,6 +35,11 @@
       "start_time": "October 14, 2026 5:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
+      "start_time": "October 14, 2026 05:00 PM"
+    },
+    {
       "url": "https://roxiestreams.info/ppv-streams-1",
       "name": "TNA",
       "start_time": "October 15, 2026 5:00 PM"
@@ -45,9 +50,24 @@
       "start_time": "October 16, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Milwaukee Brewers vs Los Angeles Dodgers",
-      "start_time": "October 14, 2026 05:00 PM"
+      "url": "https://roxiestreams.info/motogp",
+      "name": "MotoGP - Indonesian Grand Prix",
+      "start_time": "October 11, 2026 12:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/f1",
+      "name": "Formula 1 - Singapore Grand Prix",
+      "start_time": "October 11, 2026 5:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR Cup Series - Race",
+      "start_time": "October 11, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR O'Reilly Auto Parts Series - Race",
+      "start_time": "October 11, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -83,26 +103,6 @@
       "url": "https://roxiestreams.info/nba-streams-4",
       "name": "Denver Nuggets vs Los Angeles Clippers",
       "start_time": "October 14, 2026 7:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/motogp",
-      "name": "MotoGP - Indonesian Grand Prix",
-      "start_time": "October 11, 2026 12:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/f1",
-      "name": "Formula 1 - Singapore Grand Prix",
-      "start_time": "October 11, 2026 5:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR Cup Series - Race",
-      "start_time": "October 11, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR O'Reilly Auto Parts Series - Race",
-      "start_time": "October 11, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-1",
