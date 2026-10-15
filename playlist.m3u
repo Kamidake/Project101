@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="lennon.9f8fe02a311ada66" tvg-name="AEW (Oct 15, 08:00 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" group-title="AEW",AEW (Oct 15, 08:00 AM)
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/aew.m3u8
 #EXTINF:-1 tvg-id="lennon.6db8eb59ac831b1f" tvg-name="Toronto Raptors vs New York Knicks (Oct 16, 07:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs New York Knicks (Oct 16, 07:30 AM)
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)

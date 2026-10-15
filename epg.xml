@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="Project101 EPG">
-  <channel id="lennon.9f8fe02a311ada66">
-    <display-name>AEW (Oct 15, 08:00 AM)</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" />
-  </channel>
   <channel id="lennon.6db8eb59ac831b1f">
     <display-name>NBA | Toronto Raptors vs New York Knicks (Oct 16, 07:30 AM)</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
@@ -24,10 +20,6 @@
     <display-name>WWE Smackdown (Oct 17, 08:00 AM)</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261015080000 +0800" stop="20261015110000 +0800" channel="lennon.9f8fe02a311ada66">
-    <title lang="en">AEW</title>
-    <desc lang="en">Live event: AEW</desc>
-  </programme>
   <programme start="20261016073000 +0800" stop="20261016103000 +0800" channel="lennon.6db8eb59ac831b1f">
     <title lang="en">Toronto Raptors vs New York Knicks</title>
     <desc lang="en">Live event: Toronto Raptors vs New York Knicks</desc>
