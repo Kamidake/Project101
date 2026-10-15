@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-15T23:12:27.806417+00:00",
+  "updated_utc": "2026-10-15T23:37:21.248281+00:00",
   "pages": 42,
   "candidate_urls": 39,
   "live_urls": 4,
@@ -30,14 +30,14 @@
       "start_time": "October 15, 2026 5:15 PM"
     },
     {
-      "url": "https://roxiestreams.info/nba-streams-1",
-      "name": "Toronto Raptors vs New York Knicks",
-      "start_time": "October 15, 2026 4:30 PM"
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "TNA",
+      "start_time": "October 15, 2026 6:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nba-streams-2",
-      "name": "Oklahoma City Thunder vs Houston Rockets",
-      "start_time": "October 15, 2026 5:30 PM"
+      "url": "https://roxiestreams.info/wwe-streams",
+      "name": "WWE Smackdown",
+      "start_time": "October 16, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/mlb-streams-1",
@@ -48,16 +48,6 @@
       "url": "https://roxiestreams.info/mlb-streams-1",
       "name": "Milwaukee Brewers vs Los Angeles Dodgers",
       "start_time": "October 15, 2026 05:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "TNA",
-      "start_time": "October 15, 2026 6:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/wwe-streams",
-      "name": "WWE Smackdown",
-      "start_time": "October 16, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/motogp",
@@ -80,58 +70,13 @@
       "start_time": "October 11, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/soccer-streams-1",
-      "name": "Lyon vs Crystal Palace",
-      "start_time": "October 15, 2026 9:45 AM"
+      "url": "https://roxiestreams.info/nba-streams-1",
+      "name": "Toronto Raptors vs New York Knicks",
+      "start_time": "October 15, 2026 4:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/soccer-streams-2",
-      "name": "Salzburg vs Milan",
-      "start_time": "October 15, 2026 9:45 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-3",
-      "name": "Torreense vs Sunderland",
-      "start_time": "October 15, 2026 9:45 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-4",
-      "name": "Bournemouth vs Sturm Graz",
-      "start_time": "October 15, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-5",
-      "name": "Brighton vs Kauno Zalgiris",
-      "start_time": "October 15, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-6",
-      "name": "Benfica vs Celtic",
-      "start_time": "October 15, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-7",
-      "name": "Celta Vigo vs Juventus",
-      "start_time": "October 15, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-8",
-      "name": "Hearts vs Nordsj\u00e6lland",
-      "start_time": "October 15, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-11",
-      "name": "Marseille vs Olympiakos",
-      "start_time": "October 15, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-12",
-      "name": "Mansfield Town vs Oxford",
-      "start_time": "October 15, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/soccer-streams-13",
-      "name": "Estudiantes vs Flamengo",
+      "url": "https://roxiestreams.info/nba-streams-2",
+      "name": "Oklahoma City Thunder vs Houston Rockets",
       "start_time": "October 15, 2026 5:30 PM"
     },
     {
@@ -208,6 +153,61 @@
       "url": "https://roxiestreams.info/nhl-streams-11",
       "name": "Calgary Flames vs Vegas Golden Knights",
       "start_time": "October 15, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-1",
+      "name": "Lyon vs Crystal Palace",
+      "start_time": "October 15, 2026 9:45 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-2",
+      "name": "Salzburg vs Milan",
+      "start_time": "October 15, 2026 9:45 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-3",
+      "name": "Torreense vs Sunderland",
+      "start_time": "October 15, 2026 9:45 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-4",
+      "name": "Bournemouth vs Sturm Graz",
+      "start_time": "October 15, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-5",
+      "name": "Brighton vs Kauno Zalgiris",
+      "start_time": "October 15, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-6",
+      "name": "Benfica vs Celtic",
+      "start_time": "October 15, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-7",
+      "name": "Celta Vigo vs Juventus",
+      "start_time": "October 15, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-8",
+      "name": "Hearts vs Nordsj\u00e6lland",
+      "start_time": "October 15, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-11",
+      "name": "Marseille vs Olympiakos",
+      "start_time": "October 15, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-12",
+      "name": "Mansfield Town vs Oxford",
+      "start_time": "October 15, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-13",
+      "name": "Estudiantes vs Flamengo",
+      "start_time": "October 15, 2026 5:30 PM"
     }
   ],
   "roxie_source": "https://roxiestreams.info/",
