@@ -116,8 +116,8 @@ def decorate(entries):
         if entry.get('start_time'):
             display_time, xmltv_start, xmltv_stop = process_schedule_time(entry['start_time'])
             if display_time:
-                # Appends the time using the format: Event Name Oct 16 @ 10:00 AM
-                entry['name'] = f"{entry['name']} {display_time}"
+                # Appends the time using the format: Event Name | Oct 16 @ 07:30 AM
+                entry['name'] = f"{entry['name']} | {display_time}"
             if xmltv_start:
                 entry['xmltv_start'] = xmltv_start
                 entry['xmltv_stop'] = xmltv_stop
