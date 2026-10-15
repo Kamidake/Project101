@@ -3,34 +3,18 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/aew.m3u8
-#EXTINF:-1 tvg-id="lennon.6db8eb59ac831b1f" tvg-name="Brooklyn Nets vs Miami Heat (Oct 15, 07:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Brooklyn Nets vs Miami Heat (Oct 15, 07:30 AM)
+#EXTINF:-1 tvg-id="lennon.6db8eb59ac831b1f" tvg-name="Toronto Raptors vs New York Knicks (Oct 16, 07:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs New York Knicks (Oct 16, 07:30 AM)
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/heat.m3u8
-#EXTINF:-1 tvg-id="lennon.e603721945607098" tvg-name="Brooklyn Nets vs Miami Heat (Oct 15, 07:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Brooklyn Nets vs Miami Heat (Oct 15, 07:30 AM)
+#EXTINF:-1 tvg-id="lennon.e603721945607098" tvg-name="Toronto Raptors vs New York Knicks (Oct 16, 07:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs New York Knicks (Oct 16, 07:30 AM)
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="lennon.69f82e9ce08bb5a8" tvg-name="Charlotte Hornets vs Boston Celtics (Oct 15, 07:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Charlotte Hornets vs Boston Celtics (Oct 15, 07:30 AM)
+#EXTINF:-1 tvg-id="lennon.69f82e9ce08bb5a8" tvg-name="Oklahoma City Thunder vs Houston Rockets (Oct 16, 08:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Oklahoma City Thunder vs Houston Rockets (Oct 16, 08:30 AM)
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nba2.m3u8
-#EXTINF:-1 tvg-id="lennon.a96973e26e41e7e4" tvg-name="Phoenix Suns vs San Antonio Spurs (Oct 15, 08:00 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Phoenix Suns vs San Antonio Spurs (Oct 15, 08:00 AM)
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/nba3.m3u8
-#EXTINF:-1 tvg-id="lennon.872b165b84888df4" tvg-name="Denver Nuggets vs Los Angeles Clippers (Oct 15, 10:30 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Denver Nuggets vs Los Angeles Clippers (Oct 15, 10:30 AM)
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://tedesco.formaturamaxi.com.br/nba4.m3u8
-#EXTINF:-1 tvg-id="lennon.4e05893217110266" tvg-name="Chicago Bulls vs Milwaukee Bucks (Oct 15, 08:00 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Chicago Bulls vs Milwaukee Bucks (Oct 15, 08:00 AM)
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/nba5.m3u8
-#EXTINF:-1 tvg-id="lennon.e0888583cb0049a1" tvg-name="Detroit Pistons vs Minnesota Timberwolves (Oct 15, 08:00 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Detroit Pistons vs Minnesota Timberwolves (Oct 15, 08:00 AM)
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/nba6.m3u8
 #EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="TNA (Oct 16, 08:00 AM)" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA (Oct 16, 08:00 AM)
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
