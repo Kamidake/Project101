@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-15T07:12:21.040196+00:00",
+  "updated_utc": "2026-10-15T07:37:22.640114+00:00",
   "pages": 45,
   "candidate_urls": 48,
   "live_urls": 6,
@@ -55,6 +55,16 @@
       "start_time": "October 15, 2026 05:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/nba-streams-1",
+      "name": "Toronto Raptors vs New York Knicks",
+      "start_time": "October 15, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nba-streams-2",
+      "name": "Oklahoma City Thunder vs Houston Rockets",
+      "start_time": "October 15, 2026 5:30 PM"
+    },
+    {
       "url": "https://roxiestreams.info/nfl-streams-1",
       "name": "Seattle Seahawks vs Denver Broncos",
       "start_time": "Oct 15, 2026 5:15 PM"
@@ -73,36 +83,6 @@
       "url": "https://roxiestreams.info/ncaa-streams-3",
       "name": "Colorado State vs Texas State",
       "start_time": "Oct 15, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/motogp",
-      "name": "MotoGP - Indonesian Grand Prix",
-      "start_time": "October 11, 2026 12:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/f1",
-      "name": "Formula 1 - Singapore Grand Prix",
-      "start_time": "October 11, 2026 5:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR Cup Series - Race",
-      "start_time": "October 11, 2026 12:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR O'Reilly Auto Parts Series - Race",
-      "start_time": "October 11, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nba-streams-1",
-      "name": "Toronto Raptors vs New York Knicks",
-      "start_time": "October 15, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nba-streams-2",
-      "name": "Oklahoma City Thunder vs Houston Rockets",
-      "start_time": "October 15, 2026 5:30 PM"
     },
     {
       "url": "https://roxiestreams.info/nhl-streams-1",
@@ -158,6 +138,26 @@
       "url": "https://roxiestreams.info/nhl-streams-11",
       "name": "Calgary Flames vs Vegas Golden Knights",
       "start_time": "October 15, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/motogp",
+      "name": "MotoGP - Indonesian Grand Prix",
+      "start_time": "October 11, 2026 12:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/f1",
+      "name": "Formula 1 - Singapore Grand Prix",
+      "start_time": "October 11, 2026 5:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR Cup Series - Race",
+      "start_time": "October 11, 2026 12:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR O'Reilly Auto Parts Series - Race",
+      "start_time": "October 11, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-1",
