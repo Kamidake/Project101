@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-15T07:52:21.924977+00:00",
+  "updated_utc": "2026-10-15T08:07:20.306705+00:00",
   "pages": 45,
   "candidate_urls": 48,
   "live_urls": 6,
@@ -35,16 +35,6 @@
       "start_time": "October 14, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "TNA",
-      "start_time": "October 15, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/wwe-streams",
-      "name": "WWE Smackdown",
-      "start_time": "October 16, 2026 5:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/mlb-streams-1",
       "name": "Tampa Bay Rays vs Cleveland Guardians",
       "start_time": "October 15, 2026 10:00 AM"
@@ -55,14 +45,34 @@
       "start_time": "October 15, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nba-streams-1",
-      "name": "Toronto Raptors vs New York Knicks",
-      "start_time": "October 15, 2026 4:30 PM"
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "TNA",
+      "start_time": "October 15, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nba-streams-2",
-      "name": "Oklahoma City Thunder vs Houston Rockets",
-      "start_time": "October 15, 2026 5:30 PM"
+      "url": "https://roxiestreams.info/wwe-streams",
+      "name": "WWE Smackdown",
+      "start_time": "October 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nfl-streams-1",
+      "name": "Seattle Seahawks vs Denver Broncos",
+      "start_time": "Oct 15, 2026 5:15 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "East Carolina vs UAB",
+      "start_time": "Oct 15, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Georgia Southern vs Old Dominion",
+      "start_time": "Oct 15, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-3",
+      "name": "Colorado State vs Texas State",
+      "start_time": "Oct 15, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/motogp",
@@ -85,24 +95,14 @@
       "start_time": "October 11, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nfl-streams-1",
-      "name": "Seattle Seahawks vs Denver Broncos",
-      "start_time": "Oct 15, 2026 5:15 PM"
+      "url": "https://roxiestreams.info/nba-streams-1",
+      "name": "Toronto Raptors vs New York Knicks",
+      "start_time": "October 15, 2026 4:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "East Carolina vs UAB",
-      "start_time": "Oct 15, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Georgia Southern vs Old Dominion",
-      "start_time": "Oct 15, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-3",
-      "name": "Colorado State vs Texas State",
-      "start_time": "Oct 15, 2026 5:00 PM"
+      "url": "https://roxiestreams.info/nba-streams-2",
+      "name": "Oklahoma City Thunder vs Houston Rockets",
+      "start_time": "October 15, 2026 5:30 PM"
     },
     {
       "url": "https://roxiestreams.info/nhl-streams-1",
