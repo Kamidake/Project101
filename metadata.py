@@ -51,9 +51,9 @@ def fallback_logo(group):
 
 
 def process_schedule_time(time_str):
-    """Parses time and returns a formatted display string and XMLTV start/stop times."""
+    """Parses time and returns a formatted display string, XMLTV times, and the datetime object."""
     if not time_str or not zoneinfo:
-        return time_str, None, None
+        return time_str, None, None, None
         
     time_str = " ".join(time_str.split())
     
@@ -73,15 +73,19 @@ def process_schedule_time(time_str):
         xmltv_start = dt_ph.strftime("%Y%m%d%H%M00 +0800")
         xmltv_stop = (dt_ph + timedelta(hours=3)).strftime("%Y%m%d%H%M00 +0800") # Default duration 3 hours
         
-        return display, xmltv_start, xmltv_stop
+        # Return dt_ph so we can calculate if it's currently live
+        return display, xmltv_start, xmltv_stop, dt_ph
     except ValueError:
-        return re.sub(r',? \d{4}', '', time_str), None, None
+        return re.sub(r',? \d{4}', '', time_str), None, None, None
 
 
 def decorate(entries):
     """Format entries and remove exact duplicate URLs without grouping."""
     result = []
     seen_urls = set()
+    
+    # Get current time in Manila to check against stream schedules
+    now_ph = datetime.now(zoneinfo.ZoneInfo("Asia/Manila")) if zoneinfo else datetime.now()
     
     for entry_raw in entries:
         entry = dict(entry_raw)
@@ -110,21 +114,33 @@ def decorate(entries):
         seen_urls.add(url)
         
         entry['name'] = clean_title(entry['name'])
+        
+        # Set default logo first
         entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
         
         date = time.strftime('%Y-%m-%d', time.gmtime(entry.get('starts_at') or 0)) if entry.get('starts_at') else ''
         entry['event_id'] = f'{entry["group"]}:{event_key(entry["name"])}:{date}'
         
-        # --- Handle Time and XMLTV Data ---
+        # --- Handle Time, XMLTV Data, and Live Logo Swap ---
         entry['base_name'] = entry['name'] # Keep original name for the EPG Title
         if entry.get('start_time'):
-            display_time, xmltv_start, xmltv_stop = process_schedule_time(entry['start_time'])
+            display_time, xmltv_start, xmltv_stop, dt_start = process_schedule_time(entry['start_time'])
+            
             if display_time:
                 # Appends the time using the format: Event Name | Oct 16 @ 07:30 AM
                 entry['name'] = f"{entry['name']} | {display_time}"
             if xmltv_start:
                 entry['xmltv_start'] = xmltv_start
                 entry['xmltv_stop'] = xmltv_stop
+                
+            # --- DYNAMIC LIVE LOGO LOGIC ---
+            if dt_start:
+                dt_stop = dt_start + timedelta(hours=3) # Assuming 3 hour duration as defined earlier
+                if dt_start <= now_ph <= dt_stop:
+                    # Look up the base filename for this group (e.g., 'nba', 'ufc')
+                    base_logo = LOGOS.get(entry['group'], 'live')
+                    # Construct the URL: e.g., https://.../assets/logos/nba-live.png
+                    entry['poster'] = f"{LOGO_BASE}{base_logo}-live.png"
 
         provider = entry.get('provider', 'RoxieStreams')
         identity = entry.get('identity') or f'{provider}:{urlsplit(url).netloc}:{urlsplit(url).path}'
