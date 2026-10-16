@@ -89,9 +89,9 @@ def decorate(entries):
         page_url = str(entry.get('page', '')).casefold()
         referrer_url = str(entry.get('referrer', '')).casefold()
         
-        if 'floracing' in referrer_url:
+        if 'floracing' in page_url or 'floracing' in referrer_url:
             continue
-            
+        
         if 'ncaa' in page_url or 'ncaa' in referrer_url:
             continue
 
