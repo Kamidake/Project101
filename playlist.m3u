@@ -23,14 +23,14 @@ https://tedesco.formaturamaxi.com.br/nba4.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/nba5.m3u8
-#EXTINF:-1 tvg-id="lennon.e0888583cb0049a1" tvg-name="Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM
+#EXTINF:-1 tvg-id="lennon.9839392d458c9fcc" tvg-name="Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/nba6.m3u8
-#EXTINF:-1 tvg-id="lennon.f79a6a9f6b94d023" tvg-name="Charlotte Hornets vs Memphis Grizzlies | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Charlotte Hornets vs Memphis Grizzlies | Oct 17 @ 08:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
+https://admin2.formaturamaxi.com.br/nba6.m3u8
+#EXTINF:-1 tvg-id="lennon.ac09bde009bb726c" tvg-name="Washington Wizards vs New Orleans Pelicans | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Washington Wizards vs New Orleans Pelicans | Oct 17 @ 08:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/ncaa3.m3u8
+https://tedesco.formaturamaxi.com.br/nba8.m3u8
 #EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="ONE Samurai 4 | Oct 17 @ 03:00 PM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | ONE Samurai 4 | Oct 17 @ 03:00 PM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)

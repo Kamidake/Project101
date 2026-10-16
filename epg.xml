@@ -24,12 +24,12 @@
     <display-name>NBA | Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
-  <channel id="lennon.e0888583cb0049a1">
+  <channel id="lennon.9839392d458c9fcc">
     <display-name>NBA | Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
-  <channel id="lennon.f79a6a9f6b94d023">
-    <display-name>NBA | Charlotte Hornets vs Memphis Grizzlies | Oct 17 @ 08:00 AM</display-name>
+  <channel id="lennon.ac09bde009bb726c">
+    <display-name>NBA | Washington Wizards vs New Orleans Pelicans | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.41df34b610ddfe04">
@@ -64,13 +64,13 @@
     <title lang="en">Atlanta Hawks vs Dallas Mavericks</title>
     <desc lang="en">Live event: Atlanta Hawks vs Dallas Mavericks</desc>
   </programme>
-  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.e0888583cb0049a1">
+  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.9839392d458c9fcc">
     <title lang="en">Sacramento Kings vs San Antonio Spurs</title>
     <desc lang="en">Live event: Sacramento Kings vs San Antonio Spurs</desc>
   </programme>
-  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.f79a6a9f6b94d023">
-    <title lang="en">Charlotte Hornets vs Memphis Grizzlies</title>
-    <desc lang="en">Live event: Charlotte Hornets vs Memphis Grizzlies</desc>
+  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.ac09bde009bb726c">
+    <title lang="en">Washington Wizards vs New Orleans Pelicans</title>
+    <desc lang="en">Live event: Washington Wizards vs New Orleans Pelicans</desc>
   </programme>
   <programme start="20261017150000 +0800" stop="20261017180000 +0800" channel="lennon.41df34b610ddfe04">
     <title lang="en">ONE Samurai 4</title>
