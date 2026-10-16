@@ -4,10 +4,6 @@
     <display-name>NBA | Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
-  <channel id="lennon.90a795ca6ab5621b">
-    <display-name>NBA | Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
-  </channel>
   <channel id="lennon.8b1b5ee668f970bc">
     <display-name>NBA | Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
@@ -47,10 +43,6 @@
   <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.e603721945607098">
     <title lang="en">Miami Heat vs Orlando Magic</title>
     <desc lang="en">Live event: Miami Heat vs Orlando Magic</desc>
-  </programme>
-  <programme start="20261017103000 +0800" stop="20261017133000 +0800" channel="lennon.90a795ca6ab5621b">
-    <title lang="en">Denver Nuggets vs Los Angeles Lakers</title>
-    <desc lang="en">Live event: Denver Nuggets vs Los Angeles Lakers</desc>
   </programme>
   <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.8b1b5ee668f970bc">
     <title lang="en">Boston Celtics vs Philadelphia 76ers</title>
