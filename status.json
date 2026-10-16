@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-16T23:16:22.964191+00:00",
+  "updated_utc": "2026-10-16T23:31:20.647066+00:00",
   "pages": 42,
   "candidate_urls": 37,
   "live_urls": 10,
-  "unavailable_urls": 7,
+  "unavailable_urls": 6,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 10,
@@ -35,14 +35,9 @@
       "start_time": "October 16, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "The Inner Circle 35",
-      "start_time": "October 16, 2026 4:30 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "ONE Samurai 4",
-      "start_time": "October 17, 2026 12:00 AM"
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 16, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nascar",
@@ -75,9 +70,14 @@
       "start_time": "October 17, 2026 4:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 16, 2026 05:00 PM"
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "The Inner Circle 35",
+      "start_time": "October 16, 2026 4:30 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "ONE Samurai 4",
+      "start_time": "October 17, 2026 12:00 AM"
     },
     {
       "url": "https://roxiestreams.info/nhl-streams-1",
