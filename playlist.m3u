@@ -7,6 +7,10 @@ https://admin2.formaturamaxi.com.br/nba.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="lennon.a342d3815eab5a6b" tvg-name="Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nbatv.m3u8
 #EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="TNA | Oct 16 @ 09:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA | Oct 16 @ 09:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
