@@ -1,40 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="Project101 EPG">
+  <channel id="lennon.f54c9833514beff2">
+    <display-name>Live | High Limit Racing | Oct 18 @ 07:30 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
+  </channel>
   <channel id="lennon.e603721945607098">
-    <display-name>NBA | Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM</display-name>
+    <display-name>NBA | Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.90a795ca6ab5621b">
+    <display-name>NBA | Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.8b1b5ee668f970bc">
-    <display-name>NBA | Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM</display-name>
+    <display-name>NBA | Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.a342d3815eab5a6b">
-    <display-name>NBA | Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM</display-name>
+    <display-name>NBA | Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.a96973e26e41e7e4">
+    <display-name>NBA | Toronto Raptors vs Detroit Pistons | Oct 17 @ 07:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.872b165b84888df4">
+    <display-name>NBA | Milwaukee Bucks vs Indiana Pacers | Oct 17 @ 07:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.4e05893217110266">
+    <display-name>NBA | Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.e0888583cb0049a1">
+    <display-name>NBA | Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.f79a6a9f6b94d023">
+    <display-name>NBA | Charlotte Hornets vs Memphis Grizzlies | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.41df34b610ddfe04">
-    <display-name>TNA | Oct 16 @ 09:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
+    <display-name>Live | ONE Samurai 4 | Oct 17 @ 03:00 PM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
   </channel>
   <channel id="lennon.020b8247511aa5de">
     <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261016073000 +0800" stop="20261016103000 +0800" channel="lennon.e603721945607098">
-    <title lang="en">Toronto Raptors vs New York Knicks</title>
-    <desc lang="en">Live event: Toronto Raptors vs New York Knicks</desc>
+  <programme start="20261018073000 +0800" stop="20261018103000 +0800" channel="lennon.f54c9833514beff2">
+    <title lang="en">High Limit Racing</title>
+    <desc lang="en">Live event: High Limit Racing</desc>
   </programme>
-  <programme start="20261016083000 +0800" stop="20261016113000 +0800" channel="lennon.8b1b5ee668f970bc">
-    <title lang="en">Oklahoma City Thunder vs Houston Rockets</title>
-    <desc lang="en">Live event: Oklahoma City Thunder vs Houston Rockets</desc>
+  <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.e603721945607098">
+    <title lang="en">Miami Heat vs Orlando Magic</title>
+    <desc lang="en">Live event: Miami Heat vs Orlando Magic</desc>
   </programme>
-  <programme start="20261016083000 +0800" stop="20261016113000 +0800" channel="lennon.a342d3815eab5a6b">
-    <title lang="en">Oklahoma City Thunder vs Houston Rockets</title>
-    <desc lang="en">Live event: Oklahoma City Thunder vs Houston Rockets</desc>
+  <programme start="20261017103000 +0800" stop="20261017133000 +0800" channel="lennon.90a795ca6ab5621b">
+    <title lang="en">Denver Nuggets vs Los Angeles Lakers</title>
+    <desc lang="en">Live event: Denver Nuggets vs Los Angeles Lakers</desc>
   </programme>
-  <programme start="20261016090000 +0800" stop="20261016120000 +0800" channel="lennon.41df34b610ddfe04">
-    <title lang="en">TNA</title>
-    <desc lang="en">Live event: TNA</desc>
+  <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.8b1b5ee668f970bc">
+    <title lang="en">Boston Celtics vs Philadelphia 76ers</title>
+    <desc lang="en">Live event: Boston Celtics vs Philadelphia 76ers</desc>
+  </programme>
+  <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.a342d3815eab5a6b">
+    <title lang="en">Boston Celtics vs Philadelphia 76ers</title>
+    <desc lang="en">Live event: Boston Celtics vs Philadelphia 76ers</desc>
+  </programme>
+  <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.a96973e26e41e7e4">
+    <title lang="en">Toronto Raptors vs Detroit Pistons</title>
+    <desc lang="en">Live event: Toronto Raptors vs Detroit Pistons</desc>
+  </programme>
+  <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.872b165b84888df4">
+    <title lang="en">Milwaukee Bucks vs Indiana Pacers</title>
+    <desc lang="en">Live event: Milwaukee Bucks vs Indiana Pacers</desc>
+  </programme>
+  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.4e05893217110266">
+    <title lang="en">Atlanta Hawks vs Dallas Mavericks</title>
+    <desc lang="en">Live event: Atlanta Hawks vs Dallas Mavericks</desc>
+  </programme>
+  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.e0888583cb0049a1">
+    <title lang="en">Sacramento Kings vs San Antonio Spurs</title>
+    <desc lang="en">Live event: Sacramento Kings vs San Antonio Spurs</desc>
+  </programme>
+  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.f79a6a9f6b94d023">
+    <title lang="en">Charlotte Hornets vs Memphis Grizzlies</title>
+    <desc lang="en">Live event: Charlotte Hornets vs Memphis Grizzlies</desc>
+  </programme>
+  <programme start="20261017150000 +0800" stop="20261017180000 +0800" channel="lennon.41df34b610ddfe04">
+    <title lang="en">ONE Samurai 4</title>
+    <desc lang="en">Live event: ONE Samurai 4</desc>
   </programme>
   <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.020b8247511aa5de">
     <title lang="en">WWE Smackdown</title>
