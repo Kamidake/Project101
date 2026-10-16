@@ -59,11 +59,15 @@ def process_schedule_time(time_str):
     
     try:
         dt = datetime.strptime(time_str, "%B %d, %Y %I:%M %p")
+        
+        # --- Add 3 hours to the scheduled time ---
+        dt += timedelta(hours=3)
+        
         dt_et = dt.replace(tzinfo=zoneinfo.ZoneInfo("America/New_York"))
         dt_ph = dt_et.astimezone(zoneinfo.ZoneInfo("Asia/Manila"))
         
-        # 1. Display String (e.g. "Oct 14, 09:45 AM")
-        display = dt_ph.strftime("%b %d, %I:%M %p")
+        # 1. Display String (e.g. "Oct 14 @ 09:45 AM")
+        display = dt_ph.strftime("%b %d @ %I:%M %p")
         
         # 2. XMLTV timestamps (Format: YYYYMMDDHHMMSS +0800)
         xmltv_start = dt_ph.strftime("%Y%m%d%H%M00 +0800")
@@ -84,6 +88,10 @@ def decorate(entries):
         
         page_url = str(entry.get('page', '')).casefold()
         referrer_url = str(entry.get('referrer', '')).casefold()
+        
+        if 'floracing' in page_url or 'floracing' in referrer_url:
+            continue
+        
         if 'ncaa' in page_url or 'ncaa' in referrer_url:
             continue
 
@@ -112,7 +120,8 @@ def decorate(entries):
         if entry.get('start_time'):
             display_time, xmltv_start, xmltv_stop = process_schedule_time(entry['start_time'])
             if display_time:
-                entry['name'] = f"{entry['name']} ({display_time})"
+                # Appends the time using the format: Event Name | Oct 16 @ 07:30 AM
+                entry['name'] = f"{entry['name']} | {display_time}"
             if xmltv_start:
                 entry['xmltv_start'] = xmltv_start
                 entry['xmltv_stop'] = xmltv_stop
