@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="lennon.f54c9833514beff2" tvg-name="High Limit Racing | Oct 18 @ 07:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | High Limit Racing | Oct 18 @ 07:30 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/floracing-1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/flo.m3u8
 #EXTINF:-1 tvg-id="lennon.e603721945607098" tvg-name="Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)

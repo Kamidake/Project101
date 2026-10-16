@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="Project101 EPG">
-  <channel id="lennon.f54c9833514beff2">
-    <display-name>Live | High Limit Racing | Oct 18 @ 07:30 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
-  </channel>
   <channel id="lennon.e603721945607098">
     <display-name>NBA | Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
@@ -48,10 +44,6 @@
     <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261018073000 +0800" stop="20261018103000 +0800" channel="lennon.f54c9833514beff2">
-    <title lang="en">High Limit Racing</title>
-    <desc lang="en">Live event: High Limit Racing</desc>
-  </programme>
   <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.e603721945607098">
     <title lang="en">Miami Heat vs Orlando Magic</title>
     <desc lang="en">Live event: Miami Heat vs Orlando Magic</desc>
