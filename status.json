@@ -1,12 +1,12 @@
 {
-  "updated_utc": "2026-10-16T23:31:20.647066+00:00",
+  "updated_utc": "2026-10-16T23:44:44.587033+00:00",
   "pages": 42,
-  "candidate_urls": 37,
-  "live_urls": 10,
-  "unavailable_urls": 6,
+  "candidate_urls": 38,
+  "live_urls": 12,
+  "unavailable_urls": 5,
   "unsupported_pages": [],
   "errors": [],
-  "event_groups": 10,
+  "event_groups": 11,
   "event_posters": 0,
   "schedule": [
     {
@@ -33,11 +33,6 @@
       "url": "https://roxiestreams.info/wwe-streams",
       "name": "WWE Smackdown",
       "start_time": "October 16, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 16, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nascar",
@@ -80,14 +75,9 @@
       "start_time": "October 17, 2026 12:00 AM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "Pittsburgh Penguins vs Colorado Avalanche",
-      "start_time": "October 16, 2026 06:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Boston Bruins vs Anaheim Ducks",
-      "start_time": "October 16, 2026 07:00 PM"
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 16, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -148,6 +138,16 @@
       "url": "https://roxiestreams.info/nba-streams-12",
       "name": "Denver Nuggets vs Los Angeles Lakers",
       "start_time": "October 16, 2026 7:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "Pittsburgh Penguins vs Colorado Avalanche",
+      "start_time": "October 16, 2026 06:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Boston Bruins vs Anaheim Ducks",
+      "start_time": "October 16, 2026 07:00 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-1",
