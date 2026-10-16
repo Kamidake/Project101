@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-16T22:01:22.739504+00:00",
+  "updated_utc": "2026-10-16T22:16:21.125978+00:00",
   "pages": 42,
   "candidate_urls": 38,
   "live_urls": 11,
@@ -78,6 +78,31 @@
       "url": "https://roxiestreams.info/nascar",
       "name": "NASCAR O'Reilly Auto Parts Series",
       "start_time": "October 17, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "Pittsburgh Penguins vs Colorado Avalanche",
+      "start_time": "October 16, 2026 06:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Boston Bruins vs Anaheim Ducks",
+      "start_time": "October 16, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Memphis vs Tulane",
+      "start_time": "Oct 16, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Washington vs Purdue",
+      "start_time": "Oct 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-3",
+      "name": "App State vs Coastal Carolina",
+      "start_time": "Oct 16, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -198,31 +223,6 @@
       "url": "https://roxiestreams.info/soccer-streams-10",
       "name": "Atlante vs Pumas UNAM",
       "start_time": "October 16, 2026 8:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Memphis vs Tulane",
-      "start_time": "Oct 16, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Washington vs Purdue",
-      "start_time": "Oct 16, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-3",
-      "name": "App State vs Coastal Carolina",
-      "start_time": "Oct 16, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "Pittsburgh Penguins vs Colorado Avalanche",
-      "start_time": "October 16, 2026 06:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Boston Bruins vs Anaheim Ducks",
-      "start_time": "October 16, 2026 07:00 PM"
     }
   ],
   "roxie_source": "https://roxiestreams.info/",
