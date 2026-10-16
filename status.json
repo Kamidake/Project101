@@ -1,12 +1,12 @@
 {
-  "updated_utc": "2026-10-16T22:46:24.629737+00:00",
+  "updated_utc": "2026-10-16T23:01:23.192045+00:00",
   "pages": 42,
-  "candidate_urls": 38,
+  "candidate_urls": 37,
   "live_urls": 10,
-  "unavailable_urls": 8,
+  "unavailable_urls": 7,
   "unsupported_pages": [],
   "errors": [],
-  "event_groups": 9,
+  "event_groups": 10,
   "event_posters": 0,
   "schedule": [
     {
@@ -78,16 +78,6 @@
       "url": "https://roxiestreams.info/nascar",
       "name": "NASCAR O'Reilly Auto Parts Series",
       "start_time": "October 17, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "Pittsburgh Penguins vs Colorado Avalanche",
-      "start_time": "October 16, 2026 06:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Boston Bruins vs Anaheim Ducks",
-      "start_time": "October 16, 2026 07:00 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-1",
@@ -163,6 +153,16 @@
       "url": "https://roxiestreams.info/nba-streams-12",
       "name": "Denver Nuggets vs Los Angeles Lakers",
       "start_time": "October 16, 2026 7:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "Pittsburgh Penguins vs Colorado Avalanche",
+      "start_time": "October 16, 2026 06:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Boston Bruins vs Anaheim Ducks",
+      "start_time": "October 16, 2026 07:00 PM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-1",
