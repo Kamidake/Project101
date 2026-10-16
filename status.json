@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-16T08:52:24.273811+00:00",
+  "updated_utc": "2026-10-16T09:07:24.174357+00:00",
   "pages": 37,
   "candidate_urls": 32,
   "live_urls": 12,
@@ -28,21 +28,6 @@
       "url": "https://roxiestreams.info/nfl",
       "name": "NFL",
       "start_time": "October 15, 2026 5:15 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "The Inner Circle 35",
-      "start_time": "October 16, 2026 4:30 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/wwe-streams",
-      "name": "WWE Smackdown",
-      "start_time": "October 16, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "ONE Samurai 4",
-      "start_time": "October 17, 2026 12:00 AM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -135,19 +120,19 @@
       "start_time": "October 16, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Memphis vs Tulane",
-      "start_time": "Oct 16, 2026 4:30 PM"
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "The Inner Circle 35",
+      "start_time": "October 16, 2026 4:30 AM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Washington vs Purdue",
-      "start_time": "Oct 16, 2026 5:00 PM"
+      "url": "https://roxiestreams.info/wwe-streams",
+      "name": "WWE Smackdown",
+      "start_time": "October 16, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-3",
-      "name": "App State vs Coastal Carolina",
-      "start_time": "Oct 16, 2026 5:00 PM"
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "ONE Samurai 4",
+      "start_time": "October 17, 2026 12:00 AM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-1",
@@ -193,6 +178,21 @@
       "url": "https://roxiestreams.info/nhl-streams-2",
       "name": "Boston Bruins vs Anaheim Ducks",
       "start_time": "October 16, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Memphis vs Tulane",
+      "start_time": "Oct 16, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Washington vs Purdue",
+      "start_time": "Oct 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-3",
+      "name": "App State vs Coastal Carolina",
+      "start_time": "Oct 16, 2026 5:00 PM"
     }
   ],
   "roxie_source": "https://roxiestreams.info/",
