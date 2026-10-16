@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-16T07:52:24.214109+00:00",
+  "updated_utc": "2026-10-16T08:07:26.653310+00:00",
   "pages": 37,
   "candidate_urls": 32,
   "live_urls": 12,
@@ -28,11 +28,6 @@
       "url": "https://roxiestreams.info/nfl",
       "name": "NFL",
       "start_time": "October 15, 2026 5:15 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 16, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -118,6 +113,11 @@
       "url": "https://roxiestreams.info/nascar",
       "name": "NASCAR O'Reilly Auto Parts Series",
       "start_time": "October 17, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 16, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/ppv-streams-1",
