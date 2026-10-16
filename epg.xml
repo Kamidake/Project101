@@ -4,7 +4,7 @@
     <display-name>NBA | Toronto Raptors vs New York Knicks | Oct 16 @ 07:30 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
-  <channel id="lennon.90e298ac81863038">
+  <channel id="lennon.8b1b5ee668f970bc">
     <display-name>NBA | Oklahoma City Thunder vs Houston Rockets | Oct 16 @ 08:30 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
@@ -20,7 +20,7 @@
     <title lang="en">Toronto Raptors vs New York Knicks</title>
     <desc lang="en">Live event: Toronto Raptors vs New York Knicks</desc>
   </programme>
-  <programme start="20261016083000 +0800" stop="20261016113000 +0800" channel="lennon.90e298ac81863038">
+  <programme start="20261016083000 +0800" stop="20261016113000 +0800" channel="lennon.8b1b5ee668f970bc">
     <title lang="en">Oklahoma City Thunder vs Houston Rockets</title>
     <desc lang="en">Live event: Oklahoma City Thunder vs Houston Rockets</desc>
   </programme>

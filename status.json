@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-10-16T00:37:19.781679+00:00",
+  "updated_utc": "2026-10-16T00:52:20.827113+00:00",
   "pages": 42,
-  "candidate_urls": 39,
+  "candidate_urls": 40,
   "live_urls": 4,
   "unavailable_urls": 2,
   "unsupported_pages": [],
@@ -28,26 +28,6 @@
       "url": "https://roxiestreams.info/nfl",
       "name": "NFL",
       "start_time": "October 15, 2026 5:15 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "TNA",
-      "start_time": "October 15, 2026 6:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/wwe-streams",
-      "name": "WWE Smackdown",
-      "start_time": "October 16, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nba-streams-1",
-      "name": "Toronto Raptors vs New York Knicks",
-      "start_time": "October 15, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nba-streams-2",
-      "name": "Oklahoma City Thunder vs Houston Rockets",
-      "start_time": "October 15, 2026 5:30 PM"
     },
     {
       "url": "https://roxiestreams.info/motogp",
@@ -78,6 +58,26 @@
       "url": "https://roxiestreams.info/mlb-streams-1",
       "name": "Milwaukee Brewers vs Los Angeles Dodgers",
       "start_time": "October 15, 2026 05:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "TNA",
+      "start_time": "October 15, 2026 6:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/wwe-streams",
+      "name": "WWE Smackdown",
+      "start_time": "October 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nba-streams-1",
+      "name": "Toronto Raptors vs New York Knicks",
+      "start_time": "October 15, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nba-streams-2",
+      "name": "Oklahoma City Thunder vs Houston Rockets",
+      "start_time": "October 15, 2026 5:30 PM"
     },
     {
       "url": "https://roxiestreams.info/nfl-streams-1",
