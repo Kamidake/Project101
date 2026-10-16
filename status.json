@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-16T10:12:26.414532+00:00",
+  "updated_utc": "2026-10-16T10:37:22.119081+00:00",
   "pages": 37,
   "candidate_urls": 32,
   "live_urls": 12,
@@ -30,9 +30,29 @@
       "start_time": "October 15, 2026 5:15 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 16, 2026 05:00 PM"
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR Craftsman Truck Series",
+      "start_time": "October 16, 2026 1:35 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-1",
+      "name": "WoO Sprint Cars - Race",
+      "start_time": "October 16, 2026 2:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-1",
+      "name": "High Limit Racing",
+      "start_time": "October 17, 2026 4:15 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-1",
+      "name": "WoO Sprint Cars - Race",
+      "start_time": "October 17, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nascar",
+      "name": "NASCAR O'Reilly Auto Parts Series",
+      "start_time": "October 17, 2026 4:30 PM"
     },
     {
       "url": "https://roxiestreams.info/ppv-streams-1",
@@ -48,6 +68,11 @@
       "url": "https://roxiestreams.info/ppv-streams-1",
       "name": "ONE Samurai 4",
       "start_time": "October 17, 2026 12:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 16, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -108,31 +133,6 @@
       "url": "https://roxiestreams.info/nba-streams-12",
       "name": "Denver Nuggets vs Los Angeles Lakers",
       "start_time": "October 16, 2026 7:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR Craftsman Truck Series",
-      "start_time": "October 16, 2026 1:35 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-1",
-      "name": "WoO Sprint Cars - Race",
-      "start_time": "October 16, 2026 2:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-1",
-      "name": "High Limit Racing",
-      "start_time": "October 17, 2026 4:15 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-1",
-      "name": "WoO Sprint Cars - Race",
-      "start_time": "October 17, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nascar",
-      "name": "NASCAR O'Reilly Auto Parts Series",
-      "start_time": "October 17, 2026 4:30 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-1",
