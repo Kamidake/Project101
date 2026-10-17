@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-17T12:46:49.597419+00:00",
+  "updated_utc": "2026-10-17T13:01:46.824758+00:00",
   "pages": 60,
   "candidate_urls": 59,
   "live_urls": 6,
-  "unavailable_urls": 14,
+  "unavailable_urls": 13,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 4,
@@ -60,11 +60,6 @@
       "start_time": "October 17, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 17, 2026 05:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/ufc",
       "name": "UFC Fight Night: Buckley vs. Malott",
       "start_time": "October 17, 2026 2:00 PM"
@@ -80,9 +75,9 @@
       "start_time": "October 23, 2026 1:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/wnba-streams-1",
-      "name": "Atlanta Dream vs Golden State Valkyries",
-      "start_time": "October 17, 2026 12:30 PM"
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 17, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/floracing-1",
@@ -93,6 +88,11 @@
       "url": "https://roxiestreams.info/floracing-2",
       "name": "WoO Sprint Cars - Race",
       "start_time": "October 17, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/wnba-streams-1",
+      "name": "Atlanta Dream vs Golden State Valkyries",
+      "start_time": "October 17, 2026 12:30 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-3",
