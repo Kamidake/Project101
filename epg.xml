@@ -12,15 +12,15 @@
     <display-name>Live | DUBOIS vs WARDLEY II | Oct 18 @ 05:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
   </channel>
+  <channel id="lennon.bfca3ca6eccd14c7">
+    <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
+  </channel>
   <channel id="lennon.978b25f6b6f39355">
     <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
   </channel>
   <channel id="lennon.aed86d5012ca292d">
-    <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
-  </channel>
-  <channel id="lennon.bfca3ca6eccd14c7">
     <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
   </channel>
@@ -36,15 +36,15 @@
     <title lang="en">DUBOIS vs WARDLEY II</title>
     <desc lang="en">Live event: DUBOIS vs WARDLEY II</desc>
   </programme>
+  <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.bfca3ca6eccd14c7">
+    <title lang="en">UFC Fight Night: Buckley vs Malott</title>
+    <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
+  </programme>
   <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.978b25f6b6f39355">
     <title lang="en">UFC Fight Night: Buckley vs Malott</title>
     <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
   </programme>
   <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.aed86d5012ca292d">
-    <title lang="en">UFC Fight Night: Buckley vs Malott</title>
-    <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
-  </programme>
-  <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.bfca3ca6eccd14c7">
     <title lang="en">UFC Fight Night: Buckley vs Malott</title>
     <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
   </programme>

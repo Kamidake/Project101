@@ -11,6 +11,10 @@ https://tedesco.formaturamaxi.com.br/ppv.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/ppv2.m3u8
+#EXTINF:-1 tvg-id="lennon.bfca3ca6eccd14c7" tvg-name="UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/tnt.m3u8
 #EXTINF:-1 tvg-id="lennon.978b25f6b6f39355" tvg-name="UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
@@ -19,7 +23,3 @@ https://admin2.formaturamaxi.com.br/abbiecadabrii.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/hub.m3u8
-#EXTINF:-1 tvg-id="lennon.bfca3ca6eccd14c7" tvg-name="UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/tnt.m3u8
