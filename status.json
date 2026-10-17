@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-17T17:31:59.038786+00:00",
+  "updated_utc": "2026-10-17T17:46:50.468232+00:00",
   "pages": 61,
   "candidate_urls": 62,
   "live_urls": 4,
@@ -60,6 +60,11 @@
       "start_time": "October 17, 2026 5:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 17, 2026 05:00 PM"
+    },
+    {
       "url": "https://roxiestreams.info/ufc",
       "name": "UFC Fight Night: Buckley vs. Malott",
       "start_time": "October 17, 2026 2:00 PM"
@@ -75,9 +80,14 @@
       "start_time": "October 23, 2026 1:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 17, 2026 05:00 PM"
+      "url": "https://roxiestreams.info/floracing-1",
+      "name": "Lucas Oil Late Model - Race",
+      "start_time": "October 17, 2026 1:45 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-2",
+      "name": "WoO Sprint Cars - Race",
+      "start_time": "October 17, 2026 4:30 PM"
     },
     {
       "url": "https://roxiestreams.info/wnba-streams-1",
@@ -153,16 +163,6 @@
       "url": "https://roxiestreams.info/nhl-streams-14",
       "name": "Pittsburgh Penguins vs Vegas Golden Knights",
       "start_time": "October 17, 2026 07:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-1",
-      "name": "Lucas Oil Late Model - Race",
-      "start_time": "October 17, 2026 1:45 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-2",
-      "name": "WoO Sprint Cars - Race",
-      "start_time": "October 17, 2026 4:30 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-3",
