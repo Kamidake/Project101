@@ -4,6 +4,10 @@
     <display-name>AEW: WrestleDream | Oct 18 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" />
   </channel>
+  <channel id="lennon.cef07b307f79aef3">
+    <display-name>Live | Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
+  </channel>
   <channel id="lennon.a6b214907c7a09ef">
     <display-name>Live | DUBOIS vs WARDLEY II | Oct 18 @ 05:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
@@ -23,6 +27,10 @@
   <programme start="20261018080000 +0800" stop="20261018110000 +0800" channel="lennon.9f8fe02a311ada66">
     <title lang="en">AEW: WrestleDream</title>
     <desc lang="en">Live event: AEW: WrestleDream</desc>
+  </programme>
+  <programme start="20261024040000 +0800" stop="20261024070000 +0800" channel="lennon.cef07b307f79aef3">
+    <title lang="en">Fundora vs Hadribeaj: The Fight</title>
+    <desc lang="en">Live event: Fundora vs Hadribeaj: The Fight</desc>
   </programme>
   <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.a6b214907c7a09ef">
     <title lang="en">DUBOIS vs WARDLEY II</title>

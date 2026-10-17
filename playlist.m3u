@@ -3,6 +3,10 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/aew.m3u8
+#EXTINF:-1 tvg-id="lennon.cef07b307f79aef3" tvg-name="Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/ppv.m3u8
 #EXTINF:-1 tvg-id="lennon.a6b214907c7a09ef" tvg-name="DUBOIS vs WARDLEY II | Oct 18 @ 05:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | DUBOIS vs WARDLEY II | Oct 18 @ 05:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
