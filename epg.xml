@@ -2,6 +2,14 @@
 <tv generator-info-name="Project101 EPG">
   <channel id="lennon.e603721945607098">
     <display-name>NBA | Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+  </channel>
+  <channel id="lennon.ca6dc151a955b848">
+    <display-name>NBA | Portland Trail Blazers vs Golden State Warriors | Oct 17 @ 10:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
+  </channel>
+  <channel id="lennon.f7aed98c0d9afa9a">
+    <display-name>NBA | Utah Jazz vs Phoenix Suns | Oct 17 @ 10:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
   <channel id="lennon.3418396e91fb6b60">
@@ -10,11 +18,11 @@
   </channel>
   <channel id="lennon.8b1b5ee668f970bc">
     <display-name>NBA | Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.fa233622a57ef2af">
     <display-name>NBA | Toronto Raptors vs Detroit Pistons | Oct 17 @ 07:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.da3183163d01db25">
     <display-name>NBA | Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM</display-name>
@@ -51,6 +59,14 @@
   <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.e603721945607098">
     <title lang="en">Miami Heat vs Orlando Magic</title>
     <desc lang="en">Live event: Miami Heat vs Orlando Magic</desc>
+  </programme>
+  <programme start="20261017100000 +0800" stop="20261017130000 +0800" channel="lennon.ca6dc151a955b848">
+    <title lang="en">Portland Trail Blazers vs Golden State Warriors</title>
+    <desc lang="en">Live event: Portland Trail Blazers vs Golden State Warriors</desc>
+  </programme>
+  <programme start="20261017100000 +0800" stop="20261017130000 +0800" channel="lennon.f7aed98c0d9afa9a">
+    <title lang="en">Utah Jazz vs Phoenix Suns</title>
+    <desc lang="en">Live event: Utah Jazz vs Phoenix Suns</desc>
   </programme>
   <programme start="20261017103000 +0800" stop="20261017133000 +0800" channel="lennon.3418396e91fb6b60">
     <title lang="en">Denver Nuggets vs Los Angeles Lakers</title>
