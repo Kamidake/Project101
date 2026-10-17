@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-17T02:01:19.508738+00:00",
+  "updated_utc": "2026-10-17T02:16:24.051550+00:00",
   "pages": 42,
   "candidate_urls": 39,
   "live_urls": 14,
@@ -140,16 +140,6 @@
       "start_time": "October 16, 2026 7:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "Pittsburgh Penguins vs Colorado Avalanche",
-      "start_time": "October 16, 2026 06:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Boston Bruins vs Anaheim Ducks",
-      "start_time": "October 16, 2026 07:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/ncaa-streams-1",
       "name": "Memphis vs Tulane",
       "start_time": "Oct 16, 2026 4:30 PM"
@@ -163,6 +153,16 @@
       "url": "https://roxiestreams.info/ncaa-streams-3",
       "name": "App State vs Coastal Carolina",
       "start_time": "Oct 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "Pittsburgh Penguins vs Colorado Avalanche",
+      "start_time": "October 16, 2026 06:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Boston Bruins vs Anaheim Ducks",
+      "start_time": "October 16, 2026 07:00 PM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-1",
