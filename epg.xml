@@ -12,7 +12,7 @@
     <display-name>NBA | Utah Jazz vs Phoenix Suns | Oct 17 @ 10:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
-  <channel id="lennon.3418396e91fb6b60">
+  <channel id="lennon.b378dadf5d8cfbb0">
     <display-name>NBA | Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
@@ -45,8 +45,24 @@
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="lennon.41df34b610ddfe04">
-    <display-name>Live | ONE Samurai 4 | Oct 17 @ 03:00 PM</display-name>
+    <display-name>Live | Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
+  </channel>
+  <channel id="lennon.a6b214907c7a09ef">
+    <display-name>Live | DUBOIS vs WARDLEY II | Oct 17 @ 11:00 PM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" />
+  </channel>
+  <channel id="lennon.978b25f6b6f39355">
+    <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
+  </channel>
+  <channel id="lennon.aed86d5012ca292d">
+    <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
+  </channel>
+  <channel id="lennon.bfca3ca6eccd14c7">
+    <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
   </channel>
   <channel id="lennon.020b8247511aa5de">
     <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
@@ -68,7 +84,7 @@
     <title lang="en">Utah Jazz vs Phoenix Suns</title>
     <desc lang="en">Live event: Utah Jazz vs Phoenix Suns</desc>
   </programme>
-  <programme start="20261017103000 +0800" stop="20261017133000 +0800" channel="lennon.3418396e91fb6b60">
+  <programme start="20261017103000 +0800" stop="20261017133000 +0800" channel="lennon.b378dadf5d8cfbb0">
     <title lang="en">Denver Nuggets vs Los Angeles Lakers</title>
     <desc lang="en">Live event: Denver Nuggets vs Los Angeles Lakers</desc>
   </programme>
@@ -100,9 +116,25 @@
     <title lang="en">Minnesota Timberwolves vs Chicago Bulls</title>
     <desc lang="en">Live event: Minnesota Timberwolves vs Chicago Bulls</desc>
   </programme>
-  <programme start="20261017150000 +0800" stop="20261017180000 +0800" channel="lennon.41df34b610ddfe04">
-    <title lang="en">ONE Samurai 4</title>
-    <desc lang="en">Live event: ONE Samurai 4</desc>
+  <programme start="20261024040000 +0800" stop="20261024070000 +0800" channel="lennon.41df34b610ddfe04">
+    <title lang="en">Fundora vs Hadribeaj: The Fight</title>
+    <desc lang="en">Live event: Fundora vs Hadribeaj: The Fight</desc>
+  </programme>
+  <programme start="20261017230000 +0800" stop="20261018020000 +0800" channel="lennon.a6b214907c7a09ef">
+    <title lang="en">DUBOIS vs WARDLEY II</title>
+    <desc lang="en">Live event: DUBOIS vs WARDLEY II</desc>
+  </programme>
+  <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.978b25f6b6f39355">
+    <title lang="en">UFC Fight Night: Buckley vs Malott</title>
+    <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
+  </programme>
+  <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.aed86d5012ca292d">
+    <title lang="en">UFC Fight Night: Buckley vs Malott</title>
+    <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
+  </programme>
+  <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.bfca3ca6eccd14c7">
+    <title lang="en">UFC Fight Night: Buckley vs Malott</title>
+    <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
   </programme>
   <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.020b8247511aa5de">
     <title lang="en">WWE Smackdown</title>

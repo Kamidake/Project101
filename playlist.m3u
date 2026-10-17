@@ -11,10 +11,10 @@ https://admin.formaturamaxi.com.br/nba10.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-11
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://tedesco.formaturamaxi.com.br/nba11.m3u8
-#EXTINF:-1 tvg-id="lennon.3418396e91fb6b60" tvg-name="Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" group-title="NBA",NBA | Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM
+#EXTINF:-1 tvg-id="lennon.b378dadf5d8cfbb0" tvg-name="Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" group-title="NBA",NBA | Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-12
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/ncaa.m3u8
+https://admin.formaturamaxi.com.br/nba.m3u8
 #EXTINF:-1 tvg-id="lennon.8b1b5ee668f970bc" tvg-name="Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
@@ -43,10 +43,26 @@ https://tedesco.formaturamaxi.com.br/nba8.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nba9.m3u8
-#EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="ONE Samurai 4 | Oct 17 @ 03:00 PM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | ONE Samurai 4 | Oct 17 @ 03:00 PM
+#EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/ppv.m3u8
+#EXTINF:-1 tvg-id="lennon.a6b214907c7a09ef" tvg-name="DUBOIS vs WARDLEY II | Oct 17 @ 11:00 PM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | DUBOIS vs WARDLEY II | Oct 17 @ 11:00 PM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/ppv2.m3u8
+#EXTINF:-1 tvg-id="lennon.978b25f6b6f39355" tvg-name="UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/abbiecadabrii.m3u8
+#EXTINF:-1 tvg-id="lennon.aed86d5012ca292d" tvg-name="UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/hub.m3u8
+#EXTINF:-1 tvg-id="lennon.bfca3ca6eccd14c7" tvg-name="UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/tnt.m3u8
 #EXTINF:-1 tvg-id="lennon.020b8247511aa5de" tvg-name="WWE Smackdown | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown | Oct 17 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)

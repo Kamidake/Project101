@@ -1,12 +1,12 @@
 {
-  "updated_utc": "2026-10-17T03:01:20.480585+00:00",
-  "pages": 42,
-  "candidate_urls": 40,
-  "live_urls": 14,
+  "updated_utc": "2026-10-17T03:16:27.001979+00:00",
+  "pages": 44,
+  "candidate_urls": 45,
+  "live_urls": 18,
   "unavailable_urls": 4,
   "unsupported_pages": [],
   "errors": [],
-  "event_groups": 13,
+  "event_groups": 15,
   "event_posters": 0,
   "schedule": [
     {
@@ -33,6 +33,36 @@
       "url": "https://roxiestreams.info/wwe-streams",
       "name": "WWE Smackdown",
       "start_time": "October 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 16, 2026 05:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "ONE Samurai 4",
+      "start_time": "October 17, 2026 12:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-2",
+      "name": "DUBOIS VS WARDLEY II",
+      "start_time": "October 17, 2026 8:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/ufc",
+      "name": "UFC Fight Night: Buckley vs. Malott",
+      "start_time": "October 17, 2026 2:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "Fundora vs. Hadribeaj: The Fight",
+      "start_time": "October 17, 2026 2:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "RAF 14: Tsarukyan vs. Danis",
+      "start_time": "October 23, 2026 1:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nascar",
@@ -65,21 +95,6 @@
       "start_time": "October 17, 2026 4:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 16, 2026 05:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "The Inner Circle 35",
-      "start_time": "October 16, 2026 4:30 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "ONE Samurai 4",
-      "start_time": "October 17, 2026 12:00 AM"
-    },
-    {
       "url": "https://roxiestreams.info/nhl-streams-1",
       "name": "Pittsburgh Penguins vs Colorado Avalanche",
       "start_time": "October 16, 2026 06:00 PM"
@@ -88,6 +103,21 @@
       "url": "https://roxiestreams.info/nhl-streams-2",
       "name": "Boston Bruins vs Anaheim Ducks",
       "start_time": "October 16, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Memphis vs Tulane",
+      "start_time": "Oct 16, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Washington vs Purdue",
+      "start_time": "Oct 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-3",
+      "name": "App State vs Coastal Carolina",
+      "start_time": "Oct 16, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nba-streams-1",
@@ -148,21 +178,6 @@
       "url": "https://roxiestreams.info/nba-streams-12",
       "name": "Denver Nuggets vs Los Angeles Lakers",
       "start_time": "October 16, 2026 7:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Memphis vs Tulane",
-      "start_time": "Oct 16, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Washington vs Purdue",
-      "start_time": "Oct 16, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-3",
-      "name": "App State vs Coastal Carolina",
-      "start_time": "Oct 16, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-1",
@@ -229,7 +244,7 @@
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 42,
+      "pages": 44,
       "errors": []
     }
   ]
