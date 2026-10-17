@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-17T21:16:33.120793+00:00",
+  "updated_utc": "2026-10-17T21:31:28.002073+00:00",
   "pages": 64,
   "candidate_urls": 63,
   "live_urls": 5,
-  "unavailable_urls": 8,
+  "unavailable_urls": 7,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 4,
@@ -60,6 +60,11 @@
       "start_time": "October 17, 2026 5:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 17, 2026 05:00 PM"
+    },
+    {
       "url": "https://roxiestreams.info/ufc",
       "name": "UFC Fight Night: Buckley vs. Malott",
       "start_time": "October 17, 2026 2:00 PM"
@@ -73,11 +78,6 @@
       "url": "https://roxiestreams.info/ppv-streams-1",
       "name": "RAF 14: Tsarukyan vs. Danis",
       "start_time": "October 23, 2026 1:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 17, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/floracing-1",
