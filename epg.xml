@@ -22,19 +22,23 @@
   </channel>
   <channel id="lennon.da3183163d01db25">
     <display-name>NBA | Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
   <channel id="lennon.9839392d458c9fcc">
     <display-name>NBA | Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
+  </channel>
+  <channel id="lennon.a8921b46a11e8895">
+    <display-name>NBA | Charlotte Hornets vs Memphis Grizzlies | Oct 17 @ 08:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
   <channel id="lennon.ac09bde009bb726c">
     <display-name>NBA | Washington Wizards vs New Orleans Pelicans | Oct 17 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
   <channel id="lennon.f711b92fe87a4639">
     <display-name>NBA | Minnesota Timberwolves vs Chicago Bulls | Oct 17 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
   <channel id="lennon.41df34b610ddfe04">
     <display-name>Live | ONE Samurai 4 | Oct 17 @ 03:00 PM</display-name>
@@ -42,11 +46,11 @@
   </channel>
   <channel id="lennon.020b8247511aa5de">
     <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe-live.png" />
   </channel>
   <channel id="lennon.f0ae8d396889ae29">
     <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe-live.png" />
   </channel>
   <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.e603721945607098">
     <title lang="en">Miami Heat vs Orlando Magic</title>
@@ -75,6 +79,10 @@
   <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.9839392d458c9fcc">
     <title lang="en">Sacramento Kings vs San Antonio Spurs</title>
     <desc lang="en">Live event: Sacramento Kings vs San Antonio Spurs</desc>
+  </programme>
+  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.a8921b46a11e8895">
+    <title lang="en">Charlotte Hornets vs Memphis Grizzlies</title>
+    <desc lang="en">Live event: Charlotte Hornets vs Memphis Grizzlies</desc>
   </programme>
   <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.ac09bde009bb726c">
     <title lang="en">Washington Wizards vs New Orleans Pelicans</title>
