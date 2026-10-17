@@ -1,48 +1,8 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="lennon.e603721945607098" tvg-name="Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Miami Heat vs Orlando Magic | Oct 17 @ 07:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTINF:-1 tvg-id="lennon.9f8fe02a311ada66" tvg-name="AEW: WrestleDream | Oct 18 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/combat-sports.png" group-title="AEW",AEW: WrestleDream | Oct 18 @ 08:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="lennon.ca6dc151a955b848" tvg-name="Portland Trail Blazers vs Golden State Warriors | Oct 17 @ 10:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" group-title="NBA",NBA | Portland Trail Blazers vs Golden State Warriors | Oct 17 @ 10:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-10
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/nba10.m3u8
-#EXTINF:-1 tvg-id="lennon.f7aed98c0d9afa9a" tvg-name="Utah Jazz vs Phoenix Suns | Oct 17 @ 10:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" group-title="NBA",NBA | Utah Jazz vs Phoenix Suns | Oct 17 @ 10:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-11
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://tedesco.formaturamaxi.com.br/nba11.m3u8
-#EXTINF:-1 tvg-id="lennon.b378dadf5d8cfbb0" tvg-name="Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" group-title="NBA",NBA | Denver Nuggets vs Los Angeles Lakers | Oct 17 @ 10:30 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-12
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="lennon.8b1b5ee668f970bc" tvg-name="Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Boston Celtics vs Philadelphia 76ers | Oct 17 @ 07:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/nba2.m3u8
-#EXTINF:-1 tvg-id="lennon.fa233622a57ef2af" tvg-name="Toronto Raptors vs Detroit Pistons | Oct 17 @ 07:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Toronto Raptors vs Detroit Pistons | Oct 17 @ 07:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/nba3.m3u8
-#EXTINF:-1 tvg-id="lennon.da3183163d01db25" tvg-name="Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin.formaturamaxi.com.br/nba5.m3u8
-#EXTINF:-1 tvg-id="lennon.9839392d458c9fcc" tvg-name="Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Sacramento Kings vs San Antonio Spurs | Oct 17 @ 08:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/nba6.m3u8
-#EXTINF:-1 tvg-id="lennon.a8921b46a11e8895" tvg-name="Charlotte Hornets vs Memphis Grizzlies | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Charlotte Hornets vs Memphis Grizzlies | Oct 17 @ 08:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/nba7.m3u8
-#EXTINF:-1 tvg-id="lennon.ac09bde009bb726c" tvg-name="Washington Wizards vs New Orleans Pelicans | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Washington Wizards vs New Orleans Pelicans | Oct 17 @ 08:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://tedesco.formaturamaxi.com.br/nba8.m3u8
-#EXTINF:-1 tvg-id="lennon.f711b92fe87a4639" tvg-name="Minnesota Timberwolves vs Chicago Bulls | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" group-title="NBA",NBA | Minnesota Timberwolves vs Chicago Bulls | Oct 17 @ 08:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://admin2.formaturamaxi.com.br/nba9.m3u8
+https://admin2.formaturamaxi.com.br/aew.m3u8
 #EXTINF:-1 tvg-id="lennon.41df34b610ddfe04" tvg-name="Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/live.png" group-title="Live",Live | Fundora vs Hadribeaj: The Fight | Oct 24 @ 04:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
