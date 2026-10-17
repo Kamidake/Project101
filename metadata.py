@@ -96,7 +96,7 @@ def decorate(entries):
         if 'floracing' in page_url or 'floracing' in referrer_url:
             continue
 
-      if 'soccer' in page_url or 'soccer' in referrer_url:
+        if 'soccer' in page_url or 'soccer' in referrer_url:
             continue
         
         if 'ncaa' in page_url or 'ncaa' in referrer_url:
