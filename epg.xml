@@ -20,6 +20,10 @@
     <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc-live.png" />
   </channel>
+  <channel id="lennon.692e6d9669a7fea7">
+    <display-name>UFC Fight Night: Buckley vs Malott | Oct 18 @ 05:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc-live.png" />
+  </channel>
   <programme start="20261018080000 +0800" stop="20261018110000 +0800" channel="lennon.9f8fe02a311ada66">
     <title lang="en">AEW: WrestleDream</title>
     <desc lang="en">Live event: AEW: WrestleDream</desc>
@@ -37,6 +41,10 @@
     <desc lang="en">Live event: DUBOIS vs WARDLEY II</desc>
   </programme>
   <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.978b25f6b6f39355">
+    <title lang="en">UFC Fight Night: Buckley vs Malott</title>
+    <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
+  </programme>
+  <programme start="20261018050000 +0800" stop="20261018080000 +0800" channel="lennon.692e6d9669a7fea7">
     <title lang="en">UFC Fight Night: Buckley vs Malott</title>
     <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
   </programme>
