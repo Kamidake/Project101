@@ -1,12 +1,12 @@
 {
-  "updated_utc": "2026-10-17T17:46:50.468232+00:00",
-  "pages": 61,
-  "candidate_urls": 62,
-  "live_urls": 4,
-  "unavailable_urls": 6,
+  "updated_utc": "2026-10-17T18:01:36.680732+00:00",
+  "pages": 65,
+  "candidate_urls": 66,
+  "live_urls": 0,
+  "unavailable_urls": 66,
   "unsupported_pages": [],
   "errors": [],
-  "event_groups": 4,
+  "event_groups": 0,
   "event_posters": 0,
   "schedule": [
     {
@@ -30,7 +30,7 @@
       "start_time": "October 17, 2026 6:00 AM"
     },
     {
-      "url": "https://roxiestreams.info/ppv-streams-1",
+      "url": "https://roxiestreams.info/ppv-streams-2",
       "name": "DUBOIS VS WARDLEY II",
       "start_time": "October 17, 2026 8:00 AM"
     },
@@ -65,6 +65,21 @@
       "start_time": "October 17, 2026 05:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/wnba-streams-1",
+      "name": "Atlanta Dream vs Golden State Valkyries",
+      "start_time": "October 17, 2026 12:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-1",
+      "name": "Lucas Oil Late Model - Race",
+      "start_time": "October 17, 2026 1:45 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-2",
+      "name": "WoO Sprint Cars - Race",
+      "start_time": "October 17, 2026 4:30 PM"
+    },
+    {
       "url": "https://roxiestreams.info/ufc",
       "name": "UFC Fight Night: Buckley vs. Malott",
       "start_time": "October 17, 2026 2:00 PM"
@@ -78,91 +93,6 @@
       "url": "https://roxiestreams.info/ppv-streams-1",
       "name": "RAF 14: Tsarukyan vs. Danis",
       "start_time": "October 23, 2026 1:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-1",
-      "name": "Lucas Oil Late Model - Race",
-      "start_time": "October 17, 2026 1:45 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-2",
-      "name": "WoO Sprint Cars - Race",
-      "start_time": "October 17, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/wnba-streams-1",
-      "name": "Atlanta Dream vs Golden State Valkyries",
-      "start_time": "October 17, 2026 12:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "New Jersey Devils vs Washington Capitals",
-      "start_time": "October 17, 2026 10:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Carolina Hurricanes vs Winnipeg Jets",
-      "start_time": "October 17, 2026 12:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-3",
-      "name": "Vancouver Canucks vs Tampa Bay Lightning",
-      "start_time": "October 17, 2026 01:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-4",
-      "name": "Seattle Kraken vs Florida Panthers",
-      "start_time": "October 17, 2026 03:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-3",
-      "name": "New York Islanders vs Toronto Maple Leafs",
-      "start_time": "October 17, 2026 04:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-1",
-      "name": "Buffalo Sabres vs Montreal Canadiens",
-      "start_time": "October 17, 2026 04:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-7",
-      "name": "San Jose Sharks vs Detroit Red Wings",
-      "start_time": "October 17, 2026 04:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-8",
-      "name": "Ottawa Senators vs Philadelphia Flyers",
-      "start_time": "October 17, 2026 04:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-9",
-      "name": "New York Rangers vs Columbus Blue Jackets",
-      "start_time": "October 17, 2026 04:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-10",
-      "name": "Dallas Stars vs Chicago Blackhawks",
-      "start_time": "October 17, 2026 04:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-11",
-      "name": "St. Louis Blues vs Nashville Predators",
-      "start_time": "October 17, 2026 05:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-12",
-      "name": "Boston Bruins vs Los Angeles Kings",
-      "start_time": "October 17, 2026 06:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-2",
-      "name": "Edmonton Oilers vs Utah Mammoth",
-      "start_time": "October 17, 2026 07:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/nhl-streams-14",
-      "name": "Pittsburgh Penguins vs Vegas Golden Knights",
-      "start_time": "October 17, 2026 07:00 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-3",
@@ -355,6 +285,76 @@
       "start_time": "Oct 17, 2026 8:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "New Jersey Devils vs Washington Capitals",
+      "start_time": "October 17, 2026 10:00 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Carolina Hurricanes vs Winnipeg Jets",
+      "start_time": "October 17, 2026 12:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-3",
+      "name": "Vancouver Canucks vs Tampa Bay Lightning",
+      "start_time": "October 17, 2026 01:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-4",
+      "name": "Seattle Kraken vs Florida Panthers",
+      "start_time": "October 17, 2026 03:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-3",
+      "name": "New York Islanders vs Toronto Maple Leafs",
+      "start_time": "October 17, 2026 04:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-1",
+      "name": "Buffalo Sabres vs Montreal Canadiens",
+      "start_time": "October 17, 2026 04:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-7",
+      "name": "San Jose Sharks vs Detroit Red Wings",
+      "start_time": "October 17, 2026 04:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-8",
+      "name": "Ottawa Senators vs Philadelphia Flyers",
+      "start_time": "October 17, 2026 04:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-9",
+      "name": "New York Rangers vs Columbus Blue Jackets",
+      "start_time": "October 17, 2026 04:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-10",
+      "name": "Dallas Stars vs Chicago Blackhawks",
+      "start_time": "October 17, 2026 04:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-11",
+      "name": "St. Louis Blues vs Nashville Predators",
+      "start_time": "October 17, 2026 05:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-12",
+      "name": "Boston Bruins vs Los Angeles Kings",
+      "start_time": "October 17, 2026 06:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-2",
+      "name": "Edmonton Oilers vs Utah Mammoth",
+      "start_time": "October 17, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/nhl-streams-14",
+      "name": "Pittsburgh Penguins vs Vegas Golden Knights",
+      "start_time": "October 17, 2026 07:00 PM"
+    },
+    {
       "url": "https://roxiestreams.info/soccer-streams-1",
       "name": "Everton vs Chelsea",
       "start_time": "October 17, 2026 4:30 AM"
@@ -480,13 +480,23 @@
       "start_time": "October 17, 2026 3:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/soccer-streams-16",
-      "name": "Atlanta United vs Inter Miami",
-      "start_time": "October 17, 2026 3:00 PM"
+      "url": "https://roxiestreams.info/soccer-streams-19",
+      "name": "Santos Laguna vs Quer\u00e9taro",
+      "start_time": "October 17, 2026 4:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-20",
+      "name": "Guadalajara vs Tigres UANL",
+      "start_time": "October 17, 2026 4:07 PM"
     },
     {
       "url": "https://roxiestreams.info/soccer-streams-14",
       "name": "New York RB vs Toronto",
+      "start_time": "October 17, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-16",
+      "name": "Atlanta United vs Inter Miami",
       "start_time": "October 17, 2026 4:30 PM"
     },
     {
@@ -495,16 +505,31 @@
       "start_time": "October 17, 2026 5:00 PM"
     },
     {
+      "url": "https://roxiestreams.info/soccer-streams-21",
+      "name": "Toluca vs Atl\u00e9tico San Luis",
+      "start_time": "October 17, 2026 6:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-22",
+      "name": "Le\u00f3n vs Am\u00e9rica",
+      "start_time": "October 17, 2026 6:00 PM"
+    },
+    {
       "url": "https://roxiestreams.info/soccer-streams-14",
       "name": "Seattle Sounders FC vs CF Montr\u00e9al",
       "start_time": "October 17, 2026 7:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/soccer-streams-21",
+      "name": "Cruz Azul vs Ju\u00e1rez",
+      "start_time": "October 17, 2026 8:10 PM"
     }
   ],
   "roxie_source": "https://roxiestreams.info/",
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 61,
+      "pages": 65,
       "errors": []
     }
   ]
