@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-17T04:16:27.511237+00:00",
+  "updated_utc": "2026-10-17T04:31:20.867269+00:00",
   "pages": 44,
   "candidate_urls": 44,
   "live_urls": 18,
@@ -95,21 +95,6 @@
       "start_time": "October 17, 2026 4:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/ncaa-streams-1",
-      "name": "Memphis vs Tulane",
-      "start_time": "Oct 16, 2026 4:30 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-2",
-      "name": "Washington vs Purdue",
-      "start_time": "Oct 16, 2026 5:00 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-3",
-      "name": "App State vs Coastal Carolina",
-      "start_time": "Oct 16, 2026 5:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/nba-streams-1",
       "name": "Miami Heat vs Orlando Magic",
       "start_time": "October 16, 2026 4:00 PM"
@@ -168,6 +153,21 @@
       "url": "https://roxiestreams.info/nba-streams-12",
       "name": "Denver Nuggets vs Los Angeles Lakers",
       "start_time": "October 16, 2026 7:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-1",
+      "name": "Memphis vs Tulane",
+      "start_time": "Oct 16, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-2",
+      "name": "Washington vs Purdue",
+      "start_time": "Oct 16, 2026 5:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ncaa-streams-3",
+      "name": "App State vs Coastal Carolina",
+      "start_time": "Oct 16, 2026 5:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nhl-streams-1",
