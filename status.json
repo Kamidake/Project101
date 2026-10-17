@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-17T06:01:53.119021+00:00",
-  "pages": 63,
-  "candidate_urls": 64,
+  "updated_utc": "2026-10-17T06:11:03.881716+00:00",
+  "pages": 60,
+  "candidate_urls": 61,
   "live_urls": 5,
-  "unavailable_urls": 20,
+  "unavailable_urls": 18,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 3,
@@ -80,9 +80,14 @@
       "start_time": "October 17, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/wnba-streams-1",
-      "name": "Atlanta Dream vs Golden State Valkyries",
-      "start_time": "October 17, 2026 12:30 PM"
+      "url": "https://roxiestreams.info/floracing-1",
+      "name": "Lucas Oil Late Model - Race",
+      "start_time": "October 17, 2026 1:45 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-2",
+      "name": "WoO Sprint Cars - Race",
+      "start_time": "October 17, 2026 4:30 PM"
     },
     {
       "url": "https://roxiestreams.info/nhl-streams-1",
@@ -105,7 +110,7 @@
       "start_time": "October 17, 2026 03:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-5",
+      "url": "https://roxiestreams.info/nhl-streams-3",
       "name": "New York Islanders vs Toronto Maple Leafs",
       "start_time": "October 17, 2026 04:00 PM"
     },
@@ -145,7 +150,7 @@
       "start_time": "October 17, 2026 06:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/nhl-streams-13",
+      "url": "https://roxiestreams.info/nhl-streams-2",
       "name": "Edmonton Oilers vs Utah Mammoth",
       "start_time": "October 17, 2026 07:00 PM"
     },
@@ -155,14 +160,9 @@
       "start_time": "October 17, 2026 07:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/floracing-1",
-      "name": "Lucas Oil Late Model - Race",
-      "start_time": "October 17, 2026 1:45 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-2",
-      "name": "WoO Sprint Cars - Race",
-      "start_time": "October 17, 2026 4:30 PM"
+      "url": "https://roxiestreams.info/wnba-streams-1",
+      "name": "Atlanta Dream vs Golden State Valkyries",
+      "start_time": "October 17, 2026 12:30 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-3",
@@ -187,11 +187,6 @@
     {
       "url": "https://roxiestreams.info/ncaa-streams-4",
       "name": "Virginia vs SMU",
-      "start_time": "Oct 17, 2026 9:00 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/ncaa-streams-5",
-      "name": "Northwestern vs Michigan State",
       "start_time": "Oct 17, 2026 9:00 AM"
     },
     {
@@ -504,7 +499,7 @@
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 63,
+      "pages": 60,
       "errors": []
     }
   ]
