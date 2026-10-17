@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-17T22:01:30.067824+00:00",
+  "updated_utc": "2026-10-17T22:16:30.889833+00:00",
   "pages": 64,
   "candidate_urls": 64,
   "live_urls": 6,
@@ -85,16 +85,6 @@
       "start_time": "October 17, 2026 12:30 PM"
     },
     {
-      "url": "https://roxiestreams.info/floracing-1",
-      "name": "Lucas Oil Late Model - Race",
-      "start_time": "October 17, 2026 1:45 PM"
-    },
-    {
-      "url": "https://roxiestreams.info/floracing-2",
-      "name": "WoO Sprint Cars - Race",
-      "start_time": "October 17, 2026 4:30 PM"
-    },
-    {
       "url": "https://roxiestreams.info/nhl-streams-1",
       "name": "New Jersey Devils vs Washington Capitals",
       "start_time": "October 17, 2026 10:00 AM"
@@ -163,6 +153,16 @@
       "url": "https://roxiestreams.info/nhl-streams-14",
       "name": "Pittsburgh Penguins vs Vegas Golden Knights",
       "start_time": "October 17, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-1",
+      "name": "Lucas Oil Late Model - Race",
+      "start_time": "October 17, 2026 1:45 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/floracing-2",
+      "name": "WoO Sprint Cars - Race",
+      "start_time": "October 17, 2026 4:30 PM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-3",
