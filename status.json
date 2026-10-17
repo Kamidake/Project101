@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-17T00:31:21.488520+00:00",
+  "updated_utc": "2026-10-17T00:46:18.966268+00:00",
   "pages": 42,
   "candidate_urls": 38,
   "live_urls": 13,
@@ -40,16 +40,6 @@
       "start_time": "October 16, 2026 05:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "The Inner Circle 35",
-      "start_time": "October 16, 2026 4:30 AM"
-    },
-    {
-      "url": "https://roxiestreams.info/ppv-streams-1",
-      "name": "ONE Samurai 4",
-      "start_time": "October 17, 2026 12:00 AM"
-    },
-    {
       "url": "https://roxiestreams.info/nascar",
       "name": "NASCAR Craftsman Truck Series",
       "start_time": "October 16, 2026 1:35 PM"
@@ -78,6 +68,16 @@
       "url": "https://roxiestreams.info/nascar",
       "name": "NASCAR O'Reilly Auto Parts Series",
       "start_time": "October 17, 2026 4:30 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "The Inner Circle 35",
+      "start_time": "October 16, 2026 4:30 AM"
+    },
+    {
+      "url": "https://roxiestreams.info/ppv-streams-1",
+      "name": "ONE Samurai 4",
+      "start_time": "October 17, 2026 12:00 AM"
     },
     {
       "url": "https://roxiestreams.info/ncaa-streams-1",
