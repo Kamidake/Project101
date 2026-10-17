@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-17T09:46:46.440794+00:00",
+  "updated_utc": "2026-10-17T10:01:52.876922+00:00",
   "pages": 60,
   "candidate_urls": 59,
   "live_urls": 6,
@@ -60,11 +60,6 @@
       "start_time": "October 17, 2026 5:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/mlb-streams-1",
-      "name": "Tampa Bay Rays vs Cleveland Guardians",
-      "start_time": "October 17, 2026 05:00 PM"
-    },
-    {
       "url": "https://roxiestreams.info/ufc",
       "name": "UFC Fight Night: Buckley vs. Malott",
       "start_time": "October 17, 2026 2:00 PM"
@@ -80,9 +75,9 @@
       "start_time": "October 23, 2026 1:00 PM"
     },
     {
-      "url": "https://roxiestreams.info/wnba-streams-1",
-      "name": "Atlanta Dream vs Golden State Valkyries",
-      "start_time": "October 17, 2026 12:30 PM"
+      "url": "https://roxiestreams.info/mlb-streams-1",
+      "name": "Tampa Bay Rays vs Cleveland Guardians",
+      "start_time": "October 17, 2026 05:00 PM"
     },
     {
       "url": "https://roxiestreams.info/nhl-streams-1",
@@ -153,6 +148,11 @@
       "url": "https://roxiestreams.info/nhl-streams-14",
       "name": "Pittsburgh Penguins vs Vegas Golden Knights",
       "start_time": "October 17, 2026 07:00 PM"
+    },
+    {
+      "url": "https://roxiestreams.info/wnba-streams-1",
+      "name": "Atlanta Dream vs Golden State Valkyries",
+      "start_time": "October 17, 2026 12:30 PM"
     },
     {
       "url": "https://roxiestreams.info/floracing-1",
