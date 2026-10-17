@@ -15,10 +15,6 @@ https://admin.formaturamaxi.com.br/nba2.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin.formaturamaxi.com.br/nba3.m3u8
-#EXTINF:-1 tvg-id="lennon.872b165b84888df4" tvg-name="Milwaukee Bucks vs Indiana Pacers | Oct 17 @ 07:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" group-title="NBA",NBA | Milwaukee Bucks vs Indiana Pacers | Oct 17 @ 07:00 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://tedesco.formaturamaxi.com.br/nba4.m3u8
 #EXTINF:-1 tvg-id="lennon.da3183163d01db25" tvg-name="Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" group-title="NBA",NBA | Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)

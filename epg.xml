@@ -16,10 +16,6 @@
     <display-name>NBA | Toronto Raptors vs Detroit Pistons | Oct 17 @ 07:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
   </channel>
-  <channel id="lennon.872b165b84888df4">
-    <display-name>NBA | Milwaukee Bucks vs Indiana Pacers | Oct 17 @ 07:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
-  </channel>
   <channel id="lennon.da3183163d01db25">
     <display-name>NBA | Atlanta Hawks vs Dallas Mavericks | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba-live.png" />
@@ -67,10 +63,6 @@
   <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.fa233622a57ef2af">
     <title lang="en">Toronto Raptors vs Detroit Pistons</title>
     <desc lang="en">Live event: Toronto Raptors vs Detroit Pistons</desc>
-  </programme>
-  <programme start="20261017070000 +0800" stop="20261017100000 +0800" channel="lennon.872b165b84888df4">
-    <title lang="en">Milwaukee Bucks vs Indiana Pacers</title>
-    <desc lang="en">Live event: Milwaukee Bucks vs Indiana Pacers</desc>
   </programme>
   <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.da3183163d01db25">
     <title lang="en">Atlanta Hawks vs Dallas Mavericks</title>
