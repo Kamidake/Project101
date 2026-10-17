@@ -28,10 +28,6 @@
     <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <channel id="lennon.f0ae8d396889ae29">
-    <display-name>WWE Smackdown | Oct 17 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261018080000 +0800" stop="20261018110000 +0800" channel="lennon.9f8fe02a311ada66">
     <title lang="en">AEW: WrestleDream</title>
     <desc lang="en">Live event: AEW: WrestleDream</desc>
@@ -57,10 +53,6 @@
     <desc lang="en">Live event: UFC Fight Night: Buckley vs Malott</desc>
   </programme>
   <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.020b8247511aa5de">
-    <title lang="en">WWE Smackdown</title>
-    <desc lang="en">Live event: WWE Smackdown</desc>
-  </programme>
-  <programme start="20261017080000 +0800" stop="20261017110000 +0800" channel="lennon.f0ae8d396889ae29">
     <title lang="en">WWE Smackdown</title>
     <desc lang="en">Live event: WWE Smackdown</desc>
   </programme>
