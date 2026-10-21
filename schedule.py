@@ -8,36 +8,34 @@ from zoneinfo import ZoneInfo
 def start_times(text, page, links):
     result = {}
     
-    # 1. Check if we find ANY table rows on the page
-    rows = re.findall(r'<tr\b[^>]*>(.*?)</tr>', text, re.I | re.S)
-    if rows and 'streams-' not in page:  # Ignore individual player pages
-        print(f"DEBUG: Found {len(rows)} table rows on {page}", flush=True)
+    # 1. Find all table rows
+    for row in re.findall(r'<tr\b[^>]*>(.*?)</tr>', text, re.I | re.S):
         
-    for row in rows:
-        # 2. Check if the 'event-start-time' class still exists
-        match = re.search(r'<td\b[^>]*class=[\"\'][^\"\']*event-start-time[^\"\']*[\"\'][^>]*>(.*?)</td>', row, re.I | re.S)
-        if not match:
+        # 2. Strip ALL HTML tags from the row to get just the raw text
+        clean_text = html.unescape(re.sub(r'<[^>]+>', ' ', row)).strip()
+        
+        # 3. Hunt for ANY text that matches: Month DD, YYYY HH:MM AM/PM
+        # This ignores classes and just looks for the actual date format.
+        date_match = re.search(r'([A-Z][a-z]+\s+\d{1,2},\s+\d{4}\s+\d{1,2}:\d{2}\s+[AP]M)', clean_text, re.I)
+        
+        if not date_match:
             continue
             
-        value = html.unescape(re.sub('<[^>]+>', '', match[1])).strip()
+        value = " ".join(date_match.group(1).split()) # Clean up any weird spacing
         
         try:
-            # 3. Check if the date format changed
+            # Try parsing full month name (e.g., October 20, 2026 12:00 PM)
             stamp = datetime.strptime(value, '%B %d, %Y %I:%M %p').replace(tzinfo=ZoneInfo('America/Los_Angeles')).timestamp()
         except ValueError:
-            print(f"SCHEDULE ERROR on {page}: Date format changed. Found: '{value}'", flush=True)
-            continue
-            
-        row_links = list(links(row, page))
-        if not row_links:
-            print(f"SCHEDULE ERROR on {page}: Found date '{value}' but no clickable link in this row!", flush=True)
-            
-        for target, label in row_links:
+            try:
+                # Try parsing abbreviated month name just in case (e.g., Oct 20, 2026 12:00 PM)
+                stamp = datetime.strptime(value, '%b %d, %Y %I:%M %p').replace(tzinfo=ZoneInfo('America/Los_Angeles')).timestamp()
+            except ValueError:
+                continue
+                
+        for target, label in links(row, page):
             result[(target, label)] = stamp
             
-    if result:
-        print(f"DEBUG: Successfully matched {len(result)} scheduled events on {page}", flush=True)
-        
     return result
 
 
