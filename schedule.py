@@ -33,5 +33,5 @@ def start_times(text, page, links):
 
 
 def pht_time(timestamp):
-    # Convert the saved Pacific time timestamp into Philippine Standard Time
-    return datetime.fromtimestamp(timestamp, ZoneInfo('Asia/Manila')).strftime('%b %d, %I:%M %p PHT')
+    # Convert the saved Pacific time timestamp into Philippine Standard Time (without the PHT label)
+    return datetime.fromtimestamp(timestamp, ZoneInfo('Asia/Manila')).strftime('%b %d, %I:%M %p')
