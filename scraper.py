@@ -146,32 +146,16 @@ def safe(value):
     return ' '.join(value.replace('"', "'").split())
 
 
-def get_logo_url(poster):
-    """Convert local asset paths to raw GitHub URLs."""
-    if not poster:
-        return ""
-    if poster.startswith('http'):
-        return poster
-        
-    # Automatically get your repo name from GitHub Actions
-    repo = os.getenv('GITHUB_REPOSITORY', 'YourUsername/YourRepo')
-    base_url = f'https://raw.githubusercontent.com/{repo}/main/'
-    
-    # Remove leading slashes so it joins correctly
-    return urljoin(base_url, poster.lstrip('/'))
-
-
 def render(entries):
     lines = ['#EXTM3U']
     for entry in entries:
         display = safe(entry.get("display_name", entry["name"]))
+        
+        # Aggressively remove duplicate tags (like " #2") from the string
         shared_name = safe(re.sub(r'\s+#\d+', '', display))
         
-        # Convert the logo to an absolute URL
-        logo = safe(get_logo_url(entry.get("poster", "")))
-        
         extinf = f'#EXTINF:-1 tvg-id="{shared_name}" tvg-name="{shared_name}" '
-        extinf += f'tvg-logo="{logo}" '
+        extinf += f'tvg-logo="{safe(entry.get("poster", ""))}" '
         extinf += f'group-title="{safe(entry["group"])}",{shared_name}'
         
         lines.append(extinf)
@@ -197,23 +181,25 @@ def render_epg(entries):
         display = safe(entry.get("display_name", entry["name"]))
         shared_name = safe(re.sub(r'\s+#\d+', '', display))
         
+        # Escape special characters for XML compatibility
         channel_id = html.escape(shared_name, quote=True)
         
+        # We only want to create one channel entry even if there are backup streams
         if channel_id not in seen_channels:
             seen_channels.add(channel_id)
             lines.append(f'  <channel id="{channel_id}">')
             lines.append(f'    <display-name>{channel_id}</display-name>')
-            
-            logo = get_logo_url(entry.get("poster", ""))
-            if logo:
-                lines.append(f'    <icon src="{html.escape(logo, quote=True)}" />')
-                
+            if entry.get("poster"):
+                lines.append(f'    <icon src="{html.escape(entry["poster"], quote=True)}" />')
             lines.append('  </channel>')
             
+            # If the event has a start time, create a programme block for it
             if entry.get("starts_at"):
                 start_dt = dt.datetime.fromtimestamp(entry["starts_at"], tz_pht)
+                # Estimate a standard 3-hour duration for the sports event
                 stop_dt = start_dt + dt.timedelta(hours=3)
                 
+                # XMLTV time format: YYYYMMDDHHMMSS +TZ
                 start_str = start_dt.strftime('%Y%m%d%H%M%S +0800')
                 stop_str = stop_dt.strftime('%Y%m%d%H%M%S +0800')
                 
@@ -374,6 +360,7 @@ def main():
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
         
+    # Generate and save both the M3U playlist and the XMLTV EPG
     m3u_changed = write_playlist_if_changed(render(entries))
     epg_changed = write_playlist_if_changed(render_epg(entries), Path('epg.xml'))
     
