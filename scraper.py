@@ -101,4 +101,14 @@ def extract_sources(text, page, domain_loader=load_domains):
         raise ValueError('No current stream domains could be loaded')
     for path, subdomain in calls:
         for domain in sorted(set(domains)):
-            sources.add(f'
+            # Broken into smaller lines to prevent text-wrap errors
+            prefix = subdomain or (default.group(1) if default else "admin2")
+            clean_path = path.lstrip("/")
+            sources.add(f'https://{prefix}.{domain}/{clean_path}')
+    return sorted(sources)
+
+
+def live_media(url, referer, depth=0):
+    if depth > 3:
+        return False
+    text = fetch(url, referer
