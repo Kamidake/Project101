@@ -154,8 +154,6 @@ def render(entries):
         # Aggressively remove duplicate tags (like " #2") from the string
         shared_name = safe(re.sub(r'\s+#\d+', '', display))
         
-        # Split into smaller lines so the text editor doesn't break it
-        # FORCE tvg-id to equal the shared_name, completely ignoring unique URL hashes
         extinf = f'#EXTINF:-1 tvg-id="{shared_name}" tvg-name="{shared_name}" '
         extinf += f'tvg-logo="{safe(entry.get("poster", ""))}" '
         extinf += f'group-title="{safe(entry["group"])}",{shared_name}'
@@ -168,7 +166,55 @@ def render(entries):
     return '\n'.join(lines) + '\n'
 
 
-def write_playlist_if_changed(content, path=Path('playlist.m3u')):
+def render_epg(entries):
+    """Generate an XMLTV format EPG for the live streams."""
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+    lines.append('<tv generator-info-name="LivePlaylist">')
+    
+    seen_channels = set()
+    programmes = []
+    
+    # Philippine Time is UTC+8
+    tz_pht = dt.timezone(dt.timedelta(hours=8))
+    
+    for entry in entries:
+        display = safe(entry.get("display_name", entry["name"]))
+        shared_name = safe(re.sub(r'\s+#\d+', '', display))
+        
+        # Escape special characters for XML compatibility
+        channel_id = html.escape(shared_name, quote=True)
+        
+        # We only want to create one channel entry even if there are backup streams
+        if channel_id not in seen_channels:
+            seen_channels.add(channel_id)
+            lines.append(f'  <channel id="{channel_id}">')
+            lines.append(f'    <display-name>{channel_id}</display-name>')
+            if entry.get("poster"):
+                lines.append(f'    <icon src="{html.escape(entry["poster"], quote=True)}" />')
+            lines.append('  </channel>')
+            
+            # If the event has a start time, create a programme block for it
+            if entry.get("starts_at"):
+                start_dt = dt.datetime.fromtimestamp(entry["starts_at"], tz_pht)
+                # Estimate a standard 3-hour duration for the sports event
+                stop_dt = start_dt + dt.timedelta(hours=3)
+                
+                # XMLTV time format: YYYYMMDDHHMMSS +TZ
+                start_str = start_dt.strftime('%Y%m%d%H%M%S +0800')
+                stop_str = stop_dt.strftime('%Y%m%d%H%M%S +0800')
+                
+                programmes.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
+                programmes.append(f'    <title>{channel_id}</title>')
+                programmes.append(f'    <desc>Live stream: {html.escape(entry["name"], quote=True)}</desc>')
+                programmes.append(f'    <category>{html.escape(entry["group"], quote=True)}</category>')
+                programmes.append('  </programme>')
+                
+    lines.extend(programmes)
+    lines.append('</tv>')
+    return '\n'.join(lines) + '\n'
+
+
+def write_file_if_changed(content, path):
     encoded = content.encode('utf-8')
     if path.is_file() and path.read_bytes() == encoded:
         return False
@@ -314,8 +360,14 @@ def main():
     if errors or not candidates:
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
         
-    changed = write_playlist_if_changed(render(entries))
-    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
+    # Generate and save both the M3U playlist and the XMLTV EPG
+    m3u_changed = write_file_if_changed(render(entries), Path('playlist.m3u'))
+    epg_changed = write_file_if_changed(render_epg(entries), Path('epg.xml'))
+    
+    if m3u_changed or epg_changed:
+        print('Files generated successfully (playlist.m3u & epg.xml).', flush=True)
+    else:
+        print('Files unchanged; no update needed.', flush=True)
 
 
 if __name__ == '__main__':
