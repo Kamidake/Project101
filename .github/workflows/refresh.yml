@@ -1,7 +1,7 @@
 name: Refresh live playlist
 on:
   schedule:
-    - cron: '3-59/10 * * * *'
+    - cron: '1,16,31,46 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -45,4 +45,3 @@ jobs:
             git commit -m 'Refresh live playlist'
             git push
           fi
-
