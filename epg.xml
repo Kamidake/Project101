@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM">
-    <display-name>Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM">
+    <display-name>Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/8b2b07533a467425db9121211f8bfe64-thumbnail.jpg" />
   </channel>
-  <channel id="Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM">
-    <display-name>Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM">
+    <display-name>Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5749942790c20b82639fc89cc2b7eef1-thumbnail.jpg" />
   </channel>
-  <channel id="Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM">
-    <display-name>Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM">
+    <display-name>Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/b4f54d56425064c99d88b92c3890261f-thumbnail.jpg" />
   </channel>
-  <channel id="WWE NXT — Oct 21, 08:00 AM">
-    <display-name>WWE NXT — Oct 21, 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
-  <programme start="20261021030000 +0800" stop="20261021060000 +0800" channel="Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM">
-    <title>Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM</title>
-    <desc>Live stream: Boston Celtics vs Detroit Pistons</desc>
+  <programme start="20261022070000 +0800" stop="20261022100000 +0800" channel="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM">
+    <title>Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM</title>
+    <desc>Live stream: Atlanta Hawks vs Orlando Magic</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261021093000 +0800" stop="20261021123000 +0800" channel="Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM">
-    <title>Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM</title>
-    <desc>Live stream: Oklahoma City Thunder vs San Antonio Spurs</desc>
+  <programme start="20261022070000 +0800" stop="20261022100000 +0800" channel="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM">
+    <title>Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM</title>
+    <desc>Live stream: Milwaukee Bucks vs Washington Wizards</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261021070000 +0800" stop="20261021100000 +0800" channel="Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM">
-    <title>Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM</title>
-    <desc>Live stream: Philadelphia 76ers vs New York Knicks</desc>
+  <programme start="20261022073000 +0800" stop="20261022103000 +0800" channel="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM">
+    <title>Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM</title>
+    <desc>Live stream: Minnesota Timberwolves vs Miami Heat</desc>
     <category>NBA</category>
-  </programme>
-  <programme start="20261021080000 +0800" stop="20261021110000 +0800" channel="WWE NXT — Oct 21, 08:00 AM">
-    <title>WWE NXT — Oct 21, 08:00 AM</title>
-    <desc>Live stream: WWE NXT</desc>
-    <category>WWE</category>
   </programme>
 </tv>
