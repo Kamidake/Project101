@@ -1,30 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM">
-    <display-name>Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/8b2b07533a467425db9121211f8bfe64-thumbnail.jpg" />
-  </channel>
-  <channel id="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM">
-    <display-name>Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/5749942790c20b82639fc89cc2b7eef1-thumbnail.jpg" />
-  </channel>
-  <channel id="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM">
-    <display-name>Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/b4f54d56425064c99d88b92c3890261f-thumbnail.jpg" />
-  </channel>
-  <programme start="20261022070000 +0800" stop="20261022100000 +0800" channel="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM">
-    <title>Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM</title>
-    <desc>Live stream: Atlanta Hawks vs Orlando Magic</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261022070000 +0800" stop="20261022100000 +0800" channel="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM">
-    <title>Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM</title>
-    <desc>Live stream: Milwaukee Bucks vs Washington Wizards</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261022073000 +0800" stop="20261022103000 +0800" channel="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM">
-    <title>Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM</title>
-    <desc>Live stream: Minnesota Timberwolves vs Miami Heat</desc>
-    <category>NBA</category>
-  </programme>
 </tv>
