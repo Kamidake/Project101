@@ -71,7 +71,6 @@ def internal_links(text, page, base=None):
         parts = urlsplit(url)
         if parts.scheme not in ('http', 'https'):
             continue
-        # Mirrors sometimes retain absolute links to the original domain.
         if parts.hostname in ROXIE_HOSTS:
             target = urlsplit(base)
             url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
@@ -107,7 +106,6 @@ def extract_sources(text, page, domain_loader=load_domains):
 
 
 def live_media(url, referer, depth=0):
-    """Require a live media manifest and a reachable segment, not just HTTP 200."""
     if depth > 3:
         return False
     text = fetch(url, referer)
@@ -132,10 +130,7 @@ def safe(value):
 def render(entries):
     lines = ['#EXTM3U']
     for entry in entries:
-        # Get the scheduled display name, falling back to the base name if no time exists
         display = safe(entry.get("display_name", entry["name"]))
-        
-        # Inject the display variable into tvg-name and the final channel label
         lines += [f'#EXTINF:-1 tvg-id="{safe(entry.get("tvg_id", ""))}" tvg-name="{display}" tvg-logo="{safe(entry.get("poster", ""))}" group-title="{safe(entry["group"])}",{display}',
                   f'#EXTVLCOPT:http-referrer={entry["page"]}',
                   f'#EXTVLCOPT:http-user-agent={UA}', entry['url']]
@@ -161,3 +156,37 @@ def discover_roxie(base, pool):
         if not batch:
             break
         if len(pages) + len(batch) > 200:
+            raise RuntimeError('Crawl exceeded 200 pages; review website structure')
+        pending = set()
+        futures = {pool.submit(fetch, url, base):url for url in batch}
+        for future in concurrent.futures.as_completed(futures):
+            page = futures[future]
+            try:
+                text = future.result()
+                pages[page] = text
+                for url, label in internal_links(text,page,base):
+                    if label:
+                        labels.setdefault(url,label)
+                    if url not in pages:
+                        pending.add(url)
+            except Exception as exc:
+                pages[page] = ''
+                errors.append({'page':page,'error':str(exc)})
+    if pending - pages.keys():
+        errors.append({'error':'Crawl depth limit reached'})
+    return pages, labels, errors
+
+
+def collect_roxie(pages, labels):
+    errors = []
+    candidates = {}
+    unsupported = []
+    event_labels = {}
+    scheduled = {}
+    for parent, text in sorted(pages.items()):
+        if urlsplit(parent).path.strip('/'):
+            for (target, label), stamp in start_times(text, parent, internal_links).items():
+                scheduled[(target, clean_title(label))] = stamp
+            for target, label in internal_links(text, parent):
+                if label:
+                    event_labels.setdefault(target, set()).add(clean_title(
