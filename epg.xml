@@ -1,3 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="AEW — Oct 22, 08:00 AM">
+    <display-name>AEW — Oct 22, 08:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
+  </channel>
+  <channel id="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM">
+    <display-name>Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/8b2b07533a467425db9121211f8bfe64-thumbnail.jpg" />
+  </channel>
+  <channel id="Charlotte Hornets vs Brooklyn Nets — Oct 22, 07:30 AM">
+    <display-name>Charlotte Hornets vs Brooklyn Nets — Oct 22, 07:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/2dfb6b5bf08e54e0df08b50bace1a609-thumbnail.jpg" />
+  </channel>
+  <channel id="Chicago Bulls vs Toronto Raptors — Oct 22, 07:30 AM">
+    <display-name>Chicago Bulls vs Toronto Raptors — Oct 22, 07:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/0a2657ec0741f9f93bb63adb50de71f2-thumbnail.jpg" />
+  </channel>
+  <channel id="Dallas Mavericks vs Houston Rockets — Oct 22, 08:30 AM">
+    <display-name>Dallas Mavericks vs Houston Rockets — Oct 22, 08:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/80411e5a3d947113875c2bb519b7b347-thumbnail.jpg" />
+  </channel>
+  <channel id="Golden State Warriors vs Los Angeles Lakers — Oct 22, 10:00 AM">
+    <display-name>Golden State Warriors vs Los Angeles Lakers — Oct 22, 10:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/597ca4ae9aa57cafe63040c1967d6714-thumbnail.jpg" />
+  </channel>
+  <channel id="Indiana Pacers vs New Orleans Pelicans — Oct 22, 08:00 AM">
+    <display-name>Indiana Pacers vs New Orleans Pelicans — Oct 22, 08:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/1ad5fb8e106d9c5fa99249cfc218f0a8-thumbnail.jpg" />
+  </channel>
+  <channel id="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM">
+    <display-name>Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5749942790c20b82639fc89cc2b7eef1-thumbnail.jpg" />
+  </channel>
+  <channel id="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM">
+    <display-name>Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/b4f54d56425064c99d88b92c3890261f-thumbnail.jpg" />
+  </channel>
+  <channel id="Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM">
+    <display-name>Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/c56803a4356b61ce6f3d2b3acbcb18af-thumbnail.jpg" />
+  </channel>
+  <channel id="Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM">
+    <display-name>Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
+  <channel id="Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM">
+    <display-name>Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/550cff2a9e25a0fb0bdd126b50c9da2e-thumbnail.jpg" />
+  </channel>
+  <programme start="20261022080000 +0800" stop="20261022110000 +0800" channel="AEW — Oct 22, 08:00 AM">
+    <title>AEW — Oct 22, 08:00 AM</title>
+    <desc>Live stream: AEW</desc>
+    <category>AEW</category>
+  </programme>
+  <programme start="20261022070000 +0800" stop="20261022100000 +0800" channel="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM">
+    <title>Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM</title>
+    <desc>Live stream: Atlanta Hawks vs Orlando Magic</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022073000 +0800" stop="20261022103000 +0800" channel="Charlotte Hornets vs Brooklyn Nets — Oct 22, 07:30 AM">
+    <title>Charlotte Hornets vs Brooklyn Nets — Oct 22, 07:30 AM</title>
+    <desc>Live stream: Charlotte Hornets vs Brooklyn Nets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022073000 +0800" stop="20261022103000 +0800" channel="Chicago Bulls vs Toronto Raptors — Oct 22, 07:30 AM">
+    <title>Chicago Bulls vs Toronto Raptors — Oct 22, 07:30 AM</title>
+    <desc>Live stream: Chicago Bulls vs Toronto Raptors</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022083000 +0800" stop="20261022113000 +0800" channel="Dallas Mavericks vs Houston Rockets — Oct 22, 08:30 AM">
+    <title>Dallas Mavericks vs Houston Rockets — Oct 22, 08:30 AM</title>
+    <desc>Live stream: Dallas Mavericks vs Houston Rockets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022100000 +0800" stop="20261022130000 +0800" channel="Golden State Warriors vs Los Angeles Lakers — Oct 22, 10:00 AM">
+    <title>Golden State Warriors vs Los Angeles Lakers — Oct 22, 10:00 AM</title>
+    <desc>Live stream: Golden State Warriors vs Los Angeles Lakers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022080000 +0800" stop="20261022110000 +0800" channel="Indiana Pacers vs New Orleans Pelicans — Oct 22, 08:00 AM">
+    <title>Indiana Pacers vs New Orleans Pelicans — Oct 22, 08:00 AM</title>
+    <desc>Live stream: Indiana Pacers vs New Orleans Pelicans</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022070000 +0800" stop="20261022100000 +0800" channel="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM">
+    <title>Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM</title>
+    <desc>Live stream: Milwaukee Bucks vs Washington Wizards</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022073000 +0800" stop="20261022103000 +0800" channel="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM">
+    <title>Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM</title>
+    <desc>Live stream: Minnesota Timberwolves vs Miami Heat</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022100000 +0800" stop="20261022130000 +0800" channel="Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM">
+    <title>Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM</title>
+    <desc>Live stream: Phoenix Suns vs Portland Trail Blazers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022103000 +0800" stop="20261022133000 +0800" channel="Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM">
+    <title>Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM</title>
+    <desc>Live stream: Sacramento Kings vs Los Angeles Clippers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261022080000 +0800" stop="20261022110000 +0800" channel="Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM">
+    <title>Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM</title>
+    <desc>Live stream: Utah Jazz vs Memphis Grizzlies</desc>
+    <category>NBA</category>
+  </programme>
 </tv>

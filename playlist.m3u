@@ -1,1 +1,49 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="AEW — Oct 22, 08:00 AM" tvg-name="AEW — Oct 22, 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" group-title="AEW",AEW — Oct 22, 08:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/aew.m3u8
+#EXTINF:-1 tvg-id="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM" tvg-name="Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/8b2b07533a467425db9121211f8bfe64-thumbnail.jpg" group-title="NBA",Atlanta Hawks vs Orlando Magic — Oct 22, 07:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="Charlotte Hornets vs Brooklyn Nets — Oct 22, 07:30 AM" tvg-name="Charlotte Hornets vs Brooklyn Nets — Oct 22, 07:30 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/2dfb6b5bf08e54e0df08b50bace1a609-thumbnail.jpg" group-title="NBA",Charlotte Hornets vs Brooklyn Nets — Oct 22, 07:30 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba4.m3u8
+#EXTINF:-1 tvg-id="Chicago Bulls vs Toronto Raptors — Oct 22, 07:30 AM" tvg-name="Chicago Bulls vs Toronto Raptors — Oct 22, 07:30 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/0a2657ec0741f9f93bb63adb50de71f2-thumbnail.jpg" group-title="NBA",Chicago Bulls vs Toronto Raptors — Oct 22, 07:30 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba5.m3u8
+#EXTINF:-1 tvg-id="Dallas Mavericks vs Houston Rockets — Oct 22, 08:30 AM" tvg-name="Dallas Mavericks vs Houston Rockets — Oct 22, 08:30 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/80411e5a3d947113875c2bb519b7b347-thumbnail.jpg" group-title="NBA",Dallas Mavericks vs Houston Rockets — Oct 22, 08:30 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba8.m3u8
+#EXTINF:-1 tvg-id="Golden State Warriors vs Los Angeles Lakers — Oct 22, 10:00 AM" tvg-name="Golden State Warriors vs Los Angeles Lakers — Oct 22, 10:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/597ca4ae9aa57cafe63040c1967d6714-thumbnail.jpg" group-title="NBA",Golden State Warriors vs Los Angeles Lakers — Oct 22, 10:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="Indiana Pacers vs New Orleans Pelicans — Oct 22, 08:00 AM" tvg-name="Indiana Pacers vs New Orleans Pelicans — Oct 22, 08:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/1ad5fb8e106d9c5fa99249cfc218f0a8-thumbnail.jpg" group-title="NBA",Indiana Pacers vs New Orleans Pelicans — Oct 22, 08:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba7.m3u8
+#EXTINF:-1 tvg-id="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM" tvg-name="Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/5749942790c20b82639fc89cc2b7eef1-thumbnail.jpg" group-title="NBA",Milwaukee Bucks vs Washington Wizards — Oct 22, 07:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM" tvg-name="Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/b4f54d56425064c99d88b92c3890261f-thumbnail.jpg" group-title="NBA",Minnesota Timberwolves vs Miami Heat — Oct 22, 07:30 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM" tvg-name="Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/c56803a4356b61ce6f3d2b3acbcb18af-thumbnail.jpg" group-title="NBA",Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-10
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba10.m3u8
+#EXTINF:-1 tvg-id="Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM" tvg-name="Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-11
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba11.m3u8
+#EXTINF:-1 tvg-id="Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM" tvg-name="Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/550cff2a9e25a0fb0bdd126b50c9da2e-thumbnail.jpg" group-title="NBA",Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba6.m3u8
