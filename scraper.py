@@ -16,8 +16,12 @@ from schedule import start_times
 from artwork import enrich
 
 BASE = os.getenv('SOURCE_URL', 'https://roxiestreams.info/').rstrip('/') + '/'
-BACKUPS = tuple(x.rstrip('/')+'/' for x in os.getenv('ROXIE_BACKUP_URLS','https://roxiestreams.biz/,https://roxiestreams.su/').split(',') if x.strip())
-ROXIE_HOSTS = {'roxiestreams.info','roxiestreams.biz','roxiestreams.su'}
+
+# Load backup URLs safely
+raw_backups = os.getenv('ROXIE_BACKUP_URLS', 'https://roxiestreams.biz/,https://roxiestreams.su/')
+BACKUPS = tuple(x.rstrip('/') + '/' for x in raw_backups.split(',') if x.strip())
+
+ROXIE_HOSTS = {'roxiestreams.info', 'roxiestreams.biz', 'roxiestreams.su'}
 UA = 'Mozilla/5.0 (compatible; LivePlaylist/1.0)'
 TIMEOUT = 12
 
@@ -25,7 +29,8 @@ TIMEOUT = 12
 def fetch(url, referer=BASE):
     for attempt in range(2):
         try:
-            with urlopen(Request(url, headers={'User-Agent': UA, 'Referer': referer}), timeout=TIMEOUT) as response:
+            req = Request(url, headers={'User-Agent': UA, 'Referer': referer})
+            with urlopen(req, timeout=TIMEOUT) as response:
                 return response.read(2_000_000).decode('utf-8', errors='replace')
         except Exception:
             if attempt:
@@ -73,7 +78,7 @@ def internal_links(text, page, base=None):
             continue
         if parts.hostname in ROXIE_HOSTS:
             target = urlsplit(base)
-            url = urlunsplit((target.scheme,target.netloc,parts.path,parts.query,''))
+            url = urlunsplit((target.scheme, target.netloc, parts.path, parts.query, ''))
             parts = urlsplit(url)
         if parts.netloc != urlsplit(base).netloc:
             continue
@@ -90,25 +95,226 @@ def load_domains(url, referer):
 def extract_sources(text, page, domain_loader=load_domains):
     text = html.unescape(text).replace(r'\/', '/')
     sources = set(re.findall(r'https?://[^\s\'"<>`]+\.m3u8(?:\?[^\s\'"<>`]*)?', text))
-    calls = re.findall(r"getRandomStream\(\s*['\"]([^'\"]+\.m3u8[^'\"]*)['\"]\s*(?:,\s*['\"]([^'\"]+)['\"])?\s*\)", text)
+    
+    calls = re.findall(
+        r"getRandomStream\(\s*['\"]([^'\"]+\.m3u8[^'\"]*)['\"]\s*(?:,\s*['\"]([^'\"]+)['\"])?\s*\)", 
+        text
+    )
     if not calls:
         return sorted(sources)
+        
     default = re.search(r"function\s+getRandomStream\([^)]*subdomain\s*=\s*['\"]([^'\"]+)", text)
     domains = []
+    
     for name in set(re.findall(r"fetch\(\s*['\"]([^'\"]+\.txt)['\"]", text)):
-        domains += [d.strip() for d in domain_loader(urljoin(page, name), BASE).splitlines() if re.fullmatch(r'[A-Za-z0-9.-]+', d.strip())]
+        domain_list = domain_loader(urljoin(page, name), BASE).splitlines()
+        domains += [d.strip() for d in domain_list if re.fullmatch(r'[A-Za-z0-9.-]+', d.strip())]
+        
     if not domains:
         raise ValueError('No current stream domains could be loaded')
+        
     for path, subdomain in calls:
         for domain in sorted(set(domains)):
-            # Broken into smaller lines to prevent text-wrap errors
             prefix = subdomain or (default.group(1) if default else "admin2")
             clean_path = path.lstrip("/")
             sources.add(f'https://{prefix}.{domain}/{clean_path}')
+            
     return sorted(sources)
 
 
 def live_media(url, referer, depth=0):
     if depth > 3:
         return False
-    text = fetch(url, referer
+    text = fetch(url, referer)
+    if not text.lstrip('\ufeff').startswith('#EXTM3U') or '#EXT-X-ENDLIST' in text:
+        return False
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if any(line.startswith('#EXT-X-STREAM-INF:') for line in lines):
+        variants = [line for line in lines if not line.startswith('#')]
+        return any(live_media(urljoin(url, variant), referer, depth + 1) for variant in variants[:3])
+    segments = [line for line in lines if not line.startswith('#')]
+    if not segments or '#EXTINF:' not in text:
+        return False
+    segment = urljoin(url, segments[-1])
+    
+    req = Request(segment, headers={'User-Agent': UA, 'Referer': referer, 'Range': 'bytes=0-1023'})
+    with urlopen(req, timeout=TIMEOUT) as response:
+        return bool(response.read(1024))
+
+
+def safe(value):
+    return ' '.join(value.replace('"', "'").split())
+
+
+def render(entries):
+    lines = ['#EXTM3U']
+    for entry in entries:
+        display = safe(entry.get("display_name", entry["name"]))
+        raw_id = entry.get("tvg_id", "") or entry["name"]
+        shared_tvg_id = safe(re.sub(r' #\d+$', '', raw_id))
+        
+        # Split into smaller lines so the text editor doesn't break it
+        extinf = f'#EXTINF:-1 tvg-id="{shared_tvg_id}" tvg-name="{display}" '
+        extinf += f'tvg-logo="{safe(entry.get("poster", ""))}" '
+        extinf += f'group-title="{safe(entry["group"])}",{display}'
+        
+        lines.append(extinf)
+        lines.append(f'#EXTVLCOPT:http-referrer={entry["page"]}')
+        lines.append(f'#EXTVLCOPT:http-user-agent={UA}')
+        lines.append(entry['url'])
+        
+    return '\n'.join(lines) + '\n'
+
+
+def write_playlist_if_changed(content, path=Path('playlist.m3u')):
+    encoded = content.encode('utf-8')
+    if path.is_file() and path.read_bytes() == encoded:
+        return False
+    temporary = path.with_name(path.name + '.tmp')
+    temporary.write_bytes(encoded)
+    temporary.replace(path)
+    return True
+
+
+def discover_roxie(base, pool):
+    pages, errors, labels = {}, [], {base: 'RoxieStreams'}
+    pending = {base}
+    for _ in range(5):
+        batch = sorted(pending - pages.keys())
+        print(f'Crawl batch: {len(batch)} pages on {base}', flush=True)
+        if not batch:
+            break
+        if len(pages) + len(batch) > 200:
+            raise RuntimeError('Crawl exceeded 200 pages; review website structure')
+        pending = set()
+        futures = {pool.submit(fetch, url, base): url for url in batch}
+        for future in concurrent.futures.as_completed(futures):
+            page = futures[future]
+            try:
+                text = future.result()
+                pages[page] = text
+                for url, label in internal_links(text, page, base):
+                    if label:
+                        labels.setdefault(url, label)
+                    if url not in pages:
+                        pending.add(url)
+            except Exception as exc:
+                pages[page] = ''
+                errors.append({'page': page, 'error': str(exc)})
+    if pending - pages.keys():
+        errors.append({'error': 'Crawl depth limit reached'})
+    return pages, labels, errors
+
+
+def collect_roxie(pages, labels):
+    errors = []
+    candidates = {}
+    unsupported = []
+    event_labels = {}
+    scheduled = {}
+    
+    for parent, text in sorted(pages.items()):
+        if urlsplit(parent).path.strip('/'):
+            for (target, label), stamp in start_times(text, parent, internal_links).items():
+                scheduled[(target, clean_title(label))] = stamp
+            for target, label in internal_links(text, parent):
+                if label:
+                    event_labels.setdefault(target, set()).add(clean_title(label))
+                    
+    for page, text in sorted(pages.items()):
+        try:
+            sources = extract_sources(text, page)
+            for url in sources:
+                fallback_name = clean_title(labels.get(page) or urlsplit(page).path.strip('/'))
+                names = sorted(event_labels.get(page) or {fallback_name})
+                for name in names:
+                    candidates.setdefault(url, []).append({
+                        'name': name,
+                        'group': roxie_group(page), 
+                        'provider': 'RoxieStreams',
+                        'page': page, 
+                        'url': url,
+                        'starts_at': scheduled.get((page, name))
+                    })
+            if not sources and re.search(r'<(?:iframe|video)\b', text):
+                unsupported.append(page)
+        except Exception as exc:
+            errors.append({'page': page, 'error': str(exc)})
+            
+    return candidates, unsupported, errors
+
+
+def select_roxie(pool):
+    global BASE
+    attempts = []
+    for base in dict.fromkeys((BASE, *BACKUPS)):
+        BASE = base
+        try:
+            pages, labels, errors = discover_roxie(base, pool)
+            candidates, unsupported, source_errors = collect_roxie(pages, labels)
+            errors.extend(source_errors)
+            if not candidates:
+                errors.append({'error': 'No HLS sources discovered'})
+        except Exception as exc:
+            pages, candidates, unsupported, errors = {}, {}, [], [{'error': str(exc)}]
+            
+        attempts.append({'base': base, 'pages': len(pages), 'errors': errors.copy()})
+        if not errors:
+            break
+        print(f'Incomplete discovery on {base}; trying backup', flush=True)
+        
+    return pages, candidates, unsupported, errors, attempts
+
+
+def main():
+    print('Discovering stream pages...', flush=True)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+        entries, unavailable = [], 0
+        print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
+        
+        def check(aliases):
+            for entry in aliases:
+                try:
+                    if live_media(entry['url'], entry['page']):
+                        return [dict(alias, page=entry['page']) for alias in aliases]
+                except Exception:
+                    pass
+            return None
+            
+        for index, result in enumerate(pool.map(check, candidates.values()), 1):
+            if index % 10 == 0:
+                print(f'Checked {index}/{len(candidates)} URLs', flush=True)
+            if result:
+                entries.extend(result)
+            else:
+                unavailable += 1
+                
+    entries = enrich(decorate(entries))
+    
+    report = {
+        'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 
+        'pages': len(pages),
+        'candidate_urls': len(candidates), 
+        'live_urls': len(entries), 
+        'unavailable_urls': unavailable,
+        'unsupported_pages': unsupported, 
+        'errors': errors,
+        'event_groups': len({e['event_id'] for e in entries}),
+        'event_posters': sum('assets/logos/' not in e['poster'] for e in entries),
+        'roxie_source': BASE, 
+        'roxie_attempts': attempts
+    }
+    
+    Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
+    print(json.dumps(report, indent=2))
+    
+    if errors or not candidates:
+        raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
+        
+    changed = write_playlist_if_changed(render(entries))
+    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
+
+
+if __name__ == '__main__':
+    main()
