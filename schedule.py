@@ -11,13 +11,19 @@ def start_times(text, page, links):
         match = re.search(r'<td\b[^>]*class=[\"\'][^\"\']*event-start-time[^\"\']*[\"\'][^>]*>(.*?)</td>', row, re.I | re.S)
         if not match:
             continue
+            
         value = html.unescape(re.sub('<[^>]+>', '', match[1])).strip()
+        
         try:
             stamp = datetime.strptime(value, '%B %d, %Y %I:%M %p').replace(tzinfo=ZoneInfo('America/Los_Angeles')).timestamp()
         except ValueError:
+            # DEBUG: This will print the exact date text the site is using right now
+            print(f"SCHEDULE ERROR on {page}: Could not parse the date format '{value}'", flush=True)
             continue
+            
         for target, label in links(row, page):
             result[(target, label)] = stamp
+            
     return result
 
 
