@@ -4,53 +4,34 @@ import html
 import re
 from zoneinfo import ZoneInfo
 
-
 def start_times(text, page, links):
     result = {}
-    current_year = datetime.now().year
     
-    # Split the HTML by generic blocks (Table rows, list items, or divisions)
-    chunks = re.split(r'<(?:tr|li|div)\b', text, flags=re.I)
-    
-    for chunk in chunks:
-        # Re-add the opening bracket so the HTML parser doesn't break
-        chunk = '<div ' + chunk 
+    # Extract all table rows from the HTML
+    for row in re.findall(r'<tr\b[^>]*>(.*?)</tr>', text, re.I | re.S):
         
-        # 1. Check if there are any stream links in this block
-        row_links = list(links(chunk, page))
-        if not row_links:
+        # Look for the specific table data cell with the class 'event-start-time'
+        match = re.search(r'<td\b[^>]*class=[\"\'][^\"\']*event-start-time[^\"\']*[\"\'][^>]*>(.*?)</td>', row, re.I | re.S)
+        
+        if not match:
             continue
             
-        # Strip HTML to get plain text
-        clean_text = html.unescape(re.sub(r'<[^>]+>', ' ', chunk)).strip()
-        
-        # 2. Look for ANY date format (With or without the year, full or abbreviated month)
-        # Matches: "Oct 21, 2026 12:00 PM", "October 21 12:00 PM", etc.
-        date_match = re.search(r'([a-zA-Z]{3,9})\s+(\d{1,2})(?:,?\s+(\d{4}))?\s+(\d{1,2}:\d{2}\s+[AP]M)', clean_text, re.I)
-        
-        if not date_match:
-            continue
-            
-        month, day, year, time_str = date_match.groups()
-        
-        # If the website forgot the year, we add the current year automatically
-        year = year or str(current_year)
-        
-        # Standardize the format to: "Oct 21, 2026 12:00 PM"
-        value = f"{month[:3].capitalize()} {day}, {year} {time_str}"
+        # Clean up the text by removing any accidental HTML tags and whitespace
+        value = html.unescape(re.sub(r'<[^>]+>', '', match.group(1))).strip()
         
         try:
-            # Parse the standardized date format
-            stamp = datetime.strptime(value, '%b %d, %Y %I:%M %p').replace(tzinfo=ZoneInfo('America/Los_Angeles')).timestamp()
-            
-            # Map the parsed time to every link found in this HTML block
-            for target, label in row_links:
-                result[(target, label)] = stamp
+            # Parse the exact format found in the HTML: "October 20, 2026 12:00 PM"
+            stamp = datetime.strptime(value, '%B %d, %Y %I:%M %p').replace(tzinfo=ZoneInfo('America/Los_Angeles')).timestamp()
         except ValueError:
             continue
+            
+        # Link the parsed timestamp to the stream URLs found in this row
+        for target, label in links(row, page):
+            result[(target, label)] = stamp
             
     return result
 
 
 def pht_time(timestamp):
+    # Convert the saved Pacific time timestamp into Philippine Standard Time
     return datetime.fromtimestamp(timestamp, ZoneInfo('Asia/Manila')).strftime('%b %d, %I:%M %p PHT')
