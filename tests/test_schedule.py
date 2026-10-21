@@ -5,12 +5,12 @@ from metadata import decorate
 
 class ScheduleTests(unittest.TestCase):
     def test_pacific_to_pht_next_day_and_event_title(self):
-        page = 'https://roxiestreams.info/soccer-streams-1'
-        row = '<tr><td><a href="/soccer-streams-1">Team A vs Team B</a></td><td class="event-start-time">October 20, 2026 12:00 PM</td></tr>'
-        result = start_times(row, 'https://roxiestreams.info/soccer', internal_links)
+        page = 'https://roxiestreams.info/nba-streams-1'
+        row = '<tr><td><a href="/nba-streams-1">Team A vs Team B</a></td><td class="event-start-time">October 20, 2026 12:00 PM</td></tr>'
+        result = start_times(row, 'https://roxiestreams.info/nba', internal_links)
         stamp = result[(page, 'Team A vs Team B')]
         self.assertEqual(pht_time(stamp), 'Oct 21, 03:00 AM PHT')
-        candidates, _, _ = collect_roxie({'https://roxiestreams.info/soccer': row, page: 'https://example.test/live.m3u8'}, {})
+        candidates, _, _ = collect_roxie({'https://roxiestreams.info/nba': row, page: 'https://example.test/live.m3u8'}, {})
         entry = decorate(next(iter(candidates.values())))[0]
         self.assertIn('Oct 21, 03:00 AM PHT', entry['display_name'])
 
