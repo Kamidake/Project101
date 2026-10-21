@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="LivePlaylist">
+  <channel id="Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM">
+    <display-name>Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
+  <channel id="Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM">
+    <display-name>Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
+  <channel id="Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM">
+    <display-name>Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
+  <channel id="WWE NXT — Oct 21, 08:00 AM">
+    <display-name>WWE NXT — Oct 21, 08:00 AM</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <programme start="20261021030000 +0800" stop="20261021060000 +0800" channel="Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM">
+    <title>Boston Celtics vs Detroit Pistons — Oct 21, 03:00 AM</title>
+    <desc>Live stream: Boston Celtics vs Detroit Pistons</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261021093000 +0800" stop="20261021123000 +0800" channel="Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM">
+    <title>Oklahoma City Thunder vs San Antonio Spurs — Oct 21, 09:30 AM</title>
+    <desc>Live stream: Oklahoma City Thunder vs San Antonio Spurs</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261021070000 +0800" stop="20261021100000 +0800" channel="Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM">
+    <title>Philadelphia 76ers vs New York Knicks — Oct 21, 07:00 AM</title>
+    <desc>Live stream: Philadelphia 76ers vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261021080000 +0800" stop="20261021110000 +0800" channel="WWE NXT — Oct 21, 08:00 AM">
+    <title>WWE NXT — Oct 21, 08:00 AM</title>
+    <desc>Live stream: WWE NXT</desc>
+    <category>WWE</category>
+  </programme>
+</tv>
