@@ -214,7 +214,7 @@ def render_epg(entries):
     return '\n'.join(lines) + '\n'
 
 
-def write_file_if_changed(content, path):
+def write_playlist_if_changed(content, path=Path('playlist.m3u')):
     encoded = content.encode('utf-8')
     if path.is_file() and path.read_bytes() == encoded:
         return False
@@ -361,8 +361,8 @@ def main():
         raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
         
     # Generate and save both the M3U playlist and the XMLTV EPG
-    m3u_changed = write_file_if_changed(render(entries), Path('playlist.m3u'))
-    epg_changed = write_file_if_changed(render_epg(entries), Path('epg.xml'))
+    m3u_changed = write_playlist_if_changed(render(entries))
+    epg_changed = write_playlist_if_changed(render_epg(entries), Path('epg.xml'))
     
     if m3u_changed or epg_changed:
         print('Files generated successfully (playlist.m3u & epg.xml).', flush=True)
