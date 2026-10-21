@@ -157,9 +157,10 @@ def render(entries):
         shared_name = safe(re.sub(r'\s+#\d+', '', display))
         
         # Split into smaller lines so the text editor doesn't break it
+        # Use shared_name for BOTH tvg-name and the final channel label
         extinf = f'#EXTINF:-1 tvg-id="{shared_id}" tvg-name="{shared_name}" '
         extinf += f'tvg-logo="{safe(entry.get("poster", ""))}" '
-        extinf += f'group-title="{safe(entry["group"])}",{display}'
+        extinf += f'group-title="{safe(entry["group"])}",{shared_name}'
         
         lines.append(extinf)
         lines.append(f'#EXTVLCOPT:http-referrer={entry["page"]}')
