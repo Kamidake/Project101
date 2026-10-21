@@ -150,15 +150,13 @@ def render(entries):
     lines = ['#EXTM3U']
     for entry in entries:
         display = safe(entry.get("display_name", entry["name"]))
-        raw_id = entry.get("tvg_id", "") or entry["name"]
         
-        # Aggressively remove duplicate tags (like " #2") from anywhere in the string
-        shared_id = safe(re.sub(r'\s+#\d+', '', raw_id))
+        # Aggressively remove duplicate tags (like " #2") from the string
         shared_name = safe(re.sub(r'\s+#\d+', '', display))
         
         # Split into smaller lines so the text editor doesn't break it
-        # Use shared_name for BOTH tvg-name and the final channel label
-        extinf = f'#EXTINF:-1 tvg-id="{shared_id}" tvg-name="{shared_name}" '
+        # FORCE tvg-id to equal the shared_name, completely ignoring unique URL hashes
+        extinf = f'#EXTINF:-1 tvg-id="{shared_name}" tvg-name="{shared_name}" '
         extinf += f'tvg-logo="{safe(entry.get("poster", ""))}" '
         extinf += f'group-title="{safe(entry["group"])}",{shared_name}'
         
