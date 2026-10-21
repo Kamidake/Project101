@@ -189,4 +189,78 @@ def collect_roxie(pages, labels):
                 scheduled[(target, clean_title(label))] = stamp
             for target, label in internal_links(text, parent):
                 if label:
-                    event_labels.setdefault(target, set()).add(clean_title(
+                    event_labels.setdefault(target, set()).add(clean_title(label))
+    for page, text in sorted(pages.items()):
+        try:
+            sources = extract_sources(text, page)
+            for url in sources:
+                for name in sorted(event_labels.get(page) or {clean_title(labels.get(page) or urlsplit(page).path.strip('/'))}):
+                    candidates.setdefault(url, []).append({'name': name,
+                                                'group': roxie_group(page), 'provider':'RoxieStreams',
+                                                'page': page, 'url': url,
+                                                'starts_at': scheduled.get((page, name))})
+            if not sources and re.search(r'<(?:iframe|video)\b', text):
+                unsupported.append(page)
+        except Exception as exc:
+            errors.append({'page': page, 'error': str(exc)})
+    return candidates, unsupported, errors
+
+
+def select_roxie(pool):
+    global BASE
+    attempts = []
+    for base in dict.fromkeys((BASE, *BACKUPS)):
+        BASE = base
+        try:
+            pages, labels, errors = discover_roxie(base,pool)
+            candidates, unsupported, source_errors = collect_roxie(pages,labels)
+            errors.extend(source_errors)
+            if not candidates:
+                errors.append({'error':'No HLS sources discovered'})
+        except Exception as exc:
+            pages, candidates, unsupported, errors = {}, {}, [], [{'error':str(exc)}]
+        attempts.append({'base':base,'pages':len(pages),'errors':errors.copy()})
+        if not errors:
+            break
+        print(f'Incomplete discovery on {base}; trying backup',flush=True)
+    return pages, candidates, unsupported, errors, attempts
+
+
+def main():
+    print('Discovering stream pages...', flush=True)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        pages, candidates, unsupported, errors, attempts = select_roxie(pool)
+        entries, unavailable = [], 0
+        print(f'Checking {len(candidates)} HLS URLs from {len(pages)} pages...', flush=True)
+        def check(aliases):
+            for entry in aliases:
+                try:
+                    if live_media(entry['url'], entry['page']):
+                        return [dict(alias, page=entry['page']) for alias in aliases]
+                except Exception:
+                    pass
+            return None
+        for index, result in enumerate(pool.map(check, candidates.values()), 1):
+            if index % 10 == 0:
+                print(f'Checked {index}/{len(candidates)} URLs', flush=True)
+            if result:
+                entries.extend(result)
+            else:
+                unavailable += 1
+    entries = enrich(decorate(entries))
+    report = {'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 'pages': len(pages),
+              'candidate_urls': len(candidates), 'live_urls': len(entries), 'unavailable_urls': unavailable,
+              'unsupported_pages': unsupported, 'errors': errors,
+              'event_groups':len({e['event_id'] for e in entries}),
+              'event_posters':sum('assets/logos/' not in e['poster'] for e in entries),
+              'roxie_source':BASE,'roxie_attempts':attempts}
+    Path('status.json').write_text(json.dumps(report, indent=2) + '\n')
+    print(json.dumps(report, indent=2))
+    if errors or not candidates:
+        raise RuntimeError('Incomplete discovery; playlist was not updated. See status.json.')
+    changed = write_playlist_if_changed(render(entries))
+    print('Playlist updated.' if changed else 'Playlist unchanged; no update needed.', flush=True)
+
+
+if __name__ == '__main__':
+    main()
