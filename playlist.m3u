@@ -3,10 +3,6 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="Denver Nuggets vs Oklahoma City Thunder — Oct 23, 09:30 AM" tvg-name="Denver Nuggets vs Oklahoma City Thunder — Oct 23, 09:30 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/81e3ec7559f480e71f649c37c8472230-thumbnail.jpg" group-title="NBA",Denver Nuggets vs Oklahoma City Thunder — Oct 23, 09:30 AM
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://tedesco.formaturamaxi.com.br/nba2.m3u8
 #EXTINF:-1 tvg-id="WWE Smackdown — Oct 24, 08:00 AM" tvg-name="WWE Smackdown — Oct 24, 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown — Oct 24, 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
