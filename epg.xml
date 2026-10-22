@@ -4,6 +4,10 @@
     <display-name>Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/47e21a3dbde61d0cffc76ae7c230b4ef-thumbnail.jpg" />
   </channel>
+  <channel id="Denver Nuggets vs Oklahoma City Thunder — Oct 23, 09:30 AM">
+    <display-name>Denver Nuggets vs Oklahoma City Thunder — Oct 23, 09:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/81e3ec7559f480e71f649c37c8472230-thumbnail.jpg" />
+  </channel>
   <channel id="WWE Smackdown — Oct 24, 08:00 AM">
     <display-name>WWE Smackdown — Oct 24, 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
@@ -11,6 +15,11 @@
   <programme start="20261023070000 +0800" stop="20261023100000 +0800" channel="Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM">
     <title>Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM</title>
     <desc>Live stream: Cleveland Cavaliers vs Philadelphia 76ers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261023093000 +0800" stop="20261023123000 +0800" channel="Denver Nuggets vs Oklahoma City Thunder — Oct 23, 09:30 AM">
+    <title>Denver Nuggets vs Oklahoma City Thunder — Oct 23, 09:30 AM</title>
+    <desc>Live stream: Denver Nuggets vs Oklahoma City Thunder</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261024080000 +0800" stop="20261024110000 +0800" channel="WWE Smackdown — Oct 24, 08:00 AM">
