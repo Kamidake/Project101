@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="AEW">
-    <display-name>AEW</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
-  </channel>
   <channel id="Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM">
     <display-name>Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/47e21a3dbde61d0cffc76ae7c230b4ef-thumbnail.jpg" />

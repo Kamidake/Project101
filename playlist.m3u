@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="AEW" tvg-name="AEW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" group-title="AEW",AEW
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
-https://tedesco.formaturamaxi.com.br/aew.m3u8
 #EXTINF:-1 tvg-id="Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM" tvg-name="Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/47e21a3dbde61d0cffc76ae7c230b4ef-thumbnail.jpg" group-title="NBA",Cleveland Cavaliers vs Philadelphia 76ers — Oct 23, 07:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
