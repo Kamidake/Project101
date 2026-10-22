@@ -40,10 +40,6 @@
     <display-name>Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/c56803a4356b61ce6f3d2b3acbcb18af-thumbnail.jpg" />
   </channel>
-  <channel id="Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM">
-    <display-name>Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM">
     <display-name>Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -96,11 +92,6 @@
   <programme start="20261022100000 +0800" stop="20261022130000 +0800" channel="Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM">
     <title>Phoenix Suns vs Portland Trail Blazers — Oct 22, 10:00 AM</title>
     <desc>Live stream: Phoenix Suns vs Portland Trail Blazers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261022103000 +0800" stop="20261022133000 +0800" channel="Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM">
-    <title>Sacramento Kings vs Los Angeles Clippers — Oct 22, 10:30 AM</title>
-    <desc>Live stream: Sacramento Kings vs Los Angeles Clippers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261022080000 +0800" stop="20261022110000 +0800" channel="Utah Jazz vs Memphis Grizzlies — Oct 22, 08:00 AM">
