@@ -1,46 +1,58 @@
 """Consistent IPTV titles, category artwork, and feed labels."""
-from collections import defaultdict
-from schedule import pht_time
 import hashlib
 import html
 import re
-import time
 import unicodedata
+from datetime import datetime, timezone, timedelta
 from urllib.parse import urlsplit
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
 
-# Added aew and tna
-GROUPS = {'nfl':'NFL', 'redzone':'NFL', 'nba':'NBA', 'wnba':'WNBA', 'nhl':'NHL',
-          'mlb':'MLB', 'soccer':'Soccer', 'f1':'Formula 1', 'nascar':'NASCAR',
-          'motogp':'MotoGP', 'mxgp':'MXGP', 'wwe':'WWE', 'ufc':'UFC',
-          'boxing':'Boxing', 'fighting':'Combat Sports', 'motorsports':'Motorsports',
-          'aew':'AEW', 'tna':'TNA'}
+GROUPS = {
+    'nfl': 'NFL', 'redzone': 'NFL', 'nba': 'NBA', 'wnba': 'WNBA', 'nhl': 'NHL',
+    'mlb': 'MLB', 'soccer': 'Soccer', 'f1': 'Formula 1', 'nascar': 'NASCAR',
+    'motogp': 'MotoGP', 'mxgp': 'MXGP', 'wwe': 'WWE', 'ufc': 'UFC',
+    'boxing': 'Boxing', 'fighting': 'Combat Sports', 'motorsports': 'Motorsports',
+    'aew': 'AEW', 'tna': 'TNA'
+}
 
-# Added AEW and TNA
-LOGOS = {'NFL':'nfl', 'NBA':'nba', 'WNBA':'wnba', 'NHL':'nhl', 'MLB':'mlb',
-         'Soccer':'soccer', 'Formula 1':'formula-1', 'NASCAR':'nascar', 'MotoGP':'motogp',
-         'MXGP':'mxgp', 'WWE':'wwe', 'UFC':'ufc', 'Boxing':'boxing',
-         'Combat Sports':'combat-sports', 'Motorsports':'motorsports',
-         'AEW':'aew', 'TNA':'tna'}
+LOGOS = {
+    'NFL': 'nfl', 'NBA': 'nba', 'WNBA': 'wnba', 'NHL': 'nhl', 'MLB': 'mlb',
+    'Soccer': 'soccer', 'Formula 1': 'formula-1', 'NASCAR': 'nascar', 'MotoGP': 'motogp',
+    'MXGP': 'mxgp', 'WWE': 'wwe', 'UFC': 'ufc', 'Boxing': 'boxing',
+    'Combat Sports': 'combat-sports', 'Motorsports': 'motorsports',
+    'AEW': 'aew', 'TNA': 'tna'
+}
 
 # The strict list of groups you want to keep
 ALLOWED_GROUPS = {'NBA', 'Combat Sports', 'Boxing', 'AEW', 'WWE', 'UFC', 'TNA'}
 
+
+def format_schedule(timestamp):
+    """Converts a UNIX timestamp to PHT (UTC+8) in 'Mon DD @ time (AM/PM)' format."""
+    pht_zone = timezone(timedelta(hours=8))
+    dt = datetime.fromtimestamp(timestamp, tz=pht_zone)
+    # Formats as "Mon DD @ hh:mm AM/PM" (e.g., Oct 24 @ 02:30 PM)
+    return dt.strftime("%b %d @ %I:%M %p")
+
+
 def clean_title(value):
-    value = ' '.join(html.unescape(str(value)).split())
-    return value
+    return ' '.join(html.unescape(str(value)).split())
+
 
 def event_key(name):
     text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
     return re.sub(r'[^a-z0-9]+', ' ', text).strip()
 
+
 def roxie_group(page):
     slug = urlsplit(page).path.strip('/').split('-')[0].lower()
     return GROUPS.get(slug, 'Live')
 
+
 def fallback_logo(group):
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
+
 
 def decorate(entries):
     """Keep each website event; deduplicate only identical event/URL/time entries."""
@@ -58,15 +70,18 @@ def decorate(entries):
         if identity in unique:
             continue
             
-        entry['poster'] = entry.get('poster') or fallback_logo(entry['group'])
-        entry['event_id'] = f"{entry['group']}:{entry['name']}:{identity[2]}"
+        entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
+        entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{identity[2]}"
         entry['provider'] = entry.get('provider', 'RoxieStreams')
+        
+        # Generate a stable TVG ID based on the unique identity tuple
         entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(identity).encode()).hexdigest()[:16]
         entry['display_name'] = entry['name']
         
+        # Apply the "date @ time" formatting here
         if entry.get('starts_at'):
-            entry['display_name'] += ' — ' + pht_time(entry['starts_at'])
+            entry['display_name'] += f" — {format_schedule(entry['starts_at'])}"
             
         unique[identity] = entry
         
-    return sorted(unique.values(), key=lambda e: (e['group'], e['name'], e.get('starts_at') or 0, e['url']))
+    return sorted(unique.values(), key=lambda e: (e.get('group', ''), e['name'], e.get('starts_at') or 0, e['url']))
