@@ -1,3 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Brooklyn Nets vs Cleveland Cavaliers — Oct 25 @ 07:30 AM">
+    <display-name>Brooklyn Nets vs Cleveland Cavaliers — Oct 25 @ 07:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/26c9e121d666db6dd4bde1debbccd3ce-thumbnail.jpg" />
+  </channel>
+  <channel id="Golden State Warriors vs Phoenix Suns — Oct 25 @ 10:00 AM">
+    <display-name>Golden State Warriors vs Phoenix Suns — Oct 25 @ 10:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/dfc64f7d53acd09851dc99a6dea3bcae-thumbnail.jpg" />
+  </channel>
+  <channel id="Houston Rockets vs Atlanta Hawks — Oct 25 @ 08:30 AM">
+    <display-name>Houston Rockets vs Atlanta Hawks — Oct 25 @ 08:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/3578d0c39f1a1c0a57f2714c8bf07c38-thumbnail.jpg" />
+  </channel>
+  <channel id="Miami Heat vs Charlotte Hornets — Oct 25 @ 06:00 AM">
+    <display-name>Miami Heat vs Charlotte Hornets — Oct 25 @ 06:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/911104dd4d8e6c674e7c0175e4dba458-thumbnail.jpg" />
+  </channel>
+  <channel id="Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM">
+    <display-name>Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/cba419aba970197aa46d22675db14bd7-thumbnail.jpg" />
+  </channel>
+  <channel id="New Orleans Pelicans vs Denver Nuggets — Oct 25 @ 09:00 AM">
+    <display-name>New Orleans Pelicans vs Denver Nuggets — Oct 25 @ 09:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/696bc3bc963261de3c9f5889925758f9-thumbnail.jpg" />
+  </channel>
+  <channel id="San Antonio Spurs vs Dallas Mavericks — Oct 25 @ 08:00 AM">
+    <display-name>San Antonio Spurs vs Dallas Mavericks — Oct 25 @ 08:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/099c013aafb0f83b764db732044e6f30-thumbnail.jpg" />
+  </channel>
+  <channel id="Washington Wizards vs Chicago Bulls — Oct 25 @ 08:00 AM">
+    <display-name>Washington Wizards vs Chicago Bulls — Oct 25 @ 08:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/4a13446939ac9b569c758e070c3da73f-thumbnail.jpg" />
+  </channel>
+  <channel id="UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM">
+    <display-name>UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/eb39649709502149ded38e5375e3ac2b-thumbnail.jpg" />
+  </channel>
+  <programme start="20261025073000 +0800" stop="20261025103000 +0800" channel="Brooklyn Nets vs Cleveland Cavaliers — Oct 25 @ 07:30 AM">
+    <title>Brooklyn Nets vs Cleveland Cavaliers — Oct 25 @ 07:30 AM</title>
+    <desc>Live stream: Brooklyn Nets vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025100000 +0800" stop="20261025130000 +0800" channel="Golden State Warriors vs Phoenix Suns — Oct 25 @ 10:00 AM">
+    <title>Golden State Warriors vs Phoenix Suns — Oct 25 @ 10:00 AM</title>
+    <desc>Live stream: Golden State Warriors vs Phoenix Suns</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025083000 +0800" stop="20261025113000 +0800" channel="Houston Rockets vs Atlanta Hawks — Oct 25 @ 08:30 AM">
+    <title>Houston Rockets vs Atlanta Hawks — Oct 25 @ 08:30 AM</title>
+    <desc>Live stream: Houston Rockets vs Atlanta Hawks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025060000 +0800" stop="20261025090000 +0800" channel="Miami Heat vs Charlotte Hornets — Oct 25 @ 06:00 AM">
+    <title>Miami Heat vs Charlotte Hornets — Oct 25 @ 06:00 AM</title>
+    <desc>Live stream: Miami Heat vs Charlotte Hornets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025073000 +0800" stop="20261025103000 +0800" channel="Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM">
+    <title>Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM</title>
+    <desc>Live stream: Milwaukee Bucks vs Philadelphia 76ers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025090000 +0800" stop="20261025120000 +0800" channel="New Orleans Pelicans vs Denver Nuggets — Oct 25 @ 09:00 AM">
+    <title>New Orleans Pelicans vs Denver Nuggets — Oct 25 @ 09:00 AM</title>
+    <desc>Live stream: New Orleans Pelicans vs Denver Nuggets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025080000 +0800" stop="20261025110000 +0800" channel="San Antonio Spurs vs Dallas Mavericks — Oct 25 @ 08:00 AM">
+    <title>San Antonio Spurs vs Dallas Mavericks — Oct 25 @ 08:00 AM</title>
+    <desc>Live stream: San Antonio Spurs vs Dallas Mavericks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025080000 +0800" stop="20261025110000 +0800" channel="Washington Wizards vs Chicago Bulls — Oct 25 @ 08:00 AM">
+    <title>Washington Wizards vs Chicago Bulls — Oct 25 @ 08:00 AM</title>
+    <desc>Live stream: Washington Wizards vs Chicago Bulls</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261024220000 +0800" stop="20261025010000 +0800" channel="UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM">
+    <title>UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM</title>
+    <desc>Live stream: UFC 333: Volkanovski vs. Evloev</desc>
+    <category>UFC</category>
+  </programme>
 </tv>
