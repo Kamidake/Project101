@@ -36,10 +36,6 @@
     <display-name>UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/eb39649709502149ded38e5375e3ac2b-thumbnail.jpg" />
   </channel>
-  <channel id="WWE Smackdown">
-    <display-name>WWE Smackdown</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261025073000 +0800" stop="20261025103000 +0800" channel="Brooklyn Nets vs Cleveland Cavaliers — Oct 25 @ 07:30 AM">
     <title>Brooklyn Nets vs Cleveland Cavaliers — Oct 25 @ 07:30 AM</title>
     <desc>Live stream: Brooklyn Nets vs Cleveland Cavaliers</desc>
