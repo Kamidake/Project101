@@ -1,0 +1,236 @@
+#EXTM3U x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz"
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Al Nassr vs Al Faisaly (OCT 23 @ 09:30 PM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/football.png" group-title="Soccer",Al Nassr vs Al Faisaly (OCT 23 @ 09:30 PM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/cope.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Al Ittihad vs Diriyah (OCT 23 @ 11:30 PM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/football.png" group-title="Soccer",Al Ittihad vs Diriyah (OCT 23 @ 11:30 PM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-2
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/fsp.m3u8
+
+#EXTINF:-1 tvg-id="F1.Dummy.us" tvg-name="Formula 1 - Free Practice 1 (OCT 24 @ 01:30 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/f1.png" group-title="Motorsports",Formula 1 - Free Practice 1 (OCT 24 @ 01:30 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/f1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/f1.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Al Quadisiya vs Al Hilal (OCT 24 @ 02:00 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/football.png" group-title="Soccer",Al Quadisiya vs Al Hilal (OCT 24 @ 02:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-2
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/fsp.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Stuttgart vs Borussia M'gladbach (OCT 24 @ 02:30 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/5a3cb96b8de1f033a58b28f822df6ddc-thumbnail.jpg" group-title="Soccer",Stuttgart vs Borussia M'gladbach (OCT 24 @ 02:30 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-3
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/one.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Brest vs Nice (OCT 24 @ 02:45 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/0403800ec44ce19e02b9b5dddd7c96a5-thumbnail.jpg" group-title="Soccer",Brest vs Nice (OCT 24 @ 02:45 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-4
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/beines.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Torino vs Monza (OCT 24 @ 02:45 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/08289fcb28ddcb75c90ef44e7e113520-thumbnail.jpg" group-title="Soccer",Torino vs Monza (OCT 24 @ 02:45 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-5
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/golazo.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Ipswich Town vs Nottingham Forest (OCT 24 @ 03:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/410a7c5e8f198a864065858574a87c15-thumbnail.jpg" group-title="Soccer",Ipswich Town vs Nottingham Forest (OCT 24 @ 03:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-6
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/f1.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Deportivo Alavés vs Malaga (OCT 24 @ 03:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/94d64b079b2f6172ff3822d5c8278650-thumbnail.jpg" group-title="Soccer",Deportivo Alavés vs Malaga (OCT 24 @ 03:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-7
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/dep.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Bolton Wanderers vs Middlesbrough (OCT 24 @ 03:00 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/football.png" group-title="Soccer",Bolton Wanderers vs Middlesbrough (OCT 24 @ 03:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-8
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/ncaa2.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Chicago Bulls vs Milwaukee Bucks (OCT 24 @ 04:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/105caa0166df003fb73b29a693107174-thumbnail.jpg" group-title="NBA",Chicago Bulls vs Milwaukee Bucks (OCT 24 @ 04:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin.formaturamaxi.com.br/nba.m3u8
+
+#EXTINF:-1 tvg-id="F1.Dummy.us" tvg-name="NASCAR Truck Series - Race (OCT 24 @ 04:00 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/f1.png" group-title="Motorsports",NASCAR Truck Series - Race (OCT 24 @ 04:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nascar
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nas.m3u8
+
+#EXTINF:-1 tvg-id="F1.Dummy.us" tvg-name="Formula 1 - Free Practice 2 (OCT 24 @ 05:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/210fee5c338e641356391ab51368462b-thumbnail.jpg" group-title="Motorsports",Formula 1 - Free Practice 2 (OCT 24 @ 05:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/f1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/f1.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="New York Knicks vs Boston Celtics (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/87676a5a70fe2be583e0c0438346e880-thumbnail.jpg" group-title="NBA",New York Knicks vs Boston Celtics (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba2.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Atlanta Hawks vs Charlotte Hornets (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/629451523d3ed6d67d3edfc4c839553b-thumbnail.jpg" group-title="NBA",Atlanta Hawks vs Charlotte Hornets (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba3.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Dallas Mavericks vs Indiana Pacers (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/d0874069d2ee4bbc46c24494dec967d7-thumbnail.jpg" group-title="NBA",Dallas Mavericks vs Indiana Pacers (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba4.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Minnesota Timberwolves vs Orlando Magic (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/c74bec08fd65411310f2f945f9194c59-thumbnail.jpg" group-title="NBA",Minnesota Timberwolves vs Orlando Magic (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba5.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Toronto Raptors vs Washington Wizards (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/43896509fb8da0199ac9b558f69f334b-thumbnail.jpg" group-title="NBA",Toronto Raptors vs Washington Wizards (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/nba6.m3u8
+
+#EXTINF:-1 tvg-id="NFL.Football.Dummy.us" tvg-name="Duke vs Virginia (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/nfl.png" group-title="NFL",Duke vs Virginia (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ncaa-streams-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/ncaa.m3u8
+
+#EXTINF:-1 tvg-id="NFL.Football.Dummy.us" tvg-name="Massachusetts vs UConn (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/nfl.png" group-title="NFL",Massachusetts vs UConn (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ncaa-streams-2
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/ncaa2.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Cruzeiro vs Remo (OCT 24 @ 07:00 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/football.png" group-title="Soccer",Cruzeiro vs Remo (OCT 24 @ 07:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-9
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin.formaturamaxi.com.br/fana.m3u8
+
+#EXTINF:-1 tvg-id="F1.Dummy.us" tvg-name="MotoGP - Coverage (OCT 24 @ 07:10 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/f1.png" group-title="Motorsports",MotoGP - Coverage (OCT 24 @ 07:10 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/motogp
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/tnt2.m3u8
+
+#EXTINF:-1 tvg-id="F1.Dummy.us" tvg-name="WoO Sprint Cars - Race (OCT 24 @ 07:30 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/f1.png" group-title="Motorsports",WoO Sprint Cars - Race (OCT 24 @ 07:30 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/floracing-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/flo.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Detroit Pistons vs Miami Heat (OCT 24 @ 08:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/d40b16a4e56c41522c030a384db4b17f-thumbnail.jpg" group-title="NBA",Detroit Pistons vs Miami Heat (OCT 24 @ 08:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba7.m3u8
+
+#EXTINF:-1 tvg-id="NHL.Hockey.Dummy.us" tvg-name="Montreal Canadiens vs Chicago Blackhawks (OCT 24 @ 08:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/2626ba09ac741b9539a276d5097249f4-thumbnail.jpg" group-title="NHL",Montreal Canadiens vs Chicago Blackhawks (OCT 24 @ 08:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nhl.m3u8
+
+#EXTINF:-1 tvg-id="PPV.EVENTS.Dummy.us" tvg-name="WWE Smackdown (OCT 24 @ 08:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/ec7810b68fc39115ce3510bcf9687a63-thumbnail.jpg" group-title="Fighting",WWE Smackdown (OCT 24 @ 08:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/wwe.m3u8
+
+#EXTINF:-1 tvg-id="MLB.Baseball.Dummy.us" tvg-name="Tampa Bay Rays vs Milwaukee Brewers (OCT 24 @ 08:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/ab44a1441e9fb36ae32449c367a4d99f-thumbnail.jpg" group-title="MLB",Tampa Bay Rays vs Milwaukee Brewers (OCT 24 @ 08:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/mlb-streams-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/mlb.m3u8
+
+#EXTINF:-1 tvg-id="NFL.Football.Dummy.us" tvg-name="Army vs Tulsa (OCT 24 @ 08:30 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/nfl.png" group-title="NFL",Army vs Tulsa (OCT 24 @ 08:30 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ncaa-streams-3
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/ncaa3.m3u8
+
+#EXTINF:-1 tvg-id="NFL.Football.Dummy.us" tvg-name="Air Force vs Wyoming (OCT 24 @ 09:00 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/nfl.png" group-title="NFL",Air Force vs Wyoming (OCT 24 @ 09:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ncaa-streams-4
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/ncaa4.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Necaxa vs Juarez (OCT 24 @ 09:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/f81eaa61d87459f681eaab1c29dd525d-thumbnail.jpg" group-title="Soccer",Necaxa vs Juarez (OCT 24 @ 09:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-10
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/foxonemx.m3u8
+
+#EXTINF:-1 tvg-id="NHL.Hockey.Dummy.us" tvg-name="Tampa Bay Lightning vs Colorado Avalanche (OCT 24 @ 09:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/ee147471a5875ef9f05723c7185b3a8d-thumbnail.jpg" group-title="NHL",Tampa Bay Lightning vs Colorado Avalanche (OCT 24 @ 09:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nhl-streams-2
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/nhl2.m3u8
+
+#EXTINF:-1 tvg-id="PPV.EVENTS.Dummy.us" tvg-name="RAF 14: Tsarukyan vs. Danis (OCT 24 @ 09:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/4d4f75d2e1500869206e7e5b7ae914c1-thumbnail.jpg" group-title="Fighting",RAF 14: Tsarukyan vs. Danis (OCT 24 @ 09:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/ppv.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Houston Rockets vs San Antonio Spurs (OCT 24 @ 09:30 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/80578bcb5b4b5bc3c72c807292b9799d-thumbnail.jpg" group-title="NBA",Houston Rockets vs San Antonio Spurs (OCT 24 @ 09:30 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba8.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="New Orleans Pelicans vs Utah Jazz (OCT 24 @ 09:30 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/c0b0106860ba71b42b1236f395a263e6-thumbnail.jpg" group-title="NBA",New Orleans Pelicans vs Utah Jazz (OCT 24 @ 09:30 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba9.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Memphis Grizzlies vs Golden State Warriors (OCT 24 @ 10:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/c187468fc68292ea0d90502ac5e39d61-thumbnail.jpg" group-title="NBA",Memphis Grizzlies vs Golden State Warriors (OCT 24 @ 10:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-10
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba10.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Los Angeles Clippers vs Los Angeles Lakers (OCT 24 @ 10:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/a37ba518e3f2854f00790a3280353d70-thumbnail.jpg" group-title="NBA",Los Angeles Clippers vs Los Angeles Lakers (OCT 24 @ 10:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-11
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba11.m3u8
+
+#EXTINF:-1 tvg-id="NBA.Basketball.Dummy.us" tvg-name="Portland Trail Blazers vs Sacramento Kings (OCT 24 @ 10:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/162ca7fd2fd41414f724b59f19cff85f-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Sacramento Kings (OCT 24 @ 10:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-12
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/nba12.m3u8
+
+#EXTINF:-1 tvg-id="NFL.Football.Dummy.us" tvg-name="NC State vs Stanford (OCT 24 @ 10:30 AM PHT)" tvg-logo="https://raw.githubusercontent.com/atone77721/LiveGames/refs/heads/main/logos/nfl.png" group-title="NFL",NC State vs Stanford (OCT 24 @ 10:30 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ncaa-streams-1
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://tedesco.formaturamaxi.com.br/ncaa.m3u8
+
+#EXTINF:-1 tvg-id="Soccer.Dummy.us" tvg-name="Atlante vs Atlético San Luis (OCT 24 @ 11:00 AM PHT)" tvg-logo="https://static.ppvservices.st/assets/thumb/6ffc44292a9a39eb917d9400410f8f26-thumbnail.jpg" group-title="Soccer",Atlante vs Atlético San Luis (OCT 24 @ 11:00 AM PHT)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-11
+#EXTVLCOPT:http-origin=https://roxiestreams.info
+https://admin2.formaturamaxi.com.br/espn2mx.m3u8
+
