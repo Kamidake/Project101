@@ -40,10 +40,6 @@
     <display-name>New York Knicks vs Boston Celtics — Oct 24 @ 07:00 AM</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
-  <channel id="Portland Trail Blazers vs Sacramento Kings — Oct 24 @ 10:00 AM">
-    <display-name>Portland Trail Blazers vs Sacramento Kings — Oct 24 @ 10:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Toronto Raptors vs Washington Wizards — Oct 24 @ 07:00 AM">
     <display-name>Toronto Raptors vs Washington Wizards — Oct 24 @ 07:00 AM</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -100,11 +96,6 @@
   <programme start="20261024070000 +0800" stop="20261024100000 +0800" channel="New York Knicks vs Boston Celtics — Oct 24 @ 07:00 AM">
     <title>New York Knicks vs Boston Celtics — Oct 24 @ 07:00 AM</title>
     <desc>Live stream: New York Knicks vs Boston Celtics</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261024100000 +0800" stop="20261024130000 +0800" channel="Portland Trail Blazers vs Sacramento Kings — Oct 24 @ 10:00 AM">
-    <title>Portland Trail Blazers vs Sacramento Kings — Oct 24 @ 10:00 AM</title>
-    <desc>Live stream: Portland Trail Blazers vs Sacramento Kings</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261024070000 +0800" stop="20261024100000 +0800" channel="Toronto Raptors vs Washington Wizards — Oct 24 @ 07:00 AM">
