@@ -47,6 +47,10 @@ https://admin2.formaturamaxi.com.br/celticsalt.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
 https://admin2.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Portland Trail Blazers vs Sacramento Kings — Oct 24 @ 10:00 AM" tvg-name="Portland Trail Blazers vs Sacramento Kings — Oct 24 @ 10:00 AM" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Portland Trail Blazers vs Sacramento Kings — Oct 24 @ 10:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-12
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://admin2.formaturamaxi.com.br/nba12.m3u8
 #EXTINF:-1 tvg-id="Toronto Raptors vs Washington Wizards — Oct 24 @ 07:00 AM" tvg-name="Toronto Raptors vs Washington Wizards — Oct 24 @ 07:00 AM" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Toronto Raptors vs Washington Wizards — Oct 24 @ 07:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
