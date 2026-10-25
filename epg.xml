@@ -16,6 +16,10 @@
     <display-name>Miami Heat vs Charlotte Hornets — Oct 25 @ 06:00 AM</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
+  <channel id="Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM">
+    <display-name>Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
   <channel id="New Orleans Pelicans vs Denver Nuggets — Oct 25 @ 09:00 AM">
     <display-name>New Orleans Pelicans vs Denver Nuggets — Oct 25 @ 09:00 AM</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -50,6 +54,11 @@
   <programme start="20261025060000 +0800" stop="20261025090000 +0800" channel="Miami Heat vs Charlotte Hornets — Oct 25 @ 06:00 AM">
     <title>Miami Heat vs Charlotte Hornets — Oct 25 @ 06:00 AM</title>
     <desc>Live stream: Miami Heat vs Charlotte Hornets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261025073000 +0800" stop="20261025103000 +0800" channel="Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM">
+    <title>Milwaukee Bucks vs Philadelphia 76ers — Oct 25 @ 07:30 AM</title>
+    <desc>Live stream: Milwaukee Bucks vs Philadelphia 76ers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261025090000 +0800" stop="20261025120000 +0800" channel="New Orleans Pelicans vs Denver Nuggets — Oct 25 @ 09:00 AM">
