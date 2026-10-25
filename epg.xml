@@ -32,8 +32,8 @@
     <display-name>Washington Wizards vs Chicago Bulls — Oct 25 @ 08:00 AM</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
-  <channel id="UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM">
-    <display-name>UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM</display-name>
+  <channel id="UFC 333: Volkanovski vs. Evloev">
+    <display-name>UFC 333: Volkanovski vs. Evloev</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
   </channel>
   <programme start="20261025073000 +0800" stop="20261025103000 +0800" channel="Brooklyn Nets vs Cleveland Cavaliers — Oct 25 @ 07:30 AM">
@@ -75,10 +75,5 @@
     <title>Washington Wizards vs Chicago Bulls — Oct 25 @ 08:00 AM</title>
     <desc>Live stream: Washington Wizards vs Chicago Bulls</desc>
     <category>NBA</category>
-  </programme>
-  <programme start="20261024220000 +0800" stop="20261025010000 +0800" channel="UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM">
-    <title>UFC 333: Volkanovski vs. Evloev — Oct 24 @ 10:00 PM</title>
-    <desc>Live stream: UFC 333: Volkanovski vs. Evloev</desc>
-    <category>UFC</category>
   </programme>
 </tv>
