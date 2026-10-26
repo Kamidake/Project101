@@ -1,4 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="AEW — Oct 29 @ 08:00 AM" tvg-name="AEW — Oct 29 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" group-title="AEW",AEW — Oct 29 @ 08:00 AM
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+https://tedesco.formaturamaxi.com.br/aew.m3u8
 #EXTINF:-1 tvg-id="Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM" tvg-name="Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/725e6e8e0f85d4a66b3f47e2a2fa342e-thumbnail.jpg" group-title="NBA",Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
