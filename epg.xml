@@ -24,10 +24,6 @@
     <display-name>Indiana Pacers vs Milwaukee Bucks — Oct 27 @ 08:00 AM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/42dffc914ac4a06fd5848914112d6546-thumbnail.jpg" />
   </channel>
-  <channel id="Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM">
-    <display-name>Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/24e04df85629c66854225fa72ccab4bd-thumbnail.jpg" />
-  </channel>
   <channel id="Minnesota Timberwolves vs Cleveland Cavaliers — Oct 27 @ 07:00 AM">
     <display-name>Minnesota Timberwolves vs Cleveland Cavaliers — Oct 27 @ 07:00 AM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/c7ba3685b1734ba9e145d5e9822f2442-thumbnail.jpg" />
@@ -76,11 +72,6 @@
   <programme start="20261027080000 +0800" stop="20261027110000 +0800" channel="Indiana Pacers vs Milwaukee Bucks — Oct 27 @ 08:00 AM">
     <title>Indiana Pacers vs Milwaukee Bucks — Oct 27 @ 08:00 AM</title>
     <desc>Live stream: Indiana Pacers vs Milwaukee Bucks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261027090000 +0800" stop="20261027120000 +0800" channel="Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM">
-    <title>Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM</title>
-    <desc>Live stream: Memphis Grizzlies vs Utah Jazz</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261027070000 +0800" stop="20261027100000 +0800" channel="Minnesota Timberwolves vs Cleveland Cavaliers — Oct 27 @ 07:00 AM">
