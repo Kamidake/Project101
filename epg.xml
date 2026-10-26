@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="AEW — Oct 29 @ 08:00 AM">
-    <display-name>AEW — Oct 29 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
-  </channel>
   <channel id="Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM">
     <display-name>Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/725e6e8e0f85d4a66b3f47e2a2fa342e-thumbnail.jpg" />
@@ -48,11 +44,6 @@
     <display-name>WWE RAW — Oct 27 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="AEW — Oct 29 @ 08:00 AM">
-    <title>AEW — Oct 29 @ 08:00 AM</title>
-    <desc>Live stream: AEW</desc>
-    <category>AEW</category>
-  </programme>
   <programme start="20261027083000 +0800" stop="20261027113000 +0800" channel="Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM">
     <title>Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM</title>
     <desc>Live stream: Atlanta Hawks vs Houston Rockets</desc>
