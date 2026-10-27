@@ -22,7 +22,7 @@ raw_backups = os.getenv('ROXIE_BACKUP_URLS', 'https://roxiestreams.biz/,https://
 BACKUPS = tuple(x.rstrip('/') + '/' for x in raw_backups.split(',') if x.strip())
 
 ROXIE_HOSTS = {'roxiestreams.info', 'roxiestreams.biz', 'roxiestreams.su'}
-UA = 'GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0'
+UA = 'Mozilla/5.0 (compatible; LivePlaylist/1.0)'
 TIMEOUT = 12
 
 
