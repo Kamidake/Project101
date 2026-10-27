@@ -1,4 +1,3 @@
-"""Consistent IPTV titles, category artwork, and feed labels."""
 import hashlib
 import html
 import re
@@ -32,25 +31,22 @@ def format_schedule(timestamp):
     """Converts a UNIX timestamp to PHT (UTC+8) in 'Mon DD @ time (AM/PM)' format."""
     pht_zone = timezone(timedelta(hours=8))
     dt = datetime.fromtimestamp(timestamp, tz=pht_zone)
-    # Formats as "Mon DD @ hh:mm AM/PM" (e.g., Oct 24 @ 02:30 PM)
     return dt.strftime("%b %d @ %I:%M %p")
 
 
 def clean_title(value):
+    """Cleans up HTML entities and extra whitespace."""
     return ' '.join(html.unescape(str(value)).split())
 
 
-def event_key(name):
-    text = unicodedata.normalize('NFKD', clean_title(name)).casefold()
-    return re.sub(r'[^a-z0-9]+', ' ', text).strip()
-
-
 def roxie_group(page):
+    """Determines the group based on the URL path slug."""
     slug = urlsplit(page).path.strip('/').split('-')[0].lower()
     return GROUPS.get(slug, 'Live')
 
 
 def fallback_logo(group):
+    """Returns the default logo URL for a given group."""
     return LOGO_BASE + LOGOS.get(group, 'live') + '.png'
 
 
@@ -65,10 +61,17 @@ def decorate(entries):
             continue
             
         entry['name'] = clean_title(entry['name'])
-        identity = (entry['name'], entry['url'], entry.get('starts_at') or 0)
+        
+        # Capture the original URL for deduplication identity
+        original_url = entry['url']
+        identity = (entry['name'], original_url, entry.get('starts_at') or 0)
         
         if identity in unique:
             continue
+            
+        # Append the specific TiviMate 4.7.0 User-Agent to the playable URL
+        if 'User-Agent=' not in original_url:
+            entry['url'] = f"{original_url}|User-Agent=TiviMate/4.7.0"
             
         entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
         entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{identity[2]}"
@@ -84,4 +87,5 @@ def decorate(entries):
             
         unique[identity] = entry
         
+    # Sort the final output by Group -> Name -> Start Time -> URL
     return sorted(unique.values(), key=lambda e: (e.get('group', ''), e['name'], e.get('starts_at') or 0, e['url']))
