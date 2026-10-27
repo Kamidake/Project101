@@ -69,9 +69,10 @@ def decorate(entries):
         if identity in unique:
             continue
             
-        # Append the specific TiviMate 4.7.0 User-Agent to the playable URL
-        if 'User-Agent=' not in original_url:
-            entry['url'] = f"{original_url}|User-Agent=TiviMate/4.7.0"
+        # Append TiviMate 4.7.0 using the exact 'http-user-agent' syntax
+        url_lower = original_url.lower()
+        if 'http-user-agent=' not in url_lower and 'user-agent=' not in url_lower:
+            entry['url'] = f"{original_url}|http-user-agent=TiviMate/4.7.0"
             
         entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
         entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{identity[2]}"
