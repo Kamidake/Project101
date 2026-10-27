@@ -1,6 +1,5 @@
 import hashlib
 import html
-from datetime import datetime, timezone, timedelta
 from urllib.parse import urlsplit
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
@@ -23,13 +22,6 @@ LOGOS = {
 
 # The strict list of groups you want to keep
 ALLOWED_GROUPS = {'NBA', 'Combat Sports', 'Boxing', 'AEW', 'WWE', 'UFC', 'TNA'}
-
-
-def format_schedule(timestamp):
-    """Converts a UNIX timestamp to PHT (UTC+8) in 'Mon DD @ time (AM/PM)' format."""
-    pht_zone = timezone(timedelta(hours=8))
-    dt = datetime.fromtimestamp(timestamp, tz=pht_zone)
-    return dt.strftime("%b %d @ %I:%M %p")
 
 
 def clean_title(value):
@@ -78,12 +70,8 @@ def decorate(entries):
         # Generate a stable TVG ID based on the unique identity tuple
         entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(identity).encode()).hexdigest()[:16]
         entry['display_name'] = entry['name']
-        
-        # Apply the "date @ time" formatting here
-        if entry.get('starts_at'):
-            entry['display_name'] += f" — {format_schedule(entry['starts_at'])}"
             
         unique[identity] = entry
         
-    # Sort the final output by Group -> Name -> Start Time -> URL
-    return sorted(unique.values(), key=lambda e: (e.get('group', ''), e['name'], e.get('starts_at') or 0, e['url']))
+    # Sort the final output by Group -> Name -> URL
+    return sorted(unique.values(), key=lambda e: (e.get('group', ''), e['name'], e['url']))
