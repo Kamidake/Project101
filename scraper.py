@@ -165,6 +165,7 @@ def render(entries):
         
         lines.append(extinf)
         lines.append(f'#EXTVLCOPT:http-referrer={entry["page"]}')
+        lines.append(f'#EXTVLCOPT:http-user-agent={UA}')
         lines.append(entry['url'])
         
     return '\n'.join(lines) + '\n'
