@@ -5,6 +5,9 @@ from urllib.parse import urlsplit
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
 
+# The specific User-Agent you requested
+USER_AGENT = 'GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0'
+
 GROUPS = {
     'nfl': 'NFL', 'redzone': 'NFL', 'nba': 'NBA', 'wnba': 'WNBA', 'nhl': 'NHL',
     'mlb': 'MLB', 'soccer': 'Soccer', 'f1': 'Formula 1', 'nascar': 'NASCAR',
@@ -64,7 +67,7 @@ def decorate(entries):
             
         entry['name'] = clean_title(entry['name'])
         
-        # Capture the original URL for deduplication identity
+        # Capture the original URL for deduplication identity BEFORE modifying it
         original_url = entry['url']
         identity = (entry['name'], original_url, entry.get('starts_at') or 0)
         
@@ -83,6 +86,9 @@ def decorate(entries):
         if entry.get('starts_at'):
             entry['display_name'] += f" — {format_schedule(entry['starts_at'])}"
             
+        # Append the User-Agent directly to the stream URL so players recognize it
+        entry['url'] = f"{original_url}|http-user-agent={USER_AGENT}"
+        
         unique[identity] = entry
         
     # Sort the final output by Group -> Name -> Start Time -> URL
