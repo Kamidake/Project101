@@ -1,7 +1,5 @@
 import hashlib
 import html
-import re
-import unicodedata
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlsplit
 
@@ -55,6 +53,10 @@ def decorate(entries):
     unique = {}
     for source in entries:
         entry = dict(source)
+        
+        # Populate the group dynamically if it is missing
+        if 'group' not in entry and 'url' in entry:
+            entry['group'] = roxie_group(entry['url'])
         
         # SKIP any stream that is not in our allowed list
         if entry.get('group') not in ALLOWED_GROUPS:
