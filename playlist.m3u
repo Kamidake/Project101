@@ -1,29 +1,29 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="AEW — Oct 29 @ 08:00 AM" tvg-name="AEW — Oct 29 @ 08:00 AM" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" group-title="AEW",AEW — Oct 29 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+#EXTVLCOPT:http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 https://tedesco.formaturamaxi.com.br/aew.m3u8|http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 #EXTINF:-1 tvg-id="Brooklyn Nets vs Boston Celtics — Oct 28 @ 07:30 AM" tvg-name="Brooklyn Nets vs Boston Celtics — Oct 28 @ 07:30 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/36ae3d96a6953dabb2378509bff94465-thumbnail.jpg" group-title="NBA",Brooklyn Nets vs Boston Celtics — Oct 28 @ 07:30 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+#EXTVLCOPT:http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 https://admin.formaturamaxi.com.br/nba.m3u8|http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 #EXTINF:-1 tvg-id="Detroit Pistons vs New York Knicks — Oct 28 @ 08:00 AM" tvg-name="Detroit Pistons vs New York Knicks — Oct 28 @ 08:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/8e69060ac5b6ab7798b957236610131e-thumbnail.jpg" group-title="NBA",Detroit Pistons vs New York Knicks — Oct 28 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+#EXTVLCOPT:http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 https://admin.formaturamaxi.com.br/nba2.m3u8|http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 #EXTINF:-1 tvg-id="Portland Trail Blazers vs Los Angeles Lakers — Oct 28 @ 11:00 AM" tvg-name="Portland Trail Blazers vs Los Angeles Lakers — Oct 28 @ 11:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/853473ddc8475d999e715a2936bf3c98-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Los Angeles Lakers — Oct 28 @ 11:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+#EXTVLCOPT:http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 https://admin.formaturamaxi.com.br/nba4.m3u8|http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 #EXTINF:-1 tvg-id="Sacramento Kings vs San Antonio Spurs — Oct 28 @ 08:00 AM" tvg-name="Sacramento Kings vs San Antonio Spurs — Oct 28 @ 08:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/def05f077736825623aea15b8282658e-thumbnail.jpg" group-title="NBA",Sacramento Kings vs San Antonio Spurs — Oct 28 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+#EXTVLCOPT:http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 https://admin2.formaturamaxi.com.br/nba3.m3u8|http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 #EXTINF:-1 tvg-id="WWE NXT — Oct 28 @ 08:00 AM" tvg-name="WWE NXT — Oct 28 @ 08:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" group-title="WWE",WWE NXT — Oct 28 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+#EXTVLCOPT:http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 https://admin.formaturamaxi.com.br/wwe.m3u8|http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 #EXTINF:-1 tvg-id="WWE NXT — Oct 28 @ 08:00 AM" tvg-name="WWE NXT — Oct 28 @ 08:00 AM" tvg-logo="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" group-title="WWE",WWE NXT — Oct 28 @ 08:00 AM
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (compatible; LivePlaylist/1.0)
+#EXTVLCOPT:http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
 https://admin2.formaturamaxi.com.br/wwe.m3u8|http-user-agent=GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0
