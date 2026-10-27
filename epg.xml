@@ -4,108 +4,54 @@
     <display-name>AEW — Oct 29 @ 08:00 AM</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
   </channel>
-  <channel id="Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM">
-    <display-name>Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Brooklyn Nets vs Boston Celtics — Oct 28 @ 07:30 AM">
+    <display-name>Brooklyn Nets vs Boston Celtics — Oct 28 @ 07:30 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/36ae3d96a6953dabb2378509bff94465-thumbnail.jpg" />
   </channel>
-  <channel id="Chicago Bulls vs Boston Celtics — Oct 27 @ 07:30 AM">
-    <display-name>Chicago Bulls vs Boston Celtics — Oct 27 @ 07:30 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Detroit Pistons vs New York Knicks — Oct 28 @ 08:00 AM">
+    <display-name>Detroit Pistons vs New York Knicks — Oct 28 @ 08:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/8e69060ac5b6ab7798b957236610131e-thumbnail.jpg" />
   </channel>
-  <channel id="Dallas Mavericks vs Miami Heat — Oct 27 @ 07:30 AM">
-    <display-name>Dallas Mavericks vs Miami Heat — Oct 27 @ 07:30 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Portland Trail Blazers vs Los Angeles Lakers — Oct 28 @ 11:00 AM">
+    <display-name>Portland Trail Blazers vs Los Angeles Lakers — Oct 28 @ 11:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/853473ddc8475d999e715a2936bf3c98-thumbnail.jpg" />
   </channel>
-  <channel id="Golden State Warriors vs Denver Nuggets — Oct 27 @ 10:00 AM">
-    <display-name>Golden State Warriors vs Denver Nuggets — Oct 27 @ 10:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Indiana Pacers vs Milwaukee Bucks — Oct 27 @ 08:00 AM">
-    <display-name>Indiana Pacers vs Milwaukee Bucks — Oct 27 @ 08:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM">
-    <display-name>Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Minnesota Timberwolves vs Cleveland Cavaliers — Oct 27 @ 07:00 AM">
-    <display-name>Minnesota Timberwolves vs Cleveland Cavaliers — Oct 27 @ 07:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Phoenix Suns vs Oklahoma City Thunder — Oct 27 @ 08:00 AM">
-    <display-name>Phoenix Suns vs Oklahoma City Thunder — Oct 27 @ 08:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Washington Wizards vs Charlotte Hornets — Oct 27 @ 07:00 AM">
-    <display-name>Washington Wizards vs Charlotte Hornets — Oct 27 @ 07:00 AM</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Sacramento Kings vs San Antonio Spurs — Oct 28 @ 08:00 AM">
+    <display-name>Sacramento Kings vs San Antonio Spurs — Oct 28 @ 08:00 AM</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/def05f077736825623aea15b8282658e-thumbnail.jpg" />
   </channel>
   <channel id="WWE NXT — Oct 28 @ 08:00 AM">
     <display-name>WWE NXT — Oct 28 @ 08:00 AM</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
-  </channel>
-  <channel id="WWE RAW — Oct 27 @ 08:00 AM">
-    <display-name>WWE RAW — Oct 27 @ 08:00 AM</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
   <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="AEW — Oct 29 @ 08:00 AM">
     <title>AEW — Oct 29 @ 08:00 AM</title>
     <desc>Live stream: AEW</desc>
     <category>AEW</category>
   </programme>
-  <programme start="20261027083000 +0800" stop="20261027113000 +0800" channel="Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM">
-    <title>Atlanta Hawks vs Houston Rockets — Oct 27 @ 08:30 AM</title>
-    <desc>Live stream: Atlanta Hawks vs Houston Rockets</desc>
+  <programme start="20261028073000 +0800" stop="20261028103000 +0800" channel="Brooklyn Nets vs Boston Celtics — Oct 28 @ 07:30 AM">
+    <title>Brooklyn Nets vs Boston Celtics — Oct 28 @ 07:30 AM</title>
+    <desc>Live stream: Brooklyn Nets vs Boston Celtics</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261027073000 +0800" stop="20261027103000 +0800" channel="Chicago Bulls vs Boston Celtics — Oct 27 @ 07:30 AM">
-    <title>Chicago Bulls vs Boston Celtics — Oct 27 @ 07:30 AM</title>
-    <desc>Live stream: Chicago Bulls vs Boston Celtics</desc>
+  <programme start="20261028080000 +0800" stop="20261028110000 +0800" channel="Detroit Pistons vs New York Knicks — Oct 28 @ 08:00 AM">
+    <title>Detroit Pistons vs New York Knicks — Oct 28 @ 08:00 AM</title>
+    <desc>Live stream: Detroit Pistons vs New York Knicks</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261027073000 +0800" stop="20261027103000 +0800" channel="Dallas Mavericks vs Miami Heat — Oct 27 @ 07:30 AM">
-    <title>Dallas Mavericks vs Miami Heat — Oct 27 @ 07:30 AM</title>
-    <desc>Live stream: Dallas Mavericks vs Miami Heat</desc>
+  <programme start="20261028110000 +0800" stop="20261028140000 +0800" channel="Portland Trail Blazers vs Los Angeles Lakers — Oct 28 @ 11:00 AM">
+    <title>Portland Trail Blazers vs Los Angeles Lakers — Oct 28 @ 11:00 AM</title>
+    <desc>Live stream: Portland Trail Blazers vs Los Angeles Lakers</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261027100000 +0800" stop="20261027130000 +0800" channel="Golden State Warriors vs Denver Nuggets — Oct 27 @ 10:00 AM">
-    <title>Golden State Warriors vs Denver Nuggets — Oct 27 @ 10:00 AM</title>
-    <desc>Live stream: Golden State Warriors vs Denver Nuggets</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261027080000 +0800" stop="20261027110000 +0800" channel="Indiana Pacers vs Milwaukee Bucks — Oct 27 @ 08:00 AM">
-    <title>Indiana Pacers vs Milwaukee Bucks — Oct 27 @ 08:00 AM</title>
-    <desc>Live stream: Indiana Pacers vs Milwaukee Bucks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261027090000 +0800" stop="20261027120000 +0800" channel="Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM">
-    <title>Memphis Grizzlies vs Utah Jazz — Oct 27 @ 09:00 AM</title>
-    <desc>Live stream: Memphis Grizzlies vs Utah Jazz</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261027070000 +0800" stop="20261027100000 +0800" channel="Minnesota Timberwolves vs Cleveland Cavaliers — Oct 27 @ 07:00 AM">
-    <title>Minnesota Timberwolves vs Cleveland Cavaliers — Oct 27 @ 07:00 AM</title>
-    <desc>Live stream: Minnesota Timberwolves vs Cleveland Cavaliers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261027080000 +0800" stop="20261027110000 +0800" channel="Phoenix Suns vs Oklahoma City Thunder — Oct 27 @ 08:00 AM">
-    <title>Phoenix Suns vs Oklahoma City Thunder — Oct 27 @ 08:00 AM</title>
-    <desc>Live stream: Phoenix Suns vs Oklahoma City Thunder</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261027070000 +0800" stop="20261027100000 +0800" channel="Washington Wizards vs Charlotte Hornets — Oct 27 @ 07:00 AM">
-    <title>Washington Wizards vs Charlotte Hornets — Oct 27 @ 07:00 AM</title>
-    <desc>Live stream: Washington Wizards vs Charlotte Hornets</desc>
+  <programme start="20261028080000 +0800" stop="20261028110000 +0800" channel="Sacramento Kings vs San Antonio Spurs — Oct 28 @ 08:00 AM">
+    <title>Sacramento Kings vs San Antonio Spurs — Oct 28 @ 08:00 AM</title>
+    <desc>Live stream: Sacramento Kings vs San Antonio Spurs</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261028080000 +0800" stop="20261028110000 +0800" channel="WWE NXT — Oct 28 @ 08:00 AM">
     <title>WWE NXT — Oct 28 @ 08:00 AM</title>
     <desc>Live stream: WWE NXT</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261027080000 +0800" stop="20261027110000 +0800" channel="WWE RAW — Oct 27 @ 08:00 AM">
-    <title>WWE RAW — Oct 27 @ 08:00 AM</title>
-    <desc>Live stream: WWE RAW</desc>
     <category>WWE</category>
   </programme>
 </tv>
