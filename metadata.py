@@ -69,11 +69,6 @@ def decorate(entries):
         if identity in unique:
             continue
             
-        # Append TiviMate 4.7.0 using the exact 'http-user-agent' syntax
-        url_lower = original_url.lower()
-        if 'http-user-agent=' not in url_lower and 'user-agent=' not in url_lower:
-            entry['url'] = f"{original_url}|http-user-agent=TiviMate/4.7.0"
-            
         entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
         entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{identity[2]}"
         entry['provider'] = entry.get('provider', 'RoxieStreams')
