@@ -22,14 +22,17 @@ raw_backups = os.getenv('ROXIE_BACKUP_URLS', 'https://roxiestreams.biz/,https://
 BACKUPS = tuple(x.rstrip('/') + '/' for x in raw_backups.split(',') if x.strip())
 
 ROXIE_HOSTS = {'roxiestreams.info', 'roxiestreams.biz', 'roxiestreams.su'}
-UA = '‎GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0'
+UA = 'GSE/7.6 CFNetwork/1410.1 Darwin/22.6.0'
 TIMEOUT = 12
 
 
 def fetch(url, referer=BASE):
+    # Strip invisible Unicode artifacts that crash urllib
+    clean_ua = UA.encode('latin-1', 'ignore').decode('latin-1')
+    
     for attempt in range(2):
         try:
-            req = Request(url, headers={'User-Agent': UA, 'Referer': referer})
+            req = Request(url, headers={'User-Agent': clean_ua, 'Referer': referer})
             with urlopen(req, timeout=TIMEOUT) as response:
                 return response.read(2_000_000).decode('utf-8', errors='replace')
         except Exception:
@@ -137,7 +140,9 @@ def live_media(url, referer, depth=0):
         return False
     segment = urljoin(url, segments[-1])
     
-    req = Request(segment, headers={'User-Agent': UA, 'Referer': referer, 'Range': 'bytes=0-1023'})
+    # Also clean User-Agent here for safety
+    clean_ua = UA.encode('latin-1', 'ignore').decode('latin-1')
+    req = Request(segment, headers={'User-Agent': clean_ua, 'Referer': referer, 'Range': 'bytes=0-1023'})
     with urlopen(req, timeout=TIMEOUT) as response:
         return bool(response.read(1024))
 
