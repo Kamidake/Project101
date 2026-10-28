@@ -28,6 +28,10 @@
     <display-name>Miami Heat vs Atlanta Hawks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/f070ecc291fff4f69d8ba70e81c3b02f-thumbnail.jpg" />
   </channel>
+  <channel id="New York Knicks vs Chicago Bulls">
+    <display-name>New York Knicks vs Chicago Bulls</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/f229ea09ea10c7dc17403f8bc6eaacee-thumbnail.jpg" />
+  </channel>
   <channel id="Oklahoma City Thunder vs Dallas Mavericks">
     <display-name>Oklahoma City Thunder vs Dallas Mavericks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/63780a130425c63ef617a7191759f6b1-thumbnail.jpg" />
@@ -81,6 +85,11 @@
   <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Miami Heat vs Atlanta Hawks">
     <title>Miami Heat vs Atlanta Hawks</title>
     <desc>Live stream: Miami Heat vs Atlanta Hawks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="New York Knicks vs Chicago Bulls">
+    <title>New York Knicks vs Chicago Bulls</title>
+    <desc>Live stream: New York Knicks vs Chicago Bulls</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261029093000 +0800" stop="20261029123000 +0800" channel="Oklahoma City Thunder vs Dallas Mavericks">
