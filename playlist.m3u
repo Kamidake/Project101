@@ -31,18 +31,10 @@ https://admin2.formaturamaxi.com.br/celtics.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/lp.m3u8
-#EXTINF:-1 tvg-id="New York Knicks vs Chicago Bulls" tvg-name="New York Knicks vs Chicago Bulls" tvg-logo="https://static.ppvservices.st/assets/thumb/f229ea09ea10c7dc17403f8bc6eaacee-thumbnail.jpg" group-title="NBA",New York Knicks vs Chicago Bulls
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba6.m3u8
 #EXTINF:-1 tvg-id="Oklahoma City Thunder vs Dallas Mavericks" tvg-name="Oklahoma City Thunder vs Dallas Mavericks" tvg-logo="https://static.ppvservices.st/assets/thumb/63780a130425c63ef617a7191759f6b1-thumbnail.jpg" group-title="NBA",Oklahoma City Thunder vs Dallas Mavericks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-11
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba11.m3u8
-#EXTINF:-1 tvg-id="Orlando Magic vs Toronto Raptors" tvg-name="Orlando Magic vs Toronto Raptors" tvg-logo="https://static.ppvservices.st/assets/thumb/882a65157a03a48491c4df0b3e81309a-thumbnail.jpg" group-title="NBA",Orlando Magic vs Toronto Raptors
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba5.m3u8
 #EXTINF:-1 tvg-id="Philadelphia 76ers vs Indiana Pacers" tvg-name="Philadelphia 76ers vs Indiana Pacers" tvg-logo="https://static.ppvservices.st/assets/thumb/643f8a824bf65fc2e0381798e5342538-thumbnail.jpg" group-title="NBA",Philadelphia 76ers vs Indiana Pacers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
