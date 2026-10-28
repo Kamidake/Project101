@@ -4,10 +4,6 @@
     <display-name>AEW</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
   </channel>
-  <channel id="Charlotte Hornets vs Detroit Pistons">
-    <display-name>Charlotte Hornets vs Detroit Pistons</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/587496e1219ac549275841facfb2f390-thumbnail.jpg" />
-  </channel>
   <channel id="Denver Nuggets vs New Orleans Pelicans">
     <display-name>Denver Nuggets vs New Orleans Pelicans</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/5467b20c6e17a09dc8fa170ec9792bd3-thumbnail.jpg" />
@@ -36,10 +32,6 @@
     <display-name>Oklahoma City Thunder vs Dallas Mavericks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/63780a130425c63ef617a7191759f6b1-thumbnail.jpg" />
   </channel>
-  <channel id="Orlando Magic vs Toronto Raptors">
-    <display-name>Orlando Magic vs Toronto Raptors</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/882a65157a03a48491c4df0b3e81309a-thumbnail.jpg" />
-  </channel>
   <channel id="Philadelphia 76ers vs Indiana Pacers">
     <display-name>Philadelphia 76ers vs Indiana Pacers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/643f8a824bf65fc2e0381798e5342538-thumbnail.jpg" />
@@ -56,11 +48,6 @@
     <title>AEW</title>
     <desc>Live stream: AEW</desc>
     <category>AEW</category>
-  </programme>
-  <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Charlotte Hornets vs Detroit Pistons">
-    <title>Charlotte Hornets vs Detroit Pistons</title>
-    <desc>Live stream: Charlotte Hornets vs Detroit Pistons</desc>
-    <category>NBA</category>
   </programme>
   <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="Denver Nuggets vs New Orleans Pelicans">
     <title>Denver Nuggets vs New Orleans Pelicans</title>
@@ -95,11 +82,6 @@
   <programme start="20261029093000 +0800" stop="20261029123000 +0800" channel="Oklahoma City Thunder vs Dallas Mavericks">
     <title>Oklahoma City Thunder vs Dallas Mavericks</title>
     <desc>Live stream: Oklahoma City Thunder vs Dallas Mavericks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261029073000 +0800" stop="20261029103000 +0800" channel="Orlando Magic vs Toronto Raptors">
-    <title>Orlando Magic vs Toronto Raptors</title>
-    <desc>Live stream: Orlando Magic vs Toronto Raptors</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Philadelphia 76ers vs Indiana Pacers">
