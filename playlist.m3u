@@ -26,6 +26,10 @@ https://admin2.formaturamaxi.com.br/nba12.m3u8
 #EXTINF:-1 tvg-id="Miami Heat vs Atlanta Hawks" tvg-name="Miami Heat vs Atlanta Hawks" tvg-logo="https://static.ppvservices.st/assets/thumb/f070ecc291fff4f69d8ba70e81c3b02f-thumbnail.jpg" group-title="NBA",Miami Heat vs Atlanta Hawks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/heat.m3u8
+#EXTINF:-1 tvg-id="Miami Heat vs Atlanta Hawks" tvg-name="Miami Heat vs Atlanta Hawks" tvg-logo="https://static.ppvservices.st/assets/thumb/f070ecc291fff4f69d8ba70e81c3b02f-thumbnail.jpg" group-title="NBA",Miami Heat vs Atlanta Hawks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba.m3u8
 #EXTINF:-1 tvg-id="New York Knicks vs Chicago Bulls" tvg-name="New York Knicks vs Chicago Bulls" tvg-logo="https://static.ppvservices.st/assets/thumb/f229ea09ea10c7dc17403f8bc6eaacee-thumbnail.jpg" group-title="NBA",New York Knicks vs Chicago Bulls
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
