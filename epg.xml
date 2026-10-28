@@ -4,21 +4,53 @@
     <display-name>AEW</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
   </channel>
-  <channel id="Brooklyn Nets vs Boston Celtics">
-    <display-name>Brooklyn Nets vs Boston Celtics</display-name>
+  <channel id="Charlotte Hornets vs Detroit Pistons">
+    <display-name>Charlotte Hornets vs Detroit Pistons</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/587496e1219ac549275841facfb2f390-thumbnail.jpg" />
+  </channel>
+  <channel id="Denver Nuggets vs New Orleans Pelicans">
+    <display-name>Denver Nuggets vs New Orleans Pelicans</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5467b20c6e17a09dc8fa170ec9792bd3-thumbnail.jpg" />
+  </channel>
+  <channel id="Golden State Warriors vs Minnesota Timberwolves">
+    <display-name>Golden State Warriors vs Minnesota Timberwolves</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/39c0b053bdf1dcbd083cccabe6166f00-thumbnail.jpg" />
+  </channel>
+  <channel id="Houston Rockets vs Milwaukee Bucks">
+    <display-name>Houston Rockets vs Milwaukee Bucks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/b5c0634b2e1dad4cc957745c09006fed-thumbnail.jpg" />
+  </channel>
+  <channel id="Los Angeles Lakers vs Los Angeles Clippers">
+    <display-name>Los Angeles Lakers vs Los Angeles Clippers</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
-  <channel id="Detroit Pistons vs New York Knicks">
-    <display-name>Detroit Pistons vs New York Knicks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Miami Heat vs Atlanta Hawks">
+    <display-name>Miami Heat vs Atlanta Hawks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/f070ecc291fff4f69d8ba70e81c3b02f-thumbnail.jpg" />
   </channel>
-  <channel id="Portland Trail Blazers vs Los Angeles Lakers">
-    <display-name>Portland Trail Blazers vs Los Angeles Lakers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="New York Knicks vs Chicago Bulls">
+    <display-name>New York Knicks vs Chicago Bulls</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/f229ea09ea10c7dc17403f8bc6eaacee-thumbnail.jpg" />
   </channel>
-  <channel id="Sacramento Kings vs San Antonio Spurs">
-    <display-name>Sacramento Kings vs San Antonio Spurs</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  <channel id="Oklahoma City Thunder vs Dallas Mavericks">
+    <display-name>Oklahoma City Thunder vs Dallas Mavericks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/63780a130425c63ef617a7191759f6b1-thumbnail.jpg" />
+  </channel>
+  <channel id="Orlando Magic vs Toronto Raptors">
+    <display-name>Orlando Magic vs Toronto Raptors</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/882a65157a03a48491c4df0b3e81309a-thumbnail.jpg" />
+  </channel>
+  <channel id="Philadelphia 76ers vs Indiana Pacers">
+    <display-name>Philadelphia 76ers vs Indiana Pacers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/643f8a824bf65fc2e0381798e5342538-thumbnail.jpg" />
+  </channel>
+  <channel id="San Antonio Spurs vs Utah Jazz">
+    <display-name>San Antonio Spurs vs Utah Jazz</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/c722824b0b5a6290ba08e8f6e288acce-thumbnail.jpg" />
+  </channel>
+  <channel id="Washington Wizards vs Cleveland Cavaliers">
+    <display-name>Washington Wizards vs Cleveland Cavaliers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/7e7adb9d47b78097af1fcaa4bf2bad98-thumbnail.jpg" />
   </channel>
   <channel id="WWE NXT">
     <display-name>WWE NXT</display-name>
@@ -29,29 +61,64 @@
     <desc>Live stream: AEW</desc>
     <category>AEW</category>
   </programme>
-  <programme start="20261028073000 +0800" stop="20261028103000 +0800" channel="Brooklyn Nets vs Boston Celtics">
-    <title>Brooklyn Nets vs Boston Celtics</title>
-    <desc>Live stream: Brooklyn Nets vs Boston Celtics</desc>
+  <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Charlotte Hornets vs Detroit Pistons">
+    <title>Charlotte Hornets vs Detroit Pistons</title>
+    <desc>Live stream: Charlotte Hornets vs Detroit Pistons</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261028080000 +0800" stop="20261028110000 +0800" channel="Detroit Pistons vs New York Knicks">
-    <title>Detroit Pistons vs New York Knicks</title>
-    <desc>Live stream: Detroit Pistons vs New York Knicks</desc>
+  <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="Denver Nuggets vs New Orleans Pelicans">
+    <title>Denver Nuggets vs New Orleans Pelicans</title>
+    <desc>Live stream: Denver Nuggets vs New Orleans Pelicans</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261028110000 +0800" stop="20261028140000 +0800" channel="Portland Trail Blazers vs Los Angeles Lakers">
-    <title>Portland Trail Blazers vs Los Angeles Lakers</title>
-    <desc>Live stream: Portland Trail Blazers vs Los Angeles Lakers</desc>
+  <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="Golden State Warriors vs Minnesota Timberwolves">
+    <title>Golden State Warriors vs Minnesota Timberwolves</title>
+    <desc>Live stream: Golden State Warriors vs Minnesota Timberwolves</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261028080000 +0800" stop="20261028110000 +0800" channel="Sacramento Kings vs San Antonio Spurs">
-    <title>Sacramento Kings vs San Antonio Spurs</title>
-    <desc>Live stream: Sacramento Kings vs San Antonio Spurs</desc>
+  <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="Houston Rockets vs Milwaukee Bucks">
+    <title>Houston Rockets vs Milwaukee Bucks</title>
+    <desc>Live stream: Houston Rockets vs Milwaukee Bucks</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261028080000 +0800" stop="20261028110000 +0800" channel="WWE NXT">
-    <title>WWE NXT</title>
-    <desc>Live stream: WWE NXT</desc>
-    <category>WWE</category>
+  <programme start="20261029103000 +0800" stop="20261029133000 +0800" channel="Los Angeles Lakers vs Los Angeles Clippers">
+    <title>Los Angeles Lakers vs Los Angeles Clippers</title>
+    <desc>Live stream: Los Angeles Lakers vs Los Angeles Clippers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Miami Heat vs Atlanta Hawks">
+    <title>Miami Heat vs Atlanta Hawks</title>
+    <desc>Live stream: Miami Heat vs Atlanta Hawks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="New York Knicks vs Chicago Bulls">
+    <title>New York Knicks vs Chicago Bulls</title>
+    <desc>Live stream: New York Knicks vs Chicago Bulls</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029093000 +0800" stop="20261029123000 +0800" channel="Oklahoma City Thunder vs Dallas Mavericks">
+    <title>Oklahoma City Thunder vs Dallas Mavericks</title>
+    <desc>Live stream: Oklahoma City Thunder vs Dallas Mavericks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029073000 +0800" stop="20261029103000 +0800" channel="Orlando Magic vs Toronto Raptors">
+    <title>Orlando Magic vs Toronto Raptors</title>
+    <desc>Live stream: Orlando Magic vs Toronto Raptors</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Philadelphia 76ers vs Indiana Pacers">
+    <title>Philadelphia 76ers vs Indiana Pacers</title>
+    <desc>Live stream: Philadelphia 76ers vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029090000 +0800" stop="20261029120000 +0800" channel="San Antonio Spurs vs Utah Jazz">
+    <title>San Antonio Spurs vs Utah Jazz</title>
+    <desc>Live stream: San Antonio Spurs vs Utah Jazz</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Washington Wizards vs Cleveland Cavaliers">
+    <title>Washington Wizards vs Cleveland Cavaliers</title>
+    <desc>Live stream: Washington Wizards vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
   </programme>
 </tv>
