@@ -52,10 +52,6 @@
     <display-name>Washington Wizards vs Cleveland Cavaliers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7e7adb9d47b78097af1fcaa4bf2bad98-thumbnail.jpg" />
   </channel>
-  <channel id="WWE NXT">
-    <display-name>WWE NXT</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="AEW">
     <title>AEW</title>
     <desc>Live stream: AEW</desc>
