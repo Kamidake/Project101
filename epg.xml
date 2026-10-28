@@ -20,6 +20,10 @@
     <display-name>Houston Rockets vs Milwaukee Bucks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/b5c0634b2e1dad4cc957745c09006fed-thumbnail.jpg" />
   </channel>
+  <channel id="Los Angeles Lakers vs Los Angeles Clippers">
+    <display-name>Los Angeles Lakers vs Los Angeles Clippers</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
   <channel id="Miami Heat vs Atlanta Hawks">
     <display-name>Miami Heat vs Atlanta Hawks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/f070ecc291fff4f69d8ba70e81c3b02f-thumbnail.jpg" />
@@ -71,6 +75,11 @@
   <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="Houston Rockets vs Milwaukee Bucks">
     <title>Houston Rockets vs Milwaukee Bucks</title>
     <desc>Live stream: Houston Rockets vs Milwaukee Bucks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261029103000 +0800" stop="20261029133000 +0800" channel="Los Angeles Lakers vs Los Angeles Clippers">
+    <title>Los Angeles Lakers vs Los Angeles Clippers</title>
+    <desc>Live stream: Los Angeles Lakers vs Los Angeles Clippers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261029070000 +0800" stop="20261029100000 +0800" channel="Miami Heat vs Atlanta Hawks">
