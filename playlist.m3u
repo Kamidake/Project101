@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="AEW" tvg-name="AEW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" group-title="AEW",AEW
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/aew.m3u8
 #EXTINF:-1 tvg-id="Cleveland Cavaliers vs Atlanta Hawks" tvg-name="Cleveland Cavaliers vs Atlanta Hawks" tvg-logo="https://static.ppvservices.st/assets/thumb/07e44f857d4cb8ad2c740cf9cab995cc-thumbnail.jpg" group-title="NBA",Cleveland Cavaliers vs Atlanta Hawks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36

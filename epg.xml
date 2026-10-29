@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="AEW">
-    <display-name>AEW</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
-  </channel>
   <channel id="Cleveland Cavaliers vs Atlanta Hawks">
     <display-name>Cleveland Cavaliers vs Atlanta Hawks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/07e44f857d4cb8ad2c740cf9cab995cc-thumbnail.jpg" />
