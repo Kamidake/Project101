@@ -46,14 +46,18 @@ def decorate(entries):
     for source in entries:
         entry = dict(source)
         
-        # Check for 'tna' across multiple potential keys (page, url, referer, name)
+        # Check for 'tna' or 'ufc' across multiple potential keys (page, url, referer, name)
         page_val = str(entry.get('page', '')).lower()
         url_val = str(entry.get('url', '')).lower()
         referer_val = str(entry.get('referer', '')).lower()
         name_val = str(entry.get('name', '')).lower()
         
-        if 'tna' in page_val or 'tna' in url_val or 'tna' in referer_val or 'tna' in name_val:
+        search_string = f"{page_val} {url_val} {referer_val} {name_val}"
+        
+        if 'tna' in search_string:
             entry['group'] = 'TNA'
+        elif 'ufc' in search_string:
+            entry['group'] = 'UFC'
         # Populate the group dynamically if it is missing
         elif 'group' not in entry and 'url' in entry:
             entry['group'] = roxie_group(entry['url'])
