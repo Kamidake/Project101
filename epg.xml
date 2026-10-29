@@ -6,7 +6,7 @@
   </channel>
   <channel id="Charlotte Hornets vs Detroit Pistons">
     <display-name>Charlotte Hornets vs Detroit Pistons</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/587496e1219ac549275841facfb2f390-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Denver Nuggets vs New Orleans Pelicans">
     <display-name>Denver Nuggets vs New Orleans Pelicans</display-name>
@@ -26,7 +26,7 @@
   </channel>
   <channel id="Miami Heat vs Atlanta Hawks">
     <display-name>Miami Heat vs Atlanta Hawks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/f070ecc291fff4f69d8ba70e81c3b02f-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="New York Knicks vs Chicago Bulls">
     <display-name>New York Knicks vs Chicago Bulls</display-name>
@@ -42,7 +42,7 @@
   </channel>
   <channel id="Philadelphia 76ers vs Indiana Pacers">
     <display-name>Philadelphia 76ers vs Indiana Pacers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/643f8a824bf65fc2e0381798e5342538-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="San Antonio Spurs vs Utah Jazz">
     <display-name>San Antonio Spurs vs Utah Jazz</display-name>
@@ -50,7 +50,7 @@
   </channel>
   <channel id="Washington Wizards vs Cleveland Cavaliers">
     <display-name>Washington Wizards vs Cleveland Cavaliers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/7e7adb9d47b78097af1fcaa4bf2bad98-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <programme start="20261029080000 +0800" stop="20261029110000 +0800" channel="AEW">
     <title>AEW</title>
