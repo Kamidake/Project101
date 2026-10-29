@@ -172,7 +172,7 @@ def render(entries):
 
 
 def render_epg(entries):
-    """Generate an XMLTV format EPG for the live streams."""
+    """Generate an XMLTV format EPG for the live streams with dates and a pipe separator."""
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']
     lines.append('<tv generator-info-name="LivePlaylist">')
     
@@ -186,34 +186,37 @@ def render_epg(entries):
         display = safe(entry.get("display_name", entry["name"]))
         shared_name = safe(re.sub(r'\s+#\d+', '', display))
         
-        # Escape special characters for XML compatibility
+        # 1. Parse the date to prepend it with a pipe separator
+        date_prefix = ""
+        start_dt = None
+        if entry.get("starts_at"):
+            start_dt = dt.datetime.fromtimestamp(entry["starts_at"], tz_pht)
+            # Formats as "Oct 30 | "
+            date_prefix = start_dt.strftime('%b %d | ')
+            
         channel_id = html.escape(shared_name, quote=True)
+        display_name_with_date = html.escape(date_prefix + shared_name, quote=True)
         
-        # We only want to create one channel entry even if there are backup streams
         if channel_id not in seen_channels:
             seen_channels.add(channel_id)
             lines.append(f'  <channel id="{channel_id}">')
-            lines.append(f'    <display-name>{channel_id}</display-name>')
+            lines.append(f'    <display-name>{display_name_with_date}</display-name>')
             if entry.get("poster"):
                 lines.append(f'    <icon src="{html.escape(entry["poster"], quote=True)}" />')
             lines.append('  </channel>')
             
-            # If the event has a start time, create a programme block for it
-            if entry.get("starts_at"):
-                start_dt = dt.datetime.fromtimestamp(entry["starts_at"], tz_pht)
-                # Estimate a standard 3-hour duration for the sports event
-                stop_dt = start_dt + dt.timedelta(hours=3)
-                
-                # XMLTV time format: YYYYMMDDHHMMSS +TZ
-                start_str = start_dt.strftime('%Y%m%d%H%M%S +0800')
-                stop_str = stop_dt.strftime('%Y%m%d%H%M%S +0800')
-                
-                programmes.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
-                programmes.append(f'    <title>{channel_id}</title>')
-                programmes.append(f'    <desc>Live stream: {html.escape(entry["name"], quote=True)}</desc>')
-                programmes.append(f'    <category>{html.escape(entry["group"], quote=True)}</category>')
-                programmes.append('  </programme>')
-                
+        if start_dt:
+            stop_dt = start_dt + dt.timedelta(hours=3)
+            
+            start_str = start_dt.strftime('%Y%m%d%H%M%S +0800')
+            stop_str = stop_dt.strftime('%Y%m%d%H%M%S +0800')
+            
+            programmes.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
+            programmes.append(f'    <title>{display_name_with_date}</title>')
+            programmes.append(f'    <desc>Live stream: {html.escape(entry["name"], quote=True)}</desc>')
+            programmes.append(f'    <category>{html.escape(entry["group"], quote=True)}</category>')
+            programmes.append('  </programme>')
+            
     lines.extend(programmes)
     lines.append('</tv>')
     return '\n'.join(lines) + '\n'
