@@ -46,8 +46,14 @@ def decorate(entries):
     for source in entries:
         entry = dict(source)
         
+        # Check for 'tna' in the URL or referer to force allow it
+        url_val = entry.get('url', '').lower()
+        referer_val = entry.get('referer', '').lower()
+        
+        if 'tna' in url_val or 'tna' in referer_val:
+            entry['group'] = 'TNA'
         # Populate the group dynamically if it is missing
-        if 'group' not in entry and 'url' in entry:
+        elif 'group' not in entry and 'url' in entry:
             entry['group'] = roxie_group(entry['url'])
         
         # SKIP any stream that is not in our allowed list
