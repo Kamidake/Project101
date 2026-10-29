@@ -46,11 +46,13 @@ def decorate(entries):
     for source in entries:
         entry = dict(source)
         
-        # Check for 'tna' in the URL or referer to force allow it
-        url_val = entry.get('url', '').lower()
-        referer_val = entry.get('referer', '').lower()
+        # Check for 'tna' across multiple potential keys (page, url, referer, name)
+        page_val = str(entry.get('page', '')).lower()
+        url_val = str(entry.get('url', '')).lower()
+        referer_val = str(entry.get('referer', '')).lower()
+        name_val = str(entry.get('name', '')).lower()
         
-        if 'tna' in url_val or 'tna' in referer_val:
+        if 'tna' in page_val or 'tna' in url_val or 'tna' in referer_val or 'tna' in name_val:
             entry['group'] = 'TNA'
         # Populate the group dynamically if it is missing
         elif 'group' not in entry and 'url' in entry:
