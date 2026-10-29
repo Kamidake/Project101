@@ -12,6 +12,10 @@
     <display-name>Sacramento Kings vs New Orleans Pelicans</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/03c15d942cbf8dcfbe732b4a93df3a45-thumbnail.jpg" />
   </channel>
+  <channel id="TNA">
+    <display-name>TNA</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
+  </channel>
   <channel id="WWE Smackdown">
     <display-name>WWE Smackdown</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
@@ -30,6 +34,11 @@
     <title>Sacramento Kings vs New Orleans Pelicans</title>
     <desc>Live stream: Sacramento Kings vs New Orleans Pelicans</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261030080000 +0800" stop="20261030110000 +0800" channel="TNA">
+    <title>TNA</title>
+    <desc>Live stream: TNA</desc>
+    <category>TNA</category>
   </programme>
   <programme start="20261031080000 +0800" stop="20261031110000 +0800" channel="WWE Smackdown">
     <title>WWE Smackdown</title>
