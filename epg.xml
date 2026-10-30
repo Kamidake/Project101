@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Cleveland Cavaliers vs Atlanta Hawks">
-    <display-name>Oct 30 | Cleveland Cavaliers vs Atlanta Hawks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Memphis Grizzlies vs Portland Trail Blazers">
-    <display-name>Oct 30 | Memphis Grizzlies vs Portland Trail Blazers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Sacramento Kings vs New Orleans Pelicans">
-    <display-name>Oct 30 | Sacramento Kings vs New Orleans Pelicans</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="TNA">
-    <display-name>Oct 30 | TNA</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
-  </channel>
   <channel id="WWE Smackdown">
     <display-name>Oct 31 | WWE Smackdown</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261030070000 +0800" stop="20261030100000 +0800" channel="Cleveland Cavaliers vs Atlanta Hawks">
-    <title>Oct 30 | Cleveland Cavaliers vs Atlanta Hawks</title>
-    <desc>Live stream: Cleveland Cavaliers vs Atlanta Hawks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261030100000 +0800" stop="20261030130000 +0800" channel="Memphis Grizzlies vs Portland Trail Blazers">
-    <title>Oct 30 | Memphis Grizzlies vs Portland Trail Blazers</title>
-    <desc>Live stream: Memphis Grizzlies vs Portland Trail Blazers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261030080000 +0800" stop="20261030110000 +0800" channel="Sacramento Kings vs New Orleans Pelicans">
-    <title>Oct 30 | Sacramento Kings vs New Orleans Pelicans</title>
-    <desc>Live stream: Sacramento Kings vs New Orleans Pelicans</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261030080000 +0800" stop="20261030110000 +0800" channel="TNA">
-    <title>Oct 30 | TNA</title>
-    <desc>Live stream: TNA</desc>
-    <category>TNA</category>
-  </programme>
   <programme start="20261031080000 +0800" stop="20261031110000 +0800" channel="WWE Smackdown">
     <title>Oct 31 | WWE Smackdown</title>
     <desc>Live stream: WWE Smackdown</desc>
