@@ -2,10 +2,6 @@
 #EXTINF:-1 tvg-id="Cleveland Cavaliers vs Atlanta Hawks" tvg-name="Cleveland Cavaliers vs Atlanta Hawks" tvg-logo="https://static.ppvservices.st/assets/thumb/07e44f857d4cb8ad2c740cf9cab995cc-thumbnail.jpg" group-title="NBA",Cleveland Cavaliers vs Atlanta Hawks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/heat.m3u8
-#EXTINF:-1 tvg-id="Cleveland Cavaliers vs Atlanta Hawks" tvg-name="Cleveland Cavaliers vs Atlanta Hawks" tvg-logo="https://static.ppvservices.st/assets/thumb/07e44f857d4cb8ad2c740cf9cab995cc-thumbnail.jpg" group-title="NBA",Cleveland Cavaliers vs Atlanta Hawks
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba.m3u8
 #EXTINF:-1 tvg-id="Memphis Grizzlies vs Portland Trail Blazers" tvg-name="Memphis Grizzlies vs Portland Trail Blazers" tvg-logo="https://static.ppvservices.st/assets/thumb/fe7311a7c00d0465667b53a9f7fd3bf3-thumbnail.jpg" group-title="NBA",Memphis Grizzlies vs Portland Trail Blazers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
@@ -14,7 +10,7 @@ https://admin.formaturamaxi.com.br/nba3.m3u8
 #EXTINF:-1 tvg-id="Sacramento Kings vs New Orleans Pelicans" tvg-name="Sacramento Kings vs New Orleans Pelicans" tvg-logo="https://static.ppvservices.st/assets/thumb/03c15d942cbf8dcfbe732b4a93df3a45-thumbnail.jpg" group-title="NBA",Sacramento Kings vs New Orleans Pelicans
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba2.m3u8
+https://tedesco.formaturamaxi.com.br/nba2.m3u8
 #EXTINF:-1 tvg-id="TNA" tvg-name="TNA" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
