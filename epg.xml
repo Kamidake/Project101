@@ -104,4 +104,9 @@
     <desc>Live stream: WWE Smackdown</desc>
     <category>WWE</category>
   </programme>
+  <programme start="20261031080000 +0800" stop="20261031110000 +0800" channel="WWE Smackdown">
+    <title>Oct 31 | WWE Smackdown</title>
+    <desc>Live stream: WWE Smackdown</desc>
+    <category>WWE</category>
+  </programme>
 </tv>
