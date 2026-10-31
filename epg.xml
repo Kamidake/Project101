@@ -4,9 +4,13 @@
     <display-name>Oct 31 | Charlotte Hornets vs Washington Wizards</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
+  <channel id="Chicago Bulls vs Boston Celtics">
+    <display-name>Oct 31 | Chicago Bulls vs Boston Celtics</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
   <channel id="Denver Nuggets vs Phoenix Suns">
     <display-name>Oct 31 | Denver Nuggets vs Phoenix Suns</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/7296abf8aa8ee864a06337c768727ca0-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Detroit Pistons vs Brooklyn Nets">
     <display-name>Oct 31 | Detroit Pistons vs Brooklyn Nets</display-name>
@@ -26,7 +30,7 @@
   </channel>
   <channel id="Los Angeles Lakers vs Golden State Warriors">
     <display-name>Oct 31 | Los Angeles Lakers vs Golden State Warriors</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/87f1918003b213d846cbfd1d7ebe8284-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="New York Knicks vs Philadelphia 76ers">
     <display-name>Oct 31 | New York Knicks vs Philadelphia 76ers</display-name>
@@ -43,6 +47,11 @@
   <programme start="20261031070000 +0800" stop="20261031100000 +0800" channel="Charlotte Hornets vs Washington Wizards">
     <title>Oct 31 | Charlotte Hornets vs Washington Wizards</title>
     <desc>Live stream: Charlotte Hornets vs Washington Wizards</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261031073000 +0800" stop="20261031103000 +0800" channel="Chicago Bulls vs Boston Celtics">
+    <title>Oct 31 | Chicago Bulls vs Boston Celtics</title>
+    <desc>Live stream: Chicago Bulls vs Boston Celtics</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261031100000 +0800" stop="20261031130000 +0800" channel="Denver Nuggets vs Phoenix Suns">

@@ -3,7 +3,11 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="Denver Nuggets vs Phoenix Suns" tvg-name="Denver Nuggets vs Phoenix Suns" tvg-logo="https://static.ppvservices.st/assets/thumb/7296abf8aa8ee864a06337c768727ca0-thumbnail.jpg" group-title="NBA",Denver Nuggets vs Phoenix Suns
+#EXTINF:-1 tvg-id="Chicago Bulls vs Boston Celtics" tvg-name="Chicago Bulls vs Boston Celtics" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Chicago Bulls vs Boston Celtics
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Denver Nuggets vs Phoenix Suns" tvg-name="Denver Nuggets vs Phoenix Suns" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Denver Nuggets vs Phoenix Suns
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba5.m3u8
@@ -23,15 +27,15 @@ https://admin2.formaturamaxi.com.br/nba6.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba8.m3u8
-#EXTINF:-1 tvg-id="Los Angeles Lakers vs Golden State Warriors" tvg-name="Los Angeles Lakers vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/87f1918003b213d846cbfd1d7ebe8284-thumbnail.jpg" group-title="NBA",Los Angeles Lakers vs Golden State Warriors
+#EXTINF:-1 tvg-id="Los Angeles Lakers vs Golden State Warriors" tvg-name="Los Angeles Lakers vs Golden State Warriors" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Los Angeles Lakers vs Golden State Warriors
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba9.m3u8
-#EXTINF:-1 tvg-id="Los Angeles Lakers vs Golden State Warriors" tvg-name="Los Angeles Lakers vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/87f1918003b213d846cbfd1d7ebe8284-thumbnail.jpg" group-title="NBA",Los Angeles Lakers vs Golden State Warriors
+#EXTINF:-1 tvg-id="Los Angeles Lakers vs Golden State Warriors" tvg-name="Los Angeles Lakers vs Golden State Warriors" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Los Angeles Lakers vs Golden State Warriors
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/lakers.m3u8
-#EXTINF:-1 tvg-id="Los Angeles Lakers vs Golden State Warriors" tvg-name="Los Angeles Lakers vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/87f1918003b213d846cbfd1d7ebe8284-thumbnail.jpg" group-title="NBA",Los Angeles Lakers vs Golden State Warriors
+#EXTINF:-1 tvg-id="Los Angeles Lakers vs Golden State Warriors" tvg-name="Los Angeles Lakers vs Golden State Warriors" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Los Angeles Lakers vs Golden State Warriors
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba9.m3u8
