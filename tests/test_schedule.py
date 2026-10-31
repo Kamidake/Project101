@@ -1,10 +1,16 @@
 import unittest
+from unittest.mock import patch
 from schedule import start_times
 from scraper import internal_links, collect_roxie
 from metadata import decorate
 
 class ScheduleTests(unittest.TestCase):
-    def test_schedule_is_ignored_and_not_appended_to_title(self):
+    
+    @patch('metadata.time.time')
+    def test_schedule_is_ignored_and_not_appended_to_title(self, mock_time):
+        # Freeze time at epoch 0 so the Oct 20, 2026 stream is in the future
+        mock_time.return_value = 0
+        
         page = 'https://roxiestreams.info/nba-streams-1'
         row = '<tr><td><a href="/nba-streams-1">Team A vs Team B</a></td><td class="event-start-time">October 20, 2026 12:00 PM</td></tr>'
         
