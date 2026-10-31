@@ -32,10 +32,6 @@
     <display-name>Nov 01 | UFC FN: Moicano vs. Nolan</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
   </channel>
-  <channel id="WWE Smackdown">
-    <display-name>WWE Smackdown</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261101070000 +0800" stop="20261101100000 +0800" channel="Atlanta Hawks vs New Orleans Pelicans">
     <title>Nov 01 | Atlanta Hawks vs New Orleans Pelicans</title>
     <desc>Live stream: Atlanta Hawks vs New Orleans Pelicans</desc>
