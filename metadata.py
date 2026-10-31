@@ -1,5 +1,7 @@
 import hashlib
 import html
+import time
+import re
 from urllib.parse import urlsplit
 
 LOGO_BASE = 'https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/'
@@ -41,12 +43,21 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Keep each website event; deduplicate only identical event/URL/time entries."""
+    """Keep each website event; deduplicate and filter streams older than 1 hour."""
     unique = {}
+    
+    # Calculate timestamp for 1 hour ago (3600 seconds)
+    cutoff_time = time.time() - 3600
+    
     for source in entries:
         entry = dict(source)
         
-        # Check for 'tna' or 'ufc' across multiple potential keys (page, url, referer, name)
+        # Check if stream ended/started over an hour ago
+        stream_time = entry.get('ends_at') or entry.get('starts_at') or 0
+        if stream_time and stream_time < cutoff_time:
+            continue
+        
+        # Check for 'tna' or 'ufc' across multiple potential keys
         page_val = str(entry.get('page', '')).lower()
         url_val = str(entry.get('url', '')).lower()
         referer_val = str(entry.get('referer', '')).lower()
@@ -54,9 +65,10 @@ def decorate(entries):
         
         search_string = f"{page_val} {url_val} {referer_val} {name_val}"
         
-        if 'tna' in search_string:
+        # Using word boundaries to prevent false positives
+        if re.search(r'\btna\b', search_string):
             entry['group'] = 'TNA'
-        elif 'ufc' in search_string:
+        elif re.search(r'\bufc\b', search_string):
             entry['group'] = 'UFC'
         # Populate the group dynamically if it is missing
         elif 'group' not in entry and 'url' in entry:
