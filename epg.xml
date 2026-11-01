@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Atlanta Hawks vs New Orleans Pelicans">
-    <display-name>Nov 01 | Atlanta Hawks vs New Orleans Pelicans</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Cleveland Cavaliers vs Milwaukee Bucks">
     <display-name>Nov 01 | Cleveland Cavaliers vs Milwaukee Bucks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/4239a64f55451d353d0af6069678743b-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Minnesota Timberwolves vs San Antonio Spurs">
     <display-name>Nov 01 | Minnesota Timberwolves vs San Antonio Spurs</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/89993064cd415366c3ce7944edfd5044-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Oklahoma City Thunder vs Houston Rockets">
     <display-name>Nov 01 | Oklahoma City Thunder vs Houston Rockets</display-name>
@@ -18,17 +14,12 @@
   </channel>
   <channel id="Sacramento Kings vs Memphis Grizzlies">
     <display-name>Nov 01 | Sacramento Kings vs Memphis Grizzlies</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/9864edaa6555b76bc620ec8522c63036-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="UFC FN: Moicano vs. Nolan">
     <display-name>Nov 01 | UFC FN: Moicano vs. Nolan</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
   </channel>
-  <programme start="20261101070000 +0800" stop="20261101100000 +0800" channel="Atlanta Hawks vs New Orleans Pelicans">
-    <title>Nov 01 | Atlanta Hawks vs New Orleans Pelicans</title>
-    <desc>Live stream: Atlanta Hawks vs New Orleans Pelicans</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261101080000 +0800" stop="20261101110000 +0800" channel="Cleveland Cavaliers vs Milwaukee Bucks">
     <title>Nov 01 | Cleveland Cavaliers vs Milwaukee Bucks</title>
     <desc>Live stream: Cleveland Cavaliers vs Milwaukee Bucks</desc>
