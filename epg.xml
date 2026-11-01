@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Boston Celtics vs Orlando Magic">
-    <display-name>Nov 02 | Boston Celtics vs Orlando Magic</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/1c4021fb1ecea50fd203df9b0ee8faa2-thumbnail.jpg" />
-  </channel>
-  <channel id="Brooklyn Nets vs Indiana Pacers">
-    <display-name>Nov 02 | Brooklyn Nets vs Indiana Pacers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/6f589b8e067afd77dcd61f1816093fd6-thumbnail.jpg" />
-  </channel>
   <channel id="Los Angeles Clippers vs Golden State Warriors">
     <display-name>Nov 02 | Los Angeles Clippers vs Golden State Warriors</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -20,16 +12,6 @@
     <display-name>Nov 02 | WWE RAW</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261102043000 +0800" stop="20261102073000 +0800" channel="Boston Celtics vs Orlando Magic">
-    <title>Nov 02 | Boston Celtics vs Orlando Magic</title>
-    <desc>Live stream: Boston Celtics vs Orlando Magic</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261102060000 +0800" stop="20261102090000 +0800" channel="Brooklyn Nets vs Indiana Pacers">
-    <title>Nov 02 | Brooklyn Nets vs Indiana Pacers</title>
-    <desc>Live stream: Brooklyn Nets vs Indiana Pacers</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261102093000 +0800" stop="20261102123000 +0800" channel="Los Angeles Clippers vs Golden State Warriors">
     <title>Nov 02 | Los Angeles Clippers vs Golden State Warriors</title>
     <desc>Live stream: Los Angeles Clippers vs Golden State Warriors</desc>
@@ -39,11 +21,6 @@
     <title>Nov 02 | Toronto Raptors vs Los Angeles Lakers</title>
     <desc>Live stream: Toronto Raptors vs Los Angeles Lakers</desc>
     <category>NBA</category>
-  </programme>
-  <programme start="20261102090000 +0800" stop="20261102120000 +0800" channel="WWE RAW">
-    <title>Nov 02 | WWE RAW</title>
-    <desc>Live stream: WWE RAW</desc>
-    <category>WWE</category>
   </programme>
   <programme start="20261102090000 +0800" stop="20261102120000 +0800" channel="WWE RAW">
     <title>Nov 02 | WWE RAW</title>
