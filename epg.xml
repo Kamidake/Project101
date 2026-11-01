@@ -2,7 +2,7 @@
 <tv generator-info-name="LivePlaylist">
   <channel id="Atlanta Hawks vs New Orleans Pelicans">
     <display-name>Nov 01 | Atlanta Hawks vs New Orleans Pelicans</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/86b3c710bccce1c08ad816c33cd31404-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Cleveland Cavaliers vs Milwaukee Bucks">
     <display-name>Nov 01 | Cleveland Cavaliers vs Milwaukee Bucks</display-name>
@@ -15,10 +15,6 @@
   <channel id="Oklahoma City Thunder vs Houston Rockets">
     <display-name>Nov 01 | Oklahoma City Thunder vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7640679185fa59ca0f2d2713ffde7853-thumbnail.jpg" />
-  </channel>
-  <channel id="Philadelphia 76ers vs Charlotte Hornets">
-    <display-name>Nov 01 | Philadelphia 76ers vs Charlotte Hornets</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Sacramento Kings vs Memphis Grizzlies">
     <display-name>Nov 01 | Sacramento Kings vs Memphis Grizzlies</display-name>
@@ -46,11 +42,6 @@
   <programme start="20261101083000 +0800" stop="20261101113000 +0800" channel="Oklahoma City Thunder vs Houston Rockets">
     <title>Nov 01 | Oklahoma City Thunder vs Houston Rockets</title>
     <desc>Live stream: Oklahoma City Thunder vs Houston Rockets</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261101060000 +0800" stop="20261101090000 +0800" channel="Philadelphia 76ers vs Charlotte Hornets">
-    <title>Nov 01 | Philadelphia 76ers vs Charlotte Hornets</title>
-    <desc>Live stream: Philadelphia 76ers vs Charlotte Hornets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261101080000 +0800" stop="20261101110000 +0800" channel="Sacramento Kings vs Memphis Grizzlies">
