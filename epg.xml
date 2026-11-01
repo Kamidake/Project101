@@ -1,39 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Cleveland Cavaliers vs Milwaukee Bucks">
-    <display-name>Nov 01 | Cleveland Cavaliers vs Milwaukee Bucks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/4239a64f55451d353d0af6069678743b-thumbnail.jpg" />
-  </channel>
-  <channel id="Minnesota Timberwolves vs San Antonio Spurs">
-    <display-name>Nov 01 | Minnesota Timberwolves vs San Antonio Spurs</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/89993064cd415366c3ce7944edfd5044-thumbnail.jpg" />
-  </channel>
   <channel id="Oklahoma City Thunder vs Houston Rockets">
     <display-name>Nov 01 | Oklahoma City Thunder vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7640679185fa59ca0f2d2713ffde7853-thumbnail.jpg" />
   </channel>
-  <channel id="Sacramento Kings vs Memphis Grizzlies">
-    <display-name>Nov 01 | Sacramento Kings vs Memphis Grizzlies</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/9864edaa6555b76bc620ec8522c63036-thumbnail.jpg" />
-  </channel>
-  <programme start="20261101080000 +0800" stop="20261101110000 +0800" channel="Cleveland Cavaliers vs Milwaukee Bucks">
-    <title>Nov 01 | Cleveland Cavaliers vs Milwaukee Bucks</title>
-    <desc>Live stream: Cleveland Cavaliers vs Milwaukee Bucks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261101080000 +0800" stop="20261101110000 +0800" channel="Minnesota Timberwolves vs San Antonio Spurs">
-    <title>Nov 01 | Minnesota Timberwolves vs San Antonio Spurs</title>
-    <desc>Live stream: Minnesota Timberwolves vs San Antonio Spurs</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261101083000 +0800" stop="20261101113000 +0800" channel="Oklahoma City Thunder vs Houston Rockets">
     <title>Nov 01 | Oklahoma City Thunder vs Houston Rockets</title>
     <desc>Live stream: Oklahoma City Thunder vs Houston Rockets</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261101080000 +0800" stop="20261101110000 +0800" channel="Sacramento Kings vs Memphis Grizzlies">
-    <title>Nov 01 | Sacramento Kings vs Memphis Grizzlies</title>
-    <desc>Live stream: Sacramento Kings vs Memphis Grizzlies</desc>
     <category>NBA</category>
   </programme>
 </tv>
