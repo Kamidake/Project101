@@ -43,19 +43,11 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Keep each website event; deduplicate and filter streams older than 1 hour."""
+    """Keep each website event; deduplicate streams."""
     unique = {}
-    
-    # Calculate timestamp for 1 hour ago (3600 seconds)
-    cutoff_time = time.time() - 3600
     
     for source in entries:
         entry = dict(source)
-        
-        # Check if stream ended/started over an hour ago
-        stream_time = entry.get('ends_at') or entry.get('starts_at') or 0
-        if stream_time and stream_time < cutoff_time:
-            continue
         
         # Check for 'tna' or 'ufc' across multiple potential keys
         page_val = str(entry.get('page', '')).lower()
@@ -78,10 +70,10 @@ def decorate(entries):
         if entry.get('group') not in ALLOWED_GROUPS:
             continue
             
-        entry['name'] = clean_title(entry['name'])
+        entry['name'] = clean_title(entry.get('name', ''))
         
-        # Capture the original URL for deduplication identity
-        original_url = entry['url']
+        # Capture the original URL for deduplication identity safely
+        original_url = entry.get('url', '')
         identity = (entry['name'], original_url, entry.get('starts_at') or 0)
         
         if identity in unique:
@@ -98,4 +90,4 @@ def decorate(entries):
         unique[identity] = entry
         
     # Sort the final output by Group -> Name -> URL
-    return sorted(unique.values(), key=lambda e: (e.get('group', ''), e['name'], e['url']))
+    return sorted(unique.values(), key=lambda e: (e.get('group', ''), e.get('name', ''), e.get('url', '')))
