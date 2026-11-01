@@ -206,7 +206,12 @@ def render_epg(entries):
             lines.append('  </channel>')
             
         if start_dt:
-            stop_dt = start_dt + dt.timedelta(hours=3)
+            # Check for UFC or Boxing in the title or group to extend duration
+            search_text = f"{display} {entry.get('group', '')}".lower()
+            if 'ufc' in search_text or 'boxing' in search_text:
+                stop_dt = start_dt + dt.timedelta(hours=8)
+            else:
+                stop_dt = start_dt + dt.timedelta(hours=3)
             
             start_str = start_dt.strftime('%Y%m%d%H%M%S +0800')
             stop_str = stop_dt.strftime('%Y%m%d%H%M%S +0800')
