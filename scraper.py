@@ -327,6 +327,32 @@ def select_roxie(pool):
     return pages, candidates, unsupported, errors, attempts
 
 
+def filter_expired_streams(entries):
+    """Remove streams whose event stopped more than an hour ago."""
+    tz_pht = dt.timezone(dt.timedelta(hours=8))
+    now_pht = dt.datetime.now(tz_pht)
+    
+    active_entries = []
+    
+    for entry in entries:
+        if entry.get("starts_at"):
+            start_dt = dt.datetime.fromtimestamp(entry["starts_at"], tz_pht)
+            display = safe(entry.get("display_name", entry["name"]))
+            
+            search_text = f"{display} {entry.get('group', '')}".lower()
+            if 'ufc' in search_text or 'boxing' in search_text:
+                stop_dt = start_dt + dt.timedelta(hours=8)
+            else:
+                stop_dt = start_dt + dt.timedelta(hours=3)
+            
+            if now_pht > stop_dt + dt.timedelta(hours=1):
+                continue
+                
+        active_entries.append(entry)
+        
+    return active_entries
+
+
 def main():
     print('Discovering stream pages...', flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
@@ -352,6 +378,7 @@ def main():
                 unavailable += 1
                 
     entries = enrich(decorate(entries))
+    entries = filter_expired_streams(entries)
     
     report = {
         'updated_utc': dt.datetime.now(dt.timezone.utc).isoformat(), 
@@ -361,8 +388,8 @@ def main():
         'unavailable_urls': unavailable,
         'unsupported_pages': unsupported, 
         'errors': errors,
-        'event_groups': len({e['event_id'] for e in entries}),
-        'event_posters': sum('assets/logos/' not in e['poster'] for e in entries),
+        'event_groups': len({e['event_id'] for e in entries if 'event_id' in e}),
+        'event_posters': sum('assets/logos/' not in e.get('poster', 'assets/logos/') for e in entries),
         'roxie_source': BASE, 
         'roxie_attempts': attempts
     }
