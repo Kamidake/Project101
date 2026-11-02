@@ -48,6 +48,15 @@
     <display-name>Nov 03 | Washington Wizards vs Orlando Magic</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/acbc89cb759806d1ffdc1ed216c45029-thumbnail.jpg" />
   </channel>
+  <channel id="WWE RAW">
+    <display-name>Nov 03 | WWE RAW</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Atlanta Hawks vs Indiana Pacers">
+    <title>Nov 03 | Atlanta Hawks vs Indiana Pacers</title>
+    <desc>Live stream: Atlanta Hawks vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Atlanta Hawks vs Indiana Pacers">
     <title>Nov 03 | Atlanta Hawks vs Indiana Pacers</title>
     <desc>Live stream: Atlanta Hawks vs Indiana Pacers</desc>
@@ -117,5 +126,15 @@
     <title>Nov 03 | Washington Wizards vs Orlando Magic</title>
     <desc>Live stream: Washington Wizards vs Orlando Magic</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261103070000 +0800" stop="20261103100000 +0800" channel="WWE RAW">
+    <title>Nov 03 | WWE RAW</title>
+    <desc>Live stream: WWE RAW</desc>
+    <category>WWE</category>
+  </programme>
+  <programme start="20261103070000 +0800" stop="20261103100000 +0800" channel="WWE RAW">
+    <title>Nov 03 | WWE RAW</title>
+    <desc>Live stream: WWE RAW</desc>
+    <category>WWE</category>
   </programme>
 </tv>
