@@ -1,3 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Atlanta Hawks vs Indiana Pacers">
+    <display-name>Nov 03 | Atlanta Hawks vs Indiana Pacers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/14401a338e2b124fd653b1626b51ca66-thumbnail.jpg" />
+  </channel>
+  <channel id="Boston Celtics vs Houston Rockets">
+    <display-name>Nov 03 | Boston Celtics vs Houston Rockets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/39bc96aff829de783d20055d60209629-thumbnail.jpg" />
+  </channel>
+  <channel id="Brooklyn Nets vs New York Knicks">
+    <display-name>Nov 03 | Brooklyn Nets vs New York Knicks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/c171b492bb6cbc3277867ea9fe15d3a9-thumbnail.jpg" />
+  </channel>
+  <channel id="Chicago Bulls vs Philadelphia 76ers">
+    <display-name>Nov 03 | Chicago Bulls vs Philadelphia 76ers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/f40ba34cbfa96b675753b82e50ddacbd-thumbnail.jpg" />
+  </channel>
+  <channel id="Detroit Pistons vs Charlotte Hornets">
+    <display-name>Nov 03 | Detroit Pistons vs Charlotte Hornets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ab4ba136e4f835ab91e1ac8b78764a4f-thumbnail.jpg" />
+  </channel>
+  <channel id="Milwaukee Bucks vs Minnesota Timberwolves">
+    <display-name>Nov 03 | Milwaukee Bucks vs Minnesota Timberwolves</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/8eff504e68f79a2b1ee6feb4e5aeb9c1-thumbnail.jpg" />
+  </channel>
+  <channel id="New Orleans Pelicans vs Memphis Grizzlies">
+    <display-name>Nov 03 | New Orleans Pelicans vs Memphis Grizzlies</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/dbfaa32a9b842308d7773302428958c5-thumbnail.jpg" />
+  </channel>
+  <channel id="Oklahoma City Thunder vs Cleveland Cavaliers">
+    <display-name>Nov 03 | Oklahoma City Thunder vs Cleveland Cavaliers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ab4f7105f2d177e7f7dfb39db60e9ec9-thumbnail.jpg" />
+  </channel>
+  <channel id="Portland Trail Blazers vs Denver Nuggets">
+    <display-name>Nov 03 | Portland Trail Blazers vs Denver Nuggets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/8906c74a8c37811b0e37e99e185f7e54-thumbnail.jpg" />
+  </channel>
+  <channel id="Sacramento Kings vs Dallas Mavericks">
+    <display-name>Nov 03 | Sacramento Kings vs Dallas Mavericks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/f65d3cbba842fd329d4aeb4798b2ed56-thumbnail.jpg" />
+  </channel>
+  <channel id="Utah Jazz vs San Antonio Spurs">
+    <display-name>Nov 03 | Utah Jazz vs San Antonio Spurs</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/c2e29275c609e04594df977e90600e3b-thumbnail.jpg" />
+  </channel>
+  <channel id="Washington Wizards vs Orlando Magic">
+    <display-name>Nov 03 | Washington Wizards vs Orlando Magic</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/acbc89cb759806d1ffdc1ed216c45029-thumbnail.jpg" />
+  </channel>
+  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Atlanta Hawks vs Indiana Pacers">
+    <title>Nov 03 | Atlanta Hawks vs Indiana Pacers</title>
+    <desc>Live stream: Atlanta Hawks vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103093000 +0800" stop="20261103123000 +0800" channel="Boston Celtics vs Houston Rockets">
+    <title>Nov 03 | Boston Celtics vs Houston Rockets</title>
+    <desc>Live stream: Boston Celtics vs Houston Rockets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Brooklyn Nets vs New York Knicks">
+    <title>Nov 03 | Brooklyn Nets vs New York Knicks</title>
+    <desc>Live stream: Brooklyn Nets vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Brooklyn Nets vs New York Knicks">
+    <title>Nov 03 | Brooklyn Nets vs New York Knicks</title>
+    <desc>Live stream: Brooklyn Nets vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Chicago Bulls vs Philadelphia 76ers">
+    <title>Nov 03 | Chicago Bulls vs Philadelphia 76ers</title>
+    <desc>Live stream: Chicago Bulls vs Philadelphia 76ers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Detroit Pistons vs Charlotte Hornets">
+    <title>Nov 03 | Detroit Pistons vs Charlotte Hornets</title>
+    <desc>Live stream: Detroit Pistons vs Charlotte Hornets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103090000 +0800" stop="20261103120000 +0800" channel="Milwaukee Bucks vs Minnesota Timberwolves">
+    <title>Nov 03 | Milwaukee Bucks vs Minnesota Timberwolves</title>
+    <desc>Live stream: Milwaukee Bucks vs Minnesota Timberwolves</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103090000 +0800" stop="20261103120000 +0800" channel="Milwaukee Bucks vs Minnesota Timberwolves">
+    <title>Nov 03 | Milwaukee Bucks vs Minnesota Timberwolves</title>
+    <desc>Live stream: Milwaukee Bucks vs Minnesota Timberwolves</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103090000 +0800" stop="20261103120000 +0800" channel="New Orleans Pelicans vs Memphis Grizzlies">
+    <title>Nov 03 | New Orleans Pelicans vs Memphis Grizzlies</title>
+    <desc>Live stream: New Orleans Pelicans vs Memphis Grizzlies</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103080000 +0800" stop="20261103110000 +0800" channel="Oklahoma City Thunder vs Cleveland Cavaliers">
+    <title>Nov 03 | Oklahoma City Thunder vs Cleveland Cavaliers</title>
+    <desc>Live stream: Oklahoma City Thunder vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103100000 +0800" stop="20261103130000 +0800" channel="Portland Trail Blazers vs Denver Nuggets">
+    <title>Nov 03 | Portland Trail Blazers vs Denver Nuggets</title>
+    <desc>Live stream: Portland Trail Blazers vs Denver Nuggets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103090000 +0800" stop="20261103120000 +0800" channel="Sacramento Kings vs Dallas Mavericks">
+    <title>Nov 03 | Sacramento Kings vs Dallas Mavericks</title>
+    <desc>Live stream: Sacramento Kings vs Dallas Mavericks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103093000 +0800" stop="20261103123000 +0800" channel="Utah Jazz vs San Antonio Spurs">
+    <title>Nov 03 | Utah Jazz vs San Antonio Spurs</title>
+    <desc>Live stream: Utah Jazz vs San Antonio Spurs</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Washington Wizards vs Orlando Magic">
+    <title>Nov 03 | Washington Wizards vs Orlando Magic</title>
+    <desc>Live stream: Washington Wizards vs Orlando Magic</desc>
+    <category>NBA</category>
+  </programme>
 </tv>
