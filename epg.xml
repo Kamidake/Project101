@@ -8,10 +8,6 @@
     <display-name>Nov 02 | Toronto Raptors vs Los Angeles Lakers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7c5b30896a4a03a7b5d9b7b09bffe5fb-thumbnail.jpg" />
   </channel>
-  <channel id="WWE RAW">
-    <display-name>Nov 02 | WWE RAW</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261102093000 +0800" stop="20261102123000 +0800" channel="Los Angeles Clippers vs Golden State Warriors">
     <title>Nov 02 | Los Angeles Clippers vs Golden State Warriors</title>
     <desc>Live stream: Los Angeles Clippers vs Golden State Warriors</desc>
@@ -31,15 +27,5 @@
     <title>Nov 02 | Toronto Raptors vs Los Angeles Lakers</title>
     <desc>Live stream: Toronto Raptors vs Los Angeles Lakers</desc>
     <category>NBA</category>
-  </programme>
-  <programme start="20261102090000 +0800" stop="20261102120000 +0800" channel="WWE RAW">
-    <title>Nov 02 | WWE RAW</title>
-    <desc>Live stream: WWE RAW</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261102090000 +0800" stop="20261102120000 +0800" channel="WWE RAW">
-    <title>Nov 02 | WWE RAW</title>
-    <desc>Live stream: WWE RAW</desc>
-    <category>WWE</category>
   </programme>
 </tv>
