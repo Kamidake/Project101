@@ -1,26 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Los Angeles Clippers vs Golden State Warriors">
-    <display-name>Nov 02 | Los Angeles Clippers vs Golden State Warriors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Toronto Raptors vs Los Angeles Lakers">
-    <display-name>Nov 02 | Toronto Raptors vs Los Angeles Lakers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <programme start="20261102093000 +0800" stop="20261102123000 +0800" channel="Los Angeles Clippers vs Golden State Warriors">
-    <title>Nov 02 | Los Angeles Clippers vs Golden State Warriors</title>
-    <desc>Live stream: Los Angeles Clippers vs Golden State Warriors</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261102100000 +0800" stop="20261102130000 +0800" channel="Toronto Raptors vs Los Angeles Lakers">
-    <title>Nov 02 | Toronto Raptors vs Los Angeles Lakers</title>
-    <desc>Live stream: Toronto Raptors vs Los Angeles Lakers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261102100000 +0800" stop="20261102130000 +0800" channel="Toronto Raptors vs Los Angeles Lakers">
-    <title>Nov 02 | Toronto Raptors vs Los Angeles Lakers</title>
-    <desc>Live stream: Toronto Raptors vs Los Angeles Lakers</desc>
-    <category>NBA</category>
-  </programme>
 </tv>
