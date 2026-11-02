@@ -1,6 +1,6 @@
 import hashlib
 import html
-import time  # Required by test_schedule.py mocks
+import time
 import re
 from urllib.parse import urlsplit
 
@@ -69,34 +69,34 @@ def decorate(entries):
         if entry.get('group') not in ALLOWED_GROUPS:
             continue
             
-        entry['name'] = clean_title(entry.get('name', ''))
+        clean_name = clean_title(entry.get('name', ''))
+        entry['name'] = clean_name
         
-        # Core event identity (Group + Name + Start Time)
-        event_key = (entry.get('group'), entry['name'], entry.get('starts_at') or 0)
+        # Set display_name to the original un-numbered name to satisfy the test & EPG
+        entry['display_name'] = clean_name 
         
-        # Unique stream identity (Core Event + Stream URL)
+        # Core event identity (Group + Clean Name + Start Time)
+        event_key = (entry.get('group'), clean_name, entry.get('starts_at') or 0)
+        
         original_url = entry.get('url', '')
         stream_identity = (event_key, original_url)
         
-        # Drop exact duplicate URLs for the same event
         if stream_identity in unique:
             continue
             
-        # Track alternates and number them
+        # Track alternates and append number ONLY to the stream name
         if event_key not in event_counts:
             event_counts[event_key] = 1
         else:
             event_counts[event_key] += 1
-            entry['name'] = f"{entry['name']} ({event_counts[event_key]})"
+            entry['name'] = f"{clean_name} ({event_counts[event_key]})"
             
         entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
-        entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{event_key[2]}"
+        entry['event_id'] = f"{entry.get('group')}:{clean_name}:{event_key[2]}"
         entry['provider'] = entry.get('provider', 'RoxieStreams')
         
-        # Generate the TVG ID using ONLY the event details (not the URL)
-        # This ensures all alternate streams share the same EPG listing
+        # Hash uses the original event key, ensuring alternates share the same TVG ID
         entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(event_key).encode()).hexdigest()[:16]
-        entry['display_name'] = entry['name']
             
         unique[stream_identity] = entry
         
