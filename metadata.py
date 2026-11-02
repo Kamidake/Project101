@@ -45,10 +45,10 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Keep each website event; deduplicate exact URLs and number alternate streams."""
-    unique = {}
-    event_counts = {}
+    """Keep each website event; deduplicate exact URLs and number alternates deterministically."""
+    events = {}
     
+    # Pass 1: Group all unique URLs by their core event
     for source in entries:
         entry = dict(source)
         
@@ -76,30 +76,38 @@ def decorate(entries):
         
         # Core event identity (Group + Base Name + Start Time)
         event_key = (entry.get('group'), clean_name, entry.get('starts_at') or 0)
+        url = entry.get('url', '')
         
-        original_url = entry.get('url', '')
-        stream_identity = (event_key, original_url)
-        
-        # Remove exact duplicate URLs for the same event
-        if stream_identity in unique:
-            continue
+        if event_key not in events:
+            events[event_key] = {}
             
-        # Number alternate streams so they get unique channel listings
-        if event_key not in event_counts:
-            event_counts[event_key] = 1
-            entry['name'] = clean_name
-        else:
-            event_counts[event_key] += 1
-            entry['name'] = f"{clean_name} ({event_counts[event_key]})"
+        # Only store the first instance of an exact URL for a given event
+        if url not in events[event_key]:
+            entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
+            entry['event_id'] = f"{entry.get('group')}:{clean_name}:{event_key[2]}"
+            entry['provider'] = entry.get('provider', 'RoxieStreams')
+            events[event_key][url] = entry
             
-        entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
-        entry['event_id'] = f"{entry.get('group')}:{clean_name}:{event_key[2]}"
-        entry['provider'] = entry.get('provider', 'RoxieStreams')
+    final_entries = []
+    
+    # Pass 2: Sort URLs to ensure alternate numbering is invariant to input order
+    for event_key, url_dict in events.items():
+        sorted_urls = sorted(url_dict.keys())
         
-        # Generate the TVG ID using the numbered name so the test passes (unique per alternate)
-        tvg_identity = (entry.get('group'), entry['name'], event_key[2])
-        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(tvg_identity).encode()).hexdigest()[:16]
+        for index, url in enumerate(sorted_urls):
+            entry = url_dict[url]
+            base_name = event_key[1]
             
-        unique[stream_identity] = entry
-        
-    return sorted(unique.values(), key=lambda e: (e.get('group', ''), e.get('name', ''), e.get('url', '')))
+            # Number alternate streams so they get unique channel listings
+            if index == 0:
+                entry['name'] = base_name
+            else:
+                entry['name'] = f"{base_name} ({index + 1})"
+                
+            # Generate the TVG ID using the numbered name so it is unique per alternate
+            tvg_identity = (event_key[0], entry['name'], event_key[2])
+            entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(tvg_identity).encode()).hexdigest()[:16]
+            
+            final_entries.append(entry)
+            
+    return sorted(final_entries, key=lambda e: (e.get('group', ''), e.get('name', ''), e.get('url', '')))
