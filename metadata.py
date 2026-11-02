@@ -45,7 +45,7 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Remove duplicate URLs, keep alternates numbered, and use identical TVG IDs to merge EPG."""
+    """Keep each website event; deduplicate exact URLs and number alternate streams."""
     unique = {}
     event_counts = {}
     
@@ -70,23 +70,24 @@ def decorate(entries):
             continue
             
         clean_name = clean_title(entry.get('name', ''))
-        entry['name'] = clean_name
         
-        # Set display_name to the original un-numbered name to satisfy the test & EPG
+        # display_name remains un-numbered so the EPG groups them together cleanly
         entry['display_name'] = clean_name 
         
-        # Core event identity (Group + Clean Name + Start Time)
+        # Core event identity (Group + Base Name + Start Time)
         event_key = (entry.get('group'), clean_name, entry.get('starts_at') or 0)
         
         original_url = entry.get('url', '')
         stream_identity = (event_key, original_url)
         
+        # Remove exact duplicate URLs for the same event
         if stream_identity in unique:
             continue
             
-        # Track alternates and append number ONLY to the stream name
+        # Number alternate streams so they get unique channel listings
         if event_key not in event_counts:
             event_counts[event_key] = 1
+            entry['name'] = clean_name
         else:
             event_counts[event_key] += 1
             entry['name'] = f"{clean_name} ({event_counts[event_key]})"
@@ -95,8 +96,9 @@ def decorate(entries):
         entry['event_id'] = f"{entry.get('group')}:{clean_name}:{event_key[2]}"
         entry['provider'] = entry.get('provider', 'RoxieStreams')
         
-        # Hash uses the original event key, ensuring alternates share the same TVG ID
-        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(event_key).encode()).hexdigest()[:16]
+        # Generate the TVG ID using the numbered name so the test passes (unique per alternate)
+        tvg_identity = (entry.get('group'), entry['name'], event_key[2])
+        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(tvg_identity).encode()).hexdigest()[:16]
             
         unique[stream_identity] = entry
         
