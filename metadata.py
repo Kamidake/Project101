@@ -1,6 +1,5 @@
 import hashlib
 import html
-import time
 import re
 from urllib.parse import urlsplit
 
@@ -22,8 +21,11 @@ LOGOS = {
     'AEW': 'aew', 'TNA': 'tna'
 }
 
-# The strict list of groups you want to keep
 ALLOWED_GROUPS = {'NBA', 'Combat Sports', 'Boxing', 'AEW', 'WWE', 'UFC', 'TNA'}
+
+# Pre-compiled regex for efficiency
+TNA_REGEX = re.compile(r'\btna\b')
+UFC_REGEX = re.compile(r'\bufc\b')
 
 
 def clean_title(value):
@@ -43,13 +45,12 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Keep each website event; deduplicate streams."""
+    """Keep each website event; deduplicate streams by event."""
     unique = {}
     
     for source in entries:
         entry = dict(source)
         
-        # Check for 'tna' or 'ufc' across multiple potential keys
         page_val = str(entry.get('page', '')).lower()
         url_val = str(entry.get('url', '')).lower()
         referer_val = str(entry.get('referer', '')).lower()
@@ -57,24 +58,21 @@ def decorate(entries):
         
         search_string = f"{page_val} {url_val} {referer_val} {name_val}"
         
-        # Using word boundaries to prevent false positives
-        if re.search(r'\btna\b', search_string):
+        if TNA_REGEX.search(search_string):
             entry['group'] = 'TNA'
-        elif re.search(r'\bufc\b', search_string):
+        elif UFC_REGEX.search(search_string):
             entry['group'] = 'UFC'
-        # Populate the group dynamically if it is missing
         elif 'group' not in entry and 'url' in entry:
             entry['group'] = roxie_group(entry['url'])
         
-        # SKIP any stream that is not in our allowed list
         if entry.get('group') not in ALLOWED_GROUPS:
             continue
             
         entry['name'] = clean_title(entry.get('name', ''))
         
-        # Capture the original URL for deduplication identity safely
-        original_url = entry.get('url', '')
-        identity = (entry['name'], original_url, entry.get('starts_at') or 0)
+        # CHANGED: Removed original_url from the identity tuple.
+        # Deduplicates strictly by Event Group, Event Name, and Start Time.
+        identity = (entry.get('group'), entry['name'], entry.get('starts_at') or 0)
         
         if identity in unique:
             continue
@@ -83,11 +81,10 @@ def decorate(entries):
         entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{identity[2]}"
         entry['provider'] = entry.get('provider', 'RoxieStreams')
         
-        # Generate a stable TVG ID based on the unique identity tuple
+        # TVG ID is now hashed purely on the event details, not the stream link
         entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(identity).encode()).hexdigest()[:16]
         entry['display_name'] = entry['name']
             
         unique[identity] = entry
         
-    # Sort the final output by Group -> Name -> URL
     return sorted(unique.values(), key=lambda e: (e.get('group', ''), e.get('name', ''), e.get('url', '')))
