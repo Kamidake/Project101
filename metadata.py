@@ -33,6 +33,15 @@ def clean_title(value):
     return ' '.join(html.unescape(str(value)).split())
 
 
+def normalize_for_identity(title):
+    """Aggressively normalizes titles to group identical events with slight wording differences."""
+    t = title.lower()
+    for sep in [' vs. ', ' v ', ' @ ', ' at ', ' - ']:
+        t = t.replace(sep, ' vs ')
+    t = re.sub(r'[^a-z0-9 ]', '', t)
+    return ' '.join(t.split())
+
+
 def roxie_group(page):
     """Determines the group based on the URL path slug."""
     slug = urlsplit(page).path.strip('/').split('-')[0].lower()
@@ -45,10 +54,9 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Keep each website event; deduplicate exact URLs and number alternates deterministically."""
+    """Aggressively deduplicate events and streams to prevent EPG bloat."""
     events = {}
     
-    # Pass 1: Group all unique URLs by their core event
     for source in entries:
         entry = dict(source)
         
@@ -70,41 +78,51 @@ def decorate(entries):
             continue
             
         clean_name = clean_title(entry.get('name', ''))
+        identity_name = normalize_for_identity(clean_name)
         
-        # display_name remains un-numbered so the EPG groups them together cleanly
         entry['display_name'] = clean_name 
         
-        # Core event identity (Group + Base Name + Start Time)
-        event_key = (entry.get('group'), clean_name, entry.get('starts_at') or 0)
-        url = entry.get('url', '')
+        # Group events occurring within the same 1-hour block to catch slight schedule variations
+        try:
+            starts_at = int(entry.get('starts_at') or 0)
+            starts_at_rounded = (starts_at // 3600) * 3600 if starts_at else 0
+        except (ValueError, TypeError):
+            starts_at_rounded = entry.get('starts_at')
+        
+        # Core event identity uses the fuzzed data to group effectively
+        event_key = (entry.get('group'), identity_name, starts_at_rounded)
+        
+        # Strip query parameters/tokens for stream deduplication to drop useless exact-duplicates
+        raw_url = entry.get('url', '').strip()
+        parsed = urlsplit(raw_url)
+        clean_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
         
         if event_key not in events:
             events[event_key] = {}
             
-        # Only store the first instance of an exact URL for a given event
-        if url not in events[event_key]:
+        # Only add the stream if this base URL hasn't been added to this event yet
+        if clean_url not in events[event_key]:
             entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
-            entry['event_id'] = f"{entry.get('group')}:{clean_name}:{event_key[2]}"
+            entry['event_id'] = f"{entry.get('group')}:{clean_name}:{entry.get('starts_at') or 0}"
             entry['provider'] = entry.get('provider', 'RoxieStreams')
-            events[event_key][url] = entry
+            events[event_key][clean_url] = entry
             
     final_entries = []
     
-    # Pass 2: Sort URLs to ensure alternate numbering is invariant to input order
+    # Pass 2: Sort URLs to ensure alternate numbering is deterministic
     for event_key, url_dict in events.items():
         sorted_urls = sorted(url_dict.keys())
         
-        for index, url in enumerate(sorted_urls):
-            entry = url_dict[url]
-            base_name = event_key[1]
+        for index, clean_url in enumerate(sorted_urls):
+            entry = url_dict[clean_url]
+            base_name = entry['display_name']
             
-            # Number alternate streams so they get unique channel listings
             if index == 0:
                 entry['name'] = base_name
             else:
                 entry['name'] = f"{base_name} ({index + 1})"
                 
-            # Generate the TVG ID using the numbered name so it is unique per alternate
+            # TVG ID generated securely per alternate stream to satisfy EPG mapper/test
             tvg_identity = (event_key[0], entry['name'], event_key[2])
             entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(tvg_identity).encode()).hexdigest()[:16]
             
