@@ -1,5 +1,6 @@
 import hashlib
 import html
+import time  # Required by test_schedule.py mocks
 import re
 from urllib.parse import urlsplit
 
@@ -23,7 +24,6 @@ LOGOS = {
 
 ALLOWED_GROUPS = {'NBA', 'Combat Sports', 'Boxing', 'AEW', 'WWE', 'UFC', 'TNA'}
 
-# Pre-compiled regex for efficiency
 TNA_REGEX = re.compile(r'\btna\b')
 UFC_REGEX = re.compile(r'\bufc\b')
 
@@ -45,8 +45,9 @@ def fallback_logo(group):
 
 
 def decorate(entries):
-    """Keep each website event; deduplicate streams by event."""
+    """Remove duplicate URLs, keep alternates numbered, and use identical TVG IDs to merge EPG."""
     unique = {}
+    event_counts = {}
     
     for source in entries:
         entry = dict(source)
@@ -70,21 +71,33 @@ def decorate(entries):
             
         entry['name'] = clean_title(entry.get('name', ''))
         
-        # CHANGED: Removed original_url from the identity tuple.
-        # Deduplicates strictly by Event Group, Event Name, and Start Time.
-        identity = (entry.get('group'), entry['name'], entry.get('starts_at') or 0)
+        # Core event identity (Group + Name + Start Time)
+        event_key = (entry.get('group'), entry['name'], entry.get('starts_at') or 0)
         
-        if identity in unique:
+        # Unique stream identity (Core Event + Stream URL)
+        original_url = entry.get('url', '')
+        stream_identity = (event_key, original_url)
+        
+        # Drop exact duplicate URLs for the same event
+        if stream_identity in unique:
             continue
             
+        # Track alternates and number them
+        if event_key not in event_counts:
+            event_counts[event_key] = 1
+        else:
+            event_counts[event_key] += 1
+            entry['name'] = f"{entry['name']} ({event_counts[event_key]})"
+            
         entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
-        entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{identity[2]}"
+        entry['event_id'] = f"{entry.get('group')}:{entry['name']}:{event_key[2]}"
         entry['provider'] = entry.get('provider', 'RoxieStreams')
         
-        # TVG ID is now hashed purely on the event details, not the stream link
-        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(identity).encode()).hexdigest()[:16]
+        # Generate the TVG ID using ONLY the event details (not the URL)
+        # This ensures all alternate streams share the same EPG listing
+        entry['tvg_id'] = 'zerostreams.' + hashlib.sha256(repr(event_key).encode()).hexdigest()[:16]
         entry['display_name'] = entry['name']
             
-        unique[identity] = entry
+        unique[stream_identity] = entry
         
     return sorted(unique.values(), key=lambda e: (e.get('group', ''), e.get('name', ''), e.get('url', '')))
