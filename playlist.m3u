@@ -3,6 +3,10 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="Boston Celtics vs Houston Rockets" tvg-name="Boston Celtics vs Houston Rockets" tvg-logo="https://static.ppvservices.st/assets/thumb/39bc96aff829de783d20055d60209629-thumbnail.jpg" group-title="NBA",Boston Celtics vs Houston Rockets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-10
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba10.m3u8
 #EXTINF:-1 tvg-id="Brooklyn Nets vs New York Knicks" tvg-name="Brooklyn Nets vs New York Knicks" tvg-logo="https://static.ppvservices.st/assets/thumb/c171b492bb6cbc3277867ea9fe15d3a9-thumbnail.jpg" group-title="NBA",Brooklyn Nets vs New York Knicks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
@@ -27,7 +31,7 @@ https://admin.formaturamaxi.com.br/nba9.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba8.m3u8
-#EXTINF:-1 tvg-id="Oklahoma City Thunder vs Cleveland Cavaliers" tvg-name="Oklahoma City Thunder vs Cleveland Cavaliers" tvg-logo="https://static.ppvservices.st/assets/thumb/ab4f7105f2d177e7f7dfb39db60e9ec9-thumbnail.jpg" group-title="NBA",Oklahoma City Thunder vs Cleveland Cavaliers
+#EXTINF:-1 tvg-id="Oklahoma City Thunder vs Cleveland Cavaliers" tvg-name="Oklahoma City Thunder vs Cleveland Cavaliers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Oklahoma City Thunder vs Cleveland Cavaliers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba.m3u8
@@ -59,11 +63,3 @@ https://admin2.formaturamaxi.com.br/nba11.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba5.m3u8
-#EXTINF:-1 tvg-id="WWE RAW" tvg-name="WWE RAW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE RAW
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/wwe.m3u8
-#EXTINF:-1 tvg-id="WWE RAW" tvg-name="WWE RAW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE RAW
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://tedesco.formaturamaxi.com.br/wwe.m3u8
