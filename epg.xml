@@ -1,17 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="TNA">
-    <display-name>Nov 06 | TNA</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
-  </channel>
-  <programme start="20261106090000 +0800" stop="20261106120000 +0800" channel="TNA">
-    <title>Nov 06 | TNA</title>
-    <desc>Live stream: TNA</desc>
-    <category>TNA</category>
-  </programme>
-  <programme start="20261106090000 +0800" stop="20261106120000 +0800" channel="TNA">
-    <title>Nov 06 | TNA</title>
-    <desc>Live stream: TNA (2)</desc>
-    <category>TNA</category>
-  </programme>
 </tv>
