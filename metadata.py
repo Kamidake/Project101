@@ -56,9 +56,23 @@ def fallback_logo(group):
 def decorate(entries):
     """Aggressively deduplicate events and streams to prevent EPG bloat."""
     events = {}
+    current_time = time.time()
     
     for source in entries:
         entry = dict(source)
+        
+        try:
+            starts_at = int(entry.get('starts_at') or 0)
+        except (ValueError, TypeError):
+            starts_at = 0
+            
+        try:
+            ends_at = int(entry.get('ends_at') or (starts_at + 10800 if starts_at else 0))
+        except (ValueError, TypeError):
+            ends_at = starts_at + 10800
+
+        if ends_at and current_time > (ends_at + 900):
+            continue
         
         page_val = str(entry.get('page', '')).lower()
         url_val = str(entry.get('url', '')).lower()
@@ -83,11 +97,7 @@ def decorate(entries):
         entry['display_name'] = clean_name 
         
         # Group events occurring within the same 1-hour block to catch slight schedule variations
-        try:
-            starts_at = int(entry.get('starts_at') or 0)
-            starts_at_rounded = (starts_at // 3600) * 3600 if starts_at else 0
-        except (ValueError, TypeError):
-            starts_at_rounded = entry.get('starts_at')
+        starts_at_rounded = (starts_at // 3600) * 3600 if starts_at else 0
         
         # Core event identity uses the fuzzed data to group effectively
         event_key = (entry.get('group'), identity_name, starts_at_rounded)
@@ -103,7 +113,7 @@ def decorate(entries):
         # Only add the stream if this base URL hasn't been added to this event yet
         if clean_url not in events[event_key]:
             entry['poster'] = entry.get('poster') or fallback_logo(entry.get('group'))
-            entry['event_id'] = f"{entry.get('group')}:{clean_name}:{entry.get('starts_at') or 0}"
+            entry['event_id'] = f"{entry.get('group')}:{clean_name}:{starts_at}"
             entry['provider'] = entry.get('provider', 'RoxieStreams')
             events[event_key][clean_url] = entry
             
