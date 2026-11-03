@@ -1,21 +1,13 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Miami Heat vs Los Angeles Lakers" tvg-name="Miami Heat vs Los Angeles Lakers" tvg-logo="https://static.ppvservices.st/assets/thumb/4e814cc210be5b8c5c05d154f86becef-thumbnail.jpg" group-title="NBA",Miami Heat vs Los Angeles Lakers
+#EXTINF:-1 tvg-id="Miami Heat vs Los Angeles Lakers" tvg-name="Miami Heat vs Los Angeles Lakers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Miami Heat vs Los Angeles Lakers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba6.m3u8
-#EXTINF:-1 tvg-id="Phoenix Suns vs Golden State Warriors" tvg-name="Phoenix Suns vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/41fa21395bcebb9f2e31afcd0a87060f-thumbnail.jpg" group-title="NBA",Phoenix Suns vs Golden State Warriors
+#EXTINF:-1 tvg-id="Phoenix Suns vs Golden State Warriors" tvg-name="Phoenix Suns vs Golden State Warriors" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Phoenix Suns vs Golden State Warriors
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8
-#EXTINF:-1 tvg-id="Portland Trail Blazers vs Denver Nuggets" tvg-name="Portland Trail Blazers vs Denver Nuggets" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Portland Trail Blazers vs Denver Nuggets
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-12
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba12.m3u8
 #EXTINF:-1 tvg-id="Toronto Raptors vs Los Angeles Clippers" tvg-name="Toronto Raptors vs Los Angeles Clippers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Toronto Raptors vs Los Angeles Clippers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="Utah Jazz vs San Antonio Spurs" tvg-name="Utah Jazz vs San Antonio Spurs" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Utah Jazz vs San Antonio Spurs
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-11
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba11.m3u8
