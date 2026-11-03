@@ -4,10 +4,6 @@
     <display-name>Nov 03 | Atlanta Hawks vs Indiana Pacers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/14401a338e2b124fd653b1626b51ca66-thumbnail.jpg" />
   </channel>
-  <channel id="Boston Celtics vs Houston Rockets">
-    <display-name>Nov 03 | Boston Celtics vs Houston Rockets</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/39bc96aff829de783d20055d60209629-thumbnail.jpg" />
-  </channel>
   <channel id="Brooklyn Nets vs New York Knicks">
     <display-name>Nov 03 | Brooklyn Nets vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/c171b492bb6cbc3277867ea9fe15d3a9-thumbnail.jpg" />
@@ -67,11 +63,6 @@
   <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Atlanta Hawks vs Indiana Pacers">
     <title>Nov 03 | Atlanta Hawks vs Indiana Pacers</title>
     <desc>Live stream: Atlanta Hawks vs Indiana Pacers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261103093000 +0800" stop="20261103123000 +0800" channel="Boston Celtics vs Houston Rockets">
-    <title>Nov 03 | Boston Celtics vs Houston Rockets</title>
-    <desc>Live stream: Boston Celtics vs Houston Rockets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Brooklyn Nets vs New York Knicks">
