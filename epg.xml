@@ -79,11 +79,6 @@
     <desc>Live stream: Brooklyn Nets vs New York Knicks</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Brooklyn Nets vs New York Knicks">
-    <title>Nov 03 | Brooklyn Nets vs New York Knicks</title>
-    <desc>Live stream: Brooklyn Nets vs New York Knicks (2)</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261103083000 +0800" stop="20261103113000 +0800" channel="Chicago Bulls vs Philadelphia 76ers">
     <title>Nov 03 | Chicago Bulls vs Philadelphia 76ers</title>
     <desc>Live stream: Chicago Bulls vs Philadelphia 76ers</desc>
@@ -104,11 +99,6 @@
     <desc>Live stream: Milwaukee Bucks vs Minnesota Timberwolves</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261103090000 +0800" stop="20261103120000 +0800" channel="Milwaukee Bucks vs Minnesota Timberwolves">
-    <title>Nov 03 | Milwaukee Bucks vs Minnesota Timberwolves</title>
-    <desc>Live stream: Milwaukee Bucks vs Minnesota Timberwolves (2)</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261103090000 +0800" stop="20261103120000 +0800" channel="New Orleans Pelicans vs Memphis Grizzlies">
     <title>Nov 03 | New Orleans Pelicans vs Memphis Grizzlies</title>
     <desc>Live stream: New Orleans Pelicans vs Memphis Grizzlies</desc>
@@ -127,11 +117,6 @@
   <programme start="20261103110000 +0800" stop="20261103140000 +0800" channel="Phoenix Suns vs Golden State Warriors">
     <title>Nov 03 | Phoenix Suns vs Golden State Warriors</title>
     <desc>Live stream: Phoenix Suns vs Golden State Warriors</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261103110000 +0800" stop="20261103140000 +0800" channel="Phoenix Suns vs Golden State Warriors">
-    <title>Nov 03 | Phoenix Suns vs Golden State Warriors</title>
-    <desc>Live stream: Phoenix Suns vs Golden State Warriors (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261103100000 +0800" stop="20261103130000 +0800" channel="Portland Trail Blazers vs Denver Nuggets">
