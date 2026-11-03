@@ -1,57 +1,21 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Atlanta Hawks vs Indiana Pacers" tvg-name="Atlanta Hawks vs Indiana Pacers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Atlanta Hawks vs Indiana Pacers
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba3.m3u8
-#EXTINF:-1 tvg-id="Boston Celtics vs Houston Rockets" tvg-name="Boston Celtics vs Houston Rockets" tvg-logo="https://static.ppvservices.st/assets/thumb/39bc96aff829de783d20055d60209629-thumbnail.jpg" group-title="NBA",Boston Celtics vs Houston Rockets
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-10
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba10.m3u8
-#EXTINF:-1 tvg-id="Brooklyn Nets vs New York Knicks" tvg-name="Brooklyn Nets vs New York Knicks" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Brooklyn Nets vs New York Knicks
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba4.m3u8
-#EXTINF:-1 tvg-id="Chicago Bulls vs Philadelphia 76ers" tvg-name="Chicago Bulls vs Philadelphia 76ers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Chicago Bulls vs Philadelphia 76ers
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba6.m3u8
-#EXTINF:-1 tvg-id="Detroit Pistons vs Charlotte Hornets" tvg-name="Detroit Pistons vs Charlotte Hornets" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Detroit Pistons vs Charlotte Hornets
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin.formaturamaxi.com.br/nba2.m3u8
 #EXTINF:-1 tvg-id="Miami Heat vs Los Angeles Lakers" tvg-name="Miami Heat vs Los Angeles Lakers" tvg-logo="https://static.ppvservices.st/assets/thumb/4e814cc210be5b8c5c05d154f86becef-thumbnail.jpg" group-title="NBA",Miami Heat vs Los Angeles Lakers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba6.m3u8
-#EXTINF:-1 tvg-id="Milwaukee Bucks vs Minnesota Timberwolves" tvg-name="Milwaukee Bucks vs Minnesota Timberwolves" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Milwaukee Bucks vs Minnesota Timberwolves
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin.formaturamaxi.com.br/nba9.m3u8
-#EXTINF:-1 tvg-id="New Orleans Pelicans vs Memphis Grizzlies" tvg-name="New Orleans Pelicans vs Memphis Grizzlies" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",New Orleans Pelicans vs Memphis Grizzlies
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba8.m3u8
 #EXTINF:-1 tvg-id="Phoenix Suns vs Golden State Warriors" tvg-name="Phoenix Suns vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/41fa21395bcebb9f2e31afcd0a87060f-thumbnail.jpg" group-title="NBA",Phoenix Suns vs Golden State Warriors
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8
-#EXTINF:-1 tvg-id="Portland Trail Blazers vs Denver Nuggets" tvg-name="Portland Trail Blazers vs Denver Nuggets" tvg-logo="https://static.ppvservices.st/assets/thumb/8906c74a8c37811b0e37e99e185f7e54-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Denver Nuggets
+#EXTINF:-1 tvg-id="Portland Trail Blazers vs Denver Nuggets" tvg-name="Portland Trail Blazers vs Denver Nuggets" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Portland Trail Blazers vs Denver Nuggets
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-12
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba12.m3u8
-#EXTINF:-1 tvg-id="Sacramento Kings vs Dallas Mavericks" tvg-name="Sacramento Kings vs Dallas Mavericks" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Sacramento Kings vs Dallas Mavericks
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin.formaturamaxi.com.br/nba7.m3u8
 #EXTINF:-1 tvg-id="Toronto Raptors vs Los Angeles Clippers" tvg-name="Toronto Raptors vs Los Angeles Clippers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Toronto Raptors vs Los Angeles Clippers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba.m3u8
-#EXTINF:-1 tvg-id="Utah Jazz vs San Antonio Spurs" tvg-name="Utah Jazz vs San Antonio Spurs" tvg-logo="https://static.ppvservices.st/assets/thumb/c2e29275c609e04594df977e90600e3b-thumbnail.jpg" group-title="NBA",Utah Jazz vs San Antonio Spurs
+#EXTINF:-1 tvg-id="Utah Jazz vs San Antonio Spurs" tvg-name="Utah Jazz vs San Antonio Spurs" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Utah Jazz vs San Antonio Spurs
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-11
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba11.m3u8
-#EXTINF:-1 tvg-id="Washington Wizards vs Orlando Magic" tvg-name="Washington Wizards vs Orlando Magic" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Washington Wizards vs Orlando Magic
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin.formaturamaxi.com.br/nba5.m3u8
