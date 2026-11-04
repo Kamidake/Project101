@@ -3,6 +3,18 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://temp.formaturamaxi.com.br/aew.m3u8
+#EXTINF:-1 tvg-id="Atlanta Hawks vs Washington Wizards" tvg-name="Atlanta Hawks vs Washington Wizards" tvg-logo="https://static.ppvservices.st/assets/thumb/7545b2ae838d199e910f12f78100c8d0-thumbnail.jpg" group-title="NBA",Atlanta Hawks vs Washington Wizards
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://temp.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Philadelphia 76ers vs Detroit Pistons" tvg-name="Philadelphia 76ers vs Detroit Pistons" tvg-logo="https://static.ppvservices.st/assets/thumb/9f02ef41fb1967fe937f5e73dec862bd-thumbnail.jpg" group-title="NBA",Philadelphia 76ers vs Detroit Pistons
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://temp.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="Philadelphia 76ers vs Detroit Pistons" tvg-name="Philadelphia 76ers vs Detroit Pistons" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Philadelphia 76ers vs Detroit Pistons
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://temp.formaturamaxi.com.br/nbaalt.m3u8
 #EXTINF:-1 tvg-id="TNA" tvg-name="TNA" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36

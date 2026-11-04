@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-11-04T23:02:34.185136+00:00",
+  "updated_utc": "2026-11-04T23:17:26.077777+00:00",
   "pages": 51,
-  "candidate_urls": 40,
-  "live_urls": 4,
-  "unavailable_urls": 24,
+  "candidate_urls": 41,
+  "live_urls": 7,
+  "unavailable_urls": 22,
   "unsupported_pages": [
     "https://roxiestreams.info/soccer-streams-11",
     "https://roxiestreams.info/soccer-streams-12",
@@ -15,8 +15,8 @@
     "https://roxiestreams.info/soccer-streams-9"
   ],
   "errors": [],
-  "event_groups": 2,
-  "event_posters": 0,
+  "event_groups": 4,
+  "event_posters": 3,
   "roxie_source": "https://roxiestreams.info/",
   "roxie_attempts": [
     {
