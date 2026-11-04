@@ -4,10 +4,6 @@
     <display-name>Nov 06 | TNA</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
   </channel>
-  <channel id="WWE NXT">
-    <display-name>WWE NXT</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261106090000 +0800" stop="20261106120000 +0800" channel="TNA">
     <title>Nov 06 | TNA</title>
     <desc>Live stream: TNA</desc>
