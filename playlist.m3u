@@ -1,4 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="AEW" tvg-name="AEW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" group-title="AEW",AEW
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://temp.formaturamaxi.com.br/aew.m3u8
 #EXTINF:-1 tvg-id="TNA" tvg-name="TNA" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
