@@ -8,6 +8,10 @@
     <display-name>Nov 05 | Atlanta Hawks vs Washington Wizards</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7545b2ae838d199e910f12f78100c8d0-thumbnail.jpg" />
   </channel>
+  <channel id="Milwaukee Bucks vs Boston Celtics">
+    <display-name>Nov 05 | Milwaukee Bucks vs Boston Celtics</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5d8112faf285af2fd2a3a80d0218458d-thumbnail.jpg" />
+  </channel>
   <channel id="Philadelphia 76ers vs Detroit Pistons">
     <display-name>Nov 05 | Philadelphia 76ers vs Detroit Pistons</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9f02ef41fb1967fe937f5e73dec862bd-thumbnail.jpg" />
@@ -24,6 +28,11 @@
   <programme start="20261105080000 +0800" stop="20261105110000 +0800" channel="Atlanta Hawks vs Washington Wizards">
     <title>Nov 05 | Atlanta Hawks vs Washington Wizards</title>
     <desc>Live stream: Atlanta Hawks vs Washington Wizards</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261105083000 +0800" stop="20261105113000 +0800" channel="Milwaukee Bucks vs Boston Celtics">
+    <title>Nov 05 | Milwaukee Bucks vs Boston Celtics</title>
+    <desc>Live stream: Milwaukee Bucks vs Boston Celtics</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261105080000 +0800" stop="20261105110000 +0800" channel="Philadelphia 76ers vs Detroit Pistons">

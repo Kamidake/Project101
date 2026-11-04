@@ -7,6 +7,10 @@ https://temp.formaturamaxi.com.br/aew.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://temp.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Milwaukee Bucks vs Boston Celtics" tvg-name="Milwaukee Bucks vs Boston Celtics" tvg-logo="https://static.ppvservices.st/assets/thumb/5d8112faf285af2fd2a3a80d0218458d-thumbnail.jpg" group-title="NBA",Milwaukee Bucks vs Boston Celtics
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://temp.formaturamaxi.com.br/nba3.m3u8
 #EXTINF:-1 tvg-id="Philadelphia 76ers vs Detroit Pistons" tvg-name="Philadelphia 76ers vs Detroit Pistons" tvg-logo="https://static.ppvservices.st/assets/thumb/9f02ef41fb1967fe937f5e73dec862bd-thumbnail.jpg" group-title="NBA",Philadelphia 76ers vs Detroit Pistons
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
