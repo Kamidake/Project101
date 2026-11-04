@@ -19,4 +19,9 @@
     <desc>Live stream: TNA (3)</desc>
     <category>TNA</category>
   </programme>
+  <programme start="20261106090000 +0800" stop="20261106120000 +0800" channel="TNA">
+    <title>Nov 06 | TNA</title>
+    <desc>Live stream: TNA (4)</desc>
+    <category>TNA</category>
+  </programme>
 </tv>
