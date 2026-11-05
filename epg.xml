@@ -8,6 +8,10 @@
     <display-name>Nov 05 | Atlanta Hawks vs Washington Wizards</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7545b2ae838d199e910f12f78100c8d0-thumbnail.jpg" />
   </channel>
+  <channel id="Dallas Mavericks vs San Antonio Spurs">
+    <display-name>Nov 05 | Dallas Mavericks vs San Antonio Spurs</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5410e630674bf34c125298400797fadc-thumbnail.jpg" />
+  </channel>
   <channel id="Milwaukee Bucks vs Boston Celtics">
     <display-name>Nov 05 | Milwaukee Bucks vs Boston Celtics</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/5d8112faf285af2fd2a3a80d0218458d-thumbnail.jpg" />
@@ -30,6 +34,16 @@
     <desc>Live stream: Atlanta Hawks vs Washington Wizards</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261105103000 +0800" stop="20261105133000 +0800" channel="Dallas Mavericks vs San Antonio Spurs">
+    <title>Nov 05 | Dallas Mavericks vs San Antonio Spurs</title>
+    <desc>Live stream: Dallas Mavericks vs San Antonio Spurs</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261105103000 +0800" stop="20261105133000 +0800" channel="Dallas Mavericks vs San Antonio Spurs">
+    <title>Nov 05 | Dallas Mavericks vs San Antonio Spurs</title>
+    <desc>Live stream: Dallas Mavericks vs San Antonio Spurs (2)</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261105083000 +0800" stop="20261105113000 +0800" channel="Milwaukee Bucks vs Boston Celtics">
     <title>Nov 05 | Milwaukee Bucks vs Boston Celtics</title>
     <desc>Live stream: Milwaukee Bucks vs Boston Celtics</desc>
@@ -43,6 +57,11 @@
   <programme start="20261105080000 +0800" stop="20261105110000 +0800" channel="Philadelphia 76ers vs Detroit Pistons">
     <title>Nov 05 | Philadelphia 76ers vs Detroit Pistons</title>
     <desc>Live stream: Philadelphia 76ers vs Detroit Pistons (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261105080000 +0800" stop="20261105110000 +0800" channel="Philadelphia 76ers vs Detroit Pistons">
+    <title>Nov 05 | Philadelphia 76ers vs Detroit Pistons</title>
+    <desc>Live stream: Philadelphia 76ers vs Detroit Pistons (3)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261106090000 +0800" stop="20261106120000 +0800" channel="TNA">
