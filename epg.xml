@@ -8,6 +8,14 @@
     <display-name>Nov 05 | Atlanta Hawks vs Washington Wizards</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7545b2ae838d199e910f12f78100c8d0-thumbnail.jpg" />
   </channel>
+  <channel id="Charlotte Hornets vs Brooklyn Nets">
+    <display-name>Nov 05 | Charlotte Hornets vs Brooklyn Nets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/2dfb6b5bf08e54e0df08b50bace1a609-thumbnail.jpg" />
+  </channel>
+  <channel id="Chicago Bulls vs New York Knicks">
+    <display-name>Nov 05 | Chicago Bulls vs New York Knicks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/c56f20a4387bf83d7020c5051f00d657-thumbnail.jpg" />
+  </channel>
   <channel id="Dallas Mavericks vs San Antonio Spurs">
     <display-name>Nov 05 | Dallas Mavericks vs San Antonio Spurs</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/5410e630674bf34c125298400797fadc-thumbnail.jpg" />
@@ -32,6 +40,16 @@
   <programme start="20261105080000 +0800" stop="20261105110000 +0800" channel="Atlanta Hawks vs Washington Wizards">
     <title>Nov 05 | Atlanta Hawks vs Washington Wizards</title>
     <desc>Live stream: Atlanta Hawks vs Washington Wizards</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261105083000 +0800" stop="20261105113000 +0800" channel="Charlotte Hornets vs Brooklyn Nets">
+    <title>Nov 05 | Charlotte Hornets vs Brooklyn Nets</title>
+    <desc>Live stream: Charlotte Hornets vs Brooklyn Nets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261105083000 +0800" stop="20261105113000 +0800" channel="Chicago Bulls vs New York Knicks">
+    <title>Nov 05 | Chicago Bulls vs New York Knicks</title>
+    <desc>Live stream: Chicago Bulls vs New York Knicks</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261105103000 +0800" stop="20261105133000 +0800" channel="Dallas Mavericks vs San Antonio Spurs">
