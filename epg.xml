@@ -1,3 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Boston Celtics vs Charlotte Hornets">
+    <display-name>Nov 07 | Boston Celtics vs Charlotte Hornets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/4b756d4571d07c6e8d38730ffd03ebdc-thumbnail.jpg" />
+  </channel>
+  <channel id="Washington Wizards vs Atlanta Hawks">
+    <display-name>Nov 07 | Washington Wizards vs Atlanta Hawks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/21724c49f46faf47b36bbd9a16c9ed60-thumbnail.jpg" />
+  </channel>
+  <programme start="20261107080000 +0800" stop="20261107110000 +0800" channel="Boston Celtics vs Charlotte Hornets">
+    <title>Nov 07 | Boston Celtics vs Charlotte Hornets</title>
+    <desc>Live stream: Boston Celtics vs Charlotte Hornets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261107080000 +0800" stop="20261107110000 +0800" channel="Washington Wizards vs Atlanta Hawks">
+    <title>Nov 07 | Washington Wizards vs Atlanta Hawks</title>
+    <desc>Live stream: Washington Wizards vs Atlanta Hawks</desc>
+    <category>NBA</category>
+  </programme>
 </tv>
