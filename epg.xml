@@ -4,17 +4,38 @@
     <display-name>Nov 07 | Boston Celtics vs Charlotte Hornets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4b756d4571d07c6e8d38730ffd03ebdc-thumbnail.jpg" />
   </channel>
+  <channel id="Oklahoma City Thunder vs Memphis Grizzlies">
+    <display-name>Nov 07 | Oklahoma City Thunder vs Memphis Grizzlies</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/7717a8b9cf9896f700e13cfb8da0f049-thumbnail.jpg" />
+  </channel>
   <channel id="Philadelphia 76ers vs Cleveland Cavaliers">
     <display-name>Nov 07 | Philadelphia 76ers vs Cleveland Cavaliers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/8e159decd969aced65aa6af2ab7e1df1-thumbnail.jpg" />
+  </channel>
+  <channel id="Utah Jazz vs Dallas Mavericks">
+    <display-name>Nov 07 | Utah Jazz vs Dallas Mavericks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/4b7a2b07d4f3795d7c5bc012bb112757-thumbnail.jpg" />
   </channel>
   <channel id="Washington Wizards vs Atlanta Hawks">
     <display-name>Nov 07 | Washington Wizards vs Atlanta Hawks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/21724c49f46faf47b36bbd9a16c9ed60-thumbnail.jpg" />
   </channel>
+  <channel id="WWE Crown Jewel">
+    <display-name>Nov 08 | WWE Crown Jewel</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <channel id="WWE Smackdown">
+    <display-name>Nov 07 | WWE Smackdown</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
   <programme start="20261107080000 +0800" stop="20261107110000 +0800" channel="Boston Celtics vs Charlotte Hornets">
     <title>Nov 07 | Boston Celtics vs Charlotte Hornets</title>
     <desc>Live stream: Boston Celtics vs Charlotte Hornets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Oklahoma City Thunder vs Memphis Grizzlies">
+    <title>Nov 07 | Oklahoma City Thunder vs Memphis Grizzlies</title>
+    <desc>Live stream: Oklahoma City Thunder vs Memphis Grizzlies</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261107083000 +0800" stop="20261107113000 +0800" channel="Philadelphia 76ers vs Cleveland Cavaliers">
@@ -22,9 +43,34 @@
     <desc>Live stream: Philadelphia 76ers vs Cleveland Cavaliers</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Utah Jazz vs Dallas Mavericks">
+    <title>Nov 07 | Utah Jazz vs Dallas Mavericks</title>
+    <desc>Live stream: Utah Jazz vs Dallas Mavericks</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261107080000 +0800" stop="20261107110000 +0800" channel="Washington Wizards vs Atlanta Hawks">
     <title>Nov 07 | Washington Wizards vs Atlanta Hawks</title>
     <desc>Live stream: Washington Wizards vs Atlanta Hawks</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261108010000 +0800" stop="20261108040000 +0800" channel="WWE Crown Jewel">
+    <title>Nov 08 | WWE Crown Jewel</title>
+    <desc>Live stream: WWE Crown Jewel</desc>
+    <category>WWE</category>
+  </programme>
+  <programme start="20261108010000 +0800" stop="20261108040000 +0800" channel="WWE Crown Jewel">
+    <title>Nov 08 | WWE Crown Jewel</title>
+    <desc>Live stream: WWE Crown Jewel (2)</desc>
+    <category>WWE</category>
+  </programme>
+  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="WWE Smackdown">
+    <title>Nov 07 | WWE Smackdown</title>
+    <desc>Live stream: WWE Smackdown</desc>
+    <category>WWE</category>
+  </programme>
+  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="WWE Smackdown">
+    <title>Nov 07 | WWE Smackdown</title>
+    <desc>Live stream: WWE Smackdown (2)</desc>
+    <category>WWE</category>
   </programme>
 </tv>
