@@ -81,4 +81,9 @@
     <desc>Live stream: WWE Crown Jewel</desc>
     <category>WWE</category>
   </programme>
+  <programme start="20261108010000 +0800" stop="20261108040000 +0800" channel="WWE Crown Jewel">
+    <title>Nov 08 | WWE Crown Jewel</title>
+    <desc>Live stream: WWE Crown Jewel (2)</desc>
+    <category>WWE</category>
+  </programme>
 </tv>
