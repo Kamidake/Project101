@@ -1,13 +1,16 @@
 {
-  "updated_utc": "2026-11-07T17:47:51.257156+00:00",
+  "updated_utc": "2026-11-07T18:02:39.980214+00:00",
   "pages": 75,
-  "candidate_urls": 67,
-  "live_urls": 10,
-  "unavailable_urls": 16,
-  "unsupported_pages": [],
+  "candidate_urls": 65,
+  "live_urls": 0,
+  "unavailable_urls": 65,
+  "unsupported_pages": [
+    "https://roxiestreams.info/f1",
+    "https://roxiestreams.info/soccer-streams-14"
+  ],
   "errors": [],
-  "event_groups": 9,
-  "event_posters": 7,
+  "event_groups": 0,
+  "event_posters": 0,
   "roxie_source": "https://roxiestreams.info/",
   "roxie_attempts": [
     {
