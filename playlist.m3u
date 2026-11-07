@@ -15,6 +15,10 @@ https://admin2.formaturamaxi.com.br/nba5.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="Portland Trail Blazers vs Los Angeles Lakers" tvg-name="Portland Trail Blazers vs Los Angeles Lakers" tvg-logo="https://static.ppvservices.st/assets/thumb/853473ddc8475d999e715a2936bf3c98-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Los Angeles Lakers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba8.m3u8
 #EXTINF:-1 tvg-id="Toronto Raptors vs Milwaukee Bucks" tvg-name="Toronto Raptors vs Milwaukee Bucks" tvg-logo="https://static.ppvservices.st/assets/thumb/019219e0cc2d17b189f3ddbf1301026e-thumbnail.jpg" group-title="NBA",Toronto Raptors vs Milwaukee Bucks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
