@@ -1,15 +1,15 @@
 {
-  "updated_utc": "2026-11-07T00:32:28.010776+00:00",
+  "updated_utc": "2026-11-07T00:47:22.538439+00:00",
   "pages": 41,
   "candidate_urls": 35,
-  "live_urls": 2,
-  "unavailable_urls": 15,
+  "live_urls": 3,
+  "unavailable_urls": 14,
   "unsupported_pages": [
     "https://roxiestreams.info/soccer-streams-10"
   ],
   "errors": [],
-  "event_groups": 2,
-  "event_posters": 2,
+  "event_groups": 3,
+  "event_posters": 3,
   "roxie_source": "https://roxiestreams.info/",
   "roxie_attempts": [
     {
