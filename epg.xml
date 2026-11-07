@@ -17,6 +17,11 @@
     <desc>Live stream: Portland Trail Blazers vs Los Angeles Lakers</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261107110000 +0800" stop="20261107140000 +0800" channel="Portland Trail Blazers vs Los Angeles Lakers">
+    <title>Nov 07 | Portland Trail Blazers vs Los Angeles Lakers</title>
+    <desc>Live stream: Portland Trail Blazers vs Los Angeles Lakers (2)</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261107110000 +0800" stop="20261107140000 +0800" channel="San Antonio Spurs vs Sacramento Kings">
     <title>Nov 07 | San Antonio Spurs vs Sacramento Kings</title>
     <desc>Live stream: San Antonio Spurs vs Sacramento Kings</desc>
