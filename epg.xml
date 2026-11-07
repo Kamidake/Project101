@@ -4,6 +4,10 @@
     <display-name>Nov 07 | Boston Celtics vs Charlotte Hornets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4b756d4571d07c6e8d38730ffd03ebdc-thumbnail.jpg" />
   </channel>
+  <channel id="Minnesota Timberwolves vs New Orleans Pelicans">
+    <display-name>Nov 07 | Minnesota Timberwolves vs New Orleans Pelicans</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/80eb09d4cbd4fe38b48943b1a934a73a-thumbnail.jpg" />
+  </channel>
   <channel id="Oklahoma City Thunder vs Memphis Grizzlies">
     <display-name>Nov 07 | Oklahoma City Thunder vs Memphis Grizzlies</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7717a8b9cf9896f700e13cfb8da0f049-thumbnail.jpg" />
@@ -11,6 +15,10 @@
   <channel id="Philadelphia 76ers vs Cleveland Cavaliers">
     <display-name>Nov 07 | Philadelphia 76ers vs Cleveland Cavaliers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/8e159decd969aced65aa6af2ab7e1df1-thumbnail.jpg" />
+  </channel>
+  <channel id="Toronto Raptors vs Milwaukee Bucks">
+    <display-name>Nov 07 | Toronto Raptors vs Milwaukee Bucks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/019219e0cc2d17b189f3ddbf1301026e-thumbnail.jpg" />
   </channel>
   <channel id="Utah Jazz vs Dallas Mavericks">
     <display-name>Nov 07 | Utah Jazz vs Dallas Mavericks</display-name>
@@ -33,6 +41,11 @@
     <desc>Live stream: Boston Celtics vs Charlotte Hornets</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Minnesota Timberwolves vs New Orleans Pelicans">
+    <title>Nov 07 | Minnesota Timberwolves vs New Orleans Pelicans</title>
+    <desc>Live stream: Minnesota Timberwolves vs New Orleans Pelicans</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Oklahoma City Thunder vs Memphis Grizzlies">
     <title>Nov 07 | Oklahoma City Thunder vs Memphis Grizzlies</title>
     <desc>Live stream: Oklahoma City Thunder vs Memphis Grizzlies</desc>
@@ -41,6 +54,11 @@
   <programme start="20261107083000 +0800" stop="20261107113000 +0800" channel="Philadelphia 76ers vs Cleveland Cavaliers">
     <title>Nov 07 | Philadelphia 76ers vs Cleveland Cavaliers</title>
     <desc>Live stream: Philadelphia 76ers vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Toronto Raptors vs Milwaukee Bucks">
+    <title>Nov 07 | Toronto Raptors vs Milwaukee Bucks</title>
+    <desc>Live stream: Toronto Raptors vs Milwaukee Bucks</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Utah Jazz vs Dallas Mavericks">
