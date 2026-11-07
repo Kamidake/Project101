@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Brooklyn Nets vs Atlanta Hawks">
+    <display-name>Nov 08 | Brooklyn Nets vs Atlanta Hawks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/f81dd36717315c63e160f2215254568d-thumbnail.jpg" />
+  </channel>
+  <channel id="Denver Nuggets vs Indiana Pacers">
+    <display-name>Nov 08 | Denver Nuggets vs Indiana Pacers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/d1c4b0dcd61802ffea89ad25158aa228-thumbnail.jpg" />
+  </channel>
+  <channel id="Houston Rockets vs Phoenix Suns">
+    <display-name>Nov 08 | Houston Rockets vs Phoenix Suns</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/3581391a53251a898efbc9f351a86b7a-thumbnail.jpg" />
+  </channel>
+  <channel id="New York Knicks vs Cleveland Cavaliers">
+    <display-name>Nov 08 | New York Knicks vs Cleveland Cavaliers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/9367a07816518337387830d4dfb543fa-thumbnail.jpg" />
+  </channel>
+  <channel id="Orlando Magic vs Golden State Warriors">
+    <display-name>Nov 08 | Orlando Magic vs Golden State Warriors</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/8993cdab6f8bb15e26e9ca2dd3c1fe73-thumbnail.jpg" />
+  </channel>
+  <channel id="San Antonio Spurs vs Portland Trail Blazers">
+    <display-name>Nov 08 | San Antonio Spurs vs Portland Trail Blazers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/63385e60e324f208715898168944a85f-thumbnail.jpg" />
+  </channel>
+  <channel id="Washington Wizards vs Oklahoma City Thunder">
+    <display-name>Nov 08 | Washington Wizards vs Oklahoma City Thunder</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/e968b8c9013faea6b63fc11aa3feec86-thumbnail.jpg" />
+  </channel>
+  <channel id="UFC FN: Cortes Acosta vs. Walker">
+    <display-name>Nov 08 | UFC FN: Cortes Acosta vs. Walker</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
+  </channel>
   <channel id="WWE Crown Jewel">
     <display-name>Nov 08 | WWE Crown Jewel</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
+  <programme start="20261108083000 +0800" stop="20261108113000 +0800" channel="Brooklyn Nets vs Atlanta Hawks">
+    <title>Nov 08 | Brooklyn Nets vs Atlanta Hawks</title>
+    <desc>Live stream: Brooklyn Nets vs Atlanta Hawks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261108060000 +0800" stop="20261108090000 +0800" channel="Denver Nuggets vs Indiana Pacers">
+    <title>Nov 08 | Denver Nuggets vs Indiana Pacers</title>
+    <desc>Live stream: Denver Nuggets vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261108100000 +0800" stop="20261108130000 +0800" channel="Houston Rockets vs Phoenix Suns">
+    <title>Nov 08 | Houston Rockets vs Phoenix Suns</title>
+    <desc>Live stream: Houston Rockets vs Phoenix Suns</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261108090000 +0800" stop="20261108120000 +0800" channel="New York Knicks vs Cleveland Cavaliers">
+    <title>Nov 08 | New York Knicks vs Cleveland Cavaliers</title>
+    <desc>Live stream: New York Knicks vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261108093000 +0800" stop="20261108123000 +0800" channel="Orlando Magic vs Golden State Warriors">
+    <title>Nov 08 | Orlando Magic vs Golden State Warriors</title>
+    <desc>Live stream: Orlando Magic vs Golden State Warriors</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261108110000 +0800" stop="20261108140000 +0800" channel="San Antonio Spurs vs Portland Trail Blazers">
+    <title>Nov 08 | San Antonio Spurs vs Portland Trail Blazers</title>
+    <desc>Live stream: San Antonio Spurs vs Portland Trail Blazers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261108090000 +0800" stop="20261108120000 +0800" channel="Washington Wizards vs Oklahoma City Thunder">
+    <title>Nov 08 | Washington Wizards vs Oklahoma City Thunder</title>
+    <desc>Live stream: Washington Wizards vs Oklahoma City Thunder</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261108060000 +0800" stop="20261108140000 +0800" channel="UFC FN: Cortes Acosta vs. Walker">
+    <title>Nov 08 | UFC FN: Cortes Acosta vs. Walker</title>
+    <desc>Live stream: UFC FN: Cortes Acosta vs. Walker</desc>
+    <category>UFC</category>
+  </programme>
   <programme start="20261108010000 +0800" stop="20261108040000 +0800" channel="WWE Crown Jewel">
     <title>Nov 08 | WWE Crown Jewel</title>
     <desc>Live stream: WWE Crown Jewel</desc>
