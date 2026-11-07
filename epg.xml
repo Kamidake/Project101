@@ -2,7 +2,7 @@
 <tv generator-info-name="LivePlaylist">
   <channel id="Boston Celtics vs Charlotte Hornets">
     <display-name>Nov 07 | Boston Celtics vs Charlotte Hornets</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/4b756d4571d07c6e8d38730ffd03ebdc-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Minnesota Timberwolves vs New Orleans Pelicans">
     <display-name>Nov 07 | Minnesota Timberwolves vs New Orleans Pelicans</display-name>
@@ -20,6 +20,10 @@
     <display-name>Nov 07 | Portland Trail Blazers vs Los Angeles Lakers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/853473ddc8475d999e715a2936bf3c98-thumbnail.jpg" />
   </channel>
+  <channel id="San Antonio Spurs vs Sacramento Kings">
+    <display-name>Nov 07 | San Antonio Spurs vs Sacramento Kings</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/bdcfdd24f4540951c579339fd6f94e06-thumbnail.jpg" />
+  </channel>
   <channel id="Toronto Raptors vs Milwaukee Bucks">
     <display-name>Nov 07 | Toronto Raptors vs Milwaukee Bucks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/019219e0cc2d17b189f3ddbf1301026e-thumbnail.jpg" />
@@ -30,7 +34,7 @@
   </channel>
   <channel id="Washington Wizards vs Atlanta Hawks">
     <display-name>Nov 07 | Washington Wizards vs Atlanta Hawks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/21724c49f46faf47b36bbd9a16c9ed60-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="WWE Crown Jewel">
     <display-name>Nov 08 | WWE Crown Jewel</display-name>
@@ -63,6 +67,11 @@
   <programme start="20261107110000 +0800" stop="20261107140000 +0800" channel="Portland Trail Blazers vs Los Angeles Lakers">
     <title>Nov 07 | Portland Trail Blazers vs Los Angeles Lakers</title>
     <desc>Live stream: Portland Trail Blazers vs Los Angeles Lakers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261107110000 +0800" stop="20261107140000 +0800" channel="San Antonio Spurs vs Sacramento Kings">
+    <title>Nov 07 | San Antonio Spurs vs Sacramento Kings</title>
+    <desc>Live stream: San Antonio Spurs vs Sacramento Kings</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Toronto Raptors vs Milwaukee Bucks">
