@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Boston Celtics vs Charlotte Hornets">
-    <display-name>Nov 07 | Boston Celtics vs Charlotte Hornets</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Minnesota Timberwolves vs New Orleans Pelicans">
     <display-name>Nov 07 | Minnesota Timberwolves vs New Orleans Pelicans</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/80eb09d4cbd4fe38b48943b1a934a73a-thumbnail.jpg" />
@@ -32,10 +28,6 @@
     <display-name>Nov 07 | Utah Jazz vs Dallas Mavericks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4b7a2b07d4f3795d7c5bc012bb112757-thumbnail.jpg" />
   </channel>
-  <channel id="Washington Wizards vs Atlanta Hawks">
-    <display-name>Nov 07 | Washington Wizards vs Atlanta Hawks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="WWE Crown Jewel">
     <display-name>Nov 08 | WWE Crown Jewel</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
@@ -44,11 +36,6 @@
     <display-name>Nov 07 | WWE Smackdown</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261107080000 +0800" stop="20261107110000 +0800" channel="Boston Celtics vs Charlotte Hornets">
-    <title>Nov 07 | Boston Celtics vs Charlotte Hornets</title>
-    <desc>Live stream: Boston Celtics vs Charlotte Hornets</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Minnesota Timberwolves vs New Orleans Pelicans">
     <title>Nov 07 | Minnesota Timberwolves vs New Orleans Pelicans</title>
     <desc>Live stream: Minnesota Timberwolves vs New Orleans Pelicans</desc>
@@ -82,11 +69,6 @@
   <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Utah Jazz vs Dallas Mavericks">
     <title>Nov 07 | Utah Jazz vs Dallas Mavericks</title>
     <desc>Live stream: Utah Jazz vs Dallas Mavericks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261107080000 +0800" stop="20261107110000 +0800" channel="Washington Wizards vs Atlanta Hawks">
-    <title>Nov 07 | Washington Wizards vs Atlanta Hawks</title>
-    <desc>Live stream: Washington Wizards vs Atlanta Hawks</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261108010000 +0800" stop="20261108040000 +0800" channel="WWE Crown Jewel">
