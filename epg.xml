@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Minnesota Timberwolves vs New Orleans Pelicans">
-    <display-name>Nov 07 | Minnesota Timberwolves vs New Orleans Pelicans</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Oklahoma City Thunder vs Memphis Grizzlies">
-    <display-name>Nov 07 | Oklahoma City Thunder vs Memphis Grizzlies</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Portland Trail Blazers vs Los Angeles Lakers">
     <display-name>Nov 07 | Portland Trail Blazers vs Los Angeles Lakers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/853473ddc8475d999e715a2936bf3c98-thumbnail.jpg" />
@@ -16,32 +8,10 @@
     <display-name>Nov 07 | San Antonio Spurs vs Sacramento Kings</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/bdcfdd24f4540951c579339fd6f94e06-thumbnail.jpg" />
   </channel>
-  <channel id="Toronto Raptors vs Milwaukee Bucks">
-    <display-name>Nov 07 | Toronto Raptors vs Milwaukee Bucks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Utah Jazz vs Dallas Mavericks">
-    <display-name>Nov 07 | Utah Jazz vs Dallas Mavericks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="WWE Crown Jewel">
     <display-name>Nov 08 | WWE Crown Jewel</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <channel id="WWE Smackdown">
-    <display-name>Nov 07 | WWE Smackdown</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
-  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Minnesota Timberwolves vs New Orleans Pelicans">
-    <title>Nov 07 | Minnesota Timberwolves vs New Orleans Pelicans</title>
-    <desc>Live stream: Minnesota Timberwolves vs New Orleans Pelicans</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Oklahoma City Thunder vs Memphis Grizzlies">
-    <title>Nov 07 | Oklahoma City Thunder vs Memphis Grizzlies</title>
-    <desc>Live stream: Oklahoma City Thunder vs Memphis Grizzlies</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261107110000 +0800" stop="20261107140000 +0800" channel="Portland Trail Blazers vs Los Angeles Lakers">
     <title>Nov 07 | Portland Trail Blazers vs Los Angeles Lakers</title>
     <desc>Live stream: Portland Trail Blazers vs Los Angeles Lakers</desc>
@@ -52,14 +22,9 @@
     <desc>Live stream: San Antonio Spurs vs Sacramento Kings</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Toronto Raptors vs Milwaukee Bucks">
-    <title>Nov 07 | Toronto Raptors vs Milwaukee Bucks</title>
-    <desc>Live stream: Toronto Raptors vs Milwaukee Bucks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="Utah Jazz vs Dallas Mavericks">
-    <title>Nov 07 | Utah Jazz vs Dallas Mavericks</title>
-    <desc>Live stream: Utah Jazz vs Dallas Mavericks</desc>
+  <programme start="20261107110000 +0800" stop="20261107140000 +0800" channel="San Antonio Spurs vs Sacramento Kings">
+    <title>Nov 07 | San Antonio Spurs vs Sacramento Kings</title>
+    <desc>Live stream: San Antonio Spurs vs Sacramento Kings (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261108010000 +0800" stop="20261108040000 +0800" channel="WWE Crown Jewel">
@@ -70,16 +35,6 @@
   <programme start="20261108010000 +0800" stop="20261108040000 +0800" channel="WWE Crown Jewel">
     <title>Nov 08 | WWE Crown Jewel</title>
     <desc>Live stream: WWE Crown Jewel (2)</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="WWE Smackdown">
-    <title>Nov 07 | WWE Smackdown</title>
-    <desc>Live stream: WWE Smackdown</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261107090000 +0800" stop="20261107120000 +0800" channel="WWE Smackdown">
-    <title>Nov 07 | WWE Smackdown</title>
-    <desc>Live stream: WWE Smackdown (2)</desc>
     <category>WWE</category>
   </programme>
 </tv>

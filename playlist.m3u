@@ -1,12 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Minnesota Timberwolves vs New Orleans Pelicans" tvg-name="Minnesota Timberwolves vs New Orleans Pelicans" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Minnesota Timberwolves vs New Orleans Pelicans
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba7.m3u8
-#EXTINF:-1 tvg-id="Oklahoma City Thunder vs Memphis Grizzlies" tvg-name="Oklahoma City Thunder vs Memphis Grizzlies" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Oklahoma City Thunder vs Memphis Grizzlies
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba5.m3u8
 #EXTINF:-1 tvg-id="Portland Trail Blazers vs Los Angeles Lakers" tvg-name="Portland Trail Blazers vs Los Angeles Lakers" tvg-logo="https://static.ppvservices.st/assets/thumb/853473ddc8475d999e715a2936bf3c98-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Los Angeles Lakers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
@@ -14,28 +6,16 @@ https://admin2.formaturamaxi.com.br/nba8.m3u8
 #EXTINF:-1 tvg-id="San Antonio Spurs vs Sacramento Kings" tvg-name="San Antonio Spurs vs Sacramento Kings" tvg-logo="https://static.ppvservices.st/assets/thumb/bdcfdd24f4540951c579339fd6f94e06-thumbnail.jpg" group-title="NBA",San Antonio Spurs vs Sacramento Kings
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/lakers.m3u8
+#EXTINF:-1 tvg-id="San Antonio Spurs vs Sacramento Kings" tvg-name="San Antonio Spurs vs Sacramento Kings" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",San Antonio Spurs vs Sacramento Kings
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba9.m3u8
-#EXTINF:-1 tvg-id="Toronto Raptors vs Milwaukee Bucks" tvg-name="Toronto Raptors vs Milwaukee Bucks" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Toronto Raptors vs Milwaukee Bucks
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba6.m3u8
-#EXTINF:-1 tvg-id="Utah Jazz vs Dallas Mavericks" tvg-name="Utah Jazz vs Dallas Mavericks" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Utah Jazz vs Dallas Mavericks
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba4.m3u8
 #EXTINF:-1 tvg-id="WWE Crown Jewel" tvg-name="WWE Crown Jewel" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Crown Jewel
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/wwe.m3u8
 #EXTINF:-1 tvg-id="WWE Crown Jewel" tvg-name="WWE Crown Jewel" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Crown Jewel
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://tedesco.formaturamaxi.com.br/usa.m3u8
-#EXTINF:-1 tvg-id="WWE Smackdown" tvg-name="WWE Smackdown" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/wwe.m3u8
-#EXTINF:-1 tvg-id="WWE Smackdown" tvg-name="WWE Smackdown" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE Smackdown
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://tedesco.formaturamaxi.com.br/usa.m3u8
