@@ -1,1 +1,37 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="Brooklyn Nets vs Atlanta Hawks" tvg-name="Brooklyn Nets vs Atlanta Hawks" tvg-logo="https://static.ppvservices.st/assets/thumb/f81dd36717315c63e160f2215254568d-thumbnail.jpg" group-title="NBA",Brooklyn Nets vs Atlanta Hawks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/nba2.m3u8
+#EXTINF:-1 tvg-id="Denver Nuggets vs Indiana Pacers" tvg-name="Denver Nuggets vs Indiana Pacers" tvg-logo="https://static.ppvservices.st/assets/thumb/d1c4b0dcd61802ffea89ad25158aa228-thumbnail.jpg" group-title="NBA",Denver Nuggets vs Indiana Pacers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/nba.m3u8
+#EXTINF:-1 tvg-id="Houston Rockets vs Phoenix Suns" tvg-name="Houston Rockets vs Phoenix Suns" tvg-logo="https://static.ppvservices.st/assets/thumb/3581391a53251a898efbc9f351a86b7a-thumbnail.jpg" group-title="NBA",Houston Rockets vs Phoenix Suns
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/nba6.m3u8
+#EXTINF:-1 tvg-id="New York Knicks vs Cleveland Cavaliers" tvg-name="New York Knicks vs Cleveland Cavaliers" tvg-logo="https://static.ppvservices.st/assets/thumb/9367a07816518337387830d4dfb543fa-thumbnail.jpg" group-title="NBA",New York Knicks vs Cleveland Cavaliers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/nba3.m3u8
+#EXTINF:-1 tvg-id="Orlando Magic vs Golden State Warriors" tvg-name="Orlando Magic vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/8993cdab6f8bb15e26e9ca2dd3c1fe73-thumbnail.jpg" group-title="NBA",Orlando Magic vs Golden State Warriors
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/nba5.m3u8
+#EXTINF:-1 tvg-id="San Antonio Spurs vs Portland Trail Blazers" tvg-name="San Antonio Spurs vs Portland Trail Blazers" tvg-logo="https://static.ppvservices.st/assets/thumb/63385e60e324f208715898168944a85f-thumbnail.jpg" group-title="NBA",San Antonio Spurs vs Portland Trail Blazers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/nba7.m3u8
+#EXTINF:-1 tvg-id="Washington Wizards vs Oklahoma City Thunder" tvg-name="Washington Wizards vs Oklahoma City Thunder" tvg-logo="https://static.ppvservices.st/assets/thumb/e968b8c9013faea6b63fc11aa3feec86-thumbnail.jpg" group-title="NBA",Washington Wizards vs Oklahoma City Thunder
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/nba4.m3u8
+#EXTINF:-1 tvg-id="UFC FN: Cortes Acosta vs. Walker" tvg-name="UFC FN: Cortes Acosta vs. Walker" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC FN: Cortes Acosta vs. Walker
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/abbiecadabrii.m3u8
+#EXTINF:-1 tvg-id="UFC FN: Cortes Acosta vs. Walker" tvg-name="UFC FN: Cortes Acosta vs. Walker" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC FN: Cortes Acosta vs. Walker
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/soccer-streams-13
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.astrialmc.fun/tnt.m3u8
