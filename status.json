@@ -1,17 +1,30 @@
 {
-  "updated_utc": "2026-11-08T18:24:59.843717+00:00",
+  "updated_utc": "2026-11-08T18:32:48.914980+00:00",
   "pages": 60,
-  "candidate_urls": 61,
+  "candidate_urls": 62,
   "live_urls": 0,
-  "unavailable_urls": 60,
+  "unavailable_urls": 61,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 0,
   "event_posters": 0,
-  "roxie_source": "https://roxiestreams.info/",
+  "roxie_source": "https://roxiestreams.biz/",
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
+      "pages": 1,
+      "errors": [
+        {
+          "page": "https://roxiestreams.info/",
+          "error": "<urlopen error [Errno 104] Connection reset by peer>"
+        },
+        {
+          "error": "No HLS sources discovered"
+        }
+      ]
+    },
+    {
+      "base": "https://roxiestreams.biz/",
       "pages": 60,
       "errors": []
     }
