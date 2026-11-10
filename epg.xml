@@ -4,10 +4,6 @@
     <display-name>Nov 10 | Denver Nuggets vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4d2ef6f816911f5fde1b3e5b51400d21-thumbnail.jpg" />
   </channel>
-  <channel id="Indiana Pacers vs Dallas Mavericks">
-    <display-name>Nov 10 | Indiana Pacers vs Dallas Mavericks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="New Orleans Pelicans vs Golden State Warriors">
     <display-name>Nov 10 | New Orleans Pelicans vs Golden State Warriors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/fbbc720fd1b00be1d8a7c8c2dc644186-thumbnail.jpg" />
@@ -20,18 +16,9 @@
     <display-name>Nov 11 | WWE NXT</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
   </channel>
-  <channel id="WWE RAW">
-    <display-name>Nov 10 | WWE RAW</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261110093000 +0800" stop="20261110123000 +0800" channel="Denver Nuggets vs Houston Rockets">
     <title>Nov 10 | Denver Nuggets vs Houston Rockets</title>
     <desc>Live stream: Denver Nuggets vs Houston Rockets</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261110090000 +0800" stop="20261110120000 +0800" channel="Indiana Pacers vs Dallas Mavericks">
-    <title>Nov 10 | Indiana Pacers vs Dallas Mavericks</title>
-    <desc>Live stream: Indiana Pacers vs Dallas Mavericks</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261110110000 +0800" stop="20261110140000 +0800" channel="New Orleans Pelicans vs Golden State Warriors">
@@ -52,16 +39,6 @@
   <programme start="20261111090000 +0800" stop="20261111120000 +0800" channel="WWE NXT">
     <title>Nov 11 | WWE NXT</title>
     <desc>Live stream: WWE NXT (2)</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261110090000 +0800" stop="20261110120000 +0800" channel="WWE RAW">
-    <title>Nov 10 | WWE RAW</title>
-    <desc>Live stream: WWE RAW</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261110090000 +0800" stop="20261110120000 +0800" channel="WWE RAW">
-    <title>Nov 10 | WWE RAW</title>
-    <desc>Live stream: WWE RAW (2)</desc>
     <category>WWE</category>
   </programme>
 </tv>
