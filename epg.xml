@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Boston Celtics vs Philadelphia 76ers">
+    <display-name>Nov 11 | Boston Celtics vs Philadelphia 76ers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/cfe779beb14f32c8d83d858f4ede071b-thumbnail.jpg" />
+  </channel>
   <channel id="Milwaukee Bucks vs New York Knicks">
     <display-name>Nov 11 | Milwaukee Bucks vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/386ef259eff22ef79b79d43eb12c6867-thumbnail.jpg" />
@@ -16,6 +20,11 @@
     <display-name>Nov 11 | WWE NXT</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
   </channel>
+  <programme start="20261111090000 +0800" stop="20261111120000 +0800" channel="Boston Celtics vs Philadelphia 76ers">
+    <title>Nov 11 | Boston Celtics vs Philadelphia 76ers</title>
+    <desc>Live stream: Boston Celtics vs Philadelphia 76ers</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261111083000 +0800" stop="20261111113000 +0800" channel="Milwaukee Bucks vs New York Knicks">
     <title>Nov 11 | Milwaukee Bucks vs New York Knicks</title>
     <desc>Live stream: Milwaukee Bucks vs New York Knicks</desc>
