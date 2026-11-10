@@ -8,10 +8,6 @@
     <display-name>Nov 10 | Indiana Pacers vs Dallas Mavericks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/95e4364ed9a080bda4afaa21d25b7959-thumbnail.jpg" />
   </channel>
-  <channel id="Memphis Grizzlies vs Toronto Raptors">
-    <display-name>Nov 10 | Memphis Grizzlies vs Toronto Raptors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="New Orleans Pelicans vs Golden State Warriors">
     <display-name>Nov 10 | New Orleans Pelicans vs Golden State Warriors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/fbbc720fd1b00be1d8a7c8c2dc644186-thumbnail.jpg" />
@@ -36,11 +32,6 @@
   <programme start="20261110090000 +0800" stop="20261110120000 +0800" channel="Indiana Pacers vs Dallas Mavericks">
     <title>Nov 10 | Indiana Pacers vs Dallas Mavericks</title>
     <desc>Live stream: Indiana Pacers vs Dallas Mavericks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261110083000 +0800" stop="20261110113000 +0800" channel="Memphis Grizzlies vs Toronto Raptors">
-    <title>Nov 10 | Memphis Grizzlies vs Toronto Raptors</title>
-    <desc>Live stream: Memphis Grizzlies vs Toronto Raptors</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261110110000 +0800" stop="20261110140000 +0800" channel="New Orleans Pelicans vs Golden State Warriors">
