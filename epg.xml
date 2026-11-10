@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Milwaukee Bucks vs New York Knicks">
+    <display-name>Nov 11 | Milwaukee Bucks vs New York Knicks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/386ef259eff22ef79b79d43eb12c6867-thumbnail.jpg" />
+  </channel>
+  <channel id="Oklahoma City Thunder vs Portland Trail Blazers">
+    <display-name>Nov 11 | Oklahoma City Thunder vs Portland Trail Blazers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ebcf43fc73c965170376ffbfaef7e5e5-thumbnail.jpg" />
+  </channel>
+  <channel id="Orlando Magic vs Sacramento Kings">
+    <display-name>Nov 11 | Orlando Magic vs Sacramento Kings</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/dea6b289ce7ff5028ae5de19a098e6a4-thumbnail.jpg" />
+  </channel>
   <channel id="WWE NXT">
     <display-name>Nov 11 | WWE NXT</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
   </channel>
+  <programme start="20261111083000 +0800" stop="20261111113000 +0800" channel="Milwaukee Bucks vs New York Knicks">
+    <title>Nov 11 | Milwaukee Bucks vs New York Knicks</title>
+    <desc>Live stream: Milwaukee Bucks vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261111120000 +0800" stop="20261111150000 +0800" channel="Oklahoma City Thunder vs Portland Trail Blazers">
+    <title>Nov 11 | Oklahoma City Thunder vs Portland Trail Blazers</title>
+    <desc>Live stream: Oklahoma City Thunder vs Portland Trail Blazers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261111110000 +0800" stop="20261111140000 +0800" channel="Orlando Magic vs Sacramento Kings">
+    <title>Nov 11 | Orlando Magic vs Sacramento Kings</title>
+    <desc>Live stream: Orlando Magic vs Sacramento Kings</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261111090000 +0800" stop="20261111120000 +0800" channel="WWE NXT">
     <title>Nov 11 | WWE NXT</title>
     <desc>Live stream: WWE NXT</desc>
