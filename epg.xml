@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Cleveland Cavaliers vs Charlotte Hornets">
-    <display-name>Nov 10 | Cleveland Cavaliers vs Charlotte Hornets</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Denver Nuggets vs Houston Rockets">
     <display-name>Nov 10 | Denver Nuggets vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4d2ef6f816911f5fde1b3e5b51400d21-thumbnail.jpg" />
@@ -11,10 +7,6 @@
   <channel id="Indiana Pacers vs Dallas Mavericks">
     <display-name>Nov 10 | Indiana Pacers vs Dallas Mavericks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/95e4364ed9a080bda4afaa21d25b7959-thumbnail.jpg" />
-  </channel>
-  <channel id="Los Angeles Lakers vs Atlanta Hawks">
-    <display-name>Nov 10 | Los Angeles Lakers vs Atlanta Hawks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Memphis Grizzlies vs Toronto Raptors">
     <display-name>Nov 10 | Memphis Grizzlies vs Toronto Raptors</display-name>
@@ -28,10 +20,6 @@
     <display-name>Nov 10 | San Antonio Spurs vs Phoenix Suns</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7129d1f77f25fbabbeaffcd8059110ec-thumbnail.jpg" />
   </channel>
-  <channel id="Washington Wizards vs Detroit Pistons">
-    <display-name>Nov 10 | Washington Wizards vs Detroit Pistons</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="WWE NXT">
     <display-name>Nov 11 | WWE NXT</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
@@ -40,11 +28,6 @@
     <display-name>Nov 10 | WWE RAW</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
-  <programme start="20261110080000 +0800" stop="20261110110000 +0800" channel="Cleveland Cavaliers vs Charlotte Hornets">
-    <title>Nov 10 | Cleveland Cavaliers vs Charlotte Hornets</title>
-    <desc>Live stream: Cleveland Cavaliers vs Charlotte Hornets</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261110093000 +0800" stop="20261110123000 +0800" channel="Denver Nuggets vs Houston Rockets">
     <title>Nov 10 | Denver Nuggets vs Houston Rockets</title>
     <desc>Live stream: Denver Nuggets vs Houston Rockets</desc>
@@ -53,11 +36,6 @@
   <programme start="20261110090000 +0800" stop="20261110120000 +0800" channel="Indiana Pacers vs Dallas Mavericks">
     <title>Nov 10 | Indiana Pacers vs Dallas Mavericks</title>
     <desc>Live stream: Indiana Pacers vs Dallas Mavericks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261110080000 +0800" stop="20261110110000 +0800" channel="Los Angeles Lakers vs Atlanta Hawks">
-    <title>Nov 10 | Los Angeles Lakers vs Atlanta Hawks</title>
-    <desc>Live stream: Los Angeles Lakers vs Atlanta Hawks</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261110083000 +0800" stop="20261110113000 +0800" channel="Memphis Grizzlies vs Toronto Raptors">
@@ -73,11 +51,6 @@
   <programme start="20261110100000 +0800" stop="20261110130000 +0800" channel="San Antonio Spurs vs Phoenix Suns">
     <title>Nov 10 | San Antonio Spurs vs Phoenix Suns</title>
     <desc>Live stream: San Antonio Spurs vs Phoenix Suns</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261110080000 +0800" stop="20261110110000 +0800" channel="Washington Wizards vs Detroit Pistons">
-    <title>Nov 10 | Washington Wizards vs Detroit Pistons</title>
-    <desc>Live stream: Washington Wizards vs Detroit Pistons</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261111090000 +0800" stop="20261111120000 +0800" channel="WWE NXT">
