@@ -2,7 +2,7 @@
 <tv generator-info-name="LivePlaylist">
   <channel id="Cleveland Cavaliers vs Charlotte Hornets">
     <display-name>Nov 10 | Cleveland Cavaliers vs Charlotte Hornets</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/a3f7a7908881877a32ce19e4ac7c92aa-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Denver Nuggets vs Houston Rockets">
     <display-name>Nov 10 | Denver Nuggets vs Houston Rockets</display-name>
@@ -14,7 +14,7 @@
   </channel>
   <channel id="Los Angeles Lakers vs Atlanta Hawks">
     <display-name>Nov 10 | Los Angeles Lakers vs Atlanta Hawks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/daf20a1a7c27de85a6a4e82ff76ac313-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Memphis Grizzlies vs Toronto Raptors">
     <display-name>Nov 10 | Memphis Grizzlies vs Toronto Raptors</display-name>
@@ -30,7 +30,7 @@
   </channel>
   <channel id="Washington Wizards vs Detroit Pistons">
     <display-name>Nov 10 | Washington Wizards vs Detroit Pistons</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/73b35f5cd310dfb11a6d30eedec4ff1d-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="WWE NXT">
     <display-name>Nov 11 | WWE NXT</display-name>
@@ -68,11 +68,6 @@
   <programme start="20261110110000 +0800" stop="20261110140000 +0800" channel="New Orleans Pelicans vs Golden State Warriors">
     <title>Nov 10 | New Orleans Pelicans vs Golden State Warriors</title>
     <desc>Live stream: New Orleans Pelicans vs Golden State Warriors</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261110110000 +0800" stop="20261110140000 +0800" channel="New Orleans Pelicans vs Golden State Warriors">
-    <title>Nov 10 | New Orleans Pelicans vs Golden State Warriors</title>
-    <desc>Live stream: New Orleans Pelicans vs Golden State Warriors (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261110100000 +0800" stop="20261110130000 +0800" channel="San Antonio Spurs vs Phoenix Suns">
