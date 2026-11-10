@@ -1,1 +1,53 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="Cleveland Cavaliers vs Charlotte Hornets" tvg-name="Cleveland Cavaliers vs Charlotte Hornets" tvg-logo="https://static.ppvservices.st/assets/thumb/a3f7a7908881877a32ce19e4ac7c92aa-thumbnail.jpg" group-title="NBA",Cleveland Cavaliers vs Charlotte Hornets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://tedesco.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Denver Nuggets vs Houston Rockets" tvg-name="Denver Nuggets vs Houston Rockets" tvg-logo="https://static.ppvservices.st/assets/thumb/4d2ef6f816911f5fde1b3e5b51400d21-thumbnail.jpg" group-title="NBA",Denver Nuggets vs Houston Rockets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba6.m3u8
+#EXTINF:-1 tvg-id="Indiana Pacers vs Dallas Mavericks" tvg-name="Indiana Pacers vs Dallas Mavericks" tvg-logo="https://static.ppvservices.st/assets/thumb/95e4364ed9a080bda4afaa21d25b7959-thumbnail.jpg" group-title="NBA",Indiana Pacers vs Dallas Mavericks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba5.m3u8
+#EXTINF:-1 tvg-id="Los Angeles Lakers vs Atlanta Hawks" tvg-name="Los Angeles Lakers vs Atlanta Hawks" tvg-logo="https://static.ppvservices.st/assets/thumb/daf20a1a7c27de85a6a4e82ff76ac313-thumbnail.jpg" group-title="NBA",Los Angeles Lakers vs Atlanta Hawks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="Memphis Grizzlies vs Toronto Raptors" tvg-name="Memphis Grizzlies vs Toronto Raptors" tvg-logo="https://static.ppvservices.st/assets/thumb/87420339f8a8fa2a1d576be4ac4310d9-thumbnail.jpg" group-title="NBA",Memphis Grizzlies vs Toronto Raptors
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://tedesco.formaturamaxi.com.br/nba4.m3u8
+#EXTINF:-1 tvg-id="New Orleans Pelicans vs Golden State Warriors" tvg-name="New Orleans Pelicans vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/fbbc720fd1b00be1d8a7c8c2dc644186-thumbnail.jpg" group-title="NBA",New Orleans Pelicans vs Golden State Warriors
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/lakers.m3u8
+#EXTINF:-1 tvg-id="New Orleans Pelicans vs Golden State Warriors" tvg-name="New Orleans Pelicans vs Golden State Warriors" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",New Orleans Pelicans vs Golden State Warriors
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba8.m3u8
+#EXTINF:-1 tvg-id="San Antonio Spurs vs Phoenix Suns" tvg-name="San Antonio Spurs vs Phoenix Suns" tvg-logo="https://static.ppvservices.st/assets/thumb/7129d1f77f25fbabbeaffcd8059110ec-thumbnail.jpg" group-title="NBA",San Antonio Spurs vs Phoenix Suns
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://tedesco.formaturamaxi.com.br/nba7.m3u8
+#EXTINF:-1 tvg-id="Washington Wizards vs Detroit Pistons" tvg-name="Washington Wizards vs Detroit Pistons" tvg-logo="https://static.ppvservices.st/assets/thumb/73b35f5cd310dfb11a6d30eedec4ff1d-thumbnail.jpg" group-title="NBA",Washington Wizards vs Detroit Pistons
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://tedesco.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="WWE NXT" tvg-name="WWE NXT" tvg-logo="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" group-title="WWE",WWE NXT
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/wwe.m3u8
+#EXTINF:-1 tvg-id="WWE NXT" tvg-name="WWE NXT" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE NXT
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/wwealt.m3u8
+#EXTINF:-1 tvg-id="WWE RAW" tvg-name="WWE RAW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE RAW
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/wwe.m3u8
+#EXTINF:-1 tvg-id="WWE RAW" tvg-name="WWE RAW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE RAW
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/wwealt.m3u8
