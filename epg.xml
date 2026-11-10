@@ -36,9 +36,4 @@
     <desc>Live stream: WWE NXT</desc>
     <category>WWE</category>
   </programme>
-  <programme start="20261111090000 +0800" stop="20261111120000 +0800" channel="WWE NXT">
-    <title>Nov 11 | WWE NXT</title>
-    <desc>Live stream: WWE NXT (2)</desc>
-    <category>WWE</category>
-  </programme>
 </tv>
