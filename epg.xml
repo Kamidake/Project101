@@ -2,7 +2,7 @@
 <tv generator-info-name="LivePlaylist">
   <channel id="Boston Celtics vs Philadelphia 76ers">
     <display-name>Nov 11 | Boston Celtics vs Philadelphia 76ers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/cfe779beb14f32c8d83d858f4ede071b-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Los Angeles Clippers vs Phoenix Suns">
     <display-name>Nov 11 | Los Angeles Clippers vs Phoenix Suns</display-name>
@@ -22,7 +22,7 @@
   </channel>
   <channel id="WWE NXT">
     <display-name>Nov 11 | WWE NXT</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
   <programme start="20261111090000 +0800" stop="20261111120000 +0800" channel="Boston Celtics vs Philadelphia 76ers">
     <title>Nov 11 | Boston Celtics vs Philadelphia 76ers</title>
