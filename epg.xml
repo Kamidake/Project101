@@ -32,6 +32,10 @@
     <display-name>Nov 12 | Washington Wizards vs Indiana Pacers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/485c72a6cd2eb01abe3f10543af62790-thumbnail.jpg" />
   </channel>
+  <channel id="WWE NXT">
+    <display-name>WWE NXT</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
   <programme start="20261112080000 +0800" stop="20261112110000 +0800" channel="Boston Celtics vs Toronto Raptors">
     <title>Nov 12 | Boston Celtics vs Toronto Raptors</title>
     <desc>Live stream: Boston Celtics vs Toronto Raptors</desc>
