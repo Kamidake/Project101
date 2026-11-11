@@ -1,3 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Boston Celtics vs Toronto Raptors">
+    <display-name>Nov 12 | Boston Celtics vs Toronto Raptors</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/9b2266706325f5f2fc3c8bda47720f52-thumbnail.jpg" />
+  </channel>
+  <channel id="Brooklyn Nets vs New Orleans Pelicans">
+    <display-name>Nov 12 | Brooklyn Nets vs New Orleans Pelicans</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/edaf8013c716bbec08365614bb6fe1a1-thumbnail.jpg" />
+  </channel>
+  <channel id="Cleveland Cavaliers vs New York Knicks">
+    <display-name>Nov 12 | Cleveland Cavaliers vs New York Knicks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/bda25a3170ad2e2e89b954e64ec9ad09-thumbnail.jpg" />
+  </channel>
+  <channel id="Denver Nuggets vs Memphis Grizzlies">
+    <display-name>Nov 12 | Denver Nuggets vs Memphis Grizzlies</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/fabf682e80cfc3f56fd693335b9c9d48-thumbnail.jpg" />
+  </channel>
+  <channel id="Golden State Warriors vs Houston Rockets">
+    <display-name>Nov 12 | Golden State Warriors vs Houston Rockets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/2d86f3f29630b5128c865a4072c0c823-thumbnail.jpg" />
+  </channel>
+  <channel id="Los Angeles Lakers vs Milwaukee Bucks">
+    <display-name>Nov 12 | Los Angeles Lakers vs Milwaukee Bucks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/0bd2a2c5b713df9293d1b789235588e9-thumbnail.jpg" />
+  </channel>
+  <channel id="San Antonio Spurs vs Chicago Bulls">
+    <display-name>Nov 12 | San Antonio Spurs vs Chicago Bulls</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/73ab3178b6e1368b38e9e898762df0df-thumbnail.jpg" />
+  </channel>
+  <channel id="Washington Wizards vs Indiana Pacers">
+    <display-name>Nov 12 | Washington Wizards vs Indiana Pacers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/485c72a6cd2eb01abe3f10543af62790-thumbnail.jpg" />
+  </channel>
+  <programme start="20261112080000 +0800" stop="20261112110000 +0800" channel="Boston Celtics vs Toronto Raptors">
+    <title>Nov 12 | Boston Celtics vs Toronto Raptors</title>
+    <desc>Live stream: Boston Celtics vs Toronto Raptors</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="Brooklyn Nets vs New Orleans Pelicans">
+    <title>Nov 12 | Brooklyn Nets vs New Orleans Pelicans</title>
+    <desc>Live stream: Brooklyn Nets vs New Orleans Pelicans</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112080000 +0800" stop="20261112110000 +0800" channel="Cleveland Cavaliers vs New York Knicks">
+    <title>Nov 12 | Cleveland Cavaliers vs New York Knicks</title>
+    <desc>Live stream: Cleveland Cavaliers vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112080000 +0800" stop="20261112110000 +0800" channel="Cleveland Cavaliers vs New York Knicks">
+    <title>Nov 12 | Cleveland Cavaliers vs New York Knicks</title>
+    <desc>Live stream: Cleveland Cavaliers vs New York Knicks (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="Denver Nuggets vs Memphis Grizzlies">
+    <title>Nov 12 | Denver Nuggets vs Memphis Grizzlies</title>
+    <desc>Live stream: Denver Nuggets vs Memphis Grizzlies</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112103000 +0800" stop="20261112133000 +0800" channel="Golden State Warriors vs Houston Rockets">
+    <title>Nov 12 | Golden State Warriors vs Houston Rockets</title>
+    <desc>Live stream: Golden State Warriors vs Houston Rockets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112103000 +0800" stop="20261112133000 +0800" channel="Golden State Warriors vs Houston Rockets">
+    <title>Nov 12 | Golden State Warriors vs Houston Rockets</title>
+    <desc>Live stream: Golden State Warriors vs Houston Rockets (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="Los Angeles Lakers vs Milwaukee Bucks">
+    <title>Nov 12 | Los Angeles Lakers vs Milwaukee Bucks</title>
+    <desc>Live stream: Los Angeles Lakers vs Milwaukee Bucks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="San Antonio Spurs vs Chicago Bulls">
+    <title>Nov 12 | San Antonio Spurs vs Chicago Bulls</title>
+    <desc>Live stream: San Antonio Spurs vs Chicago Bulls</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112080000 +0800" stop="20261112110000 +0800" channel="Washington Wizards vs Indiana Pacers">
+    <title>Nov 12 | Washington Wizards vs Indiana Pacers</title>
+    <desc>Live stream: Washington Wizards vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
 </tv>
