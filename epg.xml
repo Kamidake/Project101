@@ -25,6 +25,11 @@
     <desc>Live stream: Boston Celtics vs Philadelphia 76ers</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261111090000 +0800" stop="20261111120000 +0800" channel="Boston Celtics vs Philadelphia 76ers">
+    <title>Nov 11 | Boston Celtics vs Philadelphia 76ers</title>
+    <desc>Live stream: Boston Celtics vs Philadelphia 76ers (2)</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261111083000 +0800" stop="20261111113000 +0800" channel="Milwaukee Bucks vs New York Knicks">
     <title>Nov 11 | Milwaukee Bucks vs New York Knicks</title>
     <desc>Live stream: Milwaukee Bucks vs New York Knicks</desc>
@@ -33,6 +38,11 @@
   <programme start="20261111120000 +0800" stop="20261111150000 +0800" channel="Oklahoma City Thunder vs Portland Trail Blazers">
     <title>Nov 11 | Oklahoma City Thunder vs Portland Trail Blazers</title>
     <desc>Live stream: Oklahoma City Thunder vs Portland Trail Blazers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261111120000 +0800" stop="20261111150000 +0800" channel="Oklahoma City Thunder vs Portland Trail Blazers">
+    <title>Nov 11 | Oklahoma City Thunder vs Portland Trail Blazers</title>
+    <desc>Live stream: Oklahoma City Thunder vs Portland Trail Blazers (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261111110000 +0800" stop="20261111140000 +0800" channel="Orlando Magic vs Sacramento Kings">
