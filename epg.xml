@@ -4,10 +4,6 @@
     <display-name>Nov 11 | Oklahoma City Thunder vs Portland Trail Blazers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ebcf43fc73c965170376ffbfaef7e5e5-thumbnail.jpg" />
   </channel>
-  <channel id="Orlando Magic vs Sacramento Kings">
-    <display-name>Nov 11 | Orlando Magic vs Sacramento Kings</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <programme start="20261111120000 +0800" stop="20261111150000 +0800" channel="Oklahoma City Thunder vs Portland Trail Blazers">
     <title>Nov 11 | Oklahoma City Thunder vs Portland Trail Blazers</title>
     <desc>Live stream: Oklahoma City Thunder vs Portland Trail Blazers</desc>
@@ -16,11 +12,6 @@
   <programme start="20261111120000 +0800" stop="20261111150000 +0800" channel="Oklahoma City Thunder vs Portland Trail Blazers">
     <title>Nov 11 | Oklahoma City Thunder vs Portland Trail Blazers</title>
     <desc>Live stream: Oklahoma City Thunder vs Portland Trail Blazers (2)</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261111110000 +0800" stop="20261111140000 +0800" channel="Orlando Magic vs Sacramento Kings">
-    <title>Nov 11 | Orlando Magic vs Sacramento Kings</title>
-    <desc>Live stream: Orlando Magic vs Sacramento Kings</desc>
     <category>NBA</category>
   </programme>
 </tv>
