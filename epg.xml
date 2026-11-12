@@ -1,66 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="AEW">
-    <display-name>Nov 12 | AEW</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
-  </channel>
-  <channel id="Brooklyn Nets vs New Orleans Pelicans">
-    <display-name>Nov 12 | Brooklyn Nets vs New Orleans Pelicans</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Denver Nuggets vs Memphis Grizzlies">
-    <display-name>Nov 12 | Denver Nuggets vs Memphis Grizzlies</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Golden State Warriors vs Houston Rockets">
     <display-name>Nov 12 | Golden State Warriors vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/2d86f3f29630b5128c865a4072c0c823-thumbnail.jpg" />
-  </channel>
-  <channel id="Los Angeles Lakers vs Milwaukee Bucks">
-    <display-name>Nov 12 | Los Angeles Lakers vs Milwaukee Bucks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Oklahoma City Thunder vs Portland Trail Blazers">
     <display-name>Nov 12 | Oklahoma City Thunder vs Portland Trail Blazers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ebcf43fc73c965170376ffbfaef7e5e5-thumbnail.jpg" />
   </channel>
-  <channel id="San Antonio Spurs vs Chicago Bulls">
-    <display-name>Nov 12 | San Antonio Spurs vs Chicago Bulls</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="AEW">
-    <title>Nov 12 | AEW</title>
-    <desc>Live stream: AEW</desc>
-    <category>AEW</category>
-  </programme>
-  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="Brooklyn Nets vs New Orleans Pelicans">
-    <title>Nov 12 | Brooklyn Nets vs New Orleans Pelicans</title>
-    <desc>Live stream: Brooklyn Nets vs New Orleans Pelicans</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="Denver Nuggets vs Memphis Grizzlies">
-    <title>Nov 12 | Denver Nuggets vs Memphis Grizzlies</title>
-    <desc>Live stream: Denver Nuggets vs Memphis Grizzlies</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261112103000 +0800" stop="20261112133000 +0800" channel="Golden State Warriors vs Houston Rockets">
     <title>Nov 12 | Golden State Warriors vs Houston Rockets</title>
     <desc>Live stream: Golden State Warriors vs Houston Rockets</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="Los Angeles Lakers vs Milwaukee Bucks">
-    <title>Nov 12 | Los Angeles Lakers vs Milwaukee Bucks</title>
-    <desc>Live stream: Los Angeles Lakers vs Milwaukee Bucks</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261112110000 +0800" stop="20261112140000 +0800" channel="Oklahoma City Thunder vs Portland Trail Blazers">
     <title>Nov 12 | Oklahoma City Thunder vs Portland Trail Blazers</title>
     <desc>Live stream: Oklahoma City Thunder vs Portland Trail Blazers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="San Antonio Spurs vs Chicago Bulls">
-    <title>Nov 12 | San Antonio Spurs vs Chicago Bulls</title>
-    <desc>Live stream: San Antonio Spurs vs Chicago Bulls</desc>
     <category>NBA</category>
   </programme>
 </tv>
