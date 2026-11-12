@@ -28,6 +28,10 @@
     <display-name>Nov 12 | Los Angeles Lakers vs Milwaukee Bucks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/0bd2a2c5b713df9293d1b789235588e9-thumbnail.jpg" />
   </channel>
+  <channel id="Oklahoma City Thunder vs Portland Trail Blazers">
+    <display-name>Nov 12 | Oklahoma City Thunder vs Portland Trail Blazers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ebcf43fc73c965170376ffbfaef7e5e5-thumbnail.jpg" />
+  </channel>
   <channel id="San Antonio Spurs vs Chicago Bulls">
     <display-name>Nov 12 | San Antonio Spurs vs Chicago Bulls</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/73ab3178b6e1368b38e9e898762df0df-thumbnail.jpg" />
@@ -69,6 +73,11 @@
   <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="Los Angeles Lakers vs Milwaukee Bucks">
     <title>Nov 12 | Los Angeles Lakers vs Milwaukee Bucks</title>
     <desc>Live stream: Los Angeles Lakers vs Milwaukee Bucks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261112110000 +0800" stop="20261112140000 +0800" channel="Oklahoma City Thunder vs Portland Trail Blazers">
+    <title>Nov 12 | Oklahoma City Thunder vs Portland Trail Blazers</title>
+    <desc>Live stream: Oklahoma City Thunder vs Portland Trail Blazers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="San Antonio Spurs vs Chicago Bulls">
