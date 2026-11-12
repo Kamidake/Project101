@@ -6,11 +6,11 @@
   </channel>
   <channel id="Brooklyn Nets vs New Orleans Pelicans">
     <display-name>Nov 12 | Brooklyn Nets vs New Orleans Pelicans</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/edaf8013c716bbec08365614bb6fe1a1-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Denver Nuggets vs Memphis Grizzlies">
     <display-name>Nov 12 | Denver Nuggets vs Memphis Grizzlies</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/fabf682e80cfc3f56fd693335b9c9d48-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Golden State Warriors vs Houston Rockets">
     <display-name>Nov 12 | Golden State Warriors vs Houston Rockets</display-name>
@@ -18,7 +18,7 @@
   </channel>
   <channel id="Los Angeles Lakers vs Milwaukee Bucks">
     <display-name>Nov 12 | Los Angeles Lakers vs Milwaukee Bucks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/0bd2a2c5b713df9293d1b789235588e9-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Oklahoma City Thunder vs Portland Trail Blazers">
     <display-name>Nov 12 | Oklahoma City Thunder vs Portland Trail Blazers</display-name>
@@ -26,7 +26,7 @@
   </channel>
   <channel id="San Antonio Spurs vs Chicago Bulls">
     <display-name>Nov 12 | San Antonio Spurs vs Chicago Bulls</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/73ab3178b6e1368b38e9e898762df0df-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="AEW">
     <title>Nov 12 | AEW</title>
