@@ -3,7 +3,7 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/aew.m3u8
-#EXTINF:-1 tvg-id="Boston Celtics vs Toronto Raptors" tvg-name="Boston Celtics vs Toronto Raptors" tvg-logo="https://static.ppvservices.st/assets/thumb/9b2266706325f5f2fc3c8bda47720f52-thumbnail.jpg" group-title="NBA",Boston Celtics vs Toronto Raptors
+#EXTINF:-1 tvg-id="Boston Celtics vs Toronto Raptors" tvg-name="Boston Celtics vs Toronto Raptors" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Boston Celtics vs Toronto Raptors
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba3.m3u8
@@ -11,7 +11,7 @@ https://admin2.formaturamaxi.com.br/nba3.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba7.m3u8
-#EXTINF:-1 tvg-id="Cleveland Cavaliers vs New York Knicks" tvg-name="Cleveland Cavaliers vs New York Knicks" tvg-logo="https://static.ppvservices.st/assets/thumb/bda25a3170ad2e2e89b954e64ec9ad09-thumbnail.jpg" group-title="NBA",Cleveland Cavaliers vs New York Knicks
+#EXTINF:-1 tvg-id="Cleveland Cavaliers vs New York Knicks" tvg-name="Cleveland Cavaliers vs New York Knicks" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Cleveland Cavaliers vs New York Knicks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba2.m3u8
@@ -35,7 +35,7 @@ https://admin2.formaturamaxi.com.br/nba10.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8
-#EXTINF:-1 tvg-id="Washington Wizards vs Indiana Pacers" tvg-name="Washington Wizards vs Indiana Pacers" tvg-logo="https://static.ppvservices.st/assets/thumb/485c72a6cd2eb01abe3f10543af62790-thumbnail.jpg" group-title="NBA",Washington Wizards vs Indiana Pacers
+#EXTINF:-1 tvg-id="Washington Wizards vs Indiana Pacers" tvg-name="Washington Wizards vs Indiana Pacers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Washington Wizards vs Indiana Pacers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba.m3u8
