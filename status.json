@@ -1,13 +1,13 @@
 {
-  "updated_utc": "2026-11-12T05:32:23.162497+00:00",
+  "updated_utc": "2026-11-12T05:47:36.094985+00:00",
   "pages": 32,
   "candidate_urls": 25,
-  "live_urls": 2,
+  "live_urls": 1,
   "unavailable_urls": 1,
   "unsupported_pages": [],
   "errors": [],
-  "event_groups": 2,
-  "event_posters": 2,
+  "event_groups": 1,
+  "event_posters": 1,
   "roxie_source": "https://roxiestreams.info/",
   "roxie_attempts": [
     {
