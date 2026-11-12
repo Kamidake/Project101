@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="AEW">
+    <display-name>Nov 12 | AEW</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
+  </channel>
   <channel id="Boston Celtics vs Toronto Raptors">
     <display-name>Nov 12 | Boston Celtics vs Toronto Raptors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9b2266706325f5f2fc3c8bda47720f52-thumbnail.jpg" />
@@ -32,6 +36,11 @@
     <display-name>Nov 12 | Washington Wizards vs Indiana Pacers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/485c72a6cd2eb01abe3f10543af62790-thumbnail.jpg" />
   </channel>
+  <programme start="20261112090000 +0800" stop="20261112120000 +0800" channel="AEW">
+    <title>Nov 12 | AEW</title>
+    <desc>Live stream: AEW</desc>
+    <category>AEW</category>
+  </programme>
   <programme start="20261112080000 +0800" stop="20261112110000 +0800" channel="Boston Celtics vs Toronto Raptors">
     <title>Nov 12 | Boston Celtics vs Toronto Raptors</title>
     <desc>Live stream: Boston Celtics vs Toronto Raptors</desc>
