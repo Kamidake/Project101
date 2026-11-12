@@ -1,1 +1,25 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="AEW" tvg-name="AEW" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" group-title="AEW",AEW
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/aew
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/aew.m3u8
+#EXTINF:-1 tvg-id="Charlotte Hornets vs Phoenix Suns" tvg-name="Charlotte Hornets vs Phoenix Suns" tvg-logo="https://static.ppvservices.st/assets/thumb/8f03b344f393d11f6386ecd23211f013-thumbnail.jpg" group-title="NBA",Charlotte Hornets vs Phoenix Suns
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba4.m3u8
+#EXTINF:-1 tvg-id="Dallas Mavericks vs Minnesota Timberwolves" tvg-name="Dallas Mavericks vs Minnesota Timberwolves" tvg-logo="https://static.ppvservices.st/assets/thumb/f9189dd3aca77fc80c7335f51d6aabc6-thumbnail.jpg" group-title="NBA",Dallas Mavericks vs Minnesota Timberwolves
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="Detroit Pistons vs Washington Wizards" tvg-name="Detroit Pistons vs Washington Wizards" tvg-logo="https://static.ppvservices.st/assets/thumb/f3b098cce9e6f6e35604282b79145019-thumbnail.jpg" group-title="NBA",Detroit Pistons vs Washington Wizards
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Toronto Raptors vs Philadelphia 76ers" tvg-name="Toronto Raptors vs Philadelphia 76ers" tvg-logo="https://static.ppvservices.st/assets/thumb/d3cd8bf6f050a18b29084be0f2bee11a-thumbnail.jpg" group-title="NBA",Toronto Raptors vs Philadelphia 76ers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="TNA" tvg-name="TNA" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" group-title="TNA",TNA
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ppv-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/ppv.m3u8
