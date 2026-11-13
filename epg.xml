@@ -8,14 +8,6 @@
     <display-name>Nov 13 | Dallas Mavericks vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/f9189dd3aca77fc80c7335f51d6aabc6-thumbnail.jpg" />
   </channel>
-  <channel id="Detroit Pistons vs Washington Wizards">
-    <display-name>Nov 13 | Detroit Pistons vs Washington Wizards</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Toronto Raptors vs Philadelphia 76ers">
-    <display-name>Nov 13 | Toronto Raptors vs Philadelphia 76ers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="TNA">
     <display-name>Nov 13 | TNA</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
@@ -28,21 +20,6 @@
   <programme start="20261113090000 +0800" stop="20261113120000 +0800" channel="Dallas Mavericks vs Minnesota Timberwolves">
     <title>Nov 13 | Dallas Mavericks vs Minnesota Timberwolves</title>
     <desc>Live stream: Dallas Mavericks vs Minnesota Timberwolves</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261113080000 +0800" stop="20261113110000 +0800" channel="Detroit Pistons vs Washington Wizards">
-    <title>Nov 13 | Detroit Pistons vs Washington Wizards</title>
-    <desc>Live stream: Detroit Pistons vs Washington Wizards</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261113080000 +0800" stop="20261113110000 +0800" channel="Toronto Raptors vs Philadelphia 76ers">
-    <title>Nov 13 | Toronto Raptors vs Philadelphia 76ers</title>
-    <desc>Live stream: Toronto Raptors vs Philadelphia 76ers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261113080000 +0800" stop="20261113110000 +0800" channel="Toronto Raptors vs Philadelphia 76ers">
-    <title>Nov 13 | Toronto Raptors vs Philadelphia 76ers</title>
-    <desc>Live stream: Toronto Raptors vs Philadelphia 76ers (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261113090000 +0800" stop="20261113120000 +0800" channel="TNA">
