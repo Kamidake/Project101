@@ -40,6 +40,11 @@
     <desc>Live stream: Toronto Raptors vs Philadelphia 76ers</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261113080000 +0800" stop="20261113110000 +0800" channel="Toronto Raptors vs Philadelphia 76ers">
+    <title>Nov 13 | Toronto Raptors vs Philadelphia 76ers</title>
+    <desc>Live stream: Toronto Raptors vs Philadelphia 76ers (2)</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261113090000 +0800" stop="20261113120000 +0800" channel="TNA">
     <title>Nov 13 | TNA</title>
     <desc>Live stream: TNA</desc>
