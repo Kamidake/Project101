@@ -4,27 +4,9 @@
     <display-name>Nov 13 | Charlotte Hornets vs Phoenix Suns</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/8f03b344f393d11f6386ecd23211f013-thumbnail.jpg" />
   </channel>
-  <channel id="Dallas Mavericks vs Minnesota Timberwolves">
-    <display-name>Nov 13 | Dallas Mavericks vs Minnesota Timberwolves</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="TNA">
-    <display-name>Nov 13 | TNA</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
-  </channel>
   <programme start="20261113100000 +0800" stop="20261113130000 +0800" channel="Charlotte Hornets vs Phoenix Suns">
     <title>Nov 13 | Charlotte Hornets vs Phoenix Suns</title>
     <desc>Live stream: Charlotte Hornets vs Phoenix Suns</desc>
     <category>NBA</category>
-  </programme>
-  <programme start="20261113090000 +0800" stop="20261113120000 +0800" channel="Dallas Mavericks vs Minnesota Timberwolves">
-    <title>Nov 13 | Dallas Mavericks vs Minnesota Timberwolves</title>
-    <desc>Live stream: Dallas Mavericks vs Minnesota Timberwolves</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261113090000 +0800" stop="20261113120000 +0800" channel="TNA">
-    <title>Nov 13 | TNA</title>
-    <desc>Live stream: TNA</desc>
-    <category>TNA</category>
   </programme>
 </tv>
