@@ -1,3 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Atlanta Hawks vs Chicago Bulls">
+    <display-name>Nov 14 | Atlanta Hawks vs Chicago Bulls</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/37c9b3804fa7eb217a2b6acb40e4ea86-thumbnail.jpg" />
+  </channel>
+  <channel id="Cleveland Cavaliers vs Miami Heat">
+    <display-name>Nov 14 | Cleveland Cavaliers vs Miami Heat</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/21928f035125c8fbf3a3fa93c9852c51-thumbnail.jpg" />
+  </channel>
+  <channel id="Golden State Warriors vs San Antonio Spurs">
+    <display-name>Nov 14 | Golden State Warriors vs San Antonio Spurs</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/2a08d8d5a7ab23833090e8203e3b3768-thumbnail.jpg" />
+  </channel>
+  <channel id="Memphis Grizzlies vs New Orleans Pelicans">
+    <display-name>Nov 14 | Memphis Grizzlies vs New Orleans Pelicans</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/70fdbb8a91c4000129944249ba58bead-thumbnail.jpg" />
+  </channel>
+  <channel id="Milwaukee Bucks vs Orlando Magic">
+    <display-name>Nov 14 | Milwaukee Bucks vs Orlando Magic</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5dd8dde250fc2624888e63ed6e3b3967-thumbnail.jpg" />
+  </channel>
+  <channel id="New York Knicks vs Indiana Pacers">
+    <display-name>Nov 14 | New York Knicks vs Indiana Pacers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ccff4ecb19b7fda22dfe686c0d050639-thumbnail.jpg" />
+  </channel>
+  <channel id="Oklahoma City Thunder vs Los Angeles Clippers">
+    <display-name>Nov 14 | Oklahoma City Thunder vs Los Angeles Clippers</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
+  <channel id="Utah Jazz vs Houston Rockets">
+    <display-name>Nov 14 | Utah Jazz vs Houston Rockets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/0fdaa5f5f87be01ca5e14b0d5574419b-thumbnail.jpg" />
+  </channel>
+  <channel id="WWE Smackdown">
+    <display-name>Nov 14 | WWE Smackdown</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <programme start="20261114090000 +0800" stop="20261114120000 +0800" channel="Atlanta Hawks vs Chicago Bulls">
+    <title>Nov 14 | Atlanta Hawks vs Chicago Bulls</title>
+    <desc>Live stream: Atlanta Hawks vs Chicago Bulls</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114090000 +0800" stop="20261114120000 +0800" channel="Cleveland Cavaliers vs Miami Heat">
+    <title>Nov 14 | Cleveland Cavaliers vs Miami Heat</title>
+    <desc>Live stream: Cleveland Cavaliers vs Miami Heat</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114103000 +0800" stop="20261114133000 +0800" channel="Golden State Warriors vs San Antonio Spurs">
+    <title>Nov 14 | Golden State Warriors vs San Antonio Spurs</title>
+    <desc>Live stream: Golden State Warriors vs San Antonio Spurs</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114090000 +0800" stop="20261114120000 +0800" channel="Memphis Grizzlies vs New Orleans Pelicans">
+    <title>Nov 14 | Memphis Grizzlies vs New Orleans Pelicans</title>
+    <desc>Live stream: Memphis Grizzlies vs New Orleans Pelicans</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114080000 +0800" stop="20261114110000 +0800" channel="Milwaukee Bucks vs Orlando Magic">
+    <title>Nov 14 | Milwaukee Bucks vs Orlando Magic</title>
+    <desc>Live stream: Milwaukee Bucks vs Orlando Magic</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114080000 +0800" stop="20261114110000 +0800" channel="New York Knicks vs Indiana Pacers">
+    <title>Nov 14 | New York Knicks vs Indiana Pacers</title>
+    <desc>Live stream: New York Knicks vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114080000 +0800" stop="20261114110000 +0800" channel="New York Knicks vs Indiana Pacers">
+    <title>Nov 14 | New York Knicks vs Indiana Pacers</title>
+    <desc>Live stream: New York Knicks vs Indiana Pacers (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114113000 +0800" stop="20261114143000 +0800" channel="Oklahoma City Thunder vs Los Angeles Clippers">
+    <title>Nov 14 | Oklahoma City Thunder vs Los Angeles Clippers</title>
+    <desc>Live stream: Oklahoma City Thunder vs Los Angeles Clippers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114113000 +0800" stop="20261114143000 +0800" channel="Oklahoma City Thunder vs Los Angeles Clippers">
+    <title>Nov 14 | Oklahoma City Thunder vs Los Angeles Clippers</title>
+    <desc>Live stream: Oklahoma City Thunder vs Los Angeles Clippers (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114093000 +0800" stop="20261114123000 +0800" channel="Utah Jazz vs Houston Rockets">
+    <title>Nov 14 | Utah Jazz vs Houston Rockets</title>
+    <desc>Live stream: Utah Jazz vs Houston Rockets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261114090000 +0800" stop="20261114120000 +0800" channel="WWE Smackdown">
+    <title>Nov 14 | WWE Smackdown</title>
+    <desc>Live stream: WWE Smackdown</desc>
+    <category>WWE</category>
+  </programme>
 </tv>
