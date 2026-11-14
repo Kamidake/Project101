@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="AEW Full Gear">
+    <display-name>Nov 15 | AEW Full Gear</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
+  </channel>
   <channel id="Atlanta Hawks vs Chicago Bulls">
     <display-name>Nov 14 | Atlanta Hawks vs Chicago Bulls</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/37c9b3804fa7eb217a2b6acb40e4ea86-thumbnail.jpg" />
@@ -32,10 +36,19 @@
     <display-name>Nov 14 | Utah Jazz vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/0fdaa5f5f87be01ca5e14b0d5574419b-thumbnail.jpg" />
   </channel>
+  <channel id="UFC 334: Gane vs. Hokit">
+    <display-name>Nov 15 | UFC 334: Gane vs. Hokit</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
+  </channel>
   <channel id="WWE Smackdown">
     <display-name>Nov 14 | WWE Smackdown</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
   </channel>
+  <programme start="20261115080000 +0800" stop="20261115110000 +0800" channel="AEW Full Gear">
+    <title>Nov 15 | AEW Full Gear</title>
+    <desc>Live stream: AEW Full Gear</desc>
+    <category>AEW</category>
+  </programme>
   <programme start="20261114090000 +0800" stop="20261114120000 +0800" channel="Atlanta Hawks vs Chicago Bulls">
     <title>Nov 14 | Atlanta Hawks vs Chicago Bulls</title>
     <desc>Live stream: Atlanta Hawks vs Chicago Bulls</desc>
@@ -80,6 +93,16 @@
     <title>Nov 14 | Utah Jazz vs Houston Rockets</title>
     <desc>Live stream: Utah Jazz vs Houston Rockets</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261115060000 +0800" stop="20261115140000 +0800" channel="UFC 334: Gane vs. Hokit">
+    <title>Nov 15 | UFC 334: Gane vs. Hokit</title>
+    <desc>Live stream: UFC 334: Gane vs. Hokit</desc>
+    <category>UFC</category>
+  </programme>
+  <programme start="20261115060000 +0800" stop="20261115140000 +0800" channel="UFC 334: Gane vs. Hokit">
+    <title>Nov 15 | UFC 334: Gane vs. Hokit</title>
+    <desc>Live stream: UFC 334: Gane vs. Hokit (2)</desc>
+    <category>UFC</category>
   </programme>
   <programme start="20261114090000 +0800" stop="20261114120000 +0800" channel="WWE Smackdown">
     <title>Nov 14 | WWE Smackdown</title>
