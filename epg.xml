@@ -16,10 +16,6 @@
     <display-name>Nov 14 | Portland Trail Blazers vs Sacramento Kings</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/162ca7fd2fd41414f724b59f19cff85f-thumbnail.jpg" />
   </channel>
-  <channel id="Utah Jazz vs Houston Rockets">
-    <display-name>Nov 14 | Utah Jazz vs Houston Rockets</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="UFC 334: Gane vs. Hokit">
     <display-name>Nov 15 | UFC 334: Gane vs. Hokit</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
@@ -42,11 +38,6 @@
   <programme start="20261114110000 +0800" stop="20261114140000 +0800" channel="Portland Trail Blazers vs Sacramento Kings">
     <title>Nov 14 | Portland Trail Blazers vs Sacramento Kings</title>
     <desc>Live stream: Portland Trail Blazers vs Sacramento Kings</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261114093000 +0800" stop="20261114123000 +0800" channel="Utah Jazz vs Houston Rockets">
-    <title>Nov 14 | Utah Jazz vs Houston Rockets</title>
-    <desc>Live stream: Utah Jazz vs Houston Rockets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261115060000 +0800" stop="20261115140000 +0800" channel="UFC 334: Gane vs. Hokit">
