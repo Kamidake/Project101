@@ -4,6 +4,26 @@
     <display-name>Nov 15 | AEW Full Gear</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
   </channel>
+  <channel id="Brooklyn Nets vs Memphis Grizzlies">
+    <display-name>Nov 15 | Brooklyn Nets vs Memphis Grizzlies</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/da9d7eddd627a7fb91b471b8d5b8a856-thumbnail.jpg" />
+  </channel>
+  <channel id="Chicago Bulls vs Minnesota Timberwolves">
+    <display-name>Nov 15 | Chicago Bulls vs Minnesota Timberwolves</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/d828ea0ac1a8d35e01414213da869607-thumbnail.jpg" />
+  </channel>
+  <channel id="Dallas Mavericks vs Cleveland Cavaliers">
+    <display-name>Nov 15 | Dallas Mavericks vs Cleveland Cavaliers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/90888e38d8fb2d063adf14b990221ad5-thumbnail.jpg" />
+  </channel>
+  <channel id="Denver Nuggets vs New Orleans Pelicans">
+    <display-name>Nov 15 | Denver Nuggets vs New Orleans Pelicans</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5467b20c6e17a09dc8fa170ec9792bd3-thumbnail.jpg" />
+  </channel>
+  <channel id="Detroit Pistons vs Miami Heat">
+    <display-name>Nov 15 | Detroit Pistons vs Miami Heat</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/d40b16a4e56c41522c030a384db4b17f-thumbnail.jpg" />
+  </channel>
   <channel id="UFC 334: Gane vs. Hokit">
     <display-name>Nov 15 | UFC 334: Gane vs. Hokit</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" />
@@ -12,6 +32,31 @@
     <title>Nov 15 | AEW Full Gear</title>
     <desc>Live stream: AEW Full Gear</desc>
     <category>AEW</category>
+  </programme>
+  <programme start="20261115090000 +0800" stop="20261115120000 +0800" channel="Brooklyn Nets vs Memphis Grizzlies">
+    <title>Nov 15 | Brooklyn Nets vs Memphis Grizzlies</title>
+    <desc>Live stream: Brooklyn Nets vs Memphis Grizzlies</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261115090000 +0800" stop="20261115120000 +0800" channel="Chicago Bulls vs Minnesota Timberwolves">
+    <title>Nov 15 | Chicago Bulls vs Minnesota Timberwolves</title>
+    <desc>Live stream: Chicago Bulls vs Minnesota Timberwolves</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261115083000 +0800" stop="20261115113000 +0800" channel="Dallas Mavericks vs Cleveland Cavaliers">
+    <title>Nov 15 | Dallas Mavericks vs Cleveland Cavaliers</title>
+    <desc>Live stream: Dallas Mavericks vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261115080000 +0800" stop="20261115110000 +0800" channel="Denver Nuggets vs New Orleans Pelicans">
+    <title>Nov 15 | Denver Nuggets vs New Orleans Pelicans</title>
+    <desc>Live stream: Denver Nuggets vs New Orleans Pelicans</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261115090000 +0800" stop="20261115120000 +0800" channel="Detroit Pistons vs Miami Heat">
+    <title>Nov 15 | Detroit Pistons vs Miami Heat</title>
+    <desc>Live stream: Detroit Pistons vs Miami Heat</desc>
+    <category>NBA</category>
   </programme>
   <programme start="20261115060000 +0800" stop="20261115140000 +0800" channel="UFC 334: Gane vs. Hokit">
     <title>Nov 15 | UFC 334: Gane vs. Hokit</title>
