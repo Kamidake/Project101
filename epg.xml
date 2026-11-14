@@ -4,10 +4,6 @@
     <display-name>Nov 15 | AEW Full Gear</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
   </channel>
-  <channel id="Golden State Warriors vs San Antonio Spurs">
-    <display-name>Nov 14 | Golden State Warriors vs San Antonio Spurs</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Oklahoma City Thunder vs Los Angeles Clippers">
     <display-name>Nov 14 | Oklahoma City Thunder vs Los Angeles Clippers</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -24,11 +20,6 @@
     <title>Nov 15 | AEW Full Gear</title>
     <desc>Live stream: AEW Full Gear</desc>
     <category>AEW</category>
-  </programme>
-  <programme start="20261114103000 +0800" stop="20261114133000 +0800" channel="Golden State Warriors vs San Antonio Spurs">
-    <title>Nov 14 | Golden State Warriors vs San Antonio Spurs</title>
-    <desc>Live stream: Golden State Warriors vs San Antonio Spurs</desc>
-    <category>NBA</category>
   </programme>
   <programme start="20261114113000 +0800" stop="20261114143000 +0800" channel="Oklahoma City Thunder vs Los Angeles Clippers">
     <title>Nov 14 | Oklahoma City Thunder vs Los Angeles Clippers</title>
