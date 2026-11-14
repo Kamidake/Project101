@@ -20,14 +20,6 @@
     <display-name>Nov 14 | Memphis Grizzlies vs New Orleans Pelicans</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/70fdbb8a91c4000129944249ba58bead-thumbnail.jpg" />
   </channel>
-  <channel id="Milwaukee Bucks vs Orlando Magic">
-    <display-name>Nov 14 | Milwaukee Bucks vs Orlando Magic</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="New York Knicks vs Indiana Pacers">
-    <display-name>Nov 14 | New York Knicks vs Indiana Pacers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Oklahoma City Thunder vs Los Angeles Clippers">
     <display-name>Nov 14 | Oklahoma City Thunder vs Los Angeles Clippers</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -71,16 +63,6 @@
   <programme start="20261114090000 +0800" stop="20261114120000 +0800" channel="Memphis Grizzlies vs New Orleans Pelicans">
     <title>Nov 14 | Memphis Grizzlies vs New Orleans Pelicans</title>
     <desc>Live stream: Memphis Grizzlies vs New Orleans Pelicans</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261114080000 +0800" stop="20261114110000 +0800" channel="Milwaukee Bucks vs Orlando Magic">
-    <title>Nov 14 | Milwaukee Bucks vs Orlando Magic</title>
-    <desc>Live stream: Milwaukee Bucks vs Orlando Magic</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261114080000 +0800" stop="20261114110000 +0800" channel="New York Knicks vs Indiana Pacers">
-    <title>Nov 14 | New York Knicks vs Indiana Pacers</title>
-    <desc>Live stream: New York Knicks vs Indiana Pacers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261114113000 +0800" stop="20261114143000 +0800" channel="Oklahoma City Thunder vs Los Angeles Clippers">
