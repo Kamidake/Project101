@@ -34,4 +34,8 @@ https://temp.formaturamaxi.com.br/simplyabby.m3u8
 #EXTINF:-1 tvg-id="UFC 334: Gane vs. Hokit" tvg-name="UFC 334: Gane vs. Hokit" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC 334: Gane vs. Hokit
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://temp.formaturamaxi.com.br/sn.m3u8
+#EXTINF:-1 tvg-id="UFC 334: Gane vs. Hokit" tvg-name="UFC 334: Gane vs. Hokit" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/ufc.png" group-title="UFC",UFC 334: Gane vs. Hokit
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/ufc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://temp.formaturamaxi.com.br/tnt.m3u8
