@@ -16,10 +16,6 @@
     <display-name>Nov 16 | Houston Rockets vs Washington Wizards</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/1d15974f2b88953c07574cc2e1c05c5f-thumbnail.jpg" />
   </channel>
-  <channel id="Los Angeles Lakers vs Phoenix Suns">
-    <display-name>Nov 16 | Los Angeles Lakers vs Phoenix Suns</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="New York Knicks vs Toronto Raptors">
     <display-name>Nov 16 | New York Knicks vs Toronto Raptors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/a4beabaa0a189a03e3ec9442a408613f-thumbnail.jpg" />
@@ -46,11 +42,6 @@
   <programme start="20261116080000 +0800" stop="20261116110000 +0800" channel="Houston Rockets vs Washington Wizards">
     <title>Nov 16 | Houston Rockets vs Washington Wizards</title>
     <desc>Live stream: Houston Rockets vs Washington Wizards</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261116050000 +0800" stop="20261116080000 +0800" channel="Los Angeles Lakers vs Phoenix Suns">
-    <title>Nov 16 | Los Angeles Lakers vs Phoenix Suns</title>
-    <desc>Live stream: Los Angeles Lakers vs Phoenix Suns</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261116070000 +0800" stop="20261116100000 +0800" channel="New York Knicks vs Toronto Raptors">
