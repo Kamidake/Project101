@@ -24,10 +24,6 @@
     <display-name>Nov 17 | Philadelphia 76ers vs Brooklyn Nets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7e3427c9f7a9de5ba308c994665d4a33-thumbnail.jpg" />
   </channel>
-  <channel id="Phoenix Suns vs Denver Nuggets">
-    <display-name>Nov 17 | Phoenix Suns vs Denver Nuggets</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/0d923ac6ced301121ff256cfde970595-thumbnail.jpg" />
-  </channel>
   <channel id="Portland Trail Blazers vs Minnesota Timberwolves">
     <display-name>Nov 17 | Portland Trail Blazers vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/dff9bf07d8c014c123b6d61b6d260959-thumbnail.jpg" />
@@ -60,11 +56,6 @@
   <programme start="20261117083000 +0800" stop="20261117113000 +0800" channel="Philadelphia 76ers vs Brooklyn Nets">
     <title>Nov 17 | Philadelphia 76ers vs Brooklyn Nets</title>
     <desc>Live stream: Philadelphia 76ers vs Brooklyn Nets</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261117100000 +0800" stop="20261117130000 +0800" channel="Phoenix Suns vs Denver Nuggets">
-    <title>Nov 17 | Phoenix Suns vs Denver Nuggets</title>
-    <desc>Live stream: Phoenix Suns vs Denver Nuggets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261117090000 +0800" stop="20261117120000 +0800" channel="Portland Trail Blazers vs Minnesota Timberwolves">
