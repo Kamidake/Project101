@@ -8,17 +8,9 @@
     <display-name>Nov 16 | Calgary Flames vs Anaheim Ducks</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
-  <channel id="Dallas Mavericks vs Boston Celtics">
-    <display-name>Nov 16 | Dallas Mavericks vs Boston Celtics</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Houston Rockets vs Washington Wizards">
     <display-name>Nov 16 | Houston Rockets vs Washington Wizards</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/1d15974f2b88953c07574cc2e1c05c5f-thumbnail.jpg" />
-  </channel>
-  <channel id="New York Knicks vs Toronto Raptors">
-    <display-name>Nov 16 | New York Knicks vs Toronto Raptors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Oklahoma City Thunder vs Sacramento Kings">
     <display-name>Nov 16 | Oklahoma City Thunder vs Sacramento Kings</display-name>
@@ -34,19 +26,9 @@
     <desc>Live stream: Calgary Flames vs Anaheim Ducks</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261116070000 +0800" stop="20261116100000 +0800" channel="Dallas Mavericks vs Boston Celtics">
-    <title>Nov 16 | Dallas Mavericks vs Boston Celtics</title>
-    <desc>Live stream: Dallas Mavericks vs Boston Celtics</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261116080000 +0800" stop="20261116110000 +0800" channel="Houston Rockets vs Washington Wizards">
     <title>Nov 16 | Houston Rockets vs Washington Wizards</title>
     <desc>Live stream: Houston Rockets vs Washington Wizards</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261116070000 +0800" stop="20261116100000 +0800" channel="New York Knicks vs Toronto Raptors">
-    <title>Nov 16 | New York Knicks vs Toronto Raptors</title>
-    <desc>Live stream: New York Knicks vs Toronto Raptors</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261116100000 +0800" stop="20261116130000 +0800" channel="Oklahoma City Thunder vs Sacramento Kings">
