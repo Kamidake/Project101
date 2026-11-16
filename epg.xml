@@ -4,10 +4,6 @@
     <display-name>Nov 16 | Calgary Flames vs Anaheim Ducks</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
-  <channel id="Charlotte Hornets vs Los Angeles Clippers">
-    <display-name>Nov 16 | Charlotte Hornets vs Los Angeles Clippers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Dallas Mavericks vs Boston Celtics">
     <display-name>Nov 16 | Dallas Mavericks vs Boston Celtics</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/8a2fe6577ec8a3199addd8cb78d2ebb7-thumbnail.jpg" />
@@ -27,11 +23,6 @@
   <programme start="20261116090000 +0800" stop="20261116120000 +0800" channel="Calgary Flames vs Anaheim Ducks">
     <title>Nov 16 | Calgary Flames vs Anaheim Ducks</title>
     <desc>Live stream: Calgary Flames vs Anaheim Ducks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261116053000 +0800" stop="20261116083000 +0800" channel="Charlotte Hornets vs Los Angeles Clippers">
-    <title>Nov 16 | Charlotte Hornets vs Los Angeles Clippers</title>
-    <desc>Live stream: Charlotte Hornets vs Los Angeles Clippers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261116070000 +0800" stop="20261116100000 +0800" channel="Dallas Mavericks vs Boston Celtics">
