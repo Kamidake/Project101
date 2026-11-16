@@ -1,4 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="Atlanta Hawks vs Milwaukee Bucks" tvg-name="Atlanta Hawks vs Milwaukee Bucks" tvg-logo="https://static.ppvservices.st/assets/thumb/1977dfacfe3638fc7f070d5e4fca7167-thumbnail.jpg" group-title="NBA",Atlanta Hawks vs Milwaukee Bucks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://tedesco.formaturamaxi.com.br/nba8.m3u8
 #EXTINF:-1 tvg-id="Calgary Flames vs Anaheim Ducks" tvg-name="Calgary Flames vs Anaheim Ducks" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Calgary Flames vs Anaheim Ducks
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
@@ -15,7 +19,11 @@ https://admin.formaturamaxi.com.br/nba7.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba6.m3u8
-#EXTINF:-1 tvg-id="San Antonio Spurs vs Utah Jazz" tvg-name="San Antonio Spurs vs Utah Jazz" tvg-logo="https://static.ppvservices.st/assets/thumb/c722824b0b5a6290ba08e8f6e288acce-thumbnail.jpg" group-title="NBA",San Antonio Spurs vs Utah Jazz
+#EXTINF:-1 tvg-id="Oklahoma City Thunder vs Sacramento Kings" tvg-name="Oklahoma City Thunder vs Sacramento Kings" tvg-logo="https://static.ppvservices.st/assets/thumb/bdd8605b1d35797613e5150ae408f69b-thumbnail.jpg" group-title="NBA",Oklahoma City Thunder vs Sacramento Kings
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba9.m3u8
+#EXTINF:-1 tvg-id="San Antonio Spurs vs Utah Jazz" tvg-name="San Antonio Spurs vs Utah Jazz" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",San Antonio Spurs vs Utah Jazz
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8

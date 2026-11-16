@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Atlanta Hawks vs Milwaukee Bucks">
+    <display-name>Nov 16 | Atlanta Hawks vs Milwaukee Bucks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/1977dfacfe3638fc7f070d5e4fca7167-thumbnail.jpg" />
+  </channel>
   <channel id="Calgary Flames vs Anaheim Ducks">
     <display-name>Nov 16 | Calgary Flames vs Anaheim Ducks</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -16,10 +20,19 @@
     <display-name>Nov 16 | New York Knicks vs Toronto Raptors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/a4beabaa0a189a03e3ec9442a408613f-thumbnail.jpg" />
   </channel>
+  <channel id="Oklahoma City Thunder vs Sacramento Kings">
+    <display-name>Nov 16 | Oklahoma City Thunder vs Sacramento Kings</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/bdd8605b1d35797613e5150ae408f69b-thumbnail.jpg" />
+  </channel>
   <channel id="San Antonio Spurs vs Utah Jazz">
     <display-name>Nov 16 | San Antonio Spurs vs Utah Jazz</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/c722824b0b5a6290ba08e8f6e288acce-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
+  <programme start="20261116090000 +0800" stop="20261116120000 +0800" channel="Atlanta Hawks vs Milwaukee Bucks">
+    <title>Nov 16 | Atlanta Hawks vs Milwaukee Bucks</title>
+    <desc>Live stream: Atlanta Hawks vs Milwaukee Bucks</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261116090000 +0800" stop="20261116120000 +0800" channel="Calgary Flames vs Anaheim Ducks">
     <title>Nov 16 | Calgary Flames vs Anaheim Ducks</title>
     <desc>Live stream: Calgary Flames vs Anaheim Ducks</desc>
@@ -38,6 +51,11 @@
   <programme start="20261116070000 +0800" stop="20261116100000 +0800" channel="New York Knicks vs Toronto Raptors">
     <title>Nov 16 | New York Knicks vs Toronto Raptors</title>
     <desc>Live stream: New York Knicks vs Toronto Raptors</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261116100000 +0800" stop="20261116130000 +0800" channel="Oklahoma City Thunder vs Sacramento Kings">
+    <title>Nov 16 | Oklahoma City Thunder vs Sacramento Kings</title>
+    <desc>Live stream: Oklahoma City Thunder vs Sacramento Kings</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261116060000 +0800" stop="20261116090000 +0800" channel="San Antonio Spurs vs Utah Jazz">
