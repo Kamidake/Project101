@@ -1,3 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Chicago Bulls vs Cleveland Cavaliers">
+    <display-name>Nov 17 | Chicago Bulls vs Cleveland Cavaliers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/fed98a7979f77c558178ab532869786a-thumbnail.jpg" />
+  </channel>
+  <channel id="Golden State Warriors vs New Orleans Pelicans">
+    <display-name>Nov 17 | Golden State Warriors vs New Orleans Pelicans</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/6c6826e870084dfc6861958eb53c1866-thumbnail.jpg" />
+  </channel>
+  <channel id="Houston Rockets vs Miami Heat">
+    <display-name>Nov 17 | Houston Rockets vs Miami Heat</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/abf837edc8dfd715f0603f09731f25fa-thumbnail.jpg" />
+  </channel>
+  <channel id="Memphis Grizzlies vs Washington Wizards">
+    <display-name>Nov 17 | Memphis Grizzlies vs Washington Wizards</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/6a6fdc76598dfefa19a8ed841cdd9668-thumbnail.jpg" />
+  </channel>
+  <channel id="Orlando Magic vs Boston Celtics">
+    <display-name>Nov 17 | Orlando Magic vs Boston Celtics</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/294f4125a52b086234bc85b43e7cb3e6-thumbnail.jpg" />
+  </channel>
+  <channel id="Philadelphia 76ers vs Brooklyn Nets">
+    <display-name>Nov 17 | Philadelphia 76ers vs Brooklyn Nets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/7e3427c9f7a9de5ba308c994665d4a33-thumbnail.jpg" />
+  </channel>
+  <channel id="Phoenix Suns vs Denver Nuggets">
+    <display-name>Nov 17 | Phoenix Suns vs Denver Nuggets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/0d923ac6ced301121ff256cfde970595-thumbnail.jpg" />
+  </channel>
+  <channel id="Portland Trail Blazers vs Minnesota Timberwolves">
+    <display-name>Nov 17 | Portland Trail Blazers vs Minnesota Timberwolves</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/dff9bf07d8c014c123b6d61b6d260959-thumbnail.jpg" />
+  </channel>
+  <programme start="20261117080000 +0800" stop="20261117110000 +0800" channel="Chicago Bulls vs Cleveland Cavaliers">
+    <title>Nov 17 | Chicago Bulls vs Cleveland Cavaliers</title>
+    <desc>Live stream: Chicago Bulls vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261117090000 +0800" stop="20261117120000 +0800" channel="Golden State Warriors vs New Orleans Pelicans">
+    <title>Nov 17 | Golden State Warriors vs New Orleans Pelicans</title>
+    <desc>Live stream: Golden State Warriors vs New Orleans Pelicans</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261117083000 +0800" stop="20261117113000 +0800" channel="Houston Rockets vs Miami Heat">
+    <title>Nov 17 | Houston Rockets vs Miami Heat</title>
+    <desc>Live stream: Houston Rockets vs Miami Heat</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261117080000 +0800" stop="20261117110000 +0800" channel="Memphis Grizzlies vs Washington Wizards">
+    <title>Nov 17 | Memphis Grizzlies vs Washington Wizards</title>
+    <desc>Live stream: Memphis Grizzlies vs Washington Wizards</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261117080000 +0800" stop="20261117110000 +0800" channel="Orlando Magic vs Boston Celtics">
+    <title>Nov 17 | Orlando Magic vs Boston Celtics</title>
+    <desc>Live stream: Orlando Magic vs Boston Celtics</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261117083000 +0800" stop="20261117113000 +0800" channel="Philadelphia 76ers vs Brooklyn Nets">
+    <title>Nov 17 | Philadelphia 76ers vs Brooklyn Nets</title>
+    <desc>Live stream: Philadelphia 76ers vs Brooklyn Nets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261117100000 +0800" stop="20261117130000 +0800" channel="Phoenix Suns vs Denver Nuggets">
+    <title>Nov 17 | Phoenix Suns vs Denver Nuggets</title>
+    <desc>Live stream: Phoenix Suns vs Denver Nuggets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261117090000 +0800" stop="20261117120000 +0800" channel="Portland Trail Blazers vs Minnesota Timberwolves">
+    <title>Nov 17 | Portland Trail Blazers vs Minnesota Timberwolves</title>
+    <desc>Live stream: Portland Trail Blazers vs Minnesota Timberwolves</desc>
+    <category>NBA</category>
+  </programme>
 </tv>

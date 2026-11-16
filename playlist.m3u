@@ -1,1 +1,33 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="Chicago Bulls vs Cleveland Cavaliers" tvg-name="Chicago Bulls vs Cleveland Cavaliers" tvg-logo="https://static.ppvservices.st/assets/thumb/fed98a7979f77c558178ab532869786a-thumbnail.jpg" group-title="NBA",Chicago Bulls vs Cleveland Cavaliers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="Golden State Warriors vs New Orleans Pelicans" tvg-name="Golden State Warriors vs New Orleans Pelicans" tvg-logo="https://static.ppvservices.st/assets/thumb/6c6826e870084dfc6861958eb53c1866-thumbnail.jpg" group-title="NBA",Golden State Warriors vs New Orleans Pelicans
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin.formaturamaxi.com.br/nba7.m3u8
+#EXTINF:-1 tvg-id="Houston Rockets vs Miami Heat" tvg-name="Houston Rockets vs Miami Heat" tvg-logo="https://static.ppvservices.st/assets/thumb/abf837edc8dfd715f0603f09731f25fa-thumbnail.jpg" group-title="NBA",Houston Rockets vs Miami Heat
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba5.m3u8
+#EXTINF:-1 tvg-id="Memphis Grizzlies vs Washington Wizards" tvg-name="Memphis Grizzlies vs Washington Wizards" tvg-logo="https://static.ppvservices.st/assets/thumb/6a6fdc76598dfefa19a8ed841cdd9668-thumbnail.jpg" group-title="NBA",Memphis Grizzlies vs Washington Wizards
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="Orlando Magic vs Boston Celtics" tvg-name="Orlando Magic vs Boston Celtics" tvg-logo="https://static.ppvservices.st/assets/thumb/294f4125a52b086234bc85b43e7cb3e6-thumbnail.jpg" group-title="NBA",Orlando Magic vs Boston Celtics
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="Philadelphia 76ers vs Brooklyn Nets" tvg-name="Philadelphia 76ers vs Brooklyn Nets" tvg-logo="https://static.ppvservices.st/assets/thumb/7e3427c9f7a9de5ba308c994665d4a33-thumbnail.jpg" group-title="NBA",Philadelphia 76ers vs Brooklyn Nets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba4.m3u8
+#EXTINF:-1 tvg-id="Phoenix Suns vs Denver Nuggets" tvg-name="Phoenix Suns vs Denver Nuggets" tvg-logo="https://static.ppvservices.st/assets/thumb/0d923ac6ced301121ff256cfde970595-thumbnail.jpg" group-title="NBA",Phoenix Suns vs Denver Nuggets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://tedesco.formaturamaxi.com.br/nba8.m3u8
+#EXTINF:-1 tvg-id="Portland Trail Blazers vs Minnesota Timberwolves" tvg-name="Portland Trail Blazers vs Minnesota Timberwolves" tvg-logo="https://static.ppvservices.st/assets/thumb/dff9bf07d8c014c123b6d61b6d260959-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Minnesota Timberwolves
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba6.m3u8
