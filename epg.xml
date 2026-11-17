@@ -32,6 +32,14 @@
     <display-name>Nov 17 | Portland Trail Blazers vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/dff9bf07d8c014c123b6d61b6d260959-thumbnail.jpg" />
   </channel>
+  <channel id="WWE NXT">
+    <display-name>Nov 18 | WWE NXT</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
+  </channel>
+  <channel id="WWE RAW">
+    <display-name>Nov 17 | WWE RAW</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
   <programme start="20261117080000 +0800" stop="20261117110000 +0800" channel="Chicago Bulls vs Cleveland Cavaliers">
     <title>Nov 17 | Chicago Bulls vs Cleveland Cavaliers</title>
     <desc>Live stream: Chicago Bulls vs Cleveland Cavaliers</desc>
@@ -71,5 +79,15 @@
     <title>Nov 17 | Portland Trail Blazers vs Minnesota Timberwolves</title>
     <desc>Live stream: Portland Trail Blazers vs Minnesota Timberwolves</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261118090000 +0800" stop="20261118120000 +0800" channel="WWE NXT">
+    <title>Nov 18 | WWE NXT</title>
+    <desc>Live stream: WWE NXT</desc>
+    <category>WWE</category>
+  </programme>
+  <programme start="20261117090000 +0800" stop="20261117120000 +0800" channel="WWE RAW">
+    <title>Nov 17 | WWE RAW</title>
+    <desc>Live stream: WWE RAW</desc>
+    <category>WWE</category>
   </programme>
 </tv>
