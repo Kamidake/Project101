@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="AEW">
+    <display-name>Nov 19 | AEW</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
+  </channel>
   <channel id="Atlanta Hawks vs Oklahoma City Thunder">
     <display-name>Nov 19 | Atlanta Hawks vs Oklahoma City Thunder</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/d8f307a3a9e6ff402026b86cbe64e6f1-thumbnail.jpg" />
@@ -36,6 +40,11 @@
     <display-name>Nov 19 | Washington Wizards vs Toronto Raptors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/fd82fc50ca4c7a90d846a1deb61c0e08-thumbnail.jpg" />
   </channel>
+  <programme start="20261119090000 +0800" stop="20261119120000 +0800" channel="AEW">
+    <title>Nov 19 | AEW</title>
+    <desc>Live stream: AEW</desc>
+    <category>AEW</category>
+  </programme>
   <programme start="20261119090000 +0800" stop="20261119120000 +0800" channel="Atlanta Hawks vs Oklahoma City Thunder">
     <title>Nov 19 | Atlanta Hawks vs Oklahoma City Thunder</title>
     <desc>Live stream: Atlanta Hawks vs Oklahoma City Thunder</desc>
