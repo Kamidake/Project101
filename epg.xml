@@ -20,6 +20,10 @@
     <display-name>Nov 19 | Houston Rockets vs Indiana Pacers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/25088ce819fae63fff237b23f43016f3-thumbnail.jpg" />
   </channel>
+  <channel id="Memphis Grizzlies vs Cleveland Cavaliers">
+    <display-name>Nov 19 | Memphis Grizzlies vs Cleveland Cavaliers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/649871117b13a745ef52682f2d95db60-thumbnail.jpg" />
+  </channel>
   <channel id="Milwaukee Bucks vs Miami Heat">
     <display-name>Nov 19 | Milwaukee Bucks vs Miami Heat</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ffca56ef90a53f9cde8601fb00c83fa7-thumbnail.jpg" />
@@ -65,6 +69,11 @@
   <programme start="20261119080000 +0800" stop="20261119110000 +0800" channel="Houston Rockets vs Indiana Pacers">
     <title>Nov 19 | Houston Rockets vs Indiana Pacers</title>
     <desc>Live stream: Houston Rockets vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261119080000 +0800" stop="20261119110000 +0800" channel="Memphis Grizzlies vs Cleveland Cavaliers">
+    <title>Nov 19 | Memphis Grizzlies vs Cleveland Cavaliers</title>
+    <desc>Live stream: Memphis Grizzlies vs Cleveland Cavaliers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261119080000 +0800" stop="20261119110000 +0800" channel="Milwaukee Bucks vs Miami Heat">
