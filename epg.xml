@@ -4,10 +4,6 @@
     <display-name>Nov 18 | Charlotte Hornets vs Los Angeles Lakers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/f09cd32ab001cf37f5d5fdeef580decf-thumbnail.jpg" />
   </channel>
-  <channel id="Utah Jazz vs Los Angeles Clippers">
-    <display-name>Nov 18 | Utah Jazz vs Los Angeles Clippers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <programme start="20261118120000 +0800" stop="20261118150000 +0800" channel="Charlotte Hornets vs Los Angeles Lakers">
     <title>Nov 18 | Charlotte Hornets vs Los Angeles Lakers</title>
     <desc>Live stream: Charlotte Hornets vs Los Angeles Lakers</desc>
@@ -21,11 +17,6 @@
   <programme start="20261118120000 +0800" stop="20261118150000 +0800" channel="Charlotte Hornets vs Los Angeles Lakers">
     <title>Nov 18 | Charlotte Hornets vs Los Angeles Lakers</title>
     <desc>Live stream: Charlotte Hornets vs Los Angeles Lakers (3)</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261118113000 +0800" stop="20261118143000 +0800" channel="Utah Jazz vs Los Angeles Clippers">
-    <title>Nov 18 | Utah Jazz vs Los Angeles Clippers</title>
-    <desc>Live stream: Utah Jazz vs Los Angeles Clippers</desc>
     <category>NBA</category>
   </programme>
 </tv>
