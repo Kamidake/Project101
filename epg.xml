@@ -8,10 +8,6 @@
     <display-name>Nov 18 | Detroit Pistons vs San Antonio Spurs</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/f4aa3089d67dbf37da9da4d381e3599a-thumbnail.jpg" />
   </channel>
-  <channel id="New York Knicks vs Toronto Raptors">
-    <display-name>Nov 18 | New York Knicks vs Toronto Raptors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Portland Trail Blazers vs Minnesota Timberwolves">
     <display-name>Nov 18 | Portland Trail Blazers vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/dff9bf07d8c014c123b6d61b6d260959-thumbnail.jpg" />
@@ -47,11 +43,6 @@
   <programme start="20261118090000 +0800" stop="20261118120000 +0800" channel="Detroit Pistons vs San Antonio Spurs">
     <title>Nov 18 | Detroit Pistons vs San Antonio Spurs</title>
     <desc>Live stream: Detroit Pistons vs San Antonio Spurs (2)</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261118083000 +0800" stop="20261118113000 +0800" channel="New York Knicks vs Toronto Raptors">
-    <title>Nov 18 | New York Knicks vs Toronto Raptors</title>
-    <desc>Live stream: New York Knicks vs Toronto Raptors</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261118090000 +0800" stop="20261118120000 +0800" channel="Portland Trail Blazers vs Minnesota Timberwolves">
