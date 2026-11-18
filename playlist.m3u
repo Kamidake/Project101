@@ -11,7 +11,7 @@ https://admin2.formaturamaxi.com.br/nba3.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://tedesco.formaturamaxi.com.br/nba3.m3u8
-#EXTINF:-1 tvg-id="Detroit Pistons vs San Antonio Spurs" tvg-name="Detroit Pistons vs San Antonio Spurs" tvg-logo="https://static.ppvservices.st/assets/thumb/f4aa3089d67dbf37da9da4d381e3599a-thumbnail.jpg" group-title="NBA",Detroit Pistons vs San Antonio Spurs
+#EXTINF:-1 tvg-id="Detroit Pistons vs San Antonio Spurs" tvg-name="Detroit Pistons vs San Antonio Spurs" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Detroit Pistons vs San Antonio Spurs
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba3.m3u8
@@ -19,7 +19,7 @@ https://admin.formaturamaxi.com.br/nba3.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba3.m3u8
-#EXTINF:-1 tvg-id="Portland Trail Blazers vs Minnesota Timberwolves" tvg-name="Portland Trail Blazers vs Minnesota Timberwolves" tvg-logo="https://static.ppvservices.st/assets/thumb/dff9bf07d8c014c123b6d61b6d260959-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Minnesota Timberwolves
+#EXTINF:-1 tvg-id="Portland Trail Blazers vs Minnesota Timberwolves" tvg-name="Portland Trail Blazers vs Minnesota Timberwolves" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Portland Trail Blazers vs Minnesota Timberwolves
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba2.m3u8
@@ -27,7 +27,7 @@ https://admin.formaturamaxi.com.br/nba2.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8
-#EXTINF:-1 tvg-id="WWE NXT" tvg-name="WWE NXT" tvg-logo="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" group-title="WWE",WWE NXT
+#EXTINF:-1 tvg-id="WWE NXT" tvg-name="WWE NXT" tvg-logo="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" group-title="WWE",WWE NXT
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/wwe-streams
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/wwe.m3u8
