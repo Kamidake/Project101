@@ -36,6 +36,10 @@
     <display-name>Nov 19 | Philadelphia 76ers vs Orlando Magic</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9db80d04d16595801a6ebc250728faa5-thumbnail.jpg" />
   </channel>
+  <channel id="Phoenix Suns vs Sacramento Kings">
+    <display-name>Nov 19 | Phoenix Suns vs Sacramento Kings</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ad920002c40d31738070f7cfdcbd44c2-thumbnail.jpg" />
+  </channel>
   <channel id="Washington Wizards vs Toronto Raptors">
     <display-name>Nov 19 | Washington Wizards vs Toronto Raptors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/fd82fc50ca4c7a90d846a1deb61c0e08-thumbnail.jpg" />
@@ -98,6 +102,11 @@
   <programme start="20261119080000 +0800" stop="20261119110000 +0800" channel="Philadelphia 76ers vs Orlando Magic">
     <title>Nov 19 | Philadelphia 76ers vs Orlando Magic</title>
     <desc>Live stream: Philadelphia 76ers vs Orlando Magic</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261119110000 +0800" stop="20261119140000 +0800" channel="Phoenix Suns vs Sacramento Kings">
+    <title>Nov 19 | Phoenix Suns vs Sacramento Kings</title>
+    <desc>Live stream: Phoenix Suns vs Sacramento Kings</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261119083000 +0800" stop="20261119113000 +0800" channel="Washington Wizards vs Toronto Raptors">
