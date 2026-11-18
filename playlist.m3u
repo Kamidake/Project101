@@ -1,8 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Atlanta Hawks vs Oklahoma City Thunder" tvg-name="Atlanta Hawks vs Oklahoma City Thunder" tvg-logo="https://static.ppvservices.st/assets/thumb/d8f307a3a9e6ff402026b86cbe64e6f1-thumbnail.jpg" group-title="NBA",Atlanta Hawks vs Oklahoma City Thunder
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://tedesco.formaturamaxi.com.br/nba8.m3u8
 #EXTINF:-1 tvg-id="Chicago Bulls vs Brooklyn Nets" tvg-name="Chicago Bulls vs Brooklyn Nets" tvg-logo="https://static.ppvservices.st/assets/thumb/4dae12eac92b494cfc5accf6caadae17-thumbnail.jpg" group-title="NBA",Chicago Bulls vs Brooklyn Nets
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
@@ -43,7 +39,3 @@ https://admin2.formaturamaxi.com.br/nba3.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8
-#EXTINF:-1 tvg-id="Washington Wizards vs Toronto Raptors" tvg-name="Washington Wizards vs Toronto Raptors" tvg-logo="https://static.ppvservices.st/assets/thumb/fd82fc50ca4c7a90d846a1deb61c0e08-thumbnail.jpg" group-title="NBA",Washington Wizards vs Toronto Raptors
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba6.m3u8
