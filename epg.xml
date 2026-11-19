@@ -12,10 +12,6 @@
     <display-name>Nov 19 | Boston Celtics vs Denver Nuggets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/d6af6ed041490dc447df6b0c7035daa7-thumbnail.jpg" />
   </channel>
-  <channel id="Chicago Bulls vs Brooklyn Nets">
-    <display-name>Nov 19 | Chicago Bulls vs Brooklyn Nets</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Detroit Pistons vs New Orleans Pelicans">
     <display-name>Nov 19 | Detroit Pistons vs New Orleans Pelicans</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ac9ea558cbe8e84f681a5657a8b231f0-thumbnail.jpg" />
@@ -31,10 +27,6 @@
   <channel id="Utah Jazz vs Los Angeles Lakers">
     <display-name>Nov 19 | Utah Jazz vs Los Angeles Lakers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/42d6fa9068ad6f6a1d6f095df7a12d89-thumbnail.jpg" />
-  </channel>
-  <channel id="Washington Wizards vs Toronto Raptors">
-    <display-name>Nov 19 | Washington Wizards vs Toronto Raptors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <programme start="20261119090000 +0800" stop="20261119120000 +0800" channel="AEW">
     <title>Nov 19 | AEW</title>
@@ -56,11 +48,6 @@
     <desc>Live stream: Boston Celtics vs Denver Nuggets (2)</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261119083000 +0800" stop="20261119113000 +0800" channel="Chicago Bulls vs Brooklyn Nets">
-    <title>Nov 19 | Chicago Bulls vs Brooklyn Nets</title>
-    <desc>Live stream: Chicago Bulls vs Brooklyn Nets</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261119090000 +0800" stop="20261119120000 +0800" channel="Detroit Pistons vs New Orleans Pelicans">
     <title>Nov 19 | Detroit Pistons vs New Orleans Pelicans</title>
     <desc>Live stream: Detroit Pistons vs New Orleans Pelicans</desc>
@@ -79,11 +66,6 @@
   <programme start="20261119110000 +0800" stop="20261119140000 +0800" channel="Utah Jazz vs Los Angeles Lakers">
     <title>Nov 19 | Utah Jazz vs Los Angeles Lakers</title>
     <desc>Live stream: Utah Jazz vs Los Angeles Lakers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261119083000 +0800" stop="20261119113000 +0800" channel="Washington Wizards vs Toronto Raptors">
-    <title>Nov 19 | Washington Wizards vs Toronto Raptors</title>
-    <desc>Live stream: Washington Wizards vs Toronto Raptors</desc>
     <category>NBA</category>
   </programme>
 </tv>
