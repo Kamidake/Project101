@@ -8,6 +8,10 @@
     <display-name>Nov 19 | Atlanta Hawks vs Oklahoma City Thunder</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/d8f307a3a9e6ff402026b86cbe64e6f1-thumbnail.jpg" />
   </channel>
+  <channel id="Boston Celtics vs Denver Nuggets">
+    <display-name>Nov 19 | Boston Celtics vs Denver Nuggets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/d6af6ed041490dc447df6b0c7035daa7-thumbnail.jpg" />
+  </channel>
   <channel id="Chicago Bulls vs Brooklyn Nets">
     <display-name>Nov 19 | Chicago Bulls vs Brooklyn Nets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4dae12eac92b494cfc5accf6caadae17-thumbnail.jpg" />
@@ -52,6 +56,16 @@
   <programme start="20261119090000 +0800" stop="20261119120000 +0800" channel="Atlanta Hawks vs Oklahoma City Thunder">
     <title>Nov 19 | Atlanta Hawks vs Oklahoma City Thunder</title>
     <desc>Live stream: Atlanta Hawks vs Oklahoma City Thunder</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261119103000 +0800" stop="20261119133000 +0800" channel="Boston Celtics vs Denver Nuggets">
+    <title>Nov 19 | Boston Celtics vs Denver Nuggets</title>
+    <desc>Live stream: Boston Celtics vs Denver Nuggets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261119103000 +0800" stop="20261119133000 +0800" channel="Boston Celtics vs Denver Nuggets">
+    <title>Nov 19 | Boston Celtics vs Denver Nuggets</title>
+    <desc>Live stream: Boston Celtics vs Denver Nuggets (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261119083000 +0800" stop="20261119113000 +0800" channel="Chicago Bulls vs Brooklyn Nets">
