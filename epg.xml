@@ -12,6 +12,10 @@
     <display-name>Nov 20 | Portland Trail Blazers vs Milwaukee Bucks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/11708e39c068beb83d9dd9d90162bdec-thumbnail.jpg" />
   </channel>
+  <channel id="TNA">
+    <display-name>Nov 20 | TNA</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
+  </channel>
   <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="Los Angeles Clippers vs San Antonio Spurs">
     <title>Nov 20 | Los Angeles Clippers vs San Antonio Spurs</title>
     <desc>Live stream: Los Angeles Clippers vs San Antonio Spurs</desc>
@@ -31,5 +35,15 @@
     <title>Nov 20 | Portland Trail Blazers vs Milwaukee Bucks</title>
     <desc>Live stream: Portland Trail Blazers vs Milwaukee Bucks</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="TNA">
+    <title>Nov 20 | TNA</title>
+    <desc>Live stream: TNA</desc>
+    <category>TNA</category>
+  </programme>
+  <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="TNA">
+    <title>Nov 20 | TNA</title>
+    <desc>Live stream: TNA (2)</desc>
+    <category>TNA</category>
   </programme>
 </tv>
