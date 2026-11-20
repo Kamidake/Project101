@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Golden State Warriors vs Memphis Grizzlies">
+    <display-name>Nov 20 | Golden State Warriors vs Memphis Grizzlies</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/bafa03ed95e4c63a924c9130d8f682c4-thumbnail.jpg" />
+  </channel>
   <channel id="Los Angeles Clippers vs San Antonio Spurs">
     <display-name>Nov 20 | Los Angeles Clippers vs San Antonio Spurs</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
@@ -16,6 +20,11 @@
     <display-name>Nov 20 | TNA</display-name>
     <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
   </channel>
+  <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="Golden State Warriors vs Memphis Grizzlies">
+    <title>Nov 20 | Golden State Warriors vs Memphis Grizzlies</title>
+    <desc>Live stream: Golden State Warriors vs Memphis Grizzlies</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="Los Angeles Clippers vs San Antonio Spurs">
     <title>Nov 20 | Los Angeles Clippers vs San Antonio Spurs</title>
     <desc>Live stream: Los Angeles Clippers vs San Antonio Spurs</desc>
@@ -24,11 +33,6 @@
   <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="New York Knicks vs Minnesota Timberwolves">
     <title>Nov 20 | New York Knicks vs Minnesota Timberwolves</title>
     <desc>Live stream: New York Knicks vs Minnesota Timberwolves</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="New York Knicks vs Minnesota Timberwolves">
-    <title>Nov 20 | New York Knicks vs Minnesota Timberwolves</title>
-    <desc>Live stream: New York Knicks vs Minnesota Timberwolves (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="Portland Trail Blazers vs Milwaukee Bucks">
