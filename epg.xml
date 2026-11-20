@@ -6,11 +6,11 @@
   </channel>
   <channel id="New York Knicks vs Minnesota Timberwolves">
     <display-name>Nov 20 | New York Knicks vs Minnesota Timberwolves</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/5e2a57bc8e40203ce33c8b9c915b57dd-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Portland Trail Blazers vs Milwaukee Bucks">
     <display-name>Nov 20 | Portland Trail Blazers vs Milwaukee Bucks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/11708e39c068beb83d9dd9d90162bdec-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="TNA">
     <display-name>Nov 20 | TNA</display-name>
@@ -39,11 +39,6 @@
   <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="TNA">
     <title>Nov 20 | TNA</title>
     <desc>Live stream: TNA</desc>
-    <category>TNA</category>
-  </programme>
-  <programme start="20261120090000 +0800" stop="20261120120000 +0800" channel="TNA">
-    <title>Nov 20 | TNA</title>
-    <desc>Live stream: TNA (2)</desc>
     <category>TNA</category>
   </programme>
 </tv>
