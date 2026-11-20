@@ -1,3 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Charlotte Hornets vs Atlanta Hawks">
+    <display-name>Nov 21 | Charlotte Hornets vs Atlanta Hawks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/d1d7ac57f71178a1bf192fe6fca712ae-thumbnail.jpg" />
+  </channel>
+  <channel id="Houston Rockets vs Denver Nuggets">
+    <display-name>Nov 21 | Houston Rockets vs Denver Nuggets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/6727662900141fcdb2d60feebeb11166-thumbnail.jpg" />
+  </channel>
+  <channel id="Indiana Pacers vs Cleveland Cavaliers">
+    <display-name>Nov 21 | Indiana Pacers vs Cleveland Cavaliers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/2fa44c939705107d594694add94d4e17-thumbnail.jpg" />
+  </channel>
+  <channel id="New Orleans Pelicans vs Oklahoma City Thunder">
+    <display-name>Nov 21 | New Orleans Pelicans vs Oklahoma City Thunder</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/7974fb81723c88aacfdf19dc228997b4-thumbnail.jpg" />
+  </channel>
+  <channel id="Orlando Magic vs Brooklyn Nets">
+    <display-name>Nov 21 | Orlando Magic vs Brooklyn Nets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/206769c0f9f6e93c455c70926b4abb41-thumbnail.jpg" />
+  </channel>
+  <channel id="Phoenix Suns vs Utah Jazz">
+    <display-name>Nov 21 | Phoenix Suns vs Utah Jazz</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/e2030521e5976b30f09613cf0150a2ef-thumbnail.jpg" />
+  </channel>
+  <channel id="Sacramento Kings vs Los Angeles Lakers">
+    <display-name>Nov 21 | Sacramento Kings vs Los Angeles Lakers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/ea6e42da9129d9d58a3463636ee37bb8-thumbnail.jpg" />
+  </channel>
+  <channel id="Toronto Raptors vs Detroit Pistons">
+    <display-name>Nov 21 | Toronto Raptors vs Detroit Pistons</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/7942f4ba146ff816f75752debdb563fd-thumbnail.jpg" />
+  </channel>
+  <channel id="Washington Wizards vs Chicago Bulls">
+    <display-name>Nov 21 | Washington Wizards vs Chicago Bulls</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/4a13446939ac9b569c758e070c3da73f-thumbnail.jpg" />
+  </channel>
+  <channel id="WWE Smackdown">
+    <display-name>Nov 21 | WWE Smackdown</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <programme start="20261121080000 +0800" stop="20261121110000 +0800" channel="Charlotte Hornets vs Atlanta Hawks">
+    <title>Nov 21 | Charlotte Hornets vs Atlanta Hawks</title>
+    <desc>Live stream: Charlotte Hornets vs Atlanta Hawks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121110000 +0800" stop="20261121140000 +0800" channel="Houston Rockets vs Denver Nuggets">
+    <title>Nov 21 | Houston Rockets vs Denver Nuggets</title>
+    <desc>Live stream: Houston Rockets vs Denver Nuggets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121083000 +0800" stop="20261121113000 +0800" channel="Indiana Pacers vs Cleveland Cavaliers">
+    <title>Nov 21 | Indiana Pacers vs Cleveland Cavaliers</title>
+    <desc>Live stream: Indiana Pacers vs Cleveland Cavaliers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121090000 +0800" stop="20261121120000 +0800" channel="New Orleans Pelicans vs Oklahoma City Thunder">
+    <title>Nov 21 | New Orleans Pelicans vs Oklahoma City Thunder</title>
+    <desc>Live stream: New Orleans Pelicans vs Oklahoma City Thunder</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121083000 +0800" stop="20261121113000 +0800" channel="Orlando Magic vs Brooklyn Nets">
+    <title>Nov 21 | Orlando Magic vs Brooklyn Nets</title>
+    <desc>Live stream: Orlando Magic vs Brooklyn Nets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121103000 +0800" stop="20261121133000 +0800" channel="Phoenix Suns vs Utah Jazz">
+    <title>Nov 21 | Phoenix Suns vs Utah Jazz</title>
+    <desc>Live stream: Phoenix Suns vs Utah Jazz</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121110000 +0800" stop="20261121140000 +0800" channel="Sacramento Kings vs Los Angeles Lakers">
+    <title>Nov 21 | Sacramento Kings vs Los Angeles Lakers</title>
+    <desc>Live stream: Sacramento Kings vs Los Angeles Lakers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121083000 +0800" stop="20261121113000 +0800" channel="Toronto Raptors vs Detroit Pistons">
+    <title>Nov 21 | Toronto Raptors vs Detroit Pistons</title>
+    <desc>Live stream: Toronto Raptors vs Detroit Pistons</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121090000 +0800" stop="20261121120000 +0800" channel="Washington Wizards vs Chicago Bulls">
+    <title>Nov 21 | Washington Wizards vs Chicago Bulls</title>
+    <desc>Live stream: Washington Wizards vs Chicago Bulls</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261121090000 +0800" stop="20261121120000 +0800" channel="WWE Smackdown">
+    <title>Nov 21 | WWE Smackdown</title>
+    <desc>Live stream: WWE Smackdown</desc>
+    <category>WWE</category>
+  </programme>
 </tv>
