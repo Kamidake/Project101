@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Milwaukee Bucks vs Philadelphia 76ers">
-    <display-name>Nov 22 | Milwaukee Bucks vs Philadelphia 76ers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/cba419aba970197aa46d22675db14bd7-thumbnail.jpg" />
-  </channel>
-  <programme start="20261122020000 +0800" stop="20261122050000 +0800" channel="Milwaukee Bucks vs Philadelphia 76ers">
-    <title>Nov 22 | Milwaukee Bucks vs Philadelphia 76ers</title>
-    <desc>Live stream: Milwaukee Bucks vs Philadelphia 76ers</desc>
-    <category>NBA</category>
-  </programme>
 </tv>
