@@ -1,3 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Boston Celtics vs Sacramento Kings">
+    <display-name>Nov 22 | Boston Celtics vs Sacramento Kings</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/20bb0dea41202064963a90c9cf3b90cb-thumbnail.jpg" />
+  </channel>
+  <channel id="Los Angeles Clippers vs Dallas Mavericks">
+    <display-name>Nov 22 | Los Angeles Clippers vs Dallas Mavericks</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+  </channel>
+  <channel id="Memphis Grizzlies vs Minnesota Timberwolves">
+    <display-name>Nov 22 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/9b6af34e377a3bfbc75d08462e3ca1a7-thumbnail.jpg" />
+  </channel>
+  <channel id="Milwaukee Bucks vs Philadelphia 76ers">
+    <display-name>Nov 22 | Milwaukee Bucks vs Philadelphia 76ers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/cba419aba970197aa46d22675db14bd7-thumbnail.jpg" />
+  </channel>
+  <channel id="New Orleans Pelicans vs San Antonio Spurs">
+    <display-name>Nov 22 | New Orleans Pelicans vs San Antonio Spurs</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/e39ccdde394e93e25b898c54ce31a1cc-thumbnail.jpg" />
+  </channel>
+  <channel id="Portland Trail Blazers vs New York Knicks">
+    <display-name>Nov 22 | Portland Trail Blazers vs New York Knicks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/a9aea5e3041253372bee48786d6c035b-thumbnail.jpg" />
+  </channel>
+  <channel id="WWE Smackdown">
+    <display-name>WWE Smackdown</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <programme start="20261122110000 +0800" stop="20261122140000 +0800" channel="Boston Celtics vs Sacramento Kings">
+    <title>Nov 22 | Boston Celtics vs Sacramento Kings</title>
+    <desc>Live stream: Boston Celtics vs Sacramento Kings</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261122090000 +0800" stop="20261122120000 +0800" channel="Los Angeles Clippers vs Dallas Mavericks">
+    <title>Nov 22 | Los Angeles Clippers vs Dallas Mavericks</title>
+    <desc>Live stream: Los Angeles Clippers vs Dallas Mavericks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261122090000 +0800" stop="20261122120000 +0800" channel="Memphis Grizzlies vs Minnesota Timberwolves">
+    <title>Nov 22 | Memphis Grizzlies vs Minnesota Timberwolves</title>
+    <desc>Live stream: Memphis Grizzlies vs Minnesota Timberwolves</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261122020000 +0800" stop="20261122050000 +0800" channel="Milwaukee Bucks vs Philadelphia 76ers">
+    <title>Nov 22 | Milwaukee Bucks vs Philadelphia 76ers</title>
+    <desc>Live stream: Milwaukee Bucks vs Philadelphia 76ers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261122090000 +0800" stop="20261122120000 +0800" channel="New Orleans Pelicans vs San Antonio Spurs">
+    <title>Nov 22 | New Orleans Pelicans vs San Antonio Spurs</title>
+    <desc>Live stream: New Orleans Pelicans vs San Antonio Spurs</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261122083000 +0800" stop="20261122113000 +0800" channel="Portland Trail Blazers vs New York Knicks">
+    <title>Nov 22 | Portland Trail Blazers vs New York Knicks</title>
+    <desc>Live stream: Portland Trail Blazers vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
 </tv>
