@@ -4,10 +4,6 @@
     <display-name>Nov 21 | Charlotte Hornets vs Atlanta Hawks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/d1d7ac57f71178a1bf192fe6fca712ae-thumbnail.jpg" />
   </channel>
-  <channel id="Houston Rockets vs Denver Nuggets">
-    <display-name>Nov 21 | Houston Rockets vs Denver Nuggets</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/6727662900141fcdb2d60feebeb11166-thumbnail.jpg" />
-  </channel>
   <channel id="Indiana Pacers vs Cleveland Cavaliers">
     <display-name>Nov 21 | Indiana Pacers vs Cleveland Cavaliers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/2fa44c939705107d594694add94d4e17-thumbnail.jpg" />
@@ -43,11 +39,6 @@
   <programme start="20261121080000 +0800" stop="20261121110000 +0800" channel="Charlotte Hornets vs Atlanta Hawks">
     <title>Nov 21 | Charlotte Hornets vs Atlanta Hawks</title>
     <desc>Live stream: Charlotte Hornets vs Atlanta Hawks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261121110000 +0800" stop="20261121140000 +0800" channel="Houston Rockets vs Denver Nuggets">
-    <title>Nov 21 | Houston Rockets vs Denver Nuggets</title>
-    <desc>Live stream: Houston Rockets vs Denver Nuggets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261121083000 +0800" stop="20261121113000 +0800" channel="Indiana Pacers vs Cleveland Cavaliers">
