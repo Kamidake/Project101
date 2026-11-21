@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-11-21T08:17:38.284043+00:00",
-  "pages": 73,
+  "updated_utc": "2026-11-21T08:32:43.910688+00:00",
+  "pages": 72,
   "candidate_urls": 71,
   "live_urls": 0,
-  "unavailable_urls": 70,
+  "unavailable_urls": 65,
   "unsupported_pages": [],
   "errors": [],
   "event_groups": 0,
@@ -12,7 +12,7 @@
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 73,
+      "pages": 72,
       "errors": []
     }
   ]
