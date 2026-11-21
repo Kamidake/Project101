@@ -2,11 +2,11 @@
 <tv generator-info-name="LivePlaylist">
   <channel id="Houston Rockets vs Denver Nuggets">
     <display-name>Nov 21 | Houston Rockets vs Denver Nuggets</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/6727662900141fcdb2d60feebeb11166-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Sacramento Kings vs Los Angeles Lakers">
     <display-name>Nov 21 | Sacramento Kings vs Los Angeles Lakers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/ea6e42da9129d9d58a3463636ee37bb8-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <programme start="20261121110000 +0800" stop="20261121140000 +0800" channel="Houston Rockets vs Denver Nuggets">
     <title>Nov 21 | Houston Rockets vs Denver Nuggets</title>
