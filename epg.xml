@@ -4,17 +4,9 @@
     <display-name>Nov 21 | Houston Rockets vs Denver Nuggets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/6727662900141fcdb2d60feebeb11166-thumbnail.jpg" />
   </channel>
-  <channel id="Indiana Pacers vs Cleveland Cavaliers">
-    <display-name>Nov 21 | Indiana Pacers vs Cleveland Cavaliers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="New Orleans Pelicans vs Oklahoma City Thunder">
     <display-name>Nov 21 | New Orleans Pelicans vs Oklahoma City Thunder</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/7974fb81723c88aacfdf19dc228997b4-thumbnail.jpg" />
-  </channel>
-  <channel id="Orlando Magic vs Brooklyn Nets">
-    <display-name>Nov 21 | Orlando Magic vs Brooklyn Nets</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Phoenix Suns vs Utah Jazz">
     <display-name>Nov 21 | Phoenix Suns vs Utah Jazz</display-name>
@@ -23,10 +15,6 @@
   <channel id="Sacramento Kings vs Los Angeles Lakers">
     <display-name>Nov 21 | Sacramento Kings vs Los Angeles Lakers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ea6e42da9129d9d58a3463636ee37bb8-thumbnail.jpg" />
-  </channel>
-  <channel id="Toronto Raptors vs Detroit Pistons">
-    <display-name>Nov 21 | Toronto Raptors vs Detroit Pistons</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Washington Wizards vs Chicago Bulls">
     <display-name>Nov 21 | Washington Wizards vs Chicago Bulls</display-name>
@@ -41,19 +29,9 @@
     <desc>Live stream: Houston Rockets vs Denver Nuggets</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261121083000 +0800" stop="20261121113000 +0800" channel="Indiana Pacers vs Cleveland Cavaliers">
-    <title>Nov 21 | Indiana Pacers vs Cleveland Cavaliers</title>
-    <desc>Live stream: Indiana Pacers vs Cleveland Cavaliers</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261121090000 +0800" stop="20261121120000 +0800" channel="New Orleans Pelicans vs Oklahoma City Thunder">
     <title>Nov 21 | New Orleans Pelicans vs Oklahoma City Thunder</title>
     <desc>Live stream: New Orleans Pelicans vs Oklahoma City Thunder</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261121083000 +0800" stop="20261121113000 +0800" channel="Orlando Magic vs Brooklyn Nets">
-    <title>Nov 21 | Orlando Magic vs Brooklyn Nets</title>
-    <desc>Live stream: Orlando Magic vs Brooklyn Nets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261121103000 +0800" stop="20261121133000 +0800" channel="Phoenix Suns vs Utah Jazz">
@@ -64,11 +42,6 @@
   <programme start="20261121110000 +0800" stop="20261121140000 +0800" channel="Sacramento Kings vs Los Angeles Lakers">
     <title>Nov 21 | Sacramento Kings vs Los Angeles Lakers</title>
     <desc>Live stream: Sacramento Kings vs Los Angeles Lakers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261121083000 +0800" stop="20261121113000 +0800" channel="Toronto Raptors vs Detroit Pistons">
-    <title>Nov 21 | Toronto Raptors vs Detroit Pistons</title>
-    <desc>Live stream: Toronto Raptors vs Detroit Pistons</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261121090000 +0800" stop="20261121120000 +0800" channel="Washington Wizards vs Chicago Bulls">
