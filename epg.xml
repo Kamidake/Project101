@@ -4,36 +4,9 @@
     <display-name>Nov 22 | Boston Celtics vs Sacramento Kings</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/20bb0dea41202064963a90c9cf3b90cb-thumbnail.jpg" />
   </channel>
-  <channel id="Los Angeles Clippers vs Dallas Mavericks">
-    <display-name>Nov 22 | Los Angeles Clippers vs Dallas Mavericks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Memphis Grizzlies vs Minnesota Timberwolves">
-    <display-name>Nov 22 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="New Orleans Pelicans vs San Antonio Spurs">
-    <display-name>Nov 22 | New Orleans Pelicans vs San Antonio Spurs</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <programme start="20261122110000 +0800" stop="20261122140000 +0800" channel="Boston Celtics vs Sacramento Kings">
     <title>Nov 22 | Boston Celtics vs Sacramento Kings</title>
     <desc>Live stream: Boston Celtics vs Sacramento Kings</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261122090000 +0800" stop="20261122120000 +0800" channel="Los Angeles Clippers vs Dallas Mavericks">
-    <title>Nov 22 | Los Angeles Clippers vs Dallas Mavericks</title>
-    <desc>Live stream: Los Angeles Clippers vs Dallas Mavericks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261122090000 +0800" stop="20261122120000 +0800" channel="Memphis Grizzlies vs Minnesota Timberwolves">
-    <title>Nov 22 | Memphis Grizzlies vs Minnesota Timberwolves</title>
-    <desc>Live stream: Memphis Grizzlies vs Minnesota Timberwolves</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261122090000 +0800" stop="20261122120000 +0800" channel="New Orleans Pelicans vs San Antonio Spurs">
-    <title>Nov 22 | New Orleans Pelicans vs San Antonio Spurs</title>
-    <desc>Live stream: New Orleans Pelicans vs San Antonio Spurs</desc>
     <category>NBA</category>
   </programme>
 </tv>
