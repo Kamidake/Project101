@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Detroit Pistons vs Atlanta Hawks">
-    <display-name>Nov 23 | Detroit Pistons vs Atlanta Hawks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Oklahoma City Thunder vs Miami Heat">
     <display-name>Nov 23 | Oklahoma City Thunder vs Miami Heat</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/bea4a07ad1e35c3faa94edfa98049da5-thumbnail.jpg" />
   </channel>
-  <programme start="20261123043000 +0800" stop="20261123073000 +0800" channel="Detroit Pistons vs Atlanta Hawks">
-    <title>Nov 23 | Detroit Pistons vs Atlanta Hawks</title>
-    <desc>Live stream: Detroit Pistons vs Atlanta Hawks</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261123070000 +0800" stop="20261123100000 +0800" channel="Oklahoma City Thunder vs Miami Heat">
     <title>Nov 23 | Oklahoma City Thunder vs Miami Heat</title>
     <desc>Live stream: Oklahoma City Thunder vs Miami Heat</desc>
