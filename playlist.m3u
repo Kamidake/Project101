@@ -3,3 +3,7 @@
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba.m3u8
+#EXTINF:-1 tvg-id="Oklahoma City Thunder vs Miami Heat" tvg-name="Oklahoma City Thunder vs Miami Heat" tvg-logo="https://static.ppvservices.st/assets/thumb/bea4a07ad1e35c3faa94edfa98049da5-thumbnail.jpg" group-title="NBA",Oklahoma City Thunder vs Miami Heat
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://tedesco.formaturamaxi.com.br/nba2.m3u8
