@@ -4,21 +4,9 @@
     <display-name>Nov 23 | Boston Celtics vs Golden State Warriors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/e7a99ae793cc3ff1510e270626deaf3e-thumbnail.jpg" />
   </channel>
-  <channel id="Dallas Mavericks vs Utah Jazz">
-    <display-name>Nov 23 | Dallas Mavericks vs Utah Jazz</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Denver Nuggets vs Chicago Bulls">
-    <display-name>Nov 23 | Denver Nuggets vs Chicago Bulls</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Indiana Pacers vs New York Knicks">
     <display-name>Nov 23 | Indiana Pacers vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/77c15a0c3e0b649ec74e67ea5a119738-thumbnail.jpg" />
-  </channel>
-  <channel id="Orlando Magic vs Washington Wizards">
-    <display-name>Nov 23 | Orlando Magic vs Washington Wizards</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <programme start="20261123093000 +0800" stop="20261123123000 +0800" channel="Boston Celtics vs Golden State Warriors">
     <title>Nov 23 | Boston Celtics vs Golden State Warriors</title>
@@ -30,24 +18,9 @@
     <desc>Live stream: Boston Celtics vs Golden State Warriors (2)</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261123080000 +0800" stop="20261123110000 +0800" channel="Dallas Mavericks vs Utah Jazz">
-    <title>Nov 23 | Dallas Mavericks vs Utah Jazz</title>
-    <desc>Live stream: Dallas Mavericks vs Utah Jazz</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261123080000 +0800" stop="20261123110000 +0800" channel="Denver Nuggets vs Chicago Bulls">
-    <title>Nov 23 | Denver Nuggets vs Chicago Bulls</title>
-    <desc>Live stream: Denver Nuggets vs Chicago Bulls</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261123090000 +0800" stop="20261123120000 +0800" channel="Indiana Pacers vs New York Knicks">
     <title>Nov 23 | Indiana Pacers vs New York Knicks</title>
     <desc>Live stream: Indiana Pacers vs New York Knicks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261123080000 +0800" stop="20261123110000 +0800" channel="Orlando Magic vs Washington Wizards">
-    <title>Nov 23 | Orlando Magic vs Washington Wizards</title>
-    <desc>Live stream: Orlando Magic vs Washington Wizards</desc>
     <category>NBA</category>
   </programme>
 </tv>
