@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Boston Celtics vs Golden State Warriors">
+    <display-name>Nov 23 | Boston Celtics vs Golden State Warriors</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/e7a99ae793cc3ff1510e270626deaf3e-thumbnail.jpg" />
+  </channel>
   <channel id="Dallas Mavericks vs Utah Jazz">
     <display-name>Nov 23 | Dallas Mavericks vs Utah Jazz</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/044ef8898e3f5c9482b893862770b354-thumbnail.jpg" />
@@ -20,6 +24,11 @@
     <display-name>Nov 23 | Orlando Magic vs Washington Wizards</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/5f2c06328219573a23651b2455d92a29-thumbnail.jpg" />
   </channel>
+  <programme start="20261123093000 +0800" stop="20261123123000 +0800" channel="Boston Celtics vs Golden State Warriors">
+    <title>Nov 23 | Boston Celtics vs Golden State Warriors</title>
+    <desc>Live stream: Boston Celtics vs Golden State Warriors</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261123080000 +0800" stop="20261123110000 +0800" channel="Dallas Mavericks vs Utah Jazz">
     <title>Nov 23 | Dallas Mavericks vs Utah Jazz</title>
     <desc>Live stream: Dallas Mavericks vs Utah Jazz</desc>

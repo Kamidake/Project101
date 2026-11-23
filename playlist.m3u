@@ -1,4 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="Boston Celtics vs Golden State Warriors" tvg-name="Boston Celtics vs Golden State Warriors" tvg-logo="https://static.ppvservices.st/assets/thumb/e7a99ae793cc3ff1510e270626deaf3e-thumbnail.jpg" group-title="NBA",Boston Celtics vs Golden State Warriors
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba7.m3u8
 #EXTINF:-1 tvg-id="Dallas Mavericks vs Utah Jazz" tvg-name="Dallas Mavericks vs Utah Jazz" tvg-logo="https://static.ppvservices.st/assets/thumb/044ef8898e3f5c9482b893862770b354-thumbnail.jpg" group-title="NBA",Dallas Mavericks vs Utah Jazz
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
