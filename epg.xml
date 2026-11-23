@@ -16,10 +16,6 @@
     <display-name>Nov 23 | Indiana Pacers vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/77c15a0c3e0b649ec74e67ea5a119738-thumbnail.jpg" />
   </channel>
-  <channel id="Oklahoma City Thunder vs Miami Heat">
-    <display-name>Nov 23 | Oklahoma City Thunder vs Miami Heat</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Orlando Magic vs Washington Wizards">
     <display-name>Nov 23 | Orlando Magic vs Washington Wizards</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/5f2c06328219573a23651b2455d92a29-thumbnail.jpg" />
@@ -27,6 +23,11 @@
   <programme start="20261123093000 +0800" stop="20261123123000 +0800" channel="Boston Celtics vs Golden State Warriors">
     <title>Nov 23 | Boston Celtics vs Golden State Warriors</title>
     <desc>Live stream: Boston Celtics vs Golden State Warriors</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261123093000 +0800" stop="20261123123000 +0800" channel="Boston Celtics vs Golden State Warriors">
+    <title>Nov 23 | Boston Celtics vs Golden State Warriors</title>
+    <desc>Live stream: Boston Celtics vs Golden State Warriors (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261123080000 +0800" stop="20261123110000 +0800" channel="Dallas Mavericks vs Utah Jazz">
@@ -42,11 +43,6 @@
   <programme start="20261123090000 +0800" stop="20261123120000 +0800" channel="Indiana Pacers vs New York Knicks">
     <title>Nov 23 | Indiana Pacers vs New York Knicks</title>
     <desc>Live stream: Indiana Pacers vs New York Knicks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261123070000 +0800" stop="20261123100000 +0800" channel="Oklahoma City Thunder vs Miami Heat">
-    <title>Nov 23 | Oklahoma City Thunder vs Miami Heat</title>
-    <desc>Live stream: Oklahoma City Thunder vs Miami Heat</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261123080000 +0800" stop="20261123110000 +0800" channel="Orlando Magic vs Washington Wizards">
