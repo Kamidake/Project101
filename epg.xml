@@ -1,17 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Boston Celtics vs Golden State Warriors">
-    <display-name>Nov 23 | Boston Celtics vs Golden State Warriors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <programme start="20261123093000 +0800" stop="20261123123000 +0800" channel="Boston Celtics vs Golden State Warriors">
-    <title>Nov 23 | Boston Celtics vs Golden State Warriors</title>
-    <desc>Live stream: Boston Celtics vs Golden State Warriors</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261123093000 +0800" stop="20261123123000 +0800" channel="Boston Celtics vs Golden State Warriors">
-    <title>Nov 23 | Boston Celtics vs Golden State Warriors</title>
-    <desc>Live stream: Boston Celtics vs Golden State Warriors (2)</desc>
-    <category>NBA</category>
-  </programme>
 </tv>
