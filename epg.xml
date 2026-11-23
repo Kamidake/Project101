@@ -1,3 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Brooklyn Nets vs Minnesota Timberwolves">
+    <display-name>Nov 24 | Brooklyn Nets vs Minnesota Timberwolves</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/92975394a0b1fd9678498f056e3a1f86-thumbnail.jpg" />
+  </channel>
+  <channel id="Cleveland Cavaliers vs Chicago Bulls">
+    <display-name>Nov 24 | Cleveland Cavaliers vs Chicago Bulls</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/7c1f60709858aa6098794af1814a5085-thumbnail.jpg" />
+  </channel>
+  <channel id="Memphis Grizzlies vs Charlotte Hornets">
+    <display-name>Nov 24 | Memphis Grizzlies vs Charlotte Hornets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/234881f2cb32455111f7de60cb6324b5-thumbnail.jpg" />
+  </channel>
+  <channel id="Milwaukee Bucks vs Toronto Raptors">
+    <display-name>Nov 24 | Milwaukee Bucks vs Toronto Raptors</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/dc7402b0c0c320bd0b888009a3fe33e1-thumbnail.jpg" />
+  </channel>
+  <channel id="Oklahoma City Thunder vs Indiana Pacers">
+    <display-name>Nov 24 | Oklahoma City Thunder vs Indiana Pacers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/4ccb28335bd6091d59a1173a36093253-thumbnail.jpg" />
+  </channel>
+  <channel id="Phoenix Suns vs New Orleans Pelicans">
+    <display-name>Nov 24 | Phoenix Suns vs New Orleans Pelicans</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/a0c58a826b4d237fc05a3acb2139dba0-thumbnail.jpg" />
+  </channel>
+  <channel id="San Antonio Spurs vs Sacramento Kings">
+    <display-name>Nov 24 | San Antonio Spurs vs Sacramento Kings</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/bdcfdd24f4540951c579339fd6f94e06-thumbnail.jpg" />
+  </channel>
+  <programme start="20261124083000 +0800" stop="20261124113000 +0800" channel="Brooklyn Nets vs Minnesota Timberwolves">
+    <title>Nov 24 | Brooklyn Nets vs Minnesota Timberwolves</title>
+    <desc>Live stream: Brooklyn Nets vs Minnesota Timberwolves</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124090000 +0800" stop="20261124120000 +0800" channel="Cleveland Cavaliers vs Chicago Bulls">
+    <title>Nov 24 | Cleveland Cavaliers vs Chicago Bulls</title>
+    <desc>Live stream: Cleveland Cavaliers vs Chicago Bulls</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124080000 +0800" stop="20261124110000 +0800" channel="Memphis Grizzlies vs Charlotte Hornets">
+    <title>Nov 24 | Memphis Grizzlies vs Charlotte Hornets</title>
+    <desc>Live stream: Memphis Grizzlies vs Charlotte Hornets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124083000 +0800" stop="20261124113000 +0800" channel="Milwaukee Bucks vs Toronto Raptors">
+    <title>Nov 24 | Milwaukee Bucks vs Toronto Raptors</title>
+    <desc>Live stream: Milwaukee Bucks vs Toronto Raptors</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124083000 +0800" stop="20261124113000 +0800" channel="Oklahoma City Thunder vs Indiana Pacers">
+    <title>Nov 24 | Oklahoma City Thunder vs Indiana Pacers</title>
+    <desc>Live stream: Oklahoma City Thunder vs Indiana Pacers</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124090000 +0800" stop="20261124120000 +0800" channel="Phoenix Suns vs New Orleans Pelicans">
+    <title>Nov 24 | Phoenix Suns vs New Orleans Pelicans</title>
+    <desc>Live stream: Phoenix Suns vs New Orleans Pelicans</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124090000 +0800" stop="20261124120000 +0800" channel="Phoenix Suns vs New Orleans Pelicans">
+    <title>Nov 24 | Phoenix Suns vs New Orleans Pelicans</title>
+    <desc>Live stream: Phoenix Suns vs New Orleans Pelicans (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124110000 +0800" stop="20261124140000 +0800" channel="San Antonio Spurs vs Sacramento Kings">
+    <title>Nov 24 | San Antonio Spurs vs Sacramento Kings</title>
+    <desc>Live stream: San Antonio Spurs vs Sacramento Kings</desc>
+    <category>NBA</category>
+  </programme>
 </tv>
