@@ -8,6 +8,10 @@
     <display-name>Nov 23 | Denver Nuggets vs Chicago Bulls</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/a6626ffb8095b259970a8e609204efc4-thumbnail.jpg" />
   </channel>
+  <channel id="Indiana Pacers vs New York Knicks">
+    <display-name>Nov 23 | Indiana Pacers vs New York Knicks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/77c15a0c3e0b649ec74e67ea5a119738-thumbnail.jpg" />
+  </channel>
   <channel id="Oklahoma City Thunder vs Miami Heat">
     <display-name>Nov 23 | Oklahoma City Thunder vs Miami Heat</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/bea4a07ad1e35c3faa94edfa98049da5-thumbnail.jpg" />
@@ -24,6 +28,11 @@
   <programme start="20261123080000 +0800" stop="20261123110000 +0800" channel="Denver Nuggets vs Chicago Bulls">
     <title>Nov 23 | Denver Nuggets vs Chicago Bulls</title>
     <desc>Live stream: Denver Nuggets vs Chicago Bulls</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261123090000 +0800" stop="20261123120000 +0800" channel="Indiana Pacers vs New York Knicks">
+    <title>Nov 23 | Indiana Pacers vs New York Knicks</title>
+    <desc>Live stream: Indiana Pacers vs New York Knicks</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261123070000 +0800" stop="20261123100000 +0800" channel="Oklahoma City Thunder vs Miami Heat">
