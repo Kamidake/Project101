@@ -7,6 +7,10 @@ https://admin2.formaturamaxi.com.br/nba5.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba6.m3u8
+#EXTINF:-1 tvg-id="Los Angeles Clippers vs Houston Rockets" tvg-name="Los Angeles Clippers vs Houston Rockets" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Los Angeles Clippers vs Houston Rockets
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-8
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba8.m3u8
 #EXTINF:-1 tvg-id="Memphis Grizzlies vs Charlotte Hornets" tvg-name="Memphis Grizzlies vs Charlotte Hornets" tvg-logo="https://static.ppvservices.st/assets/thumb/234881f2cb32455111f7de60cb6324b5-thumbnail.jpg" group-title="NBA",Memphis Grizzlies vs Charlotte Hornets
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
@@ -22,11 +26,7 @@ https://admin2.formaturamaxi.com.br/nba3.m3u8
 #EXTINF:-1 tvg-id="Phoenix Suns vs New Orleans Pelicans" tvg-name="Phoenix Suns vs New Orleans Pelicans" tvg-logo="https://static.ppvservices.st/assets/thumb/a0c58a826b4d237fc05a3acb2139dba0-thumbnail.jpg" group-title="NBA",Phoenix Suns vs New Orleans Pelicans
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba7.m3u8
-#EXTINF:-1 tvg-id="Phoenix Suns vs New Orleans Pelicans" tvg-name="Phoenix Suns vs New Orleans Pelicans" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Phoenix Suns vs New Orleans Pelicans
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://tedesco.formaturamaxi.com.br/nba.m3u8
+https://admin.formaturamaxi.com.br/nba7.m3u8
 #EXTINF:-1 tvg-id="Portland Trail Blazers vs Philadelphia 76ers" tvg-name="Portland Trail Blazers vs Philadelphia 76ers" tvg-logo="https://static.ppvservices.st/assets/thumb/fdc55e13dae68ab9e50b4b19b9ce2263-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Philadelphia 76ers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
