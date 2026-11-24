@@ -20,21 +20,17 @@ https://admin2.formaturamaxi.com.br/nba.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8
 #EXTINF:-1 tvg-id="Oklahoma City Thunder vs Indiana Pacers" tvg-name="Oklahoma City Thunder vs Indiana Pacers" tvg-logo="https://static.ppvservices.st/assets/thumb/4ccb28335bd6091d59a1173a36093253-thumbnail.jpg" group-title="NBA",Oklahoma City Thunder vs Indiana Pacers
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-10
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba3.m3u8
 #EXTINF:-1 tvg-id="Phoenix Suns vs New Orleans Pelicans" tvg-name="Phoenix Suns vs New Orleans Pelicans" tvg-logo="https://static.ppvservices.st/assets/thumb/a0c58a826b4d237fc05a3acb2139dba0-thumbnail.jpg" group-title="NBA",Phoenix Suns vs New Orleans Pelicans
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-7
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin.formaturamaxi.com.br/nba7.m3u8
-#EXTINF:-1 tvg-id="Portland Trail Blazers vs Philadelphia 76ers" tvg-name="Portland Trail Blazers vs Philadelphia 76ers" tvg-logo="https://static.ppvservices.st/assets/thumb/fdc55e13dae68ab9e50b4b19b9ce2263-thumbnail.jpg" group-title="NBA",Portland Trail Blazers vs Philadelphia 76ers
-#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://tedesco.formaturamaxi.com.br/nba2.m3u8
 #EXTINF:-1 tvg-id="San Antonio Spurs vs Sacramento Kings" tvg-name="San Antonio Spurs vs Sacramento Kings" tvg-logo="https://static.ppvservices.st/assets/thumb/bdcfdd24f4540951c579339fd6f94e06-thumbnail.jpg" group-title="NBA",San Antonio Spurs vs Sacramento Kings
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-10
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
-https://admin2.formaturamaxi.com.br/nba3.m3u8
+https://tedesco.formaturamaxi.com.br/nba10.m3u8
 #EXTINF:-1 tvg-id="Utah Jazz vs Los Angeles Lakers" tvg-name="Utah Jazz vs Los Angeles Lakers" tvg-logo="https://static.ppvservices.st/assets/thumb/42d6fa9068ad6f6a1d6f095df7a12d89-thumbnail.jpg" group-title="NBA",Utah Jazz vs Los Angeles Lakers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36

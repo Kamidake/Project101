@@ -28,10 +28,6 @@
     <display-name>Nov 24 | Phoenix Suns vs New Orleans Pelicans</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/a0c58a826b4d237fc05a3acb2139dba0-thumbnail.jpg" />
   </channel>
-  <channel id="Portland Trail Blazers vs Philadelphia 76ers">
-    <display-name>Nov 24 | Portland Trail Blazers vs Philadelphia 76ers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/fdc55e13dae68ab9e50b4b19b9ce2263-thumbnail.jpg" />
-  </channel>
   <channel id="San Antonio Spurs vs Sacramento Kings">
     <display-name>Nov 24 | San Antonio Spurs vs Sacramento Kings</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/bdcfdd24f4540951c579339fd6f94e06-thumbnail.jpg" />
@@ -77,11 +73,6 @@
   <programme start="20261124090000 +0800" stop="20261124120000 +0800" channel="Phoenix Suns vs New Orleans Pelicans">
     <title>Nov 24 | Phoenix Suns vs New Orleans Pelicans</title>
     <desc>Live stream: Phoenix Suns vs New Orleans Pelicans</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261124080000 +0800" stop="20261124110000 +0800" channel="Portland Trail Blazers vs Philadelphia 76ers">
-    <title>Nov 24 | Portland Trail Blazers vs Philadelphia 76ers</title>
-    <desc>Live stream: Portland Trail Blazers vs Philadelphia 76ers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261124110000 +0800" stop="20261124140000 +0800" channel="San Antonio Spurs vs Sacramento Kings">
