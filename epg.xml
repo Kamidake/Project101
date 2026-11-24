@@ -40,10 +40,6 @@
     <display-name>Nov 25 | WWE NXT</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
   </channel>
-  <channel id="WWE RAW">
-    <display-name>Nov 24 | WWE RAW</display-name>
-    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
-  </channel>
   <programme start="20261124083000 +0800" stop="20261124113000 +0800" channel="Brooklyn Nets vs Minnesota Timberwolves">
     <title>Nov 24 | Brooklyn Nets vs Minnesota Timberwolves</title>
     <desc>Live stream: Brooklyn Nets vs Minnesota Timberwolves</desc>
@@ -92,11 +88,6 @@
   <programme start="20261125090000 +0800" stop="20261125120000 +0800" channel="WWE NXT">
     <title>Nov 25 | WWE NXT</title>
     <desc>Live stream: WWE NXT</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261124070000 +0800" stop="20261124100000 +0800" channel="WWE RAW">
-    <title>Nov 24 | WWE RAW</title>
-    <desc>Live stream: WWE RAW</desc>
     <category>WWE</category>
   </programme>
 </tv>
