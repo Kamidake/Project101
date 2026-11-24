@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="San Antonio Spurs vs Sacramento Kings">
-    <display-name>Nov 24 | San Antonio Spurs vs Sacramento Kings</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Utah Jazz vs Los Angeles Lakers">
-    <display-name>Nov 24 | Utah Jazz vs Los Angeles Lakers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="WWE NXT">
     <display-name>Nov 25 | WWE NXT</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
   </channel>
-  <programme start="20261124110000 +0800" stop="20261124140000 +0800" channel="San Antonio Spurs vs Sacramento Kings">
-    <title>Nov 24 | San Antonio Spurs vs Sacramento Kings</title>
-    <desc>Live stream: San Antonio Spurs vs Sacramento Kings</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261124110000 +0800" stop="20261124140000 +0800" channel="Utah Jazz vs Los Angeles Lakers">
-    <title>Nov 24 | Utah Jazz vs Los Angeles Lakers</title>
-    <desc>Live stream: Utah Jazz vs Los Angeles Lakers</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261125090000 +0800" stop="20261125120000 +0800" channel="WWE NXT">
     <title>Nov 25 | WWE NXT</title>
     <desc>Live stream: WWE NXT</desc>
