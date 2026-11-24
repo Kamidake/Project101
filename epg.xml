@@ -36,6 +36,10 @@
     <display-name>Nov 24 | San Antonio Spurs vs Sacramento Kings</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/bdcfdd24f4540951c579339fd6f94e06-thumbnail.jpg" />
   </channel>
+  <channel id="Utah Jazz vs Los Angeles Lakers">
+    <display-name>Nov 24 | Utah Jazz vs Los Angeles Lakers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/42d6fa9068ad6f6a1d6f095df7a12d89-thumbnail.jpg" />
+  </channel>
   <channel id="WWE NXT">
     <display-name>Nov 25 | WWE NXT</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/ef5595e08561ede45c52b36a0b62af76-thumbnail.jpg" />
@@ -83,6 +87,11 @@
   <programme start="20261124110000 +0800" stop="20261124140000 +0800" channel="San Antonio Spurs vs Sacramento Kings">
     <title>Nov 24 | San Antonio Spurs vs Sacramento Kings</title>
     <desc>Live stream: San Antonio Spurs vs Sacramento Kings</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261124110000 +0800" stop="20261124140000 +0800" channel="Utah Jazz vs Los Angeles Lakers">
+    <title>Nov 24 | Utah Jazz vs Los Angeles Lakers</title>
+    <desc>Live stream: Utah Jazz vs Los Angeles Lakers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261125090000 +0800" stop="20261125120000 +0800" channel="WWE NXT">
