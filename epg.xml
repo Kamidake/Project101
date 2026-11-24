@@ -12,10 +12,6 @@
     <display-name>Nov 24 | Los Angeles Clippers vs Houston Rockets</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
-  <channel id="Memphis Grizzlies vs Charlotte Hornets">
-    <display-name>Nov 24 | Memphis Grizzlies vs Charlotte Hornets</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Milwaukee Bucks vs Toronto Raptors">
     <display-name>Nov 24 | Milwaukee Bucks vs Toronto Raptors</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/dc7402b0c0c320bd0b888009a3fe33e1-thumbnail.jpg" />
@@ -53,11 +49,6 @@
   <programme start="20261124093000 +0800" stop="20261124123000 +0800" channel="Los Angeles Clippers vs Houston Rockets">
     <title>Nov 24 | Los Angeles Clippers vs Houston Rockets</title>
     <desc>Live stream: Los Angeles Clippers vs Houston Rockets</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261124080000 +0800" stop="20261124110000 +0800" channel="Memphis Grizzlies vs Charlotte Hornets">
-    <title>Nov 24 | Memphis Grizzlies vs Charlotte Hornets</title>
-    <desc>Live stream: Memphis Grizzlies vs Charlotte Hornets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261124083000 +0800" stop="20261124113000 +0800" channel="Milwaukee Bucks vs Toronto Raptors">
