@@ -94,19 +94,9 @@
     <desc>Live stream: WWE NXT</desc>
     <category>WWE</category>
   </programme>
-  <programme start="20261125090000 +0800" stop="20261125120000 +0800" channel="WWE NXT">
-    <title>Nov 25 | WWE NXT</title>
-    <desc>Live stream: WWE NXT (2)</desc>
-    <category>WWE</category>
-  </programme>
   <programme start="20261124070000 +0800" stop="20261124100000 +0800" channel="WWE RAW">
     <title>Nov 24 | WWE RAW</title>
     <desc>Live stream: WWE RAW</desc>
-    <category>WWE</category>
-  </programme>
-  <programme start="20261124070000 +0800" stop="20261124100000 +0800" channel="WWE RAW">
-    <title>Nov 24 | WWE RAW</title>
-    <desc>Live stream: WWE RAW (2)</desc>
     <category>WWE</category>
   </programme>
 </tv>
