@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="Chicago Bulls vs Charlotte Hornets">
+    <display-name>Nov 26 | Chicago Bulls vs Charlotte Hornets</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/26fd11ca8c2fe2dfdb3ff5872fcc913b-thumbnail.jpg" />
+  </channel>
   <channel id="Cleveland Cavaliers vs New York Knicks">
     <display-name>Nov 26 | Cleveland Cavaliers vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/bda25a3170ad2e2e89b954e64ec9ad09-thumbnail.jpg" />
+  </channel>
+  <channel id="Los Angeles Clippers vs Memphis Grizzlies">
+    <display-name>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</display-name>
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Miami Heat vs Philadelphia 76ers">
     <display-name>Nov 26 | Miami Heat vs Philadelphia 76ers</display-name>
@@ -12,9 +20,19 @@
     <display-name>Nov 26 | Phoenix Suns vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/6897e85df79e1e5103cbc5b62854b092-thumbnail.jpg" />
   </channel>
+  <programme start="20261126080000 +0800" stop="20261126110000 +0800" channel="Chicago Bulls vs Charlotte Hornets">
+    <title>Nov 26 | Chicago Bulls vs Charlotte Hornets</title>
+    <desc>Live stream: Chicago Bulls vs Charlotte Hornets</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261126083000 +0800" stop="20261126113000 +0800" channel="Cleveland Cavaliers vs New York Knicks">
     <title>Nov 26 | Cleveland Cavaliers vs New York Knicks</title>
     <desc>Live stream: Cleveland Cavaliers vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261126090000 +0800" stop="20261126120000 +0800" channel="Los Angeles Clippers vs Memphis Grizzlies">
+    <title>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</title>
+    <desc>Live stream: Los Angeles Clippers vs Memphis Grizzlies</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261126060000 +0800" stop="20261126090000 +0800" channel="Miami Heat vs Philadelphia 76ers">
