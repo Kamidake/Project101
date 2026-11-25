@@ -11,6 +11,10 @@ https://admin.formaturamaxi.com.br/nba6.m3u8
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://tedesco.formaturamaxi.com.br/nba2.m3u8
+#EXTINF:-1 tvg-id="Cleveland Cavaliers vs New York Knicks" tvg-name="Cleveland Cavaliers vs New York Knicks" tvg-logo="https://static.ppvservices.st/assets/thumb/bda25a3170ad2e2e89b954e64ec9ad09-thumbnail.jpg" group-title="NBA",Cleveland Cavaliers vs New York Knicks
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba3.m3u8
 #EXTINF:-1 tvg-id="Los Angeles Clippers vs Memphis Grizzlies" tvg-name="Los Angeles Clippers vs Memphis Grizzlies" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",Los Angeles Clippers vs Memphis Grizzlies
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
@@ -32,6 +36,10 @@ https://admin2.formaturamaxi.com.br/nba4.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba7.m3u8
 #EXTINF:-1 tvg-id="San Antonio Spurs vs Portland Trail Blazers" tvg-name="San Antonio Spurs vs Portland Trail Blazers" tvg-logo="https://static.ppvservices.st/assets/thumb/63385e60e324f208715898168944a85f-thumbnail.jpg" group-title="NBA",San Antonio Spurs vs Portland Trail Blazers
+#EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+https://admin2.formaturamaxi.com.br/nba3.m3u8
+#EXTINF:-1 tvg-id="San Antonio Spurs vs Portland Trail Blazers" tvg-name="San Antonio Spurs vs Portland Trail Blazers" tvg-logo="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" group-title="NBA",San Antonio Spurs vs Portland Trail Blazers
 #EXTVLCOPT:http-referrer=https://roxiestreams.info/nba-streams-1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
 https://admin2.formaturamaxi.com.br/nba4.m3u8
