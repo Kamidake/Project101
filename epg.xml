@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="AEW">
+    <display-name>Nov 26 | AEW</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
+  </channel>
+  <channel id="Brooklyn Nets vs Milwaukee Bucks">
+    <display-name>Nov 26 | Brooklyn Nets vs Milwaukee Bucks</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/c3df2ecae074b209913679276d432d09-thumbnail.jpg" />
+  </channel>
   <channel id="Chicago Bulls vs Charlotte Hornets">
     <display-name>Nov 26 | Chicago Bulls vs Charlotte Hornets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/26fd11ca8c2fe2dfdb3ff5872fcc913b-thumbnail.jpg" />
-  </channel>
-  <channel id="Cleveland Cavaliers vs New York Knicks">
-    <display-name>Nov 26 | Cleveland Cavaliers vs New York Knicks</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/bda25a3170ad2e2e89b954e64ec9ad09-thumbnail.jpg" />
   </channel>
   <channel id="Los Angeles Clippers vs Memphis Grizzlies">
     <display-name>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</display-name>
@@ -16,18 +20,31 @@
     <display-name>Nov 26 | Miami Heat vs Philadelphia 76ers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/2a09f23a6f6e5186d3a92bec589691e4-thumbnail.jpg" />
   </channel>
+  <channel id="Minnesota Timberwolves vs Oklahoma City Thunder">
+    <display-name>Nov 26 | Minnesota Timberwolves vs Oklahoma City Thunder</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/b16e0385a0fc90d0acd3c810f90d32f2-thumbnail.jpg" />
+  </channel>
   <channel id="Phoenix Suns vs Houston Rockets">
     <display-name>Nov 26 | Phoenix Suns vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/6897e85df79e1e5103cbc5b62854b092-thumbnail.jpg" />
   </channel>
+  <channel id="San Antonio Spurs vs Portland Trail Blazers">
+    <display-name>Nov 26 | San Antonio Spurs vs Portland Trail Blazers</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/63385e60e324f208715898168944a85f-thumbnail.jpg" />
+  </channel>
+  <programme start="20261126090000 +0800" stop="20261126120000 +0800" channel="AEW">
+    <title>Nov 26 | AEW</title>
+    <desc>Live stream: AEW</desc>
+    <category>AEW</category>
+  </programme>
+  <programme start="20261126090000 +0800" stop="20261126120000 +0800" channel="Brooklyn Nets vs Milwaukee Bucks">
+    <title>Nov 26 | Brooklyn Nets vs Milwaukee Bucks</title>
+    <desc>Live stream: Brooklyn Nets vs Milwaukee Bucks</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261126080000 +0800" stop="20261126110000 +0800" channel="Chicago Bulls vs Charlotte Hornets">
     <title>Nov 26 | Chicago Bulls vs Charlotte Hornets</title>
     <desc>Live stream: Chicago Bulls vs Charlotte Hornets</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261126083000 +0800" stop="20261126113000 +0800" channel="Cleveland Cavaliers vs New York Knicks">
-    <title>Nov 26 | Cleveland Cavaliers vs New York Knicks</title>
-    <desc>Live stream: Cleveland Cavaliers vs New York Knicks</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261126090000 +0800" stop="20261126120000 +0800" channel="Los Angeles Clippers vs Memphis Grizzlies">
@@ -40,9 +57,24 @@
     <desc>Live stream: Miami Heat vs Philadelphia 76ers</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261126060000 +0800" stop="20261126090000 +0800" channel="Miami Heat vs Philadelphia 76ers">
+    <title>Nov 26 | Miami Heat vs Philadelphia 76ers</title>
+    <desc>Live stream: Miami Heat vs Philadelphia 76ers (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261126083000 +0800" stop="20261126113000 +0800" channel="Minnesota Timberwolves vs Oklahoma City Thunder">
+    <title>Nov 26 | Minnesota Timberwolves vs Oklahoma City Thunder</title>
+    <desc>Live stream: Minnesota Timberwolves vs Oklahoma City Thunder</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261126093000 +0800" stop="20261126123000 +0800" channel="Phoenix Suns vs Houston Rockets">
     <title>Nov 26 | Phoenix Suns vs Houston Rockets</title>
     <desc>Live stream: Phoenix Suns vs Houston Rockets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261126110000 +0800" stop="20261126140000 +0800" channel="San Antonio Spurs vs Portland Trail Blazers">
+    <title>Nov 26 | San Antonio Spurs vs Portland Trail Blazers</title>
+    <desc>Live stream: San Antonio Spurs vs Portland Trail Blazers</desc>
     <category>NBA</category>
   </programme>
 </tv>
