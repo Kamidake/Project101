@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-26T01:32:55.959042+00:00",
+  "updated_utc": "2026-11-26T01:47:25.301811+00:00",
   "pages": 50,
   "candidate_urls": 46,
   "live_urls": 9,
@@ -8,23 +8,10 @@
   "errors": [],
   "event_groups": 8,
   "event_posters": 8,
-  "roxie_source": "https://roxiestreams.biz/",
+  "roxie_source": "https://roxiestreams.info/",
   "roxie_attempts": [
     {
       "base": "https://roxiestreams.info/",
-      "pages": 1,
-      "errors": [
-        {
-          "page": "https://roxiestreams.info/",
-          "error": "<urlopen error timed out>"
-        },
-        {
-          "error": "No HLS sources discovered"
-        }
-      ]
-    },
-    {
-      "base": "https://roxiestreams.biz/",
       "pages": 50,
       "errors": []
     }
