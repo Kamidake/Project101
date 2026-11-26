@@ -8,16 +8,8 @@
     <display-name>Nov 26 | Brooklyn Nets vs Milwaukee Bucks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/c3df2ecae074b209913679276d432d09-thumbnail.jpg" />
   </channel>
-  <channel id="Cleveland Cavaliers vs New York Knicks">
-    <display-name>Nov 26 | Cleveland Cavaliers vs New York Knicks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Los Angeles Clippers vs Memphis Grizzlies">
     <display-name>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Minnesota Timberwolves vs Oklahoma City Thunder">
-    <display-name>Nov 26 | Minnesota Timberwolves vs Oklahoma City Thunder</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="Phoenix Suns vs Houston Rockets">
@@ -42,19 +34,9 @@
     <desc>Live stream: Brooklyn Nets vs Milwaukee Bucks</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261126083000 +0800" stop="20261126113000 +0800" channel="Cleveland Cavaliers vs New York Knicks">
-    <title>Nov 26 | Cleveland Cavaliers vs New York Knicks</title>
-    <desc>Live stream: Cleveland Cavaliers vs New York Knicks</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261126090000 +0800" stop="20261126120000 +0800" channel="Los Angeles Clippers vs Memphis Grizzlies">
     <title>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</title>
     <desc>Live stream: Los Angeles Clippers vs Memphis Grizzlies</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261126083000 +0800" stop="20261126113000 +0800" channel="Minnesota Timberwolves vs Oklahoma City Thunder">
-    <title>Nov 26 | Minnesota Timberwolves vs Oklahoma City Thunder</title>
-    <desc>Live stream: Minnesota Timberwolves vs Oklahoma City Thunder</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261126093000 +0800" stop="20261126123000 +0800" channel="Phoenix Suns vs Houston Rockets">
