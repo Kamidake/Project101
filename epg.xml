@@ -20,10 +20,6 @@
     <display-name>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
-  <channel id="Miami Heat vs Philadelphia 76ers">
-    <display-name>Nov 26 | Miami Heat vs Philadelphia 76ers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Minnesota Timberwolves vs Oklahoma City Thunder">
     <display-name>Nov 26 | Minnesota Timberwolves vs Oklahoma City Thunder</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/b16e0385a0fc90d0acd3c810f90d32f2-thumbnail.jpg" />
@@ -59,16 +55,6 @@
   <programme start="20261126090000 +0800" stop="20261126120000 +0800" channel="Los Angeles Clippers vs Memphis Grizzlies">
     <title>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</title>
     <desc>Live stream: Los Angeles Clippers vs Memphis Grizzlies</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261126060000 +0800" stop="20261126090000 +0800" channel="Miami Heat vs Philadelphia 76ers">
-    <title>Nov 26 | Miami Heat vs Philadelphia 76ers</title>
-    <desc>Live stream: Miami Heat vs Philadelphia 76ers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261126060000 +0800" stop="20261126090000 +0800" channel="Miami Heat vs Philadelphia 76ers">
-    <title>Nov 26 | Miami Heat vs Philadelphia 76ers</title>
-    <desc>Live stream: Miami Heat vs Philadelphia 76ers (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261126083000 +0800" stop="20261126113000 +0800" channel="Minnesota Timberwolves vs Oklahoma City Thunder">
