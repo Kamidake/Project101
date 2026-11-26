@@ -28,6 +28,10 @@
     <display-name>Nov 26 | Phoenix Suns vs Houston Rockets</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/6897e85df79e1e5103cbc5b62854b092-thumbnail.jpg" />
   </channel>
+  <channel id="Sacramento Kings vs Golden State Warriors">
+    <display-name>Nov 26 | Sacramento Kings vs Golden State Warriors</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/5f9632e771be2c269ed2300e1db03312-thumbnail.jpg" />
+  </channel>
   <channel id="San Antonio Spurs vs Portland Trail Blazers">
     <display-name>Nov 26 | San Antonio Spurs vs Portland Trail Blazers</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/63385e60e324f208715898168944a85f-thumbnail.jpg" />
@@ -65,6 +69,11 @@
   <programme start="20261126093000 +0800" stop="20261126123000 +0800" channel="Phoenix Suns vs Houston Rockets">
     <title>Nov 26 | Phoenix Suns vs Houston Rockets</title>
     <desc>Live stream: Phoenix Suns vs Houston Rockets</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261126110000 +0800" stop="20261126140000 +0800" channel="Sacramento Kings vs Golden State Warriors">
+    <title>Nov 26 | Sacramento Kings vs Golden State Warriors</title>
+    <desc>Live stream: Sacramento Kings vs Golden State Warriors</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261126110000 +0800" stop="20261126140000 +0800" channel="San Antonio Spurs vs Portland Trail Blazers">
