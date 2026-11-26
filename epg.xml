@@ -1,26 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
-  <channel id="Sacramento Kings vs Golden State Warriors">
-    <display-name>Nov 26 | Sacramento Kings vs Golden State Warriors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="San Antonio Spurs vs Portland Trail Blazers">
-    <display-name>Nov 26 | San Antonio Spurs vs Portland Trail Blazers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <programme start="20261126110000 +0800" stop="20261126140000 +0800" channel="Sacramento Kings vs Golden State Warriors">
-    <title>Nov 26 | Sacramento Kings vs Golden State Warriors</title>
-    <desc>Live stream: Sacramento Kings vs Golden State Warriors</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261126110000 +0800" stop="20261126140000 +0800" channel="San Antonio Spurs vs Portland Trail Blazers">
-    <title>Nov 26 | San Antonio Spurs vs Portland Trail Blazers</title>
-    <desc>Live stream: San Antonio Spurs vs Portland Trail Blazers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261126110000 +0800" stop="20261126140000 +0800" channel="San Antonio Spurs vs Portland Trail Blazers">
-    <title>Nov 26 | San Antonio Spurs vs Portland Trail Blazers</title>
-    <desc>Live stream: San Antonio Spurs vs Portland Trail Blazers (2)</desc>
-    <category>NBA</category>
-  </programme>
 </tv>
