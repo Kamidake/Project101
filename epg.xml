@@ -8,10 +8,6 @@
     <display-name>Nov 26 | Brooklyn Nets vs Milwaukee Bucks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/c3df2ecae074b209913679276d432d09-thumbnail.jpg" />
   </channel>
-  <channel id="Chicago Bulls vs Charlotte Hornets">
-    <display-name>Nov 26 | Chicago Bulls vs Charlotte Hornets</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/26fd11ca8c2fe2dfdb3ff5872fcc913b-thumbnail.jpg" />
-  </channel>
   <channel id="Cleveland Cavaliers vs New York Knicks">
     <display-name>Nov 26 | Cleveland Cavaliers vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/bda25a3170ad2e2e89b954e64ec9ad09-thumbnail.jpg" />
@@ -44,11 +40,6 @@
   <programme start="20261126090000 +0800" stop="20261126120000 +0800" channel="Brooklyn Nets vs Milwaukee Bucks">
     <title>Nov 26 | Brooklyn Nets vs Milwaukee Bucks</title>
     <desc>Live stream: Brooklyn Nets vs Milwaukee Bucks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261126080000 +0800" stop="20261126110000 +0800" channel="Chicago Bulls vs Charlotte Hornets">
-    <title>Nov 26 | Chicago Bulls vs Charlotte Hornets</title>
-    <desc>Live stream: Chicago Bulls vs Charlotte Hornets</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261126083000 +0800" stop="20261126113000 +0800" channel="Cleveland Cavaliers vs New York Knicks">
