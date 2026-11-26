@@ -2,11 +2,11 @@
 <tv generator-info-name="LivePlaylist">
   <channel id="Sacramento Kings vs Golden State Warriors">
     <display-name>Nov 26 | Sacramento Kings vs Golden State Warriors</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/5f9632e771be2c269ed2300e1db03312-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="San Antonio Spurs vs Portland Trail Blazers">
     <display-name>Nov 26 | San Antonio Spurs vs Portland Trail Blazers</display-name>
-    <icon src="https://static.ppvservices.st/assets/thumb/63385e60e324f208715898168944a85f-thumbnail.jpg" />
+    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <programme start="20261126110000 +0800" stop="20261126140000 +0800" channel="Sacramento Kings vs Golden State Warriors">
     <title>Nov 26 | Sacramento Kings vs Golden State Warriors</title>
