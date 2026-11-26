@@ -18,7 +18,7 @@
   </channel>
   <channel id="Los Angeles Clippers vs Memphis Grizzlies">
     <display-name>Nov 26 | Los Angeles Clippers vs Memphis Grizzlies</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/nba.png" />
   </channel>
   <channel id="Miami Heat vs Philadelphia 76ers">
     <display-name>Nov 26 | Miami Heat vs Philadelphia 76ers</display-name>
