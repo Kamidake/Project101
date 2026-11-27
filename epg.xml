@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="AEW Collision">
+    <display-name>AEW Collision</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
+  </channel>
   <channel id="Atlanta Hawks vs Boston Celtics">
     <display-name>Nov 28 | Atlanta Hawks vs Boston Celtics</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9e1d713d51433b3b4ae9828aea173f98-thumbnail.jpg" />
