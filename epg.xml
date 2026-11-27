@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="LivePlaylist">
+  <channel id="AEW">
+    <display-name>Nov 27 | AEW</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/aew.png" />
+  </channel>
   <channel id="Atlanta Hawks vs Boston Celtics">
     <display-name>Nov 28 | Atlanta Hawks vs Boston Celtics</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9e1d713d51433b3b4ae9828aea173f98-thumbnail.jpg" />
@@ -8,6 +12,11 @@
     <display-name>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9b6af34e377a3bfbc75d08462e3ca1a7-thumbnail.jpg" />
   </channel>
+  <programme start="20261127090000 +0800" stop="20261127120000 +0800" channel="AEW">
+    <title>Nov 27 | AEW</title>
+    <desc>Live stream: AEW</desc>
+    <category>AEW</category>
+  </programme>
   <programme start="20261128090000 +0800" stop="20261128120000 +0800" channel="Atlanta Hawks vs Boston Celtics">
     <title>Nov 28 | Atlanta Hawks vs Boston Celtics</title>
     <desc>Live stream: Atlanta Hawks vs Boston Celtics</desc>
