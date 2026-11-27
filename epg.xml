@@ -12,6 +12,10 @@
     <display-name>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9b6af34e377a3bfbc75d08462e3ca1a7-thumbnail.jpg" />
   </channel>
+  <channel id="TNA">
+    <display-name>Nov 27 | TNA</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/tna.png" />
+  </channel>
   <programme start="20261127090000 +0800" stop="20261127120000 +0800" channel="AEW">
     <title>Nov 27 | AEW</title>
     <desc>Live stream: AEW</desc>
@@ -26,5 +30,10 @@
     <title>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</title>
     <desc>Live stream: Memphis Grizzlies vs Minnesota Timberwolves</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261127090000 +0800" stop="20261127120000 +0800" channel="TNA">
+    <title>Nov 27 | TNA</title>
+    <desc>Live stream: TNA</desc>
+    <category>TNA</category>
   </programme>
 </tv>
