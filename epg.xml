@@ -8,6 +8,14 @@
     <display-name>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9b6af34e377a3bfbc75d08462e3ca1a7-thumbnail.jpg" />
   </channel>
+  <channel id="WWE Smackdown">
+    <display-name>Nov 28 | WWE Smackdown</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
+  <channel id="WWE Survivor Series">
+    <display-name>Nov 29 | WWE Survivor Series</display-name>
+    <icon src="https://raw.githubusercontent.com/Kamidake/Project101/main/assets/logos/wwe.png" />
+  </channel>
   <programme start="20261128090000 +0800" stop="20261128120000 +0800" channel="Atlanta Hawks vs Boston Celtics">
     <title>Nov 28 | Atlanta Hawks vs Boston Celtics</title>
     <desc>Live stream: Atlanta Hawks vs Boston Celtics</desc>
@@ -17,5 +25,15 @@
     <title>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</title>
     <desc>Live stream: Memphis Grizzlies vs Minnesota Timberwolves</desc>
     <category>NBA</category>
+  </programme>
+  <programme start="20261128090000 +0800" stop="20261128120000 +0800" channel="WWE Smackdown">
+    <title>Nov 28 | WWE Smackdown</title>
+    <desc>Live stream: WWE Smackdown</desc>
+    <category>WWE</category>
+  </programme>
+  <programme start="20261129070000 +0800" stop="20261129100000 +0800" channel="WWE Survivor Series">
+    <title>Nov 29 | WWE Survivor Series</title>
+    <desc>Live stream: WWE Survivor Series</desc>
+    <category>WWE</category>
   </programme>
 </tv>
