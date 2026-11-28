@@ -66,6 +66,11 @@
     <desc>Live stream: Miami Heat vs New York Knicks</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261128080000 +0800" stop="20261128110000 +0800" channel="Miami Heat vs New York Knicks">
+    <title>Nov 28 | Miami Heat vs New York Knicks</title>
+    <desc>Live stream: Miami Heat vs New York Knicks (2)</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Milwaukee Bucks vs Detroit Pistons">
     <title>Nov 28 | Milwaukee Bucks vs Detroit Pistons</title>
     <desc>Live stream: Milwaukee Bucks vs Detroit Pistons</desc>
