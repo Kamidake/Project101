@@ -28,10 +28,6 @@
     <display-name>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9b6af34e377a3bfbc75d08462e3ca1a7-thumbnail.jpg" />
   </channel>
-  <channel id="Miami Heat vs New York Knicks">
-    <display-name>Nov 28 | Miami Heat vs New York Knicks</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Milwaukee Bucks vs Detroit Pistons">
     <display-name>Nov 28 | Milwaukee Bucks vs Detroit Pistons</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/8ca603d900763d4607c088ec81390f47-thumbnail.jpg" />
@@ -85,16 +81,6 @@
   <programme start="20261128093000 +0800" stop="20261128123000 +0800" channel="Memphis Grizzlies vs Minnesota Timberwolves">
     <title>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</title>
     <desc>Live stream: Memphis Grizzlies vs Minnesota Timberwolves</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261128080000 +0800" stop="20261128110000 +0800" channel="Miami Heat vs New York Knicks">
-    <title>Nov 28 | Miami Heat vs New York Knicks</title>
-    <desc>Live stream: Miami Heat vs New York Knicks</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261128080000 +0800" stop="20261128110000 +0800" channel="Miami Heat vs New York Knicks">
-    <title>Nov 28 | Miami Heat vs New York Knicks</title>
-    <desc>Live stream: Miami Heat vs New York Knicks (2)</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Milwaukee Bucks vs Detroit Pistons">
