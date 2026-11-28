@@ -4,6 +4,10 @@
     <display-name>Nov 28 | Atlanta Hawks vs Boston Celtics</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9e1d713d51433b3b4ae9828aea173f98-thumbnail.jpg" />
   </channel>
+  <channel id="Brooklyn Nets vs Toronto Raptors">
+    <display-name>Nov 28 | Brooklyn Nets vs Toronto Raptors</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/81378101f0dd5eabbc14721b66146a94-thumbnail.jpg" />
+  </channel>
   <channel id="Dallas Mavericks vs Phoenix Suns">
     <display-name>Nov 28 | Dallas Mavericks vs Phoenix Suns</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/dd45df696a6757e5cff5b6c0eb3ee405-thumbnail.jpg" />
@@ -15,6 +19,10 @@
   <channel id="Miami Heat vs New York Knicks">
     <display-name>Nov 28 | Miami Heat vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/fd1cfc9d598b192261d9f565f491dcaf-thumbnail.jpg" />
+  </channel>
+  <channel id="Milwaukee Bucks vs Detroit Pistons">
+    <display-name>Nov 28 | Milwaukee Bucks vs Detroit Pistons</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/8ca603d900763d4607c088ec81390f47-thumbnail.jpg" />
   </channel>
   <channel id="Philadelphia 76ers vs Indiana Pacers">
     <display-name>Nov 28 | Philadelphia 76ers vs Indiana Pacers</display-name>
@@ -33,6 +41,11 @@
     <desc>Live stream: Atlanta Hawks vs Boston Celtics</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Brooklyn Nets vs Toronto Raptors">
+    <title>Nov 28 | Brooklyn Nets vs Toronto Raptors</title>
+    <desc>Live stream: Brooklyn Nets vs Toronto Raptors</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261128100000 +0800" stop="20261128130000 +0800" channel="Dallas Mavericks vs Phoenix Suns">
     <title>Nov 28 | Dallas Mavericks vs Phoenix Suns</title>
     <desc>Live stream: Dallas Mavericks vs Phoenix Suns</desc>
@@ -43,9 +56,19 @@
     <desc>Live stream: Denver Nuggets vs Utah Jazz</desc>
     <category>NBA</category>
   </programme>
+  <programme start="20261128103000 +0800" stop="20261128133000 +0800" channel="Denver Nuggets vs Utah Jazz">
+    <title>Nov 28 | Denver Nuggets vs Utah Jazz</title>
+    <desc>Live stream: Denver Nuggets vs Utah Jazz (2)</desc>
+    <category>NBA</category>
+  </programme>
   <programme start="20261128080000 +0800" stop="20261128110000 +0800" channel="Miami Heat vs New York Knicks">
     <title>Nov 28 | Miami Heat vs New York Knicks</title>
     <desc>Live stream: Miami Heat vs New York Knicks</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Milwaukee Bucks vs Detroit Pistons">
+    <title>Nov 28 | Milwaukee Bucks vs Detroit Pistons</title>
+    <desc>Live stream: Milwaukee Bucks vs Detroit Pistons</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Philadelphia 76ers vs Indiana Pacers">
