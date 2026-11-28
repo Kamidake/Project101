@@ -4,10 +4,6 @@
     <display-name>Nov 28 | Atlanta Hawks vs Boston Celtics</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9e1d713d51433b3b4ae9828aea173f98-thumbnail.jpg" />
   </channel>
-  <channel id="Brooklyn Nets vs Toronto Raptors">
-    <display-name>Nov 28 | Brooklyn Nets vs Toronto Raptors</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="Dallas Mavericks vs Phoenix Suns">
     <display-name>Nov 28 | Dallas Mavericks vs Phoenix Suns</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/dd45df696a6757e5cff5b6c0eb3ee405-thumbnail.jpg" />
@@ -28,16 +24,8 @@
     <display-name>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9b6af34e377a3bfbc75d08462e3ca1a7-thumbnail.jpg" />
   </channel>
-  <channel id="Milwaukee Bucks vs Detroit Pistons">
-    <display-name>Nov 28 | Milwaukee Bucks vs Detroit Pistons</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
   <channel id="New Orleans Pelicans vs Los Angeles Clippers">
     <display-name>Nov 28 | New Orleans Pelicans vs Los Angeles Clippers</display-name>
-    <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
-  </channel>
-  <channel id="Philadelphia 76ers vs Indiana Pacers">
-    <display-name>Nov 28 | Philadelphia 76ers vs Indiana Pacers</display-name>
     <icon src="https://r2.thesportsdb.com/images/media/league/badge/frdjqy1536585083.png" />
   </channel>
   <channel id="WWE Smackdown">
@@ -51,11 +39,6 @@
   <programme start="20261128090000 +0800" stop="20261128120000 +0800" channel="Atlanta Hawks vs Boston Celtics">
     <title>Nov 28 | Atlanta Hawks vs Boston Celtics</title>
     <desc>Live stream: Atlanta Hawks vs Boston Celtics</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Brooklyn Nets vs Toronto Raptors">
-    <title>Nov 28 | Brooklyn Nets vs Toronto Raptors</title>
-    <desc>Live stream: Brooklyn Nets vs Toronto Raptors</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261128100000 +0800" stop="20261128130000 +0800" channel="Dallas Mavericks vs Phoenix Suns">
@@ -83,19 +66,9 @@
     <desc>Live stream: Memphis Grizzlies vs Minnesota Timberwolves</desc>
     <category>NBA</category>
   </programme>
-  <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Milwaukee Bucks vs Detroit Pistons">
-    <title>Nov 28 | Milwaukee Bucks vs Detroit Pistons</title>
-    <desc>Live stream: Milwaukee Bucks vs Detroit Pistons</desc>
-    <category>NBA</category>
-  </programme>
   <programme start="20261128103000 +0800" stop="20261128133000 +0800" channel="New Orleans Pelicans vs Los Angeles Clippers">
     <title>Nov 28 | New Orleans Pelicans vs Los Angeles Clippers</title>
     <desc>Live stream: New Orleans Pelicans vs Los Angeles Clippers</desc>
-    <category>NBA</category>
-  </programme>
-  <programme start="20261128083000 +0800" stop="20261128113000 +0800" channel="Philadelphia 76ers vs Indiana Pacers">
-    <title>Nov 28 | Philadelphia 76ers vs Indiana Pacers</title>
-    <desc>Live stream: Philadelphia 76ers vs Indiana Pacers</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261128090000 +0800" stop="20261128120000 +0800" channel="WWE Smackdown">
