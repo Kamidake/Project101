@@ -16,6 +16,10 @@
     <display-name>Nov 28 | Denver Nuggets vs Utah Jazz</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4e5dc37469424e4d422f7f5e7c6b41bf-thumbnail.jpg" />
   </channel>
+  <channel id="Memphis Grizzlies vs Minnesota Timberwolves">
+    <display-name>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/9b6af34e377a3bfbc75d08462e3ca1a7-thumbnail.jpg" />
+  </channel>
   <channel id="Miami Heat vs New York Knicks">
     <display-name>Nov 28 | Miami Heat vs New York Knicks</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/fd1cfc9d598b192261d9f565f491dcaf-thumbnail.jpg" />
@@ -59,6 +63,11 @@
   <programme start="20261128103000 +0800" stop="20261128133000 +0800" channel="Denver Nuggets vs Utah Jazz">
     <title>Nov 28 | Denver Nuggets vs Utah Jazz</title>
     <desc>Live stream: Denver Nuggets vs Utah Jazz (2)</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261128093000 +0800" stop="20261128123000 +0800" channel="Memphis Grizzlies vs Minnesota Timberwolves">
+    <title>Nov 28 | Memphis Grizzlies vs Minnesota Timberwolves</title>
+    <desc>Live stream: Memphis Grizzlies vs Minnesota Timberwolves</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261128080000 +0800" stop="20261128110000 +0800" channel="Miami Heat vs New York Knicks">
