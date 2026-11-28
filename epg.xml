@@ -4,6 +4,10 @@
     <display-name>Nov 28 | Atlanta Hawks vs Boston Celtics</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/9e1d713d51433b3b4ae9828aea173f98-thumbnail.jpg" />
   </channel>
+  <channel id="Dallas Mavericks vs Phoenix Suns">
+    <display-name>Nov 28 | Dallas Mavericks vs Phoenix Suns</display-name>
+    <icon src="https://static.ppvservices.st/assets/thumb/dd45df696a6757e5cff5b6c0eb3ee405-thumbnail.jpg" />
+  </channel>
   <channel id="Denver Nuggets vs Utah Jazz">
     <display-name>Nov 28 | Denver Nuggets vs Utah Jazz</display-name>
     <icon src="https://static.ppvservices.st/assets/thumb/4e5dc37469424e4d422f7f5e7c6b41bf-thumbnail.jpg" />
@@ -31,6 +35,11 @@
   <programme start="20261128090000 +0800" stop="20261128120000 +0800" channel="Atlanta Hawks vs Boston Celtics">
     <title>Nov 28 | Atlanta Hawks vs Boston Celtics</title>
     <desc>Live stream: Atlanta Hawks vs Boston Celtics</desc>
+    <category>NBA</category>
+  </programme>
+  <programme start="20261128100000 +0800" stop="20261128130000 +0800" channel="Dallas Mavericks vs Phoenix Suns">
+    <title>Nov 28 | Dallas Mavericks vs Phoenix Suns</title>
+    <desc>Live stream: Dallas Mavericks vs Phoenix Suns</desc>
     <category>NBA</category>
   </programme>
   <programme start="20261128103000 +0800" stop="20261128133000 +0800" channel="Denver Nuggets vs Utah Jazz">
